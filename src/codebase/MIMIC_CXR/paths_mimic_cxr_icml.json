@@ -1,0 +1,24 @@
+{
+  "effusion": {
+    "MoIE_paths": {
+      "iter1": {
+        "base_path": "densenet121_1028_lr_0.01_SGD_temperature-lens_7.6_cov_0.5_alpha_0.5_selection-threshold_0.5_lm_96.0_lambda-lens_0.0001_alpha-KD_0.99_temperature-KD_20.0_hidden-layers_2020_input-size-pi_2048_layer_layer4",
+        "prev_path": "",
+        "explainer_path": "explainer",
+        "output": "g_outputs"
+      },
+      "iter2": {
+        "base_path": "densenet121_1028_lr_0.01_SGD_temperature-lens_7.6_cov_0.2_alpha_0.5_selection-threshold_0.5_lm_96.0_lambda-lens_0.0001_alpha-KD_0.99_temperature-KD_20.0_hidden-layers_2020_input-size-pi_2048_layer_layer4",
+        "prev_path": "",
+        "explainer_path": "explainer",
+        "output": "g_outputs"
+      },
+      "iter3": {
+        "base_path": "densenet121_1028_lr_0.01_SGD_temperature-lens_7.6_cov_0.05_alpha_0.5_selection-threshold_0.5_lm_96.0_lambda-lens_0.0001_alpha-KD_0.99_temperature-KD_20.0_hidden-layers_2020_input-size-pi_2048_layer_layer4",
+        "prev_path": "",
+        "explainer_path": "explainer",
+        "output": "g_outputs"
+      }
+    }
+  }
+}

@@ -1,0 +1,197 @@
+Inputs
+data_root: /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/data/CUB_200_2011
+json_root: /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/codebase/data_preprocessing
+logs: /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/log
+checkpoints: /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints
+checkpoint_model: ['model_g_best_model.pth.tar']
+checkpoint_residual: ['model_residual_best_model_epoch_2.pth.tar']
+root_bb: lr_0.03_epochs_95
+checkpoint_bb: VIT_CUBS_8000_checkpoint.bin
+checkpoint_t: g_best_model_epoch_200.pth.tar
+output: /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/out
+attribute_file_name: attributes.npy
+iter: 1
+expert_to_train: residual
+seed: 5
+pretrained: True
+dataset: cub
+img_size: 448
+cov: [0.2]
+alpha: 0.5
+selection_threshold: 0.5
+use_concepts_as_pi_input: y
+bs: 16
+dataset_folder_concepts: lr_0.03_epochs_95_ViT-B_16_layer4_VIT_sgd_BCE
+lr_residual: 0.001
+momentum_residual: 0.9
+weight_decay_residual: 0.0001
+lr: [0.01]
+input_size_pi: 2048
+temperature_lens: 6.0
+lambda_lens: 0.0001
+alpha_KD: 0.99
+temperature_KD: 10.0
+conceptizator: identity_bool
+hidden_nodes: [10]
+explainer_init: None
+epochs: 65
+epochs_residual: 5
+layer: VIT
+arch: ViT-B_16
+smoothing_value: 0.0
+decay_type: cosine
+warmup_steps: 500
+max_grad_norm: 1.0
+weight_decay: 0
+num_steps: 10000
+prev_explainer_chk_pt_folder: ['/ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints/cub/explainer/ViT-B_16/lr_0.01_epochs_500_temperature-lens_6.0_use-concepts-as-pi-input_True_input-size-pi_2048_cov_0.2_alpha_0.5_selection-threshold_0.5_lambda-lens_0.0001_alpha-KD_0.99_temperature-KD_10.0_hidden-layers_1_layer_VIT_explainer_init_none/iter1']
+train_baseline: n
+concept_names: ['has_bill_shape_dagger', 'has_bill_shape_hooked_seabird', 'has_bill_shape_allpurpose', 'has_bill_shape_cone', 'has_wing_color_brown', 'has_wing_color_grey', 'has_wing_color_yellow', 'has_wing_color_black', 'has_wing_color_white', 'has_wing_color_buff', 'has_upperparts_color_brown', 'has_upperparts_color_grey', 'has_upperparts_color_yellow', 'has_upperparts_color_black', 'has_upperparts_color_white', 'has_upperparts_color_buff', 'has_underparts_color_brown', 'has_underparts_color_grey', 'has_underparts_color_yellow', 'has_underparts_color_black', 'has_underparts_color_white', 'has_underparts_color_buff', 'has_breast_pattern_solid', 'has_breast_pattern_striped', 'has_breast_pattern_multicolored', 'has_back_color_brown', 'has_back_color_grey', 'has_back_color_yellow', 'has_back_color_black', 'has_back_color_white', 'has_back_color_buff', 'has_tail_shape_notched_tail', 'has_upper_tail_color_brown', 'has_upper_tail_color_grey', 'has_upper_tail_color_black', 'has_upper_tail_color_white', 'has_upper_tail_color_buff', 'has_head_pattern_plain', 'has_head_pattern_capped', 'has_breast_color_brown', 'has_breast_color_grey', 'has_breast_color_yellow', 'has_breast_color_black', 'has_breast_color_white', 'has_breast_color_buff', 'has_throat_color_grey', 'has_throat_color_yellow', 'has_throat_color_black', 'has_throat_color_white', 'has_eye_color_black', 'has_bill_length_about_the_same_as_head', 'has_bill_length_shorter_than_head', 'has_forehead_color_blue', 'has_forehead_color_brown', 'has_forehead_color_grey', 'has_forehead_color_yellow', 'has_forehead_color_black', 'has_forehead_color_white', 'has_forehead_color_red', 'has_under_tail_color_brown', 'has_under_tail_color_grey', 'has_under_tail_color_yellow', 'has_under_tail_color_black', 'has_under_tail_color_white', 'has_under_tail_color_buff', 'has_nape_color_blue', 'has_nape_color_brown', 'has_nape_color_grey', 'has_nape_color_yellow', 'has_nape_color_black', 'has_nape_color_white', 'has_nape_color_buff', 'has_belly_color_grey', 'has_belly_color_yellow', 'has_belly_color_black', 'has_belly_color_white', 'has_belly_color_buff', 'has_wing_shape_roundedwings', 'has_size_small_5__9_in', 'has_size_medium_9__16_in', 'has_size_very_small_3__5_in', 'has_shape_perchinglike', 'has_back_pattern_solid', 'has_back_pattern_striped', 'has_back_pattern_multicolored', 'has_tail_pattern_solid', 'has_tail_pattern_multicolored', 'has_belly_pattern_solid', 'has_primary_color_brown', 'has_primary_color_grey', 'has_primary_color_yellow', 'has_primary_color_black', 'has_primary_color_white', 'has_primary_color_buff', 'has_leg_color_grey', 'has_leg_color_black', 'has_leg_color_buff', 'has_bill_color_grey', 'has_bill_color_black', 'has_crown_color_blue', 'has_crown_color_brown', 'has_crown_color_grey', 'has_crown_color_yellow', 'has_crown_color_black', 'has_crown_color_white', 'has_wing_pattern_solid', 'has_wing_pattern_striped', 'has_wing_pattern_multicolored']
+labels: ['Black_footed_Albatross', 'Laysan_Albatross', 'Sooty_Albatross', 'Groove_billed_Ani', 'Crested_Auklet', 'Least_Auklet', 'Parakeet_Auklet', 'Rhinoceros_Auklet', 'Brewer_Blackbird', 'Red_winged_Blackbird', 'Rusty_Blackbird', 'Yellow_headed_Blackbird', 'Bobolink', 'Indigo_Bunting', 'Lazuli_Bunting', 'Painted_Bunting', 'Cardinal', 'Spotted_Catbird', 'Gray_Catbird', 'Yellow_breasted_Chat', 'Eastern_Towhee', 'Chuck_will_Widow', 'Brandt_Cormorant', 'Red_faced_Cormorant', 'Pelagic_Cormorant', 'Bronzed_Cowbird', 'Shiny_Cowbird', 'Brown_Creeper', 'American_Crow', 'Fish_Crow', 'Black_billed_Cuckoo', 'Mangrove_Cuckoo', 'Yellow_billed_Cuckoo', 'Gray_crowned_Rosy_Finch', 'Purple_Finch', 'Northern_Flicker', 'Acadian_Flycatcher', 'Great_Crested_Flycatcher', 'Least_Flycatcher', 'Olive_sided_Flycatcher', 'Scissor_tailed_Flycatcher', 'Vermilion_Flycatcher', 'Yellow_bellied_Flycatcher', 'Frigatebird', 'Northern_Fulmar', 'Gadwall', 'American_Goldfinch', 'European_Goldfinch', 'Boat_tailed_Grackle', 'Eared_Grebe', 'Horned_Grebe', 'Pied_billed_Grebe', 'Western_Grebe', 'Blue_Grosbeak', 'Evening_Grosbeak', 'Pine_Grosbeak', 'Rose_breasted_Grosbeak', 'Pigeon_Guillemot', 'California_Gull', 'Glaucous_winged_Gull', 'Heermann_Gull', 'Herring_Gull', 'Ivory_Gull', 'Ring_billed_Gull', 'Slaty_backed_Gull', 'Western_Gull', 'Anna_Hummingbird', 'Ruby_throated_Hummingbird', 'Rufous_Hummingbird', 'Green_Violetear', 'Long_tailed_Jaeger', 'Pomarine_Jaeger', 'Blue_Jay', 'Florida_Jay', 'Green_Jay', 'Dark_eyed_Junco', 'Tropical_Kingbird', 'Gray_Kingbird', 'Belted_Kingfisher', 'Green_Kingfisher', 'Pied_Kingfisher', 'Ringed_Kingfisher', 'White_breasted_Kingfisher', 'Red_legged_Kittiwake', 'Horned_Lark', 'Pacific_Loon', 'Mallard', 'Western_Meadowlark', 'Hooded_Merganser', 'Red_breasted_Merganser', 'Mockingbird', 'Nighthawk', 'Clark_Nutcracker', 'White_breasted_Nuthatch', 'Baltimore_Oriole', 'Hooded_Oriole', 'Orchard_Oriole', 'Scott_Oriole', 'Ovenbird', 'Brown_Pelican', 'White_Pelican', 'Western_Wood_Pewee', 'Sayornis', 'American_Pipit', 'Whip_poor_Will', 'Horned_Puffin', 'Common_Raven', 'White_necked_Raven', 'American_Redstart', 'Geococcyx', 'Loggerhead_Shrike', 'Great_Grey_Shrike', 'Baird_Sparrow', 'Black_throated_Sparrow', 'Brewer_Sparrow', 'Chipping_Sparrow', 'Clay_colored_Sparrow', 'House_Sparrow', 'Field_Sparrow', 'Fox_Sparrow', 'Grasshopper_Sparrow', 'Harris_Sparrow', 'Henslow_Sparrow', 'Le_Conte_Sparrow', 'Lincoln_Sparrow', 'Nelson_Sharp_tailed_Sparrow', 'Savannah_Sparrow', 'Seaside_Sparrow', 'Song_Sparrow', 'Tree_Sparrow', 'Vesper_Sparrow', 'White_crowned_Sparrow', 'White_throated_Sparrow', 'Cape_Glossy_Starling', 'Bank_Swallow', 'Barn_Swallow', 'Cliff_Swallow', 'Tree_Swallow', 'Scarlet_Tanager', 'Summer_Tanager', 'Artic_Tern', 'Black_Tern', 'Caspian_Tern', 'Common_Tern', 'Elegant_Tern', 'Forsters_Tern', 'Least_Tern', 'Green_tailed_Towhee', 'Brown_Thrasher', 'Sage_Thrasher', 'Black_capped_Vireo', 'Blue_headed_Vireo', 'Philadelphia_Vireo', 'Red_eyed_Vireo', 'Warbling_Vireo', 'White_eyed_Vireo', 'Yellow_throated_Vireo', 'Bay_breasted_Warbler', 'Black_and_white_Warbler', 'Black_throated_Blue_Warbler', 'Blue_winged_Warbler', 'Canada_Warbler', 'Cape_May_Warbler', 'Cerulean_Warbler', 'Chestnut_sided_Warbler', 'Golden_winged_Warbler', 'Hooded_Warbler', 'Kentucky_Warbler', 'Magnolia_Warbler', 'Mourning_Warbler', 'Myrtle_Warbler', 'Nashville_Warbler', 'Orange_crowned_Warbler', 'Palm_Warbler', 'Pine_Warbler', 'Prairie_Warbler', 'Prothonotary_Warbler', 'Swainson_Warbler', 'Tennessee_Warbler', 'Wilson_Warbler', 'Worm_eating_Warbler', 'Yellow_Warbler', 'Northern_Waterthrush', 'Louisiana_Waterthrush', 'Bohemian_Waxwing', 'Cedar_Waxwing', 'American_Three_toed_Woodpecker', 'Pileated_Woodpecker', 'Red_bellied_Woodpecker', 'Red_cockaded_Woodpecker', 'Red_headed_Woodpecker', 'Downy_Woodpecker', 'Bewick_Wren', 'Cactus_Wren', 'Carolina_Wren', 'House_Wren', 'Marsh_Wren', 'Rock_Wren', 'Winter_Wren', 'Common_Yellowthroat']
+spurious_specific_classes: n
+spurious_waterbird_landbird: n
+bb_projected: _cov_1.0/iter1/bb_projected/batch_norm_n_finetune_y
+projected: n
+soft: y
+with_seed: y
+Training explainer for CUB
+lr_0.01_epochs_65_temperature-lens_6.0_use-concepts-as-pi-input_True_input-size-pi_2048_cov_0.2_alpha_0.5_selection-threshold_0.5_lambda-lens_0.0001_alpha-KD_0.99_temperature-KD_10.0_hidden-layers_1_layer_VIT_explainer_init_none
+Attribute_file: attributes.npy
+Length of the [train] dataset: 9422
+(9422, 108)
+Attribute_file: attributes.npy
+Length of the [test] dataset: 1183
+(1183, 108)
+torch.Size([9422, 108])
+torch.Size([9422, 108])
+torch.Size([9422])
+torch.Size([1183, 108])
+torch.Size([1183, 108])
+torch.Size([1183])
+Time to the full datasets: 215.73186683654785 secs
+iteration: 1========================>>
+==============================================
+seed: 0
+==============================================
+################### Paths ###################
+/ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints/cub/soft_concepts/seed_0/explainer/ViT-B_16/lr_0.01_epochs_65_temperature-lens_6.0_use-concepts-as-pi-input_True_input-size-pi_2048_cov_0.2_alpha_0.5_selection-threshold_0.5_lambda-lens_0.0001_alpha-KD_0.99_temperature-KD_10.0_hidden-layers_1_layer_VIT_explainer_init_none/iter1/bb
+/ocean/projects/asc170022p/shg121/PhD/ICLR-2022/out/cub/soft_concepts/seed_0/explainer/ViT-B_16/lr_0.01_epochs_65_temperature-lens_6.0_use-concepts-as-pi-input_True_input-size-pi_2048_cov_0.2_alpha_0.5_selection-threshold_0.5_lambda-lens_0.0001_alpha-KD_0.99_temperature-KD_10.0_hidden-layers_1_layer_VIT_explainer_init_none/lr_0.01_epochs_65_temperature-lens_6.0_use-concepts-as-pi-input_True_input-size-pi_2048_cov_0.2_alpha_0.5_selection-threshold_0.5_lambda-lens_0.0001_alpha-KD_0.99_temperature-KD_10.0_hidden-layers_1_layer_VIT_explainer_init_none/iter1/bb
+################### Paths ###################  
+Device: cuda
+==>> Loading BB from : /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints/cub/BB/lr_0.03_epochs_95/ViT-B_16/VIT_CUBS_8000_checkpoint.bin
+=======> Latest G for iteration 1 is loaded from /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints/cub/soft_concepts/seed_0/explainer/ViT-B_16/lr_0.01_epochs_65_temperature-lens_6.0_use-concepts-as-pi-input_True_input-size-pi_2048_cov_0.2_alpha_0.5_selection-threshold_0.5_lambda-lens_0.0001_alpha-KD_0.99_temperature-KD_10.0_hidden-layers_1_layer_VIT_explainer_init_none/iter1/explainer/model_g_best_model.pth.tar
+################## TB Log path ###################
+/ocean/projects/asc170022p/shg121/PhD/ICLR-2022/log/cub/soft_concepts/seed_0/explainer/lr_0.01_epochs_65_temperature-lens_6.0_use-concepts-as-pi-input_True_input-size-pi_2048_cov_0.2_alpha_0.5_selection-threshold_0.5_lambda-lens_0.0001_alpha-KD_0.99_temperature-KD_10.0_hidden-layers_1_layer_VIT_explainer_init_none/iter1/bb
+################## TB Log path ###################
+
+ Old best val accuracy of residual : 0 (%) || New best val accuracy of residual: 89.80891719745213 (%) , and new model saved..
+
+
+ /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints/cub/soft_concepts/seed_0/explainer/ViT-B_16/lr_0.01_epochs_65_temperature-lens_6.0_use-concepts-as-pi-input_True_input-size-pi_2048_cov_0.2_alpha_0.5_selection-threshold_0.5_lambda-lens_0.0001_alpha-KD_0.99_temperature-KD_10.0_hidden-layers_1_layer_VIT_explainer_init_none/iter1/bb
+
+Epoch: [1/5] || Train_total_loss: 1.6048 || Val_total_loss: 1.5862 || Train_Accuracy: 99.9469 (%) || Val_Accuracy: 91.716 (%) || Val_residual_Accuracy: 89.8089 (%) || Val_residual_Incorrect_Accuracy: 99.1701 (%) || Best_residual_Val_Accuracy: 89.8089 (%)  || Best_Epoch: 1 || n_selected: 942.0 || n_rejected: 241.0 || coverage: 0.7963
+Epoch: [2/5] || Train_total_loss: 1.6046 || Val_total_loss: 1.5862 || Train_Accuracy: 99.9788 (%) || Val_Accuracy: 91.716 (%) || Val_residual_Accuracy: 89.8089 (%) || Val_residual_Incorrect_Accuracy: 99.1701 (%) || Best_residual_Val_Accuracy: 89.8089 (%)  || Best_Epoch: 1 || n_selected: 942.0 || n_rejected: 241.0 || coverage: 0.7963
+Epoch: [3/5] || Train_total_loss: 1.6042 || Val_total_loss: 1.5862 || Train_Accuracy: 99.9363 (%) || Val_Accuracy: 91.716 (%) || Val_residual_Accuracy: 89.8089 (%) || Val_residual_Incorrect_Accuracy: 99.1701 (%) || Best_residual_Val_Accuracy: 89.8089 (%)  || Best_Epoch: 1 || n_selected: 942.0 || n_rejected: 241.0 || coverage: 0.7963
+Epoch: [4/5] || Train_total_loss: 1.6038 || Val_total_loss: 1.5862 || Train_Accuracy: 99.9575 (%) || Val_Accuracy: 91.716 (%) || Val_residual_Accuracy: 89.8089 (%) || Val_residual_Incorrect_Accuracy: 99.1701 (%) || Best_residual_Val_Accuracy: 89.8089 (%)  || Best_Epoch: 1 || n_selected: 942.0 || n_rejected: 241.0 || coverage: 0.7963
+Epoch: [5/5] || Train_total_loss: 1.6047 || Val_total_loss: 1.5862 || Train_Accuracy: 99.9788 (%) || Val_Accuracy: 91.716 (%) || Val_residual_Accuracy: 89.8089 (%) || Val_residual_Incorrect_Accuracy: 99.1701 (%) || Best_residual_Val_Accuracy: 89.8089 (%)  || Best_Epoch: 1 || n_selected: 942.0 || n_rejected: 241.0 || coverage: 0.7963
+done
+==============================================
+seed: 1
+==============================================
+################### Paths ###################
+/ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints/cub/soft_concepts/seed_1/explainer/ViT-B_16/lr_0.01_epochs_65_temperature-lens_6.0_use-concepts-as-pi-input_True_input-size-pi_2048_cov_0.2_alpha_0.5_selection-threshold_0.5_lambda-lens_0.0001_alpha-KD_0.99_temperature-KD_10.0_hidden-layers_1_layer_VIT_explainer_init_none/iter1/bb
+/ocean/projects/asc170022p/shg121/PhD/ICLR-2022/out/cub/soft_concepts/seed_1/explainer/ViT-B_16/lr_0.01_epochs_65_temperature-lens_6.0_use-concepts-as-pi-input_True_input-size-pi_2048_cov_0.2_alpha_0.5_selection-threshold_0.5_lambda-lens_0.0001_alpha-KD_0.99_temperature-KD_10.0_hidden-layers_1_layer_VIT_explainer_init_none/lr_0.01_epochs_65_temperature-lens_6.0_use-concepts-as-pi-input_True_input-size-pi_2048_cov_0.2_alpha_0.5_selection-threshold_0.5_lambda-lens_0.0001_alpha-KD_0.99_temperature-KD_10.0_hidden-layers_1_layer_VIT_explainer_init_none/iter1/bb
+################### Paths ###################  
+Device: cuda
+==>> Loading BB from : /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints/cub/BB/lr_0.03_epochs_95/ViT-B_16/VIT_CUBS_8000_checkpoint.bin
+=======> Latest G for iteration 1 is loaded from /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints/cub/soft_concepts/seed_1/explainer/ViT-B_16/lr_0.01_epochs_65_temperature-lens_6.0_use-concepts-as-pi-input_True_input-size-pi_2048_cov_0.2_alpha_0.5_selection-threshold_0.5_lambda-lens_0.0001_alpha-KD_0.99_temperature-KD_10.0_hidden-layers_1_layer_VIT_explainer_init_none/iter1/explainer/model_g_best_model.pth.tar
+################## TB Log path ###################
+/ocean/projects/asc170022p/shg121/PhD/ICLR-2022/log/cub/soft_concepts/seed_1/explainer/lr_0.01_epochs_65_temperature-lens_6.0_use-concepts-as-pi-input_True_input-size-pi_2048_cov_0.2_alpha_0.5_selection-threshold_0.5_lambda-lens_0.0001_alpha-KD_0.99_temperature-KD_10.0_hidden-layers_1_layer_VIT_explainer_init_none/iter1/bb
+################## TB Log path ###################
+
+ Old best val accuracy of residual : 0 (%) || New best val accuracy of residual: 90.35433070866132 (%) , and new model saved..
+
+
+ /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints/cub/soft_concepts/seed_1/explainer/ViT-B_16/lr_0.01_epochs_65_temperature-lens_6.0_use-concepts-as-pi-input_True_input-size-pi_2048_cov_0.2_alpha_0.5_selection-threshold_0.5_lambda-lens_0.0001_alpha-KD_0.99_temperature-KD_10.0_hidden-layers_1_layer_VIT_explainer_init_none/iter1/bb
+
+Epoch: [1/5] || Train_total_loss: 1.1276 || Val_total_loss: 1.1259 || Train_Accuracy: 99.9788 (%) || Val_Accuracy: 91.716 (%) || Val_residual_Accuracy: 90.3543 (%) || Val_residual_Incorrect_Accuracy: 100.0 (%) || Best_residual_Val_Accuracy: 90.3543 (%)  || Best_Epoch: 1 || n_selected: 1016.0 || n_rejected: 167.0 || coverage: 0.8588
+Epoch: [2/5] || Train_total_loss: 1.1273 || Val_total_loss: 1.1259 || Train_Accuracy: 99.9894 (%) || Val_Accuracy: 91.716 (%) || Val_residual_Accuracy: 90.3543 (%) || Val_residual_Incorrect_Accuracy: 100.0 (%) || Best_residual_Val_Accuracy: 90.3543 (%)  || Best_Epoch: 1 || n_selected: 1016.0 || n_rejected: 167.0 || coverage: 0.8588
+Epoch: [3/5] || Train_total_loss: 1.1281 || Val_total_loss: 1.1259 || Train_Accuracy: 99.9257 (%) || Val_Accuracy: 91.716 (%) || Val_residual_Accuracy: 90.3543 (%) || Val_residual_Incorrect_Accuracy: 100.0 (%) || Best_residual_Val_Accuracy: 90.3543 (%)  || Best_Epoch: 1 || n_selected: 1016.0 || n_rejected: 167.0 || coverage: 0.8588
+Epoch: [4/5] || Train_total_loss: 1.1281 || Val_total_loss: 1.1259 || Train_Accuracy: 99.9788 (%) || Val_Accuracy: 91.716 (%) || Val_residual_Accuracy: 90.3543 (%) || Val_residual_Incorrect_Accuracy: 100.0 (%) || Best_residual_Val_Accuracy: 90.3543 (%)  || Best_Epoch: 1 || n_selected: 1016.0 || n_rejected: 167.0 || coverage: 0.8588
+Epoch: [5/5] || Train_total_loss: 1.1282 || Val_total_loss: 1.1259 || Train_Accuracy: 99.9788 (%) || Val_Accuracy: 91.716 (%) || Val_residual_Accuracy: 90.3543 (%) || Val_residual_Incorrect_Accuracy: 100.0 (%) || Best_residual_Val_Accuracy: 90.3543 (%)  || Best_Epoch: 1 || n_selected: 1016.0 || n_rejected: 167.0 || coverage: 0.8588
+done
+==============================================
+seed: 2
+==============================================
+################### Paths ###################
+/ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints/cub/soft_concepts/seed_2/explainer/ViT-B_16/lr_0.01_epochs_65_temperature-lens_6.0_use-concepts-as-pi-input_True_input-size-pi_2048_cov_0.2_alpha_0.5_selection-threshold_0.5_lambda-lens_0.0001_alpha-KD_0.99_temperature-KD_10.0_hidden-layers_1_layer_VIT_explainer_init_none/iter1/bb
+/ocean/projects/asc170022p/shg121/PhD/ICLR-2022/out/cub/soft_concepts/seed_2/explainer/ViT-B_16/lr_0.01_epochs_65_temperature-lens_6.0_use-concepts-as-pi-input_True_input-size-pi_2048_cov_0.2_alpha_0.5_selection-threshold_0.5_lambda-lens_0.0001_alpha-KD_0.99_temperature-KD_10.0_hidden-layers_1_layer_VIT_explainer_init_none/lr_0.01_epochs_65_temperature-lens_6.0_use-concepts-as-pi-input_True_input-size-pi_2048_cov_0.2_alpha_0.5_selection-threshold_0.5_lambda-lens_0.0001_alpha-KD_0.99_temperature-KD_10.0_hidden-layers_1_layer_VIT_explainer_init_none/iter1/bb
+################### Paths ###################  
+Device: cuda
+==>> Loading BB from : /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints/cub/BB/lr_0.03_epochs_95/ViT-B_16/VIT_CUBS_8000_checkpoint.bin
+=======> Latest G for iteration 1 is loaded from /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints/cub/soft_concepts/seed_2/explainer/ViT-B_16/lr_0.01_epochs_65_temperature-lens_6.0_use-concepts-as-pi-input_True_input-size-pi_2048_cov_0.2_alpha_0.5_selection-threshold_0.5_lambda-lens_0.0001_alpha-KD_0.99_temperature-KD_10.0_hidden-layers_1_layer_VIT_explainer_init_none/iter1/explainer/model_g_best_model.pth.tar
+################## TB Log path ###################
+/ocean/projects/asc170022p/shg121/PhD/ICLR-2022/log/cub/soft_concepts/seed_2/explainer/lr_0.01_epochs_65_temperature-lens_6.0_use-concepts-as-pi-input_True_input-size-pi_2048_cov_0.2_alpha_0.5_selection-threshold_0.5_lambda-lens_0.0001_alpha-KD_0.99_temperature-KD_10.0_hidden-layers_1_layer_VIT_explainer_init_none/iter1/bb
+################## TB Log path ###################
+
+ Old best val accuracy of residual : 0 (%) || New best val accuracy of residual: 90.010626992561 (%) , and new model saved..
+
+
+ /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints/cub/soft_concepts/seed_2/explainer/ViT-B_16/lr_0.01_epochs_65_temperature-lens_6.0_use-concepts-as-pi-input_True_input-size-pi_2048_cov_0.2_alpha_0.5_selection-threshold_0.5_lambda-lens_0.0001_alpha-KD_0.99_temperature-KD_10.0_hidden-layers_1_layer_VIT_explainer_init_none/iter1/bb
+
+Epoch: [1/5] || Train_total_loss: 1.5967 || Val_total_loss: 1.586 || Train_Accuracy: 99.9682 (%) || Val_Accuracy: 91.716 (%) || Val_residual_Accuracy: 90.0106 (%) || Val_residual_Incorrect_Accuracy: 98.3471 (%) || Best_residual_Val_Accuracy: 90.0106 (%)  || Best_Epoch: 1 || n_selected: 941.0 || n_rejected: 242.0 || coverage: 0.7954
+Epoch: [2/5] || Train_total_loss: 1.5965 || Val_total_loss: 1.586 || Train_Accuracy: 99.9788 (%) || Val_Accuracy: 91.716 (%) || Val_residual_Accuracy: 90.0106 (%) || Val_residual_Incorrect_Accuracy: 98.3471 (%) || Best_residual_Val_Accuracy: 90.0106 (%)  || Best_Epoch: 1 || n_selected: 941.0 || n_rejected: 242.0 || coverage: 0.7954
+Epoch: [3/5] || Train_total_loss: 1.5972 || Val_total_loss: 1.586 || Train_Accuracy: 99.9682 (%) || Val_Accuracy: 91.716 (%) || Val_residual_Accuracy: 90.0106 (%) || Val_residual_Incorrect_Accuracy: 98.3471 (%) || Best_residual_Val_Accuracy: 90.0106 (%)  || Best_Epoch: 1 || n_selected: 941.0 || n_rejected: 242.0 || coverage: 0.7954
+Epoch: [4/5] || Train_total_loss: 1.5961 || Val_total_loss: 1.586 || Train_Accuracy: 99.9682 (%) || Val_Accuracy: 91.716 (%) || Val_residual_Accuracy: 90.0106 (%) || Val_residual_Incorrect_Accuracy: 98.3471 (%) || Best_residual_Val_Accuracy: 90.0106 (%)  || Best_Epoch: 1 || n_selected: 941.0 || n_rejected: 242.0 || coverage: 0.7954
+Epoch: [5/5] || Train_total_loss: 1.5964 || Val_total_loss: 1.586 || Train_Accuracy: 100.0 (%) || Val_Accuracy: 91.716 (%) || Val_residual_Accuracy: 90.0106 (%) || Val_residual_Incorrect_Accuracy: 98.3471 (%) || Best_residual_Val_Accuracy: 90.0106 (%)  || Best_Epoch: 1 || n_selected: 941.0 || n_rejected: 242.0 || coverage: 0.7954
+done
+==============================================
+seed: 3
+==============================================
+################### Paths ###################
+/ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints/cub/soft_concepts/seed_3/explainer/ViT-B_16/lr_0.01_epochs_65_temperature-lens_6.0_use-concepts-as-pi-input_True_input-size-pi_2048_cov_0.2_alpha_0.5_selection-threshold_0.5_lambda-lens_0.0001_alpha-KD_0.99_temperature-KD_10.0_hidden-layers_1_layer_VIT_explainer_init_none/iter1/bb
+/ocean/projects/asc170022p/shg121/PhD/ICLR-2022/out/cub/soft_concepts/seed_3/explainer/ViT-B_16/lr_0.01_epochs_65_temperature-lens_6.0_use-concepts-as-pi-input_True_input-size-pi_2048_cov_0.2_alpha_0.5_selection-threshold_0.5_lambda-lens_0.0001_alpha-KD_0.99_temperature-KD_10.0_hidden-layers_1_layer_VIT_explainer_init_none/lr_0.01_epochs_65_temperature-lens_6.0_use-concepts-as-pi-input_True_input-size-pi_2048_cov_0.2_alpha_0.5_selection-threshold_0.5_lambda-lens_0.0001_alpha-KD_0.99_temperature-KD_10.0_hidden-layers_1_layer_VIT_explainer_init_none/iter1/bb
+################### Paths ###################  
+Device: cuda
+==>> Loading BB from : /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints/cub/BB/lr_0.03_epochs_95/ViT-B_16/VIT_CUBS_8000_checkpoint.bin
+=======> Latest G for iteration 1 is loaded from /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints/cub/soft_concepts/seed_3/explainer/ViT-B_16/lr_0.01_epochs_65_temperature-lens_6.0_use-concepts-as-pi-input_True_input-size-pi_2048_cov_0.2_alpha_0.5_selection-threshold_0.5_lambda-lens_0.0001_alpha-KD_0.99_temperature-KD_10.0_hidden-layers_1_layer_VIT_explainer_init_none/iter1/explainer/model_g_best_model.pth.tar
+################## TB Log path ###################
+/ocean/projects/asc170022p/shg121/PhD/ICLR-2022/log/cub/soft_concepts/seed_3/explainer/lr_0.01_epochs_65_temperature-lens_6.0_use-concepts-as-pi-input_True_input-size-pi_2048_cov_0.2_alpha_0.5_selection-threshold_0.5_lambda-lens_0.0001_alpha-KD_0.99_temperature-KD_10.0_hidden-layers_1_layer_VIT_explainer_init_none/iter1/bb
+################## TB Log path ###################
+
+ Old best val accuracy of residual : 0 (%) || New best val accuracy of residual: 90.31281533804228 (%) , and new model saved..
+
+
+ /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints/cub/soft_concepts/seed_3/explainer/ViT-B_16/lr_0.01_epochs_65_temperature-lens_6.0_use-concepts-as-pi-input_True_input-size-pi_2048_cov_0.2_alpha_0.5_selection-threshold_0.5_lambda-lens_0.0001_alpha-KD_0.99_temperature-KD_10.0_hidden-layers_1_layer_VIT_explainer_init_none/iter1/bb
+
+Epoch: [1/5] || Train_total_loss: 1.3741 || Val_total_loss: 1.3822 || Train_Accuracy: 99.9575 (%) || Val_Accuracy: 91.716 (%) || Val_residual_Accuracy: 90.3128 (%) || Val_residual_Incorrect_Accuracy: 98.9583 (%) || Best_residual_Val_Accuracy: 90.3128 (%)  || Best_Epoch: 1 || n_selected: 991.0 || n_rejected: 192.0 || coverage: 0.8377
+Epoch: [2/5] || Train_total_loss: 1.3754 || Val_total_loss: 1.3822 || Train_Accuracy: 99.9894 (%) || Val_Accuracy: 91.716 (%) || Val_residual_Accuracy: 90.3128 (%) || Val_residual_Incorrect_Accuracy: 98.9583 (%) || Best_residual_Val_Accuracy: 90.3128 (%)  || Best_Epoch: 1 || n_selected: 991.0 || n_rejected: 192.0 || coverage: 0.8377
+Epoch: [3/5] || Train_total_loss: 1.3747 || Val_total_loss: 1.3822 || Train_Accuracy: 99.9788 (%) || Val_Accuracy: 91.716 (%) || Val_residual_Accuracy: 90.3128 (%) || Val_residual_Incorrect_Accuracy: 98.9583 (%) || Best_residual_Val_Accuracy: 90.3128 (%)  || Best_Epoch: 1 || n_selected: 991.0 || n_rejected: 192.0 || coverage: 0.8377
+Epoch: [4/5] || Train_total_loss: 1.3748 || Val_total_loss: 1.3822 || Train_Accuracy: 99.9788 (%) || Val_Accuracy: 91.716 (%) || Val_residual_Accuracy: 90.3128 (%) || Val_residual_Incorrect_Accuracy: 98.9583 (%) || Best_residual_Val_Accuracy: 90.3128 (%)  || Best_Epoch: 1 || n_selected: 991.0 || n_rejected: 192.0 || coverage: 0.8377
+Epoch: [5/5] || Train_total_loss: 1.3744 || Val_total_loss: 1.3822 || Train_Accuracy: 99.9894 (%) || Val_Accuracy: 91.716 (%) || Val_residual_Accuracy: 90.3128 (%) || Val_residual_Incorrect_Accuracy: 98.9583 (%) || Best_residual_Val_Accuracy: 90.3128 (%)  || Best_Epoch: 1 || n_selected: 991.0 || n_rejected: 192.0 || coverage: 0.8377
+done
+==============================================
+seed: 4
+==============================================
+################### Paths ###################
+/ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints/cub/soft_concepts/seed_4/explainer/ViT-B_16/lr_0.01_epochs_65_temperature-lens_6.0_use-concepts-as-pi-input_True_input-size-pi_2048_cov_0.2_alpha_0.5_selection-threshold_0.5_lambda-lens_0.0001_alpha-KD_0.99_temperature-KD_10.0_hidden-layers_1_layer_VIT_explainer_init_none/iter1/bb
+/ocean/projects/asc170022p/shg121/PhD/ICLR-2022/out/cub/soft_concepts/seed_4/explainer/ViT-B_16/lr_0.01_epochs_65_temperature-lens_6.0_use-concepts-as-pi-input_True_input-size-pi_2048_cov_0.2_alpha_0.5_selection-threshold_0.5_lambda-lens_0.0001_alpha-KD_0.99_temperature-KD_10.0_hidden-layers_1_layer_VIT_explainer_init_none/lr_0.01_epochs_65_temperature-lens_6.0_use-concepts-as-pi-input_True_input-size-pi_2048_cov_0.2_alpha_0.5_selection-threshold_0.5_lambda-lens_0.0001_alpha-KD_0.99_temperature-KD_10.0_hidden-layers_1_layer_VIT_explainer_init_none/iter1/bb
+################### Paths ###################  
+Device: cuda
+==>> Loading BB from : /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints/cub/BB/lr_0.03_epochs_95/ViT-B_16/VIT_CUBS_8000_checkpoint.bin
+=======> Latest G for iteration 1 is loaded from /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints/cub/soft_concepts/seed_4/explainer/ViT-B_16/lr_0.01_epochs_65_temperature-lens_6.0_use-concepts-as-pi-input_True_input-size-pi_2048_cov_0.2_alpha_0.5_selection-threshold_0.5_lambda-lens_0.0001_alpha-KD_0.99_temperature-KD_10.0_hidden-layers_1_layer_VIT_explainer_init_none/iter1/explainer/model_g_best_model.pth.tar
+################## TB Log path ###################
+/ocean/projects/asc170022p/shg121/PhD/ICLR-2022/log/cub/soft_concepts/seed_4/explainer/lr_0.01_epochs_65_temperature-lens_6.0_use-concepts-as-pi-input_True_input-size-pi_2048_cov_0.2_alpha_0.5_selection-threshold_0.5_lambda-lens_0.0001_alpha-KD_0.99_temperature-KD_10.0_hidden-layers_1_layer_VIT_explainer_init_none/iter1/bb
+################## TB Log path ###################
+
+ Old best val accuracy of residual : 0 (%) || New best val accuracy of residual: 90.03115264797498 (%) , and new model saved..
+
+
+ /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints/cub/soft_concepts/seed_4/explainer/ViT-B_16/lr_0.01_epochs_65_temperature-lens_6.0_use-concepts-as-pi-input_True_input-size-pi_2048_cov_0.2_alpha_0.5_selection-threshold_0.5_lambda-lens_0.0001_alpha-KD_0.99_temperature-KD_10.0_hidden-layers_1_layer_VIT_explainer_init_none/iter1/bb
+
+Epoch: [1/5] || Train_total_loss: 1.692 || Val_total_loss: 1.6672 || Train_Accuracy: 99.9575 (%) || Val_Accuracy: 91.716 (%) || Val_residual_Accuracy: 90.0312 (%) || Val_residual_Incorrect_Accuracy: 99.0909 (%) || Best_residual_Val_Accuracy: 90.0312 (%)  || Best_Epoch: 1 || n_selected: 963.0 || n_rejected: 220.0 || coverage: 0.814
+Epoch: [2/5] || Train_total_loss: 1.6924 || Val_total_loss: 1.6672 || Train_Accuracy: 99.9788 (%) || Val_Accuracy: 91.716 (%) || Val_residual_Accuracy: 90.0312 (%) || Val_residual_Incorrect_Accuracy: 99.0909 (%) || Best_residual_Val_Accuracy: 90.0312 (%)  || Best_Epoch: 1 || n_selected: 963.0 || n_rejected: 220.0 || coverage: 0.814
+Epoch: [3/5] || Train_total_loss: 1.6916 || Val_total_loss: 1.6672 || Train_Accuracy: 99.9894 (%) || Val_Accuracy: 91.716 (%) || Val_residual_Accuracy: 90.0312 (%) || Val_residual_Incorrect_Accuracy: 99.0909 (%) || Best_residual_Val_Accuracy: 90.0312 (%)  || Best_Epoch: 1 || n_selected: 963.0 || n_rejected: 220.0 || coverage: 0.814
+Epoch: [4/5] || Train_total_loss: 1.6919 || Val_total_loss: 1.6672 || Train_Accuracy: 100.0 (%) || Val_Accuracy: 91.716 (%) || Val_residual_Accuracy: 90.0312 (%) || Val_residual_Incorrect_Accuracy: 99.0909 (%) || Best_residual_Val_Accuracy: 90.0312 (%)  || Best_Epoch: 1 || n_selected: 963.0 || n_rejected: 220.0 || coverage: 0.814
+Epoch: [5/5] || Train_total_loss: 1.6923 || Val_total_loss: 1.6672 || Train_Accuracy: 100.0 (%) || Val_Accuracy: 91.716 (%) || Val_residual_Accuracy: 90.0312 (%) || Val_residual_Incorrect_Accuracy: 99.0909 (%) || Best_residual_Val_Accuracy: 90.0312 (%)  || Best_Epoch: 1 || n_selected: 963.0 || n_rejected: 220.0 || coverage: 0.814
+done

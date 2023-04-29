@@ -1,0 +1,11 @@
+The current approach to ML model design is either to choose a flexible Blackbox model and explain it post hoc or to start with an interpretable model. 
+Blackbox models are flexible but difficult to explain, whereas interpretable models are designed to be explainable. 
+However, developing interpretable models necessitates extensive ML knowledge, and the resulting models tend to be less flexible, offering potentially subpar performance compared to their Blackbox equivalents. 
+This paper aims to blur the distinction between a post hoc explanation of a BlackBox and constructing interpretable models. 
+We propose beginning with a flexible BlackBox model and gradually \emph{carving out} a mixture of interpretable models and a \emph{residual network}. 
+Our design identifies a subset of samples and \emph{routes} them through the interpretable models. The remaining samples are routed through a flexible residual network. 
+We adopt First Order Logic (FOL) as the interpretable model's backbone, which provides basic reasoning on concepts retrieved from the BlackBox model. 
+On the residual network, we repeat the method until the proportion of data explained by the residual network falls below a desired threshold. 
+Our approach offers several advantages. First, the mixture of interpretable and flexible residual networks results in almost no compromise in performance. Second, the route, interpret, and repeat approach yields a highly flexible interpretable model. 
+Our extensive experiment demonstrates the performance of the model on various datasets. We show that by editing the FOL model, we can fix the shortcut learned by the original BlackBox model. 
+Finally, our method provides a framework for a hybrid symbolic-connectionist network that is simple to train and adaptable to many applications.

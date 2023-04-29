@@ -1,0 +1,390 @@
+\begin{thebibliography}{54}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Abid et~al.(2021)Abid, Yuksekgonul, and Zou]{abid2021meaningfully}
+Abid, A., Yuksekgonul, M., and Zou, J.
+\newblock Meaningfully explaining model mistakes using conceptual
+  counterfactuals.
+\newblock \emph{arXiv preprint arXiv:2106.12723}, 2021.
+
+\bibitem[Adebayo et~al.(2018)Adebayo, Gilmer, Muelly, Goodfellow, Hardt, and
+  Kim]{adebayo2018sanity}
+Adebayo, J., Gilmer, J., Muelly, M., Goodfellow, I., Hardt, M., and Kim, B.
+\newblock Sanity checks for saliency maps.
+\newblock \emph{Advances in neural information processing systems}, 31, 2018.
+
+\bibitem[Alharbi et~al.(2021)Alharbi, Vu, and Thai]{alharbi2021learning}
+Alharbi, R., Vu, M.~N., and Thai, M.~T.
+\newblock Learning interpretation with explainable knowledge distillation.
+\newblock In \emph{2021 IEEE International Conference on Big Data (Big Data)},
+  pp.\  705--714. IEEE, 2021.
+
+\bibitem[Barbiero et~al.(2022)Barbiero, Ciravegna, Giannini, Li{\'o}, Gori, and
+  Melacci]{barbiero2022entropy}
+Barbiero, P., Ciravegna, G., Giannini, F., Li{\'o}, P., Gori, M., and Melacci,
+  S.
+\newblock Entropy-based logic explanations of neural networks.
+\newblock In \emph{Proceedings of the AAAI Conference on Artificial
+  Intelligence}, volume~36, pp.\  6046--6054, 2022.
+
+\bibitem[Belle(2020)]{belle2020symbolic}
+Belle, V.
+\newblock Symbolic logic meets machine learning: A brief survey in infinite
+  domains.
+\newblock In \emph{International Conference on Scalable Uncertainty
+  Management}, pp.\  3--16. Springer, 2020.
+
+\bibitem[Besold et~al.(2017)Besold, Garcez, Bader, Bowman, Domingos, Hitzler,
+  K{\"u}hnberger, Lamb, Lowd, Lima, et~al.]{besold2017neural}
+Besold, T.~R., Garcez, A.~d., Bader, S., Bowman, H., Domingos, P., Hitzler, P.,
+  K{\"u}hnberger, K.-U., Lamb, L.~C., Lowd, D., Lima, P. M.~V., et~al.
+\newblock Neural-symbolic learning and reasoning: A survey and interpretation.
+\newblock \emph{arXiv preprint arXiv:1711.03902}, 2017.
+
+\bibitem[Binder et~al.(2016)Binder, Montavon, Lapuschkin, M{\"u}ller, and
+  Samek]{binder2016layer}
+Binder, A., Montavon, G., Lapuschkin, S., M{\"u}ller, K.-R., and Samek, W.
+\newblock Layer-wise relevance propagation for neural networks with local
+  renormalization layers.
+\newblock In \emph{International Conference on Artificial Neural Networks},
+  pp.\  63--71. Springer, 2016.
+
+\bibitem[Breiman et~al.(1984)Breiman, Friedman, Stone, and
+  Olshen]{breiman1984classification}
+Breiman, L., Friedman, J., Stone, C., and Olshen, R.
+\newblock Classification and regression trees (crc, boca raton, fl).
+\newblock 1984.
+
+\bibitem[Cheng et~al.(2020)Cheng, Rao, Chen, and Zhang]{cheng2020explaining}
+Cheng, X., Rao, Z., Chen, Y., and Zhang, Q.
+\newblock Explaining knowledge distillation by quantifying the knowledge.
+\newblock In \emph{Proceedings of the IEEE/CVF conference on computer vision
+  and pattern recognition}, pp.\  12925--12935, 2020.
+
+\bibitem[Ciravegna et~al.(2021)Ciravegna, Barbiero, Giannini, Gori, Li{\'o},
+  Maggini, and Melacci]{ciravegna2021logic}
+Ciravegna, G., Barbiero, P., Giannini, F., Gori, M., Li{\'o}, P., Maggini, M.,
+  and Melacci, S.
+\newblock Logic explained networks.
+\newblock \emph{arXiv preprint arXiv:2108.05149}, 2021.
+
+\bibitem[Ciravegna et~al.(2023)Ciravegna, Barbiero, Giannini, Gori, Li{\'o},
+  Maggini, and Melacci]{ciravegna2023logic}
+Ciravegna, G., Barbiero, P., Giannini, F., Gori, M., Li{\'o}, P., Maggini, M.,
+  and Melacci, S.
+\newblock Logic explained networks.
+\newblock \emph{Artificial Intelligence}, 314:\penalty0 103822, 2023.
+
+\bibitem[Daneshjou et~al.(2021)Daneshjou, Vodrahalli, Liang, Novoa, Jenkins,
+  Rotemberg, Ko, Swetter, Bailey, Gevaert, et~al.]{daneshjou2021disparities}
+Daneshjou, R., Vodrahalli, K., Liang, W., Novoa, R.~A., Jenkins, M., Rotemberg,
+  V., Ko, J., Swetter, S.~M., Bailey, E.~E., Gevaert, O., et~al.
+\newblock Disparities in dermatology ai: Assessments using diverse clinical
+  images.
+\newblock \emph{arXiv preprint arXiv:2111.08006}, 2021.
+
+\bibitem[Garcez et~al.(2015)Garcez, Besold, De~Raedt, F{\"o}ldiak, Hitzler,
+  Icard, K{\"u}hnberger, Lamb, Miikkulainen, and Silver]{garcez2015neural}
+Garcez, A.~d., Besold, T.~R., De~Raedt, L., F{\"o}ldiak, P., Hitzler, P.,
+  Icard, T., K{\"u}hnberger, K.-U., Lamb, L.~C., Miikkulainen, R., and Silver,
+  D.~L.
+\newblock Neural-symbolic learning and reasoning: contributions and challenges.
+\newblock In \emph{2015 AAAI Spring Symposium Series}, 2015.
+
+\bibitem[Geifman \& El-Yaniv(2019)Geifman and
+  El-Yaniv]{geifman2019selectivenet}
+Geifman, Y. and El-Yaniv, R.
+\newblock Selectivenet: A deep neural network with an integrated reject option.
+\newblock In \emph{International conference on machine learning}, pp.\
+  2151--2159. PMLR, 2019.
+
+\bibitem[Hastie \& Tibshirani(1987)Hastie and
+  Tibshirani]{hastie1987generalized}
+Hastie, T. and Tibshirani, R.
+\newblock Generalized additive models: some applications.
+\newblock \emph{Journal of the American Statistical Association}, 82\penalty0
+  (398):\penalty0 371--386, 1987.
+
+\bibitem[Havasi et~al.(2022)Havasi, Parbhoo, and
+  Doshi-Velez]{havasi2022addressing}
+Havasi, M., Parbhoo, S., and Doshi-Velez, F.
+\newblock Addressing leakage in concept bottleneck models.
+\newblock In \emph{Advances in Neural Information Processing Systems}, 2022.
+
+\bibitem[He et~al.(2016)He, Zhang, Ren, and Sun]{he2016deep}
+He, K., Zhang, X., Ren, S., and Sun, J.
+\newblock Deep residual learning for image recognition.
+\newblock In \emph{Proceedings of the IEEE conference on computer vision and
+  pattern recognition}, pp.\  770--778, 2016.
+
+\bibitem[Hinton et~al.(2015)Hinton, Vinyals, Dean,
+  et~al.]{hinton2015distilling}
+Hinton, G., Vinyals, O., Dean, J., et~al.
+\newblock Distilling the knowledge in a neural network.
+\newblock \emph{arXiv preprint arXiv:1503.02531}, 2\penalty0 (7), 2015.
+
+\bibitem[Huang et~al.(2017)Huang, Liu, Van Der~Maaten, and
+  Weinberger]{huang2017densely}
+Huang, G., Liu, Z., Van Der~Maaten, L., and Weinberger, K.~Q.
+\newblock Densely connected convolutional networks.
+\newblock In \emph{Proceedings of the IEEE conference on computer vision and
+  pattern recognition}, pp.\  4700--4708, 2017.
+
+\bibitem[Jain et~al.(2021)Jain, Agrawal, Saporta, Truong, Duong, Bui, Chambon,
+  Zhang, Lungren, Ng, et~al.]{10_jain2021radgraph}
+Jain, S., Agrawal, A., Saporta, A., Truong, S.~Q., Duong, D.~N., Bui, T.,
+  Chambon, P., Zhang, Y., Lungren, M.~P., Ng, A.~Y., et~al.
+\newblock Radgraph: Extracting clinical entities and relations from radiology
+  reports.
+\newblock \emph{arXiv preprint arXiv:2106.14463}, 2021.
+
+\bibitem[Johnson et~al.()Johnson, Lungren, Peng, Lu, Mark, Berkowitz, and
+  Horng]{12_johnsonmimic}
+Johnson, A., Lungren, M., Peng, Y., Lu, Z., Mark, R., Berkowitz, S., and Horng,
+  S.
+\newblock Mimic-cxr-jpg-chest radiographs with structured labels.
+
+\bibitem[Kawahara et~al.(2018)Kawahara, Daneshvar, Argenziano, and
+  Hamarneh]{kawahara2018seven}
+Kawahara, J., Daneshvar, S., Argenziano, G., and Hamarneh, G.
+\newblock Seven-point checklist and skin lesion classification using multitask
+  multimodal neural nets.
+\newblock \emph{IEEE journal of biomedical and health informatics}, 23\penalty0
+  (2):\penalty0 538--546, 2018.
+
+\bibitem[Kim et~al.(2017)Kim, Wattenberg, Gilmer, Cai, Wexler, Viegas, and
+  Sayres]{kim2017interpretability}
+Kim, B., Wattenberg, M., Gilmer, J., Cai, C., Wexler, J., Viegas, F., and
+  Sayres, R.
+\newblock Interpretability beyond feature attribution: Quantitative testing
+  with concept activation vectors (tcav).(2017).
+\newblock \emph{arXiv preprint arXiv:1711.11279}, 2017.
+
+\bibitem[Koh et~al.(2020)Koh, Nguyen, Tang, Mussmann, Pierson, Kim, and
+  Liang]{koh2020concept}
+Koh, P.~W., Nguyen, T., Tang, Y.~S., Mussmann, S., Pierson, E., Kim, B., and
+  Liang, P.
+\newblock Concept bottleneck models.
+\newblock In \emph{International Conference on Machine Learning}, pp.\
+  5338--5348. PMLR, 2020.
+
+\bibitem[Letham et~al.(2015)Letham, Rudin, McCormick, and
+  Madigan]{letham2015interpretable}
+Letham, B., Rudin, C., McCormick, T.~H., and Madigan, D.
+\newblock Interpretable classifiers using rules and bayesian analysis: Building
+  a better stroke prediction model.
+\newblock \emph{The Annals of Applied Statistics}, 9\penalty0 (3):\penalty0
+  1350--1371, 2015.
+
+\bibitem[Lu et~al.(2021)Lu, Zhao, Zhang, Pohl, Fei-Fei, Niebles, and
+  Adeli]{lu2021metadata}
+Lu, M., Zhao, Q., Zhang, J., Pohl, K.~M., Fei-Fei, L., Niebles, J.~C., and
+  Adeli, E.
+\newblock Metadata normalization.
+\newblock In \emph{Proceedings of the IEEE/CVF Conference on Computer Vision
+  and Pattern Recognition}, pp.\  10917--10927, 2021.
+
+\bibitem[Lucieri et~al.(2020)Lucieri, Bajwa, Braun, Malik, Dengel, and
+  Ahmed]{lucieri2020interpretability}
+Lucieri, A., Bajwa, M.~N., Braun, S.~A., Malik, M.~I., Dengel, A., and Ahmed,
+  S.
+\newblock On interpretability of deep learning based skin lesion classifiers
+  using concept activation vectors.
+\newblock In \emph{2020 international joint conference on neural networks
+  (IJCNN)}, pp.\  1--10. IEEE, 2020.
+
+\bibitem[Lundberg \& Lee(2017)Lundberg and Lee]{SHAP}
+Lundberg, S.~M. and Lee, S.-I.
+\newblock A unified approach to interpreting model predictions.
+\newblock In \emph{Proceedings of the 31st international conference on neural
+  information processing systems}, pp.\  4768--4777, 2017.
+
+\bibitem[Mendelson(2009)]{mendelson2009introduction}
+Mendelson, E.
+\newblock \emph{Introduction to mathematical logic}.
+\newblock Chapman and Hall/CRC, 2009.
+
+\bibitem[Montavon et~al.(2018)Montavon, Samek, and
+  M{\"u}ller]{montavon2018methods}
+Montavon, G., Samek, W., and M{\"u}ller, K.-R.
+\newblock Methods for interpreting and understanding deep neural networks.
+\newblock \emph{Digital signal processing}, 73:\penalty0 1--15, 2018.
+
+\bibitem[Ribeiro et~al.(2016)Ribeiro, Singh, and Guestrin]{ribeiro2016should}
+Ribeiro, M.~T., Singh, S., and Guestrin, C.
+\newblock " why should i trust you?" explaining the predictions of any
+  classifier.
+\newblock In \emph{Proceedings of the 22nd ACM SIGKDD international conference
+  on knowledge discovery and data mining}, pp.\  1135--1144, 2016.
+
+\bibitem[Rosenzweig et~al.(2021)Rosenzweig, Sicking, Houben, Mock, and
+  Akila]{rosenzweig2021patch}
+Rosenzweig, J., Sicking, J., Houben, S., Mock, M., and Akila, M.
+\newblock Patch shortcuts: Interpretable proxy models efficiently find
+  black-box vulnerabilities.
+\newblock In \emph{Proceedings of the IEEE/CVF Conference on Computer Vision
+  and Pattern Recognition}, pp.\  56--65, 2021.
+
+\bibitem[Rotemberg et~al.(2021)Rotemberg, Kurtansky, Betz-Stablein, Caffery,
+  Chousakos, Codella, Combalia, Dusza, Guitera, Gutman,
+  et~al.]{rotemberg2021patient}
+Rotemberg, V., Kurtansky, N., Betz-Stablein, B., Caffery, L., Chousakos, E.,
+  Codella, N., Combalia, M., Dusza, S., Guitera, P., Gutman, D., et~al.
+\newblock A patient-centric dataset of images and metadata for identifying
+  melanomas using clinical context.
+\newblock \emph{Scientific data}, 8\penalty0 (1):\penalty0 1--8, 2021.
+
+\bibitem[Rudin(2019)]{rudin2019stop}
+Rudin, C.
+\newblock Stop explaining black box machine learning models for high stakes
+  decisions and use interpretable models instead.
+\newblock \emph{Nature Machine Intelligence}, 1\penalty0 (5):\penalty0
+  206--215, 2019.
+
+\bibitem[Sagawa et~al.(2019)Sagawa, Koh, Hashimoto, and Liang]{sagawa2019dro}
+Sagawa, S., Koh, P.~W., Hashimoto, T.~B., and Liang, P.
+\newblock Distributionally robust neural networks for group shifts: On the
+  importance of regularization for worst-case generalization.
+\newblock \emph{arXiv preprint arXiv:1911.08731}, 2019.
+
+\bibitem[Samek et~al.(2016)Samek, Binder, Montavon, Lapuschkin, and
+  M{\"u}ller]{samek2016evaluating}
+Samek, W., Binder, A., Montavon, G., Lapuschkin, S., and M{\"u}ller, K.-R.
+\newblock Evaluating the visualization of what a deep neural network has
+  learned.
+\newblock \emph{IEEE transactions on neural networks and learning systems},
+  28\penalty0 (11):\penalty0 2660--2673, 2016.
+
+\bibitem[Sarkar et~al.(2022)Sarkar, Vijaykeerthy, Sarkar, and
+  Balasubramanian]{sarkar2021inducing}
+Sarkar, A., Vijaykeerthy, D., Sarkar, A., and Balasubramanian, V.~N.
+\newblock A framework for learning ante-hoc explainable models via concepts.
+\newblock In \emph{Proceedings of the IEEE/CVF Conference on Computer Vision
+  and Pattern Recognition}, pp.\  10286--10295, 2022.
+
+\bibitem[Selvaraju et~al.(2017)Selvaraju, Cogswell, Das, Vedantam, Parikh, and
+  Batra]{selvaraju2017grad}
+Selvaraju, R.~R., Cogswell, M., Das, A., Vedantam, R., Parikh, D., and Batra,
+  D.
+\newblock Grad-cam: Visual explanations from deep networks via gradient-based
+  localization.
+\newblock In \emph{Proceedings of the IEEE international conference on computer
+  vision}, pp.\  618--626, 2017.
+
+\bibitem[Shrikumar et~al.(2016)Shrikumar, Greenside, Shcherbina, and
+  Kundaje]{shrikumar2016not}
+Shrikumar, A., Greenside, P., Shcherbina, A., and Kundaje, A.
+\newblock Not just a black box: Learning important features through propagating
+  activation differences.
+\newblock \emph{arXiv preprint arXiv:1605.01713}, 2016.
+
+\bibitem[Simonyan et~al.(2013)Simonyan, Vedaldi, and
+  Zisserman]{simonyan2013deep}
+Simonyan, K., Vedaldi, A., and Zisserman, A.
+\newblock Deep inside convolutional networks: Visualising image classification
+  models and saliency maps.
+\newblock \emph{arXiv preprint arXiv:1312.6034}, 2013.
+
+\bibitem[Singla et~al.(2019)Singla, Pollack, Chen, and
+  Batmanghelich]{singla2019explanation}
+Singla, S., Pollack, B., Chen, J., and Batmanghelich, K.
+\newblock Explanation by progressive exaggeration.
+\newblock \emph{arXiv preprint arXiv:1911.00483}, 2019.
+
+\bibitem[Smilkov et~al.(2017)Smilkov, Thorat, Kim, Vi{\'e}gas, and
+  Wattenberg]{smilkov2017smoothgrad}
+Smilkov, D., Thorat, N., Kim, B., Vi{\'e}gas, F., and Wattenberg, M.
+\newblock Smoothgrad: removing noise by adding noise.
+\newblock \emph{arXiv preprint arXiv:1706.03825}, 2017.
+
+\bibitem[Sundararajan et~al.(2017)Sundararajan, Taly, and
+  Yan]{sundararajan2017axiomatic}
+Sundararajan, M., Taly, A., and Yan, Q.
+\newblock Axiomatic attribution for deep networks.
+\newblock In \emph{International conference on machine learning}, pp.\
+  3319--3328. PMLR, 2017.
+
+\bibitem[Szegedy et~al.(2015)Szegedy, Liu, Jia, Sermanet, Reed, Anguelov,
+  Erhan, Vanhoucke, and Rabinovich]{szegedy2015going}
+Szegedy, C., Liu, W., Jia, Y., Sermanet, P., Reed, S., Anguelov, D., Erhan, D.,
+  Vanhoucke, V., and Rabinovich, A.
+\newblock Going deeper with convolutions.
+\newblock In \emph{Proceedings of the IEEE conference on computer vision and
+  pattern recognition}, pp.\  1--9, 2015.
+
+\bibitem[Tschandl et~al.(2018)Tschandl, Rosendahl, and
+  Kittler]{tschandl2018ham10000}
+Tschandl, P., Rosendahl, C., and Kittler, H.
+\newblock The ham10000 dataset, a large collection of multi-source
+  dermatoscopic images of common pigmented skin lesions.
+\newblock \emph{Scientific data}, 5\penalty0 (1):\penalty0 1--9, 2018.
+
+\bibitem[Wadden et~al.(2019)Wadden, Wennberg, Luan, and
+  Hajishirzi]{23_wadden-etal-2019-entity}
+Wadden, D., Wennberg, U., Luan, Y., and Hajishirzi, H.
+\newblock Entity, relation, and event extraction with contextualized span
+  representations.
+\newblock In \emph{Proceedings of the 2019 Conference on Empirical Methods in
+  Natural Language Processing and the 9th International Joint Conference on
+  Natural Language Processing (EMNLP-IJCNLP)}, pp.\  5784--5789, Hong Kong,
+  China, November 2019. Association for Computational Linguistics.
+\newblock \doi{10.18653/v1/D19-1585}.
+\newblock URL \url{https://aclanthology.org/D19-1585}.
+
+\bibitem[Wah et~al.(2011)Wah, Branson, Welinder, Perona, and
+  Belongie]{wah2011caltech}
+Wah, C., Branson, S., Welinder, P., Perona, P., and Belongie, S.
+\newblock The caltech-ucsd birds-200-2011 dataset.
+\newblock 2011.
+
+\bibitem[Wan et~al.(2022)Wan, Belo, and Zejnilovic]{wan2022explainability}
+Wan, C., Belo, R., and Zejnilovic, L.
+\newblock Explainability's gain is optimality's loss? how explanations bias
+  decision-making.
+\newblock In \emph{Proceedings of the 2022 AAAI/ACM Conference on AI, Ethics,
+  and Society}, pp.\  778--787, 2022.
+
+\bibitem[Wang et~al.(2021)Wang, Yu, and Gao]{wang2021feature}
+Wang, J., Yu, X., and Gao, Y.
+\newblock Feature fusion vision transformer for fine-grained visual
+  categorization.
+\newblock \emph{arXiv preprint arXiv:2107.02341}, 2021.
+
+\bibitem[Xian et~al.(2018)Xian, Lampert, Schiele, and Akata]{xian2018zero}
+Xian, Y., Lampert, C.~H., Schiele, B., and Akata, Z.
+\newblock Zero-shot learning—a comprehensive evaluation of the good, the bad
+  and the ugly.
+\newblock \emph{IEEE transactions on pattern analysis and machine
+  intelligence}, 41\penalty0 (9):\penalty0 2251--2265, 2018.
+
+\bibitem[Yeh et~al.(2019)Yeh, Kim, Arik, Li, Ravikumar, and
+  Pfister]{yeh2019concept}
+Yeh, C.-K., Kim, B., Arik, S., Li, C.-L., Ravikumar, P., and Pfister, T.
+\newblock On concept-based explanations in deep neural networks.
+\newblock 2019.
+
+\bibitem[Yu et~al.(2022)Yu, Ghosh, Liu, Deible, and
+  Batmanghelich]{yu2022anatomy}
+Yu, K., Ghosh, S., Liu, Z., Deible, C., and Batmanghelich, K.
+\newblock Anatomy-guided weakly-supervised abnormality localization in chest
+  x-rays.
+\newblock \emph{arXiv preprint arXiv:2206.12704}, 2022.
+
+\bibitem[Yuksekgonul et~al.(2022)Yuksekgonul, Wang, and
+  Zou]{yuksekgonul2022post}
+Yuksekgonul, M., Wang, M., and Zou, J.
+\newblock Post-hoc concept bottleneck models.
+\newblock \emph{arXiv preprint arXiv:2205.15480}, 2022.
+
+\bibitem[Zarlenga et~al.(2022)Zarlenga, Barbiero, Ciravegna, Marra, Giannini,
+  Diligenti, Shams, Precioso, Melacci, Weller, et~al.]{zarlenga2022concept}
+Zarlenga, M.~E., Barbiero, P., Ciravegna, G., Marra, G., Giannini, F.,
+  Diligenti, M., Shams, Z., Precioso, F., Melacci, S., Weller, A., et~al.
+\newblock Concept embedding models.
+\newblock \emph{arXiv preprint arXiv:2209.09056}, 2022.
+
+\end{thebibliography}

@@ -1,0 +1,82 @@
+% Our paper aims at constructing a mixture of experts specializing in a subset of the test set to provide local explanations. Due to space constraints, we report the analysis of the HAM10000 and CUB datasets in this section. Appendices \ref{app:awa2_resutls} and \ref{app:mimic_cxr_resutls} include the resutls of Awa2 and MIMIC-CXR datasets, respectively. 
+% As shown in E-Lens~\cite{barbiero2022entropy}, each expert constructs local FOL per sample, composing the concepts based on their attention weights. 
+
+First, we show that MoIE captures a rich set of diverse instance-specific concepts qualitatively. Next, we show quantitatively that MoIE-identified concepts are faithful to Blackbox's final prediction using the metric ``completeness score'' and zeroing out relevant concepts.
+
+
+\textbf{Heterogenity of Explanations:}
+At each iteration of MoIE, the blackbox \big($h^k(\Phi(.)$\big) splits into an interpretable expert ($g^k$) and a residual ($r^k$).~\cref{fig:local_ex_cub}i shows this mechanism for VIT-based MoIE and compares the FOLs with CBM + E-LEN and PCBM + E-LEN baselines to classify ``Bay Breasted Warbler'' of CUB-200.
+The experts of different iterations specialize in specific instances of ``Bay Breasted Warbler''. Thus, each expert's FOL comprises \textcolor{blue}{its} instance-specific concepts of the same class (~\cref{fig:local_ex_cub}i-c). For example, the concept, \emph{leg\_color\_grey} is unique to expert4, but \emph{belly\_pattern\_solid} and \emph{back\_pattern\_multicolored} are unique to experts 1 and 2, respectively, to classify the instances of ``Bay Breasted Warbler''. 
+% Also, FOLs from all three experts share \emph{back\_pattern\_stripped}. 
+Unlike MoIE, the baselines employ a single interpretable model $g$, resulting in a generic FOL with identical concepts for all the samples of ``Bay Breasted Warbler'' (\cref{fig:local_ex_cub}(a-b)). Thus the baselines fail to capture the heterogeneity of explanations. For additional results of CUB-200, refer to~\cref{app:local_cub}.
+% Appendix \ref{app:more_cub_results} display more instances of such global explanations.
+
+\cref{fig:local_ex_cub}ii shows such diverse explanations for HAM10000 (\emph{top}) and ISIC (\emph{bottom}). In~\cref{fig:local_ex_cub}ii-(top), the baseline-FOL consists of concepts such as \emph{AtypicalPigmentNetwork} and \emph{BlueWhitishVeil (BWV)} to classify ``Malignancy'' for all the instances for HAM10000. However, expert~3 relies on \emph{RegressionStructures} along with \emph{BWV} to classify the same for the samples it covers while expert~5 utilizes several other concepts \eg \emph{IrregularStreaks}, \emph{Irregular dots and globules (IrregularDG)} \etc \text{ }Due to space constraints,~\cref{app:local_awa2} reports similar results for the Awa2 dataset. Also, VIT-based experts compose less concepts per sample than the ResNet-based experts, shown in~\cref{app:comparison_arch}.
+
+\begin{table*}[t]
+\caption{MoIE does not hurt the performance of the original Blackbox using a held-out test set. We 
+provide the mean and standard errors of AUROC and accuracy for medical imaging (\eg HAM10000, ISIC, and Effusion) and vision (\eg CUB-200 and Awa2) datasets, respectively, over 5 random seeds. For MoIE, we also report the percentage of test set samples covered by all experts as ``coverage''. Here, MoIE + Residual represents the experts with the final residual. Following the setting~\cite{zarlenga2022concept}, we only report the performance of the convolutional CEM, leaving the construction of VIT-based CEM as a future work. Recall that interpretable-by-design models can not be constructed for HAM10000 and ISIC as they have no concept annotation; we learn the concepts from the Derm7pt dataset. For all the datasets, MoIE covers a significant portion of data (at least 90\%) cumulatively. We boldface our results. 
+}
+\fontsize{5pt}{0.20cm}\selectfont
+\label{tab:performance}
+% \vskip 0.15in
+\begin{center}
+% \begin{small}
+% \begin{sc}
+\begin{tabular}{p{25.5em} p{7.5em} p{7.5em} p{7.5em} p{7.5em} p{7.5em} p{7.5em} p{7.5em}}
+\toprule 
+        \textbf{MODEL} & \multicolumn{7}{c}{\textbf{DATASET}} \\
+       & CUB-200 (RESNET101) & CUB-200 (VIT) & AWA2 (RESNET101) & AWA2 (VIT) & HAM10000 & SIIM-ISIC & EFFUSION  \\
+\midrule 
+    BLACKBOX & 0.88 & 0.92 & 0.89 & 0.99 & 0.96 & 0.85 & 0.91\\
+\midrule
+    \textbf{INTERPRETABLE-BY-DESIGN} \\
+    CEM~\cite{zarlenga2022concept} & 0.77 $\pm$ 0.22 & - & 0.88 $\pm$ 0.50 & - & NA & NA & 0.76 $\pm$ 0.00\\
+    CBM (Sequential)~\cite{koh2020concept} & 0.65 $\pm$ 0.37 & 0.86 $\pm$ 0.24 & 0.88 $\pm$ 0.35 & 0.94 $\pm$ 0.28  & NA & NA  
+    & 0.79 $\pm$ 0.00 \\ 
+    CBM + E-LEN~\cite{koh2020concept, barbiero2022entropy} & 0.71 $\pm$ 0.35 & 0.88 $\pm$ 0.24 & 0.86 $\pm$ 0.35 & 0.93 $\pm$ 0.25 & NA & NA & 
+    0.79 $\pm$ 0.00  \\
+\midrule
+     \textbf{POSTHOC} \\
+     PCBM~\cite{yuksekgonul2022post} & 0.76 $\pm$ 0.01  & 0.85 $\pm$ 0.20 & 0.82 $\pm$ 0.23 & 0.94 $\pm$ 0.17 &
+     0.93 $\pm$	0.00 & 0.71 $\pm$	0.01 & 0.81 $\pm$	0.01\\
+     PCBM-h~\cite{yuksekgonul2022post} & 0.85 $\pm$ 0.01  & 0.91 $\pm$ 0.18 & 0.87 $\pm$ 0.20 & 0.98 $\pm$ 0.17 &
+     0.95 $\pm$	0.00 & 0.79 $\pm$	0.05 & 0.87 $\pm$	0.07\\
+     PCBM + E-LEN~\cite{yuksekgonul2022post, barbiero2022entropy} &  0.80 $\pm$ 0.36 & 0.89 $\pm$ 0.26 & 0.85 $\pm$ 0.25 & 0.96 $\pm$ 0.18 & 
+     0.94 $\pm$	0.02 &  0.73 $\pm$	0.01 & 0.81 $\pm$	0.01\\
+     PCBM-h + E-LEN~\cite{yuksekgonul2022post, barbiero2022entropy} &  0.85 $\pm$ 0.30 & 0.91 $\pm$ 0.28 & 0.88 $\pm$ 0.24 & 0.98 $\pm$ 0.20 & 
+     0.95 $\pm$	0.03 &  0.82 $\pm$	0.05 & 0.87 $\pm$	0.03\\
+\midrule
+     \textbf{OURS} \\
+     MoIE (COVERAGE) &\textbf{0.86 $\pm$ 0.01 (0.9)} &\textbf{0.91 $\pm$ 0.00 (0.95)} &
+     \textbf{0.87 $\pm$ 0.02 (0.91)} & \textbf{0.97 $\pm$ 0.00 (0.94)} & \textbf{0.95 $\pm$	0.00 (0.9)}
+     & \textbf{0.84 $\pm$ 0.00 (0.94)} & \textbf{0.87 $\pm$	0.00 (0.98)}\\
+     MoIE + RESIDUAL & \textbf{0.84 $\pm$ 0.01} & \textbf{0.90 $\pm$ 0.01} & \textbf{0.86 $\pm$ 0.020} & \textbf{0.94 $\pm$ 0.004}
+     & \textbf{0.92 $\pm$	0.00} & \textbf{0.82 $\pm$	0.01} & \textbf{0.86 $\pm$	0.00} \\
+\bottomrule
+\end{tabular}
+% \end{sc}
+% \end{small}
+\end{center}
+% \vskip -0.1in
+\end{table*}
+
+\textbf{MoiE-identified concepts attain higher completeness scores.} 
+\cref{fig:valid_concepts}(a-b) shows the completeness scores~\cite{yeh2019concept} for varying number of concepts.
+ Completeness score is a post hoc measure, signifying the identified concepts as ``sufficient statistic'' of the predictive capability of the Blackbox. Recall that $g$ utilizes E-LEN~\cite{barbiero2022entropy}, associating each concept with an attention weight after training. A concept with high attention weight implies its high predictive significance.
+ Iteratively, we select the top relevant concepts based on their attention weights and compute the completeness scores for the top concepts for MoIE and the PCBM + E-LEN baseline in \cref{fig:valid_concepts}(a-b) (~\cref{app:completeness} for details).
+ For example, MoIE achieves a completeness score of 0.9 compared to 0.75 of the baseline($\sim 20\%\uparrow$) for the 10 most significant concepts for the CUB-200 dataset with VIT as Blackbox.
+ 
+\textbf{MoIE identifies more meaningful instance-specific concepts.} 
+\cref{fig:valid_concepts}(c-d) reports the drop in accuracy by zeroing out the significant concepts.
+Any interpretable model ($g$) supports concept-intervention~\cite{koh2020concept}. 
+After identifying the top concepts from $g$ using the attention weights, as in the last section, we set these concepts' values to zero, compute the model's accuracy drop, and plot in~\cref{fig:valid_concepts}(b). When zeroing out the top 10 essential concepts for VIT-based CUB-200 models, MoIE records a drop of 53\% compared to 28\% and 42\% for the CBM + E-LEN and PCBM + E-LEN baselines, respectively, showing the faithfulness of the identified concepts to the prediction.
+
+% generic baseline
+In both of the last experiments, MoIE outperforms the baselines as the baselines mark the same concepts as significant for all samples of each class. However,
+MoIE leverages various experts specializing in different subsets of samples of different classes. 
+% Thus, MoIE identifies more diverse instance-specific concepts, resulting in a superior completeness score and a severe drop in performance due to zeroing out the essential concepts compared to the baselines. 
+For results of MIMIC-CXR and Awa2, refer to~\cref{app:mimic_cxr} and~\cref{app:awa2} respectively.
+
+
+

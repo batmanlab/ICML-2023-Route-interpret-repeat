@@ -1,0 +1,400 @@
+%%%%%%%% ICML 2022 EXAMPLE LATEX SUBMISSION FILE %%%%%%%%%%%%%%%%%
+
+\documentclass[nohyperref]{article}
+
+% Recommended, but optional, packages for figures and better typesetting:
+\usepackage{microtype}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{booktabs} % for professional tables
+
+% hyperref makes hyperlinks in the resulting PDF.
+% If your build breaks (sometimes temporarily if a hyperlink spans a page)
+% please comment out the following usepackage line and replace
+% \usepackage{icml2022} with \usepackage[nohyperref]{icml2022} above.
+\usepackage{hyperref}
+
+
+% Attempt to make hyperref and algorithmic work together better:
+\newcommand{\theHalgorithm}{\arabic{algorithm}}
+
+% Use the following line for the initial blind version submitted for review:
+% \usepackage{icml2022}
+
+% If accepted, instead use the following line for the camera-ready submission:
+\usepackage[accepted]{icml2023}
+
+% For theorems and such
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{amsthm}
+\usepackage{makecell}
+\usepackage{float}
+% \usepackage{subfig}
+% \usepackage[demo]{graphicx}
+% \usepackage{soul}
+% \usepackage{algorithm}
+% \usepackage{arevmath}     % For math symbols
+% \usepackage[noend]{algpseudocode}
+
+% if you use cleveref..
+\usepackage[capitalize,noabbrev]{cleveref}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% THEOREMS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{assumption}[theorem]{Assumption}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+% Todonotes is useful during development; simply uncomment the next line
+%    and comment out the line below the next line to turn off comments
+%\usepackage[disable,textsize=tiny]{todonotes}
+\usepackage[textsize=tiny]{todonotes}
+
+
+% The \icmltitle you define below is probably too long as a header.
+% Therefore, a short form for the running title is supplied here:
+\icmltitlerunning{~ \hfill Dividing and Conquering a BlackBox to a Mixture of Interpretable Models: Route, Interpret, Repeat \hfill \thepage}
+
+% \icmltitlerunning{~ \hfill foo bar \hfill \thepage}
+
+\newcommand*\mystrut[1]{\vrule width0pt height0pt depth#1\relax}
+\newcommand{\fix}{\marginpar{FIX}}
+\newcommand{\new}{\marginpar{NEW}}
+\newcommand\etal {{\it et al.}}
+\newcommand\ie {{\it i.e., }}
+\newcommand\st {{\it s.t., }}
+\newcommand\eg {{\it e.g., }}
+\newcommand\etc{{\it etc.}}
+\newcommand\cf {{\it cf. }}
+\newcommand\eq {{\it Eq.}}
+\newcommand\ex {{ex.}}
+\newcommand{\zerodisplayskips}{%
+  \setlength{\abovedisplayskip}{0pt}%
+  \setlength{\belowdisplayskip}{0pt}%
+  \setlength{\abovedisplayshortskip}{0pt}%
+  \setlength{\belowdisplayshortskip}{0pt}}
+% \appto{\normalsize}{\zerodisplayskips}
+% \appto{\small}{\zerodisplayskips}
+% \appto{\footnotesize}{\zerodisplayskips}
+\begin{document}
+
+\twocolumn[
+\icmltitle{Dividing and Conquering a BlackBox to a Mixture of Interpretable Models: Route, Interpret, Repeat }
+
+% It is OKAY to include author information, even for blind
+% submissions: the style file will automatically remove it for you
+% unless you've provided the [accepted] option to the icml2022
+% package.
+
+% List of affiliations: The first argument should be a (short)
+% identifier you will use later to specify author affiliations
+% Academic affiliations should list Department, University, City, Region, Country
+% Industry affiliations should list Company, City, Region, Country
+
+% You can specify symbols, otherwise they are numbered in order.
+% Ideally, you should not use this facility. Affiliations will be numbered
+% in order of appearance and this is the preferred way.
+\icmlsetsymbol{equal}{*}
+
+\begin{icmlauthorlist}
+\icmlauthor{Shantanu Ghosh}{bu}
+\icmlauthor{Ke Yu}{pitt}
+\icmlauthor{Forough Arabshahi}{meta}
+\icmlauthor{Kayhan Batmanghelich}{bu}
+%\icmlauthor{}{sch}
+% \icmlauthor{Firstname8 Lastname8}{sch}
+% \icmlauthor{Firstname8 Lastname8}{yyy,comp}
+%\icmlauthor{}{sch}
+%\icmlauthor{}{sch}
+\end{icmlauthorlist}
+
+\icmlaffiliation{bu}{Department of Electrical and Computer Engineering, Boston University, MA, USA}
+\icmlaffiliation{pitt}{Intelligent Systems Program, University of Pittsburgh, Pittsburgh, PA, USA}
+\icmlaffiliation{meta}{MetaAI, MenloPark, CA, USA}
+% \icmlaffiliation{sch}{School of ZZZ, Institute of WWW, Location, Country}
+
+\icmlcorrespondingauthor{Shantanu Ghosh}{shawn24@bu.edu}
+% \icmlcorrespondingauthor{Firstname2 Lastname2}{first2.last2@www.uk}
+
+% You may provide any keywords that you
+% find helpful for describing your paper; these are used to populate
+% the "keywords" metadata in the PDF but will not be shown in the document
+\icmlkeywords{Machine Learning, ICML}
+
+\vskip 0.3in
+]
+
+% this must go after the closing bracket ] following \twocolumn[ ...
+
+% This command actually creates the footnote in the first column
+% listing the affiliations and the copyright notice.
+% The command takes one argument, which is text to display at the start of the footnote.
+% The \icmlEqualContribution command is standard text for equal contribution.
+% Remove it (just {}) if you do not need this facility.
+
+%\printAffiliationsAndNotice{}  % leave blank if no need to mention equal contribution
+\printAffiliationsAndNotice{} % otherwise use the standard text.
+
+\begin{abstract}
+\input{Sections/abstract_v2.tex}
+% \input{Sections/abstract_v1.tex}
+\end{abstract}
+
+\section{Introduction}
+% \input{Sections/intro_v1.tex}
+\input{Sections/intro_v2.tex}
+
+% \section{Related work}
+% \input{sections/related_work_v1.tex}
+
+
+\section{Method}
+\label{sec:method}
+% \input{Sections/method_v1.tex}
+\input{Sections/method_v2.tex}
+
+\begin{table}[t]
+\caption{Datasets and Blackboxes.}
+\fontsize{5.2pt}{0.30cm}\selectfont
+\label{tab:dataset}
+\vskip 0.1in
+\begin{center}
+% \begin{small}
+% \begin{sc}
+\begin{tabular}{lcc}
+\toprule
+DATASET & BLACKBOX & \# EXPERTS  \\
+\midrule
+CUB-200~\cite{wah2011caltech}  & RESNET101~\cite{he2016deep}& 6 \\
+CUB-200~\cite{wah2011caltech}  & VIT~\cite{wang2021feature}&  6 \\
+AWA2~\cite{xian2018zero} & RESNET101~\cite{he2016deep} & 4\\
+AWA2~\cite{xian2018zero} & VIT~\cite{wang2021feature} & 6\\
+HAM1000~\cite{tschandl2018ham10000}    & INCEPTION~\cite{szegedy2015going}& 6\\
+SIIM-ISIC~\cite{rotemberg2021patient}    & INCEPTION~\cite{szegedy2015going} & 6\\
+EFFUSION IN MIMIC-CXR~\cite{12_johnsonmimic}    & DENSENET121~\cite{huang2017densely} & 3\\
+\bottomrule
+\end{tabular}
+% \end{sc}
+% \end{small}
+\end{center}
+\vskip -0.1in
+\end{table}
+
+\begin{figure*}[t]
+\vskip 0.1in
+\begin{center}
+\centerline{\includegraphics[width=\linewidth]{figures/main/Results_all.pdf}}
+\caption{MoIE identifies diverse concepts for specific subsets of a class, unlike the generic ones by the baselines. \textbf{(i)} We construct the FOL explanations of the samples of, ``Bay breasted warbler'' in the CUB-200 dataset for VIT-based \textbf{(a)} CBM + E-LEN as an \emph{interpretable-by-design} baseline, \textbf{(b)} PCBM + E-LEN as a \emph{posthoc} baseline, \textbf{(c)} experts in MoIE at inference. We highlight the unique concepts for experts 1,2, and 3 in~\emph{red},~\emph{blue}, and~\emph{magenta}, respectively. \textbf{(ii)} Comparison of FOL explanations by MoIE with the PCBM + E-LEN baselines for HAM10000 (\textbf{top}) and ISIC (\textbf{down})  to classify Malignant lesion. We highlight unique concepts for experts 3, 5, and 6 in \emph{red}, \emph{blue}, and \emph{violet}, respectively. For brevity, we combine FOLs for each expert for the samples covered by them.}
+\label{fig:local_ex_cub}
+\end{center}
+\vskip -0.1in
+\end{figure*}
+
+\section{Related work}
+%\input{Sections/related_work_v2.tex}
+\input{Sections/related_work_v3.tex}
+
+\begin{figure*}[ht]
+\vskip 0.2in
+\begin{center}
+\centerline{\includegraphics[width=\linewidth]{figures/main/Expert_res_all.pdf}}
+\caption{The performance of experts and residuals across iterations. 
+\textbf{(a-c)} Coverage and proportional accuracy of the experts and residuals. 
+\textbf{(d-f)} We route the samples covered by the residuals across iterations to the initial Blackbox $f^0$ and compare the accuracy of $f^0$ (red bar) with the residual (blue bar). Figures \textbf{d-f} show the progressive decline in performance of the residuals across iterations as they cover the samples in the increasing order of ``hardness''. We observe the similar abysmal performance of the initial blackbox $f^0$ for these samples.
+}
+\label{fig:expert_performance_cv_vit}
+\end{center}
+\vskip -0.2in
+\end{figure*}
+
+
+\section{Experiments}
+\input{Sections/experiments_v1.tex}
+
+\subsection{Results}
+% \subsection{Baseline}
+% \label{app:baseline}
+% \input{Sections/baseline_v1.tex}
+
+\subsubsection{Expert driven explanations by MoIE }
+\input{Sections/explanations_variability_v1.tex}
+
+\subsubsection{Identification of harder samples by successive residuals}
+\label{Sec:residual}
+\input{Sections/residual_performance_v1.tex}
+
+
+\subsubsection{Quantitative analysis of MoIE with the blackbox and baseline}
+\input{Sections/quant_eval_v1.tex}
+
+\subsubsection{Test time interventions}
+\input{Sections/tti_v1.tex}
+
+\subsubsection{Application in the removal of shortcuts}
+\input{Sections/shortcut_application_v1.tex}
+
+
+
+\section{Discussion \& Conclusions}
+\input{Sections/conclusion_v1.tex}
+
+\section{Acknowledgement}
+\input{Sections/ack_v1.tex}
+
+
+\bibliography{example_paper}
+\bibliographystyle{icml2023}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% APPENDIX
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\appendix
+\onecolumn
+\section{Appendix}
+% \subsection{Reproducibility }
+% The code with all the experiments is available in the anonymous GitHub repository \url{https://github.com/AI09-guy/ICML-Submission}.
+% \label{app:code}
+
+\subsection{Background of First-order logic (FOL) and Neuro-symbolic-AI}
+\label{app:FOL}
+\input{Appendix/FOL_NS_AI_v1.tex}
+
+
+\subsection{Learning the concepts}
+\label{app:concept_learning}
+\input{Appendix/concept_learning.tex}
+
+
+\subsection{Optimization}
+\label{app:loss}
+\input{Appendix/loss_v1.tex}
+
+\subsection{Algorithm}
+\label{app:algo}
+\input{Appendix/algo_v1.tex}
+
+\subsection{Dataset}
+\label{app:dataset}
+\input{Appendix/dataset_v1.tex}
+
+\subsection{Architectural details of symbolic experts and hyperparameters}
+\label{app:g}
+\input{Appendix/g_v1.tex}
+
+\subsection{Estimation of completeness score}
+\label{app:completeness}
+\input{Appendix/completeness_v1.tex}
+
+\subsection{Flow diagram to eliminate shotcut}
+\label{app:shortcut}
+\cref{fig:spurious_flow} shows the flow digram to eliminate shortcut.
+\begin{figure*}[h]
+\centering
+\includegraphics[width=1.0\textwidth]
+{figures/Supp/Spurious_Flow.pdf}
+\caption{The flow diagram to eliminate the shortcut from vision datasets using FOL by MoIE.}
+\label{fig:spurious_flow}
+\end{figure*}
+
+
+\subsection{More Results}
+\subsubsection{Comparison with other interpretable by design baselines}
+\label{app:more_baselines}
+\input{Appendix/more_baselines}
+
+\subsubsection{Results of Effusion of MIMIC-CXR}
+\label{app:mimic_cxr}
+\input{Appendix/mimic_cxr_v1.tex}
+
+\subsubsection{Performance of experts and residual for ResNet-derived experts of Awa2 and CUB-200 datasets}
+\label{app:resnet_cv}
+\input{Appendix/expert_performance_awa2_cub_resnet.tex}
+
+\subsubsection{Concept validation of Awa2}
+\label{app:awa2}
+\input{Appendix/completeness_ham_awa2_v1.tex}
+
+% \subsubsection{Performance drop for MoIE and baselines}
+% \label{app:performance_drop_other}
+% \input{Appendix/performance_drop_other_v1.tex}
+
+% \subsubsection{Test time interventions for ResNet models and Awa2}
+% \label{app:tti}
+% \input{Appendix/tti_v1.tex}
+
+% \subsubsection{Validating concepts by zer}
+% \label{app:validate_concepts}
+% \input{Appendix/explanation_validity.tex}
+
+\subsubsection{Example of expert-specific test time intervention}
+\label{app:tti_qual}
+\input{Appendix/tti_qual_v1.tex}
+
+\subsubsection{Diversity of explanations for CUB}
+\label{app:local_cub}
+\input{Appendix/local_cub_v1.tex}
+
+
+\subsubsection{Diversity of explanations for Awa2}
+\label{app:local_awa2}
+\input{Appendix/local_awa2_v1.tex}
+
+\subsubsection{VIT-based experts compose of less concepts than the ResNet-based counterparts}
+\label{app:comparison_arch}
+\input{Appendix/comparison_resnet_vit_v1.tex}
+
+\subsection{Computational performance }
+\label{app:validate_concepts}
+\cref{fig:flops} shows the computational performance compared to the Blackbox. Though in MoIE, we sequentially learn the experts and the residuals, they take less computational resources than the Blackbox. The experts are shallow neural networks. Also, we only update the classification layer ($h$) for the residuals, so it takes such less time. The Flops in the Y axis are computed as Flop of (forward propagation + backward propagation) $\times$ (minibatch size) $\times$ (no of training epochs).
+We use the Pytorch profiler package to monitor the flops.
+
+\begin{figure*}[h]
+\centering
+\includegraphics[width=1.0\textwidth]
+{figures/Supp/Flops.pdf}
+\caption{Flops vs. iteration for MoIE and the Blackbox. The dotted line in the figure represents the flops taken by the blackbox.}
+\label{fig:flops}
+\end{figure*}
+
+
+% \subsubsection{Diversity of explanations for SIIM-ISIC}
+% \label{app:local_isic}
+% \input{Appendix/local_isic_v1.tex}
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\end{document}
+
+
+% This document was modified from the file originally made available by
+% Pat Langley and Andrea Danyluk for ICML-2K. This version was created
+% by Iain Murray in 2018, and modified by Alexandre Bouchard in
+% 2019 and 2021 and by Csaba Szepesvari, Gang Niu and Sivan Sabato in 2022. 
+% Previous contributors include Dan Roy, Lise Getoor and Tobias
+% Scheffer, which was slightly modified from the 2010 version by
+% Thorsten Joachims & Johannes Fuernkranz, slightly modified from the
+% 2009 version by Kiri Wagstaff and Sam Roweis's 2008 version, which is
+% slightly modified from Prasad Tadepalli's 2007 version which is a
+% lightly changed version of the previous year's version by Andrew
+% Moore, which was in turn edited from those of Kristian Kersting and
+% Codrina Lauth. Alex Smola contributed to the algorithmic style files.

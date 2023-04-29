@@ -1,0 +1,36 @@
+
+
+Model explainability is essential in high-stakes applications of AI, \eg healthcare. While Blackbox models (\eg Deep Learning) offer flexibility and modular design, post hoc explanation is prone to confirmation bias~\cite{wan2022explainability}, lack of fidelity to the original model~\cite{adebayo2018sanity}, and insufficient mechanistic explanation of the decision-making process~\cite{rudin2019stop}. Interpretable-by-design models overcome those issues but tend to be less flexible than Blackbox models and demand substantial expertise to design. Using a post hoc explanation or adopting an inherently interpretable model is a mutually exclusive decision to be made at the initial phase of AI model design. This paper blurs the line on that dichotomous model design.
+
+The literature on post hoc explanations is extensive. This includes model attributions (~\cite{simonyan2013deep, selvaraju2017grad}), counterfactual approaches ~\cite{abid2021meaningfully, singla2019explanation}, and distillation methods~\cite{alharbi2021learning, cheng2020explaining}. Those methods either identify key input features that contribute the most to the network's output~\cite{shrikumar2016not}, generate input perturbation to flip the network's output~\cite{samek2016evaluating, montavon2018methods}, or estimate simpler functions to approximate the network output locally. Post hoc methods preserve the flexibility and performance of the Blackbox but suffer from a lack of fidelity and mechanistic explanation of the network output~\cite{rudin2019stop}. Without a mechanistic explanation, recourse to a model's undesirable behavior is unclear. Interpretable models are alternative designs to the Blackbox without many such drawbacks. For example, modern interpretable methods highlight human understandable \emph{concepts} that contribute to the downstream prediction.
+
+% Interpretable models also have a long history in statistics and machine learning~\cite{letham2015interpretable, breiman1984classification}. 
+Several families of interpretable models exist for a long time, such as the rule-based approach and generalized additive models~\cite{hastie1987generalized, letham2015interpretable, breiman1984classification}. They primarily focus on tabular data. Such models for high-dimensional data (\eg images) primarily rely on projecting to a lower dimensional human understandable \emph{concept} or \emph{symbolic} space~\cite{koh2020concept} and predicting the output with an interpretable classifier. Despite their utility, the current State-Of-The-Art (SOTA)
+%designs 1) require explicit concept annotation, 2) 
+are limited in design; for example, they do not model the interaction between the concepts except for a few exceptions~\cite{ciravegna2021logic, barbiero2022entropy}, offering limited reasoning capabilities and robustness. Furthermore, if a portion of the samples does not fit the template design of the interpretable model, they do not offer any flexibility, compromising performance. 
+%they are not as flexible as the Blackbox, thereby compromising the performance. 
+
+
+\textbf{Our contributions}
+We propose an interpretable method, aiming to achieve the best of both worlds: not sacrificing Blackbox performance similar to post hoc explainability while still providing actionable interpretation. We hypothesize that a Blackbox encodes several interpretable models, each applicable to a different portion of data. Thus, a single interpretable model may be insufficient to explain all samples. We construct a hybrid neuro-symbolic model by progressively \emph{carving out} a mixture of interpretable models and a \emph{residual network} from the given Blackbox. We coin the term \emph{expert} for each interpretable model, as they specialize over a subset of data. All the interpretable models are termed a ``Mixture of Interpretable Experts'' (MoIE). Our design identifies a subset of samples and \emph{routes} them through the interpretable models to explain the samples with FOL, providing basic reasoning on concepts from the Blackbox. The remaining samples are routed through a flexible residual network. 
+On the residual network, we repeat the method until MoIE explains the desired proportion of data.
+% FOL is a logical function
+% that accepts predicates (concept presence/absent) as input and returns a True/False output being a
+% logical expression of the predicates. The logical expression, which is a set of AND, OR, Negative,
+% and parenthesis, can be written in the so-called Disjunctive Normal Form (DNF). DNF is a FOL logical formula composed of a disjunction (OR) of conjunctions (AND), known as the ``sum of products''. 
+% % Why the solution is smart / Did it work.
+We quantify the sufficiency of the identified concepts to explain the Blackbox’s prediction using the concept completeness score~\cite{yeh2019concept}.
+Using FOL for interpretable models offers recourse when undesirable behavior is detected in the model. We provide an example of fixing a shortcut learning by modifying the FOL. FOL can be used in human-model interaction (not explored in this paper). Our method is the divide-and-conquer approach, where the instances covered by the residual network need progressively more complicated interpretable models. Such insight can be used to inspect the data and the model further. Finally, our model allows \emph{unexplainable} category of data, which is currently not allowed in the interpretable models.  
+%The experimental results across computer vision and medical imaging datasets utilizing diverse architectures reveal that our method 
+%1) is able to capture more meaningful instance-specific concepts  without sacrificing Blackbox's performance by qualitative and quantitative comparisons with the concept based interpretable-by-design and post hoc baselines, 
+%2) does not require explicit concept annotation in training data, unlike most of the interpretable by design models,
+%3) estimate ``harder'' to explain samples using the residuals,
+%4) achieves significant performance boost during test-time interventions, 
+%5) eliminates shortcut bias successfully from the Blackbox's representation.
+
+% \begin{figure}[t]
+% \centering
+% \includegraphics[width=1\textwidth]{figures/Final/Local_explanation_motivation.pdf}
+% \caption{The motivation of our work. All the plots correspond to detect a skin lesion as ``Malignant". In the left, (a) plot of the weights for each concepts by the fully interpretable model; (b) explanations by the interpretable model containing the concept \textit{sex} as it has the height weight, making the explanation too generic; (c) plot of the weights for each concepts by the expert4 using our method; (d) explanations by the expert4 using our method; (e) plot of the weights for each concepts by the expert5 using our method; (f) explanations by the expert5 using our method. From (c)-(f), we can see the expert model focuses on specific concept for specific samples.}
+% \label{fig:motivation} 
+% \end{figure}

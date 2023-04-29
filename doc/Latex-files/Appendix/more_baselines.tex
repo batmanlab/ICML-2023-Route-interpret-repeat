@@ -1,0 +1,36 @@
+\begin{table}[H]
+\caption{Comparing the performance of MoIE with additional interpretable by design baselines.
+}
+\fontsize{7.5pt}{0.20cm}\selectfont
+\label{tab:performance_app}
+% \vskip 0.15in
+\begin{center}
+% \begin{small}
+% \begin{sc}
+\begin{tabular}{p{23em} c c c c}
+\toprule 
+        \textbf{MODEL} & \multicolumn{3}{c}{\textbf{DATASET}} \\
+       & CUB-200 (RESNET101) & AWA2 (RESNET101) & EFFUSION  \\
+\midrule 
+    BLACKBOX & 0.88 & 0.89 & 0.91 \\
+\midrule 
+ANTEHOC W SUP~\cite{sarkar2021inducing} & 0.71 & 0.85 & 0.75\\
+ANTEHOC W/O SUP~\cite{sarkar2021inducing} & 0.64 & 0.81 & 0.70\\
+HARD W AR~\cite{havasi2022addressing} & 0.81 & 0.84 & 0.73\\
+HARD W/O AR~\cite{havasi2022addressing} & 0.78 & 0.81 & 0.71\\
+\midrule
+\textbf{OURS} \\
+MoIE (COVERAGE) &\textbf{0.86} &
+     \textbf{0.87}
+     & \textbf{0.87} \\
+MoIE + RESIDUAL &\textbf{0.84} &
+     \textbf{0.86}
+     & \textbf{0.86} \\
+\bottomrule
+\end{tabular}
+% \end{sc}
+% \end{small}
+\end{center}
+% \vskip -0.1in
+\end{table}
+~\cref{tab:performance_app} compares our method with several other interpretable by design baselines.

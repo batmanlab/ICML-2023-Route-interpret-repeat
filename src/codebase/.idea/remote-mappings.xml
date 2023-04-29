@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="RemoteMappingsManager">
+    <list>
+      <list>
+        <remote-mappings server-id="python@sftp://shg121@localhost:9990/ocean/projects/asc170022p/shg121/anaconda3/envs/python_3_7/bin/python" />
+        <remote-mappings server-id="python@sftp://shg121@localhost:9996/ocean/projects/asc170022p/shg121/anaconda3/envs/python_3_7/bin/python">
+          <settings>
+            <list>
+              <mapping local-root="$PROJECT_DIR$/../scripts" remote-root="/ocean/projects/asc170022p/shg121/PhD/ICLR-2022/scripts" />
+            </list>
+          </settings>
+        </remote-mappings>
+      </list>
+    </list>
+  </component>
+</project>

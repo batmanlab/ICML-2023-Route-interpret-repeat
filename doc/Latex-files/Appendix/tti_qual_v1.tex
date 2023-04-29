@@ -1,0 +1,8 @@
+\begin{figure}[h]
+\centering
+\includegraphics[width=1 \linewidth]{figures/Supp/TTI_qual.pdf}
+\caption{Illustration of test time intervention of top-3 concepts for ``harder'' samples identified by the last two experts of VIT-driven MoIE. We adopt E-LEN~\cite{barbiero2022entropy} as the experts. Thus, each concept is associated with an attention weight after training, signifying its prediction importance. So, here we intervene the top 3 concepts with the highest attention weights for samples routed to expert 5 (\textbf{\emph{left}}) and expert 6 (\textbf{\emph{right}}). These samples are considered the ``harder'' samples as they are routed to the last two experts of MoIE. We demonstrate that the test time intervention corrects the prediction. }
+\label{fig:tti_qual}
+\vspace{-2.5pt}
+\end{figure}
+~\cref{fig:tti_qual} demonstrates an example of test time intervention of concepts for ``harder'' samples identified by the last two experts of VIT-driven MoIE.

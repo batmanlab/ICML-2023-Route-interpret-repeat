@@ -1,0 +1,1421 @@
+Concept completeness: cub
+TopK: 3
+train_size: torch.Size([8241, 2048, 14, 14])
+train_size: torch.Size([8241, 108])
+train_size: torch.Size([8241])
+test_size: torch.Size([1040, 2048, 14, 14])
+test_size: torch.Size([1040, 108])
+test_size: torch.Size([1040])
+Time to the full datasets: 14.920772075653076 secs
+############# Paths ############# 
+/ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints/cub/completeness/ResNet101/moIE/concepts_topK_3
+/ocean/projects/asc170022p/shg121/PhD/ICLR-2022/out/cub/completeness/ResNet101/moIE/concepts_topK_3
+/ocean/projects/asc170022p/shg121/PhD/ICLR-2022/log/cub/completeness/ResNet101/moIE/concepts_topK_3
+############# Paths ############# 
+==>> Loading BB from : /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints/cub/BB/lr_0.001_epochs_95/ResNet101/best_model_epoch_63.pth.tar
+Device: cuda
+===>>> t is loaded from: /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints/cub/t/lr_0.001_epochs_95/lr_0.001_epochs_95_ResNet101_layer4_adaptive_sgd_BCE/best_model_epoch_62.pth.tar
+Size of CAV: torch.Size([108, 2048])
+Logistic_Regression_t(
+  (adaptive_avg_pool): AdaptiveAvgPool2d(output_size=(1, 1))
+  (adaptive_max_pool): AdaptiveMaxPool2d(output_size=(1, 1))
+  (flatten): Flatten(start_dim=1, end_dim=-1)
+  (linear): Linear(in_features=2048, out_features=108, bias=True)
+)
+################## TB Log path ###################
+/ocean/projects/asc170022p/shg121/PhD/ICLR-2022/log/cub/completeness/ResNet101/moIE/concepts_topK_3/g_train
+################## TB Log path ###################
+
+ Old best val accuracy: 0 (%) || New best val accuracy: 30.961538461538463 (%) , and new model saved..
+
+
+ /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints/cub/completeness/ResNet101/moIE/concepts_topK_3/g_best_model_epoch_1.pth.tar
+
+Epoch: [1/75] Train_loss: 10.9734 Train_Accuracy: 22.5943 (%) Val_loss: 13.4138 Best_Val_Accuracy: 30.9615 (%)  Epoch_Duration: 161.3171
+
+ Old best val accuracy: 30.961538461538463 (%) || New best val accuracy: 34.42307692307692 (%) , and new model saved..
+
+
+ /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints/cub/completeness/ResNet101/moIE/concepts_topK_3/g_best_model_epoch_2.pth.tar
+
+Epoch: [2/75] Train_loss: 13.626 Train_Accuracy: 36.7795 (%) Val_loss: 17.7733 Best_Val_Accuracy: 34.4231 (%)  Epoch_Duration: 44.3459
+
+ Old best val accuracy: 34.42307692307692 (%) || New best val accuracy: 37.88461538461539 (%) , and new model saved..
+
+
+ /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints/cub/completeness/ResNet101/moIE/concepts_topK_3/g_best_model_epoch_3.pth.tar
+
+Epoch: [3/75] Train_loss: 12.3476 Train_Accuracy: 47.1545 (%) Val_loss: 21.0664 Best_Val_Accuracy: 37.8846 (%)  Epoch_Duration: 44.4918
+
+ Old best val accuracy: 37.88461538461539 (%) || New best val accuracy: 38.55769230769231 (%) , and new model saved..
+
+
+ /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints/cub/completeness/ResNet101/moIE/concepts_topK_3/g_best_model_epoch_4.pth.tar
+
+Epoch: [4/75] Train_loss: 11.1059 Train_Accuracy: 54.5322 (%) Val_loss: 23.4657 Best_Val_Accuracy: 38.5577 (%)  Epoch_Duration: 44.6227
+
+ Old best val accuracy: 38.55769230769231 (%) || New best val accuracy: 40.48076923076923 (%) , and new model saved..
+
+
+ /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints/cub/completeness/ResNet101/moIE/concepts_topK_3/g_best_model_epoch_5.pth.tar
+
+Epoch: [5/75] Train_loss: 10.2669 Train_Accuracy: 59.3011 (%) Val_loss: 26.4029 Best_Val_Accuracy: 40.4808 (%)  Epoch_Duration: 45.03
+
+ Old best val accuracy: 40.48076923076923 (%) || New best val accuracy: 45.28846153846154 (%) , and new model saved..
+
+
+ /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints/cub/completeness/ResNet101/moIE/concepts_topK_3/g_best_model_epoch_6.pth.tar
+
+Epoch: [6/75] Train_loss: 10.8052 Train_Accuracy: 63.1598 (%) Val_loss: 30.606 Best_Val_Accuracy: 45.2885 (%)  Epoch_Duration: 46.5281
+Epoch: [7/75] Train_loss: 9.283 Train_Accuracy: 67.0914 (%) Val_loss: 31.2247 Best_Val_Accuracy: 45.2885 (%)  Epoch_Duration: 44.5474
+
+ Old best val accuracy: 45.28846153846154 (%) || New best val accuracy: 45.57692307692307 (%) , and new model saved..
+
+
+ /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints/cub/completeness/ResNet101/moIE/concepts_topK_3/g_best_model_epoch_8.pth.tar
+
+Epoch: [8/75] Train_loss: 9.33 Train_Accuracy: 68.6082 (%) Val_loss: 39.0199 Best_Val_Accuracy: 45.5769 (%)  Epoch_Duration: 44.5248
+Epoch: [9/75] Train_loss: 8.8251 Train_Accuracy: 73.2435 (%) Val_loss: 42.3885 Best_Val_Accuracy: 45.5769 (%)  Epoch_Duration: 44.7098
+
+ Old best val accuracy: 45.57692307692307 (%) || New best val accuracy: 47.98076923076923 (%) , and new model saved..
+
+
+ /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints/cub/completeness/ResNet101/moIE/concepts_topK_3/g_best_model_epoch_10.pth.tar
+
+Epoch: [10/75] Train_loss: 8.3353 Train_Accuracy: 74.275 (%) Val_loss: 41.8846 Best_Val_Accuracy: 47.9808 (%)  Epoch_Duration: 46.1019
+
+ Old best val accuracy: 47.98076923076923 (%) || New best val accuracy: 48.07692307692308 (%) , and new model saved..
+
+
+ /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints/cub/completeness/ResNet101/moIE/concepts_topK_3/g_best_model_epoch_11.pth.tar
+
+Epoch: [11/75] Train_loss: 7.5437 Train_Accuracy: 77.0052 (%) Val_loss: 46.7389 Best_Val_Accuracy: 48.0769 (%)  Epoch_Duration: 44.9436
+Epoch: [12/75] Train_loss: 6.5518 Train_Accuracy: 79.8568 (%) Val_loss: 54.0115 Best_Val_Accuracy: 48.0769 (%)  Epoch_Duration: 44.5529
+Epoch: [13/75] Train_loss: 7.2477 Train_Accuracy: 80.4393 (%) Val_loss: 55.6274 Best_Val_Accuracy: 48.0769 (%)  Epoch_Duration: 45.0121
+Epoch: [14/75] Train_loss: 7.9939 Train_Accuracy: 79.6748 (%) Val_loss: 65.1662 Best_Val_Accuracy: 48.0769 (%)  Epoch_Duration: 44.5783
+
+ Old best val accuracy: 48.07692307692308 (%) || New best val accuracy: 49.61538461538461 (%) , and new model saved..
+
+
+ /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints/cub/completeness/ResNet101/moIE/concepts_topK_3/g_best_model_epoch_15.pth.tar
+
+Epoch: [15/75] Train_loss: 7.7158 Train_Accuracy: 80.8033 (%) Val_loss: 63.7528 Best_Val_Accuracy: 49.6154 (%)  Epoch_Duration: 46.7725
+Epoch: [16/75] Train_loss: 6.5445 Train_Accuracy: 83.2181 (%) Val_loss: 72.221 Best_Val_Accuracy: 49.6154 (%)  Epoch_Duration: 45.162
+Epoch: [17/75] Train_loss: 7.0349 Train_Accuracy: 83.8126 (%) Val_loss: 76.009 Best_Val_Accuracy: 49.6154 (%)  Epoch_Duration: 44.5439
+Epoch: [18/75] Train_loss: 7.4663 Train_Accuracy: 84.8441 (%) Val_loss: 78.9491 Best_Val_Accuracy: 49.6154 (%)  Epoch_Duration: 45.6353
+Epoch: [19/75] Train_loss: 6.7044 Train_Accuracy: 85.9968 (%) Val_loss: 83.3731 Best_Val_Accuracy: 49.6154 (%)  Epoch_Duration: 44.7987
+Epoch: [20/75] Train_loss: 7.2545 Train_Accuracy: 85.9847 (%) Val_loss: 92.8786 Best_Val_Accuracy: 49.6154 (%)  Epoch_Duration: 44.7339
+Epoch: [21/75] Train_loss: 7.4346 Train_Accuracy: 85.6328 (%) Val_loss: 94.9181 Best_Val_Accuracy: 49.6154 (%)  Epoch_Duration: 44.7273
+
+ Old best val accuracy: 49.61538461538461 (%) || New best val accuracy: 50.38461538461539 (%) , and new model saved..
+
+
+ /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints/cub/completeness/ResNet101/moIE/concepts_topK_3/g_best_model_epoch_22.pth.tar
+
+Epoch: [22/75] Train_loss: 5.192 Train_Accuracy: 87.7806 (%) Val_loss: 95.8555 Best_Val_Accuracy: 50.3846 (%)  Epoch_Duration: 44.6364
+Epoch: [23/75] Train_loss: 5.5582 Train_Accuracy: 88.8363 (%) Val_loss: 100.7482 Best_Val_Accuracy: 50.3846 (%)  Epoch_Duration: 44.7313
+
+ Old best val accuracy: 50.38461538461539 (%) || New best val accuracy: 50.480769230769226 (%) , and new model saved..
+
+
+ /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints/cub/completeness/ResNet101/moIE/concepts_topK_3/g_best_model_epoch_24.pth.tar
+
+Epoch: [24/75] Train_loss: 7.0161 Train_Accuracy: 87.4772 (%) Val_loss: 105.5922 Best_Val_Accuracy: 50.4808 (%)  Epoch_Duration: 45.7172
+Epoch: [25/75] Train_loss: 6.2469 Train_Accuracy: 88.1325 (%) Val_loss: 105.6545 Best_Val_Accuracy: 50.4808 (%)  Epoch_Duration: 46.3282
+
+ Old best val accuracy: 50.480769230769226 (%) || New best val accuracy: 50.57692307692307 (%) , and new model saved..
+
+
+ /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints/cub/completeness/ResNet101/moIE/concepts_topK_3/g_best_model_epoch_26.pth.tar
+
+Epoch: [26/75] Train_loss: 5.516 Train_Accuracy: 89.6372 (%) Val_loss: 109.2524 Best_Val_Accuracy: 50.5769 (%)  Epoch_Duration: 44.4194
+
+ Old best val accuracy: 50.57692307692307 (%) || New best val accuracy: 50.76923076923077 (%) , and new model saved..
+
+
+ /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints/cub/completeness/ResNet101/moIE/concepts_topK_3/g_best_model_epoch_27.pth.tar
+
+Epoch: [27/75] Train_loss: 5.4457 Train_Accuracy: 89.9284 (%) Val_loss: 121.0431 Best_Val_Accuracy: 50.7692 (%)  Epoch_Duration: 44.706
+Epoch: [28/75] Train_loss: 5.7345 Train_Accuracy: 90.0619 (%) Val_loss: 116.5317 Best_Val_Accuracy: 50.7692 (%)  Epoch_Duration: 45.5002
+
+ Old best val accuracy: 50.76923076923077 (%) || New best val accuracy: 51.92307692307693 (%) , and new model saved..
+
+
+ /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints/cub/completeness/ResNet101/moIE/concepts_topK_3/g_best_model_epoch_29.pth.tar
+
+Epoch: [29/75] Train_loss: 6.1541 Train_Accuracy: 89.892 (%) Val_loss: 133.8986 Best_Val_Accuracy: 51.9231 (%)  Epoch_Duration: 46.4676
+Epoch: [30/75] Train_loss: 7.1722 Train_Accuracy: 90.4259 (%) Val_loss: 124.7891 Best_Val_Accuracy: 51.9231 (%)  Epoch_Duration: 44.8772
+Epoch: [31/75] Train_loss: 11.3238 Train_Accuracy: 89.346 (%) Val_loss: 131.9033 Best_Val_Accuracy: 51.9231 (%)  Epoch_Duration: 44.5844
+Epoch: [32/75] Train_loss: 4.0007 Train_Accuracy: 91.9306 (%) Val_loss: 138.5809 Best_Val_Accuracy: 51.9231 (%)  Epoch_Duration: 44.5017
+Epoch: [33/75] Train_loss: 4.1097 Train_Accuracy: 92.9984 (%) Val_loss: 142.133 Best_Val_Accuracy: 51.9231 (%)  Epoch_Duration: 44.7434
+Epoch: [34/75] Train_loss: 5.9018 Train_Accuracy: 90.9477 (%) Val_loss: 147.4382 Best_Val_Accuracy: 51.9231 (%)  Epoch_Duration: 45.0455
+Epoch: [35/75] Train_loss: 5.0968 Train_Accuracy: 91.8335 (%) Val_loss: 154.5615 Best_Val_Accuracy: 51.9231 (%)  Epoch_Duration: 44.673
+Epoch: [36/75] Train_loss: 5.8534 Train_Accuracy: 91.4816 (%) Val_loss: 166.2155 Best_Val_Accuracy: 51.9231 (%)  Epoch_Duration: 45.1396
+Epoch: [37/75] Train_loss: 6.5463 Train_Accuracy: 91.6636 (%) Val_loss: 164.3408 Best_Val_Accuracy: 51.9231 (%)  Epoch_Duration: 45.2653
+Epoch: [38/75] Train_loss: 6.7439 Train_Accuracy: 91.4573 (%) Val_loss: 168.3858 Best_Val_Accuracy: 51.9231 (%)  Epoch_Duration: 44.5808
+
+ Old best val accuracy: 51.92307692307693 (%) || New best val accuracy: 54.71153846153847 (%) , and new model saved..
+
+
+ /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints/cub/completeness/ResNet101/moIE/concepts_topK_3/g_best_model_epoch_39.pth.tar
+
+Epoch: [39/75] Train_loss: 3.358 Train_Accuracy: 94.4788 (%) Val_loss: 166.8229 Best_Val_Accuracy: 54.7115 (%)  Epoch_Duration: 44.9225
+Epoch: [40/75] Train_loss: 5.1618 Train_Accuracy: 93.0348 (%) Val_loss: 171.3946 Best_Val_Accuracy: 54.7115 (%)  Epoch_Duration: 44.576
+Epoch: [41/75] Train_loss: 4.9675 Train_Accuracy: 93.0955 (%) Val_loss: 177.8076 Best_Val_Accuracy: 54.7115 (%)  Epoch_Duration: 46.0319
+Epoch: [42/75] Train_loss: 5.3944 Train_Accuracy: 92.9378 (%) Val_loss: 183.9423 Best_Val_Accuracy: 54.7115 (%)  Epoch_Duration: 44.4834
+Epoch: [43/75] Train_loss: 4.9691 Train_Accuracy: 92.9499 (%) Val_loss: 194.0351 Best_Val_Accuracy: 54.7115 (%)  Epoch_Duration: 44.8089
+Epoch: [44/75] Train_loss: 4.4065 Train_Accuracy: 93.5202 (%) Val_loss: 198.9495 Best_Val_Accuracy: 54.7115 (%)  Epoch_Duration: 46.3324
+Epoch: [45/75] Train_loss: 4.5506 Train_Accuracy: 93.9813 (%) Val_loss: 196.5979 Best_Val_Accuracy: 54.7115 (%)  Epoch_Duration: 44.5904
+Epoch: [46/75] Train_loss: 5.484 Train_Accuracy: 93.3261 (%) Val_loss: 201.4744 Best_Val_Accuracy: 54.7115 (%)  Epoch_Duration: 45.0113
+Epoch: [47/75] Train_loss: 6.3453 Train_Accuracy: 92.9742 (%) Val_loss: 204.977 Best_Val_Accuracy: 54.7115 (%)  Epoch_Duration: 45.0629
+Epoch: [48/75] Train_loss: 4.8096 Train_Accuracy: 93.8236 (%) Val_loss: 215.6997 Best_Val_Accuracy: 54.7115 (%)  Epoch_Duration: 44.5981
+Epoch: [49/75] Train_loss: 4.9633 Train_Accuracy: 94.1269 (%) Val_loss: 220.3944 Best_Val_Accuracy: 54.7115 (%)  Epoch_Duration: 44.8227
+Epoch: [50/75] Train_loss: 3.9077 Train_Accuracy: 94.7336 (%) Val_loss: 216.7706 Best_Val_Accuracy: 54.7115 (%)  Epoch_Duration: 44.5023
+Epoch: [51/75] Train_loss: 5.1645 Train_Accuracy: 94.4546 (%) Val_loss: 220.0366 Best_Val_Accuracy: 54.7115 (%)  Epoch_Duration: 44.5658
+Epoch: [52/75] Train_loss: 3.6167 Train_Accuracy: 94.9521 (%) Val_loss: 227.3265 Best_Val_Accuracy: 54.7115 (%)  Epoch_Duration: 44.503
+Epoch: [53/75] Train_loss: 5.0048 Train_Accuracy: 94.8186 (%) Val_loss: 231.2265 Best_Val_Accuracy: 54.7115 (%)  Epoch_Duration: 46.8759
+Epoch: [54/75] Train_loss: 6.1309 Train_Accuracy: 94.1269 (%) Val_loss: 245.1651 Best_Val_Accuracy: 54.7115 (%)  Epoch_Duration: 44.8102
+Epoch: [55/75] Train_loss: 6.1949 Train_Accuracy: 94.1391 (%) Val_loss: 251.6434 Best_Val_Accuracy: 54.7115 (%)  Epoch_Duration: 46.5038
+Epoch: [56/75] Train_loss: 5.0558 Train_Accuracy: 95.0855 (%) Val_loss: 247.3459 Best_Val_Accuracy: 54.7115 (%)  Epoch_Duration: 44.5388
+Epoch: [57/75] Train_loss: 5.5147 Train_Accuracy: 94.3575 (%) Val_loss: 263.7068 Best_Val_Accuracy: 54.7115 (%)  Epoch_Duration: 44.5438
+Epoch: [58/75] Train_loss: 4.5124 Train_Accuracy: 94.8065 (%) Val_loss: 254.507 Best_Val_Accuracy: 54.7115 (%)  Epoch_Duration: 44.9018
+Epoch: [59/75] Train_loss: 4.7808 Train_Accuracy: 95.2069 (%) Val_loss: 259.2759 Best_Val_Accuracy: 54.7115 (%)  Epoch_Duration: 44.6111
+Epoch: [60/75] Train_loss: 3.4583 Train_Accuracy: 95.6437 (%) Val_loss: 264.5492 Best_Val_Accuracy: 54.7115 (%)  Epoch_Duration: 45.3174
+Epoch: [61/75] Train_loss: 3.079 Train_Accuracy: 95.7893 (%) Val_loss: 272.3086 Best_Val_Accuracy: 54.7115 (%)  Epoch_Duration: 44.7196
+Epoch: [62/75] Train_loss: 4.2194 Train_Accuracy: 95.304 (%) Val_loss: 277.3329 Best_Val_Accuracy: 54.7115 (%)  Epoch_Duration: 45.148
+Epoch: [63/75] Train_loss: 5.2494 Train_Accuracy: 95.1341 (%) Val_loss: 290.1196 Best_Val_Accuracy: 54.7115 (%)  Epoch_Duration: 44.9332
+Epoch: [64/75] Train_loss: 4.481 Train_Accuracy: 95.2433 (%) Val_loss: 303.2665 Best_Val_Accuracy: 54.7115 (%)  Epoch_Duration: 44.6279
+Epoch: [65/75] Train_loss: 6.1685 Train_Accuracy: 94.5638 (%) Val_loss: 308.3954 Best_Val_Accuracy: 54.7115 (%)  Epoch_Duration: 45.6588
+Epoch: [66/75] Train_loss: 5.5473 Train_Accuracy: 95.1705 (%) Val_loss: 299.951 Best_Val_Accuracy: 54.7115 (%)  Epoch_Duration: 46.1768
+Epoch: [67/75] Train_loss: 3.5732 Train_Accuracy: 96.1898 (%) Val_loss: 312.492 Best_Val_Accuracy: 54.7115 (%)  Epoch_Duration: 44.9272
+Epoch: [68/75] Train_loss: 3.6053 Train_Accuracy: 96.0563 (%) Val_loss: 309.1398 Best_Val_Accuracy: 54.7115 (%)  Epoch_Duration: 44.5689
+Epoch: [69/75] Train_loss: 3.5915 Train_Accuracy: 95.8743 (%) Val_loss: 307.4939 Best_Val_Accuracy: 54.7115 (%)  Epoch_Duration: 46.3216
+Epoch: [70/75] Train_loss: 5.3351 Train_Accuracy: 95.5952 (%) Val_loss: 312.0593 Best_Val_Accuracy: 54.7115 (%)  Epoch_Duration: 44.5004
+Epoch: [71/75] Train_loss: 3.3676 Train_Accuracy: 96.2019 (%) Val_loss: 315.4927 Best_Val_Accuracy: 54.7115 (%)  Epoch_Duration: 44.5555
+Epoch: [72/75] Train_loss: 3.512 Train_Accuracy: 96.3233 (%) Val_loss: 324.7706 Best_Val_Accuracy: 54.7115 (%)  Epoch_Duration: 44.7691
+Epoch: [73/75] Train_loss: 4.8301 Train_Accuracy: 95.486 (%) Val_loss: 347.4701 Best_Val_Accuracy: 54.7115 (%)  Epoch_Duration: 44.359
+Epoch: [74/75] Train_loss: 5.3932 Train_Accuracy: 95.3525 (%) Val_loss: 338.6458 Best_Val_Accuracy: 54.7115 (%)  Epoch_Duration: 44.8175
+Epoch: [75/75] Train_loss: 7.4475 Train_Accuracy: 95.8379 (%) Val_loss: 350.1745 Best_Val_Accuracy: 54.7115 (%)  Epoch_Duration: 44.9391
+
+ Computing the completeness score: 
+
+Top concepts: 3
+Accuracy of the bb: 88.84615384615384 (%)
+Accuracy using the completeness: 51.63461538461539 (%)
+Completeness_score: 0.04207920792079222
+/ocean/projects/asc170022p/shg121/PhD/ICLR-2022/out/cub/completeness/ResNet101/moIE/concepts_topK_3/out_put_predict_bb.pt
+TopK: 5
+train_size: torch.Size([8241, 2048, 14, 14])
+train_size: torch.Size([8241, 108])
+train_size: torch.Size([8241])
+test_size: torch.Size([1040, 2048, 14, 14])
+test_size: torch.Size([1040, 108])
+test_size: torch.Size([1040])
+Time to the full datasets: 94.5244619846344 secs
+############# Paths ############# 
+/ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints/cub/completeness/ResNet101/moIE/concepts_topK_5
+/ocean/projects/asc170022p/shg121/PhD/ICLR-2022/out/cub/completeness/ResNet101/moIE/concepts_topK_5
+/ocean/projects/asc170022p/shg121/PhD/ICLR-2022/log/cub/completeness/ResNet101/moIE/concepts_topK_5
+############# Paths ############# 
+==>> Loading BB from : /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints/cub/BB/lr_0.001_epochs_95/ResNet101/best_model_epoch_63.pth.tar
+Device: cuda
+===>>> t is loaded from: /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints/cub/t/lr_0.001_epochs_95/lr_0.001_epochs_95_ResNet101_layer4_adaptive_sgd_BCE/best_model_epoch_62.pth.tar
+Size of CAV: torch.Size([108, 2048])
+Logistic_Regression_t(
+  (adaptive_avg_pool): AdaptiveAvgPool2d(output_size=(1, 1))
+  (adaptive_max_pool): AdaptiveMaxPool2d(output_size=(1, 1))
+  (flatten): Flatten(start_dim=1, end_dim=-1)
+  (linear): Linear(in_features=2048, out_features=108, bias=True)
+)
+################## TB Log path ###################
+/ocean/projects/asc170022p/shg121/PhD/ICLR-2022/log/cub/completeness/ResNet101/moIE/concepts_topK_5/g_train
+################## TB Log path ###################
+
+ Old best val accuracy: 0 (%) || New best val accuracy: 31.057692307692307 (%) , and new model saved..
+
+
+ /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints/cub/completeness/ResNet101/moIE/concepts_topK_5/g_best_model_epoch_1.pth.tar
+
+Epoch: [1/75] Train_loss: 12.1325 Train_Accuracy: 27.6908 (%) Val_loss: 18.0987 Best_Val_Accuracy: 31.0577 (%)  Epoch_Duration: 47.9001
+
+ Old best val accuracy: 31.057692307692307 (%) || New best val accuracy: 44.13461538461539 (%) , and new model saved..
+
+
+ /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints/cub/completeness/ResNet101/moIE/concepts_topK_5/g_best_model_epoch_2.pth.tar
+
+Epoch: [2/75] Train_loss: 15.995 Train_Accuracy: 45.4435 (%) Val_loss: 24.9025 Best_Val_Accuracy: 44.1346 (%)  Epoch_Duration: 43.5369
+
+ Old best val accuracy: 44.13461538461539 (%) || New best val accuracy: 47.69230769230769 (%) , and new model saved..
+
+
+ /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints/cub/completeness/ResNet101/moIE/concepts_topK_5/g_best_model_epoch_3.pth.tar
+
+Epoch: [3/75] Train_loss: 12.33 Train_Accuracy: 59.1312 (%) Val_loss: 26.5996 Best_Val_Accuracy: 47.6923 (%)  Epoch_Duration: 44.1974
+
+ Old best val accuracy: 47.69230769230769 (%) || New best val accuracy: 49.61538461538461 (%) , and new model saved..
+
+
+ /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints/cub/completeness/ResNet101/moIE/concepts_topK_5/g_best_model_epoch_4.pth.tar
+
+Epoch: [4/75] Train_loss: 11.9072 Train_Accuracy: 65.4896 (%) Val_loss: 33.4334 Best_Val_Accuracy: 49.6154 (%)  Epoch_Duration: 43.5492
+
+ Old best val accuracy: 49.61538461538461 (%) || New best val accuracy: 50.67307692307692 (%) , and new model saved..
+
+
+ /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints/cub/completeness/ResNet101/moIE/concepts_topK_5/g_best_model_epoch_5.pth.tar
+
+Epoch: [5/75] Train_loss: 10.7749 Train_Accuracy: 70.8652 (%) Val_loss: 39.4423 Best_Val_Accuracy: 50.6731 (%)  Epoch_Duration: 45.8002
+
+ Old best val accuracy: 50.67307692307692 (%) || New best val accuracy: 52.40384615384615 (%) , and new model saved..
+
+
+ /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints/cub/completeness/ResNet101/moIE/concepts_topK_5/g_best_model_epoch_6.pth.tar
+
+Epoch: [6/75] Train_loss: 9.8874 Train_Accuracy: 75.5369 (%) Val_loss: 45.5639 Best_Val_Accuracy: 52.4038 (%)  Epoch_Duration: 45.9444
+Epoch: [7/75] Train_loss: 10.8526 Train_Accuracy: 77.6605 (%) Val_loss: 55.4703 Best_Val_Accuracy: 52.4038 (%)  Epoch_Duration: 43.8512
+
+ Old best val accuracy: 52.40384615384615 (%) || New best val accuracy: 53.65384615384615 (%) , and new model saved..
+
+
+ /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints/cub/completeness/ResNet101/moIE/concepts_topK_5/g_best_model_epoch_8.pth.tar
+
+Epoch: [8/75] Train_loss: 10.4442 Train_Accuracy: 79.5049 (%) Val_loss: 57.1003 Best_Val_Accuracy: 53.6538 (%)  Epoch_Duration: 47.1451
+
+ Old best val accuracy: 53.65384615384615 (%) || New best val accuracy: 55.769230769230774 (%) , and new model saved..
+
+
+ /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints/cub/completeness/ResNet101/moIE/concepts_topK_5/g_best_model_epoch_9.pth.tar
+
+Epoch: [9/75] Train_loss: 11.6224 Train_Accuracy: 80.0146 (%) Val_loss: 61.3833 Best_Val_Accuracy: 55.7692 (%)  Epoch_Duration: 43.9545
+
+ Old best val accuracy: 55.769230769230774 (%) || New best val accuracy: 57.49999999999999 (%) , and new model saved..
+
+
+ /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints/cub/completeness/ResNet101/moIE/concepts_topK_5/g_best_model_epoch_10.pth.tar
+
+Epoch: [10/75] Train_loss: 7.5952 Train_Accuracy: 85.4387 (%) Val_loss: 68.2936 Best_Val_Accuracy: 57.5 (%)  Epoch_Duration: 45.3253
+Epoch: [11/75] Train_loss: 7.354 Train_Accuracy: 86.6885 (%) Val_loss: 72.0694 Best_Val_Accuracy: 57.5 (%)  Epoch_Duration: 45.586
+Epoch: [12/75] Train_loss: 7.4984 Train_Accuracy: 87.6957 (%) Val_loss: 80.4758 Best_Val_Accuracy: 57.5 (%)  Epoch_Duration: 44.5503
+Epoch: [13/75] Train_loss: 8.3693 Train_Accuracy: 87.6835 (%) Val_loss: 92.6889 Best_Val_Accuracy: 57.5 (%)  Epoch_Duration: 45.1576
+Epoch: [14/75] Train_loss: 7.693 Train_Accuracy: 87.9141 (%) Val_loss: 97.2642 Best_Val_Accuracy: 57.5 (%)  Epoch_Duration: 43.8041
+Epoch: [15/75] Train_loss: 8.3038 Train_Accuracy: 88.5329 (%) Val_loss: 103.4245 Best_Val_Accuracy: 57.5 (%)  Epoch_Duration: 45.9454
+Epoch: [16/75] Train_loss: 7.1808 Train_Accuracy: 90.1226 (%) Val_loss: 105.987 Best_Val_Accuracy: 57.5 (%)  Epoch_Duration: 46.206
+Epoch: [17/75] Train_loss: 6.2694 Train_Accuracy: 90.6929 (%) Val_loss: 115.4807 Best_Val_Accuracy: 57.5 (%)  Epoch_Duration: 46.3662
+
+ Old best val accuracy: 57.49999999999999 (%) || New best val accuracy: 59.23076923076923 (%) , and new model saved..
+
+
+ /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints/cub/completeness/ResNet101/moIE/concepts_topK_5/g_best_model_epoch_18.pth.tar
+
+Epoch: [18/75] Train_loss: 6.1874 Train_Accuracy: 91.7364 (%) Val_loss: 119.5947 Best_Val_Accuracy: 59.2308 (%)  Epoch_Duration: 43.8728
+
+ Old best val accuracy: 59.23076923076923 (%) || New best val accuracy: 59.61538461538461 (%) , and new model saved..
+
+
+ /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints/cub/completeness/ResNet101/moIE/concepts_topK_5/g_best_model_epoch_19.pth.tar
+
+Epoch: [19/75] Train_loss: 7.2248 Train_Accuracy: 91.1054 (%) Val_loss: 124.2824 Best_Val_Accuracy: 59.6154 (%)  Epoch_Duration: 44.0959
+Epoch: [20/75] Train_loss: 5.7761 Train_Accuracy: 92.4038 (%) Val_loss: 127.8455 Best_Val_Accuracy: 59.6154 (%)  Epoch_Duration: 45.3301
+Epoch: [21/75] Train_loss: 7.3749 Train_Accuracy: 91.9913 (%) Val_loss: 146.7699 Best_Val_Accuracy: 59.6154 (%)  Epoch_Duration: 43.5626
+
+ Old best val accuracy: 59.61538461538461 (%) || New best val accuracy: 60.192307692307686 (%) , and new model saved..
+
+
+ /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints/cub/completeness/ResNet101/moIE/concepts_topK_5/g_best_model_epoch_22.pth.tar
+
+Epoch: [22/75] Train_loss: 6.6353 Train_Accuracy: 92.5859 (%) Val_loss: 140.1804 Best_Val_Accuracy: 60.1923 (%)  Epoch_Duration: 46.9973
+
+ Old best val accuracy: 60.192307692307686 (%) || New best val accuracy: 60.76923076923077 (%) , and new model saved..
+
+
+ /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints/cub/completeness/ResNet101/moIE/concepts_topK_5/g_best_model_epoch_23.pth.tar
+
+Epoch: [23/75] Train_loss: 6.1822 Train_Accuracy: 93.678 (%) Val_loss: 147.2289 Best_Val_Accuracy: 60.7692 (%)  Epoch_Duration: 43.8452
+Epoch: [24/75] Train_loss: 5.7622 Train_Accuracy: 93.4838 (%) Val_loss: 164.0821 Best_Val_Accuracy: 60.7692 (%)  Epoch_Duration: 46.19
+Epoch: [25/75] Train_loss: 6.3836 Train_Accuracy: 94.1512 (%) Val_loss: 175.6925 Best_Val_Accuracy: 60.7692 (%)  Epoch_Duration: 43.8079
+
+ Old best val accuracy: 60.76923076923077 (%) || New best val accuracy: 60.96153846153847 (%) , and new model saved..
+
+
+ /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints/cub/completeness/ResNet101/moIE/concepts_topK_5/g_best_model_epoch_26.pth.tar
+
+Epoch: [26/75] Train_loss: 5.9438 Train_Accuracy: 93.678 (%) Val_loss: 178.9221 Best_Val_Accuracy: 60.9615 (%)  Epoch_Duration: 43.6714
+
+ Old best val accuracy: 60.96153846153847 (%) || New best val accuracy: 61.44230769230769 (%) , and new model saved..
+
+
+ /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints/cub/completeness/ResNet101/moIE/concepts_topK_5/g_best_model_epoch_27.pth.tar
+
+Epoch: [27/75] Train_loss: 5.4324 Train_Accuracy: 94.2847 (%) Val_loss: 179.2634 Best_Val_Accuracy: 61.4423 (%)  Epoch_Duration: 43.6248
+Epoch: [28/75] Train_loss: 4.3191 Train_Accuracy: 95.4739 (%) Val_loss: 179.6042 Best_Val_Accuracy: 61.4423 (%)  Epoch_Duration: 46.0518
+Epoch: [29/75] Train_loss: 6.3828 Train_Accuracy: 94.6123 (%) Val_loss: 191.3656 Best_Val_Accuracy: 61.4423 (%)  Epoch_Duration: 44.1776
+Epoch: [30/75] Train_loss: 7.9406 Train_Accuracy: 94.0299 (%) Val_loss: 199.8426 Best_Val_Accuracy: 61.4423 (%)  Epoch_Duration: 43.768
+Epoch: [31/75] Train_loss: 5.9821 Train_Accuracy: 95.0734 (%) Val_loss: 207.9912 Best_Val_Accuracy: 61.4423 (%)  Epoch_Duration: 44.7108
+Epoch: [32/75] Train_loss: 5.4367 Train_Accuracy: 95.3161 (%) Val_loss: 217.5698 Best_Val_Accuracy: 61.4423 (%)  Epoch_Duration: 44.0993
+Epoch: [33/75] Train_loss: 5.4472 Train_Accuracy: 95.3404 (%) Val_loss: 222.9269 Best_Val_Accuracy: 61.4423 (%)  Epoch_Duration: 43.7652
+
+ Old best val accuracy: 61.44230769230769 (%) || New best val accuracy: 61.53846153846154 (%) , and new model saved..
+
+
+ /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints/cub/completeness/ResNet101/moIE/concepts_topK_5/g_best_model_epoch_34.pth.tar
+
+Epoch: [34/75] Train_loss: 3.6941 Train_Accuracy: 96.3597 (%) Val_loss: 217.0706 Best_Val_Accuracy: 61.5385 (%)  Epoch_Duration: 45.664
+Epoch: [35/75] Train_loss: 3.9781 Train_Accuracy: 96.2141 (%) Val_loss: 226.1176 Best_Val_Accuracy: 61.5385 (%)  Epoch_Duration: 43.623
+Epoch: [36/75] Train_loss: 5.2878 Train_Accuracy: 95.85 (%) Val_loss: 242.2815 Best_Val_Accuracy: 61.5385 (%)  Epoch_Duration: 48.5937
+Epoch: [37/75] Train_loss: 7.7357 Train_Accuracy: 94.6002 (%) Val_loss: 248.9731 Best_Val_Accuracy: 61.5385 (%)  Epoch_Duration: 45.8097
+
+ Old best val accuracy: 61.53846153846154 (%) || New best val accuracy: 61.73076923076923 (%) , and new model saved..
+
+
+ /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints/cub/completeness/ResNet101/moIE/concepts_topK_5/g_best_model_epoch_38.pth.tar
+
+Epoch: [38/75] Train_loss: 5.1846 Train_Accuracy: 96.2383 (%) Val_loss: 245.9094 Best_Val_Accuracy: 61.7308 (%)  Epoch_Duration: 49.3013
+Epoch: [39/75] Train_loss: 4.0018 Train_Accuracy: 96.8936 (%) Val_loss: 251.6977 Best_Val_Accuracy: 61.7308 (%)  Epoch_Duration: 56.8004
+Epoch: [40/75] Train_loss: 5.7206 Train_Accuracy: 96.1291 (%) Val_loss: 272.9381 Best_Val_Accuracy: 61.7308 (%)  Epoch_Duration: 43.6346
+
+ Old best val accuracy: 61.73076923076923 (%) || New best val accuracy: 62.019230769230774 (%) , and new model saved..
+
+
+ /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints/cub/completeness/ResNet101/moIE/concepts_topK_5/g_best_model_epoch_41.pth.tar
+
+Epoch: [41/75] Train_loss: 3.8342 Train_Accuracy: 96.7965 (%) Val_loss: 268.9986 Best_Val_Accuracy: 62.0192 (%)  Epoch_Duration: 43.604
+Epoch: [42/75] Train_loss: 4.5468 Train_Accuracy: 96.845 (%) Val_loss: 284.4868 Best_Val_Accuracy: 62.0192 (%)  Epoch_Duration: 43.6637
+Epoch: [43/75] Train_loss: 4.9188 Train_Accuracy: 96.3961 (%) Val_loss: 293.3719 Best_Val_Accuracy: 62.0192 (%)  Epoch_Duration: 43.5521
+Epoch: [44/75] Train_loss: 5.0835 Train_Accuracy: 96.5417 (%) Val_loss: 307.7711 Best_Val_Accuracy: 62.0192 (%)  Epoch_Duration: 43.5844
+Epoch: [45/75] Train_loss: 5.0063 Train_Accuracy: 96.7722 (%) Val_loss: 303.3085 Best_Val_Accuracy: 62.0192 (%)  Epoch_Duration: 43.5893
+Epoch: [46/75] Train_loss: 5.8073 Train_Accuracy: 96.4446 (%) Val_loss: 316.4301 Best_Val_Accuracy: 62.0192 (%)  Epoch_Duration: 43.5012
+
+ Old best val accuracy: 62.019230769230774 (%) || New best val accuracy: 62.40384615384615 (%) , and new model saved..
+
+
+ /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints/cub/completeness/ResNet101/moIE/concepts_topK_5/g_best_model_epoch_47.pth.tar
+
+Epoch: [47/75] Train_loss: 5.7924 Train_Accuracy: 96.7601 (%) Val_loss: 329.8414 Best_Val_Accuracy: 62.4038 (%)  Epoch_Duration: 43.7318
+Epoch: [48/75] Train_loss: 4.1248 Train_Accuracy: 97.2697 (%) Val_loss: 323.3946 Best_Val_Accuracy: 62.4038 (%)  Epoch_Duration: 43.8681
+
+ Old best val accuracy: 62.40384615384615 (%) || New best val accuracy: 63.46153846153846 (%) , and new model saved..
+
+
+ /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints/cub/completeness/ResNet101/moIE/concepts_topK_5/g_best_model_epoch_49.pth.tar
+
+Epoch: [49/75] Train_loss: 3.2444 Train_Accuracy: 97.5731 (%) Val_loss: 335.9038 Best_Val_Accuracy: 63.4615 (%)  Epoch_Duration: 43.5725
+Epoch: [50/75] Train_loss: 3.3898 Train_Accuracy: 97.5974 (%) Val_loss: 348.4435 Best_Val_Accuracy: 63.4615 (%)  Epoch_Duration: 43.5267
+Epoch: [51/75] Train_loss: 4.8354 Train_Accuracy: 97.5367 (%) Val_loss: 363.2023 Best_Val_Accuracy: 63.4615 (%)  Epoch_Duration: 43.8536
+Epoch: [52/75] Train_loss: 6.3707 Train_Accuracy: 97.0999 (%) Val_loss: 363.7184 Best_Val_Accuracy: 63.4615 (%)  Epoch_Duration: 45.5588
+Epoch: [53/75] Train_loss: 5.4496 Train_Accuracy: 97.4882 (%) Val_loss: 357.989 Best_Val_Accuracy: 63.4615 (%)  Epoch_Duration: 44.3935
+
+ Old best val accuracy: 63.46153846153846 (%) || New best val accuracy: 64.13461538461539 (%) , and new model saved..
+
+
+ /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints/cub/completeness/ResNet101/moIE/concepts_topK_5/g_best_model_epoch_54.pth.tar
+
+Epoch: [54/75] Train_loss: 4.958 Train_Accuracy: 97.2576 (%) Val_loss: 371.7995 Best_Val_Accuracy: 64.1346 (%)  Epoch_Duration: 43.8293
+Epoch: [55/75] Train_loss: 3.8118 Train_Accuracy: 97.7309 (%) Val_loss: 370.1282 Best_Val_Accuracy: 64.1346 (%)  Epoch_Duration: 45.5494
+Epoch: [56/75] Train_loss: 4.8624 Train_Accuracy: 97.4032 (%) Val_loss: 384.8869 Best_Val_Accuracy: 64.1346 (%)  Epoch_Duration: 43.657
+Epoch: [57/75] Train_loss: 5.2941 Train_Accuracy: 97.1969 (%) Val_loss: 395.7467 Best_Val_Accuracy: 64.1346 (%)  Epoch_Duration: 43.6122
+Epoch: [58/75] Train_loss: 4.8613 Train_Accuracy: 97.2697 (%) Val_loss: 416.2288 Best_Val_Accuracy: 64.1346 (%)  Epoch_Duration: 43.8279
+Epoch: [59/75] Train_loss: 4.3891 Train_Accuracy: 98.0342 (%) Val_loss: 406.3345 Best_Val_Accuracy: 64.1346 (%)  Epoch_Duration: 43.7817
+Epoch: [60/75] Train_loss: 2.5677 Train_Accuracy: 98.5924 (%) Val_loss: 411.916 Best_Val_Accuracy: 64.1346 (%)  Epoch_Duration: 45.9413
+Epoch: [61/75] Train_loss: 3.5127 Train_Accuracy: 97.7794 (%) Val_loss: 410.3901 Best_Val_Accuracy: 64.1346 (%)  Epoch_Duration: 44.2626
+Epoch: [62/75] Train_loss: 4.744 Train_Accuracy: 98.1313 (%) Val_loss: 420.6217 Best_Val_Accuracy: 64.1346 (%)  Epoch_Duration: 43.9393
+Epoch: [63/75] Train_loss: 3.8958 Train_Accuracy: 97.6338 (%) Val_loss: 437.8192 Best_Val_Accuracy: 64.1346 (%)  Epoch_Duration: 43.634
+Epoch: [64/75] Train_loss: 5.6076 Train_Accuracy: 97.2576 (%) Val_loss: 443.8277 Best_Val_Accuracy: 64.1346 (%)  Epoch_Duration: 44.2162
+Epoch: [65/75] Train_loss: 5.2266 Train_Accuracy: 97.8643 (%) Val_loss: 445.2187 Best_Val_Accuracy: 64.1346 (%)  Epoch_Duration: 45.2318
+Epoch: [66/75] Train_loss: 3.3384 Train_Accuracy: 98.289 (%) Val_loss: 439.0561 Best_Val_Accuracy: 64.1346 (%)  Epoch_Duration: 45.2675
+Epoch: [67/75] Train_loss: 3.66 Train_Accuracy: 98.0221 (%) Val_loss: 444.3941 Best_Val_Accuracy: 64.1346 (%)  Epoch_Duration: 45.3799
+Epoch: [68/75] Train_loss: 3.2141 Train_Accuracy: 98.4104 (%) Val_loss: 450.5033 Best_Val_Accuracy: 64.1346 (%)  Epoch_Duration: 43.8923
+Epoch: [69/75] Train_loss: 5.0635 Train_Accuracy: 97.6095 (%) Val_loss: 460.0529 Best_Val_Accuracy: 64.1346 (%)  Epoch_Duration: 43.641
+Epoch: [70/75] Train_loss: 5.5161 Train_Accuracy: 97.7309 (%) Val_loss: 495.1647 Best_Val_Accuracy: 64.1346 (%)  Epoch_Duration: 45.3865
+Epoch: [71/75] Train_loss: 6.5489 Train_Accuracy: 97.7187 (%) Val_loss: 473.2425 Best_Val_Accuracy: 64.1346 (%)  Epoch_Duration: 44.2563
+Epoch: [72/75] Train_loss: 3.429 Train_Accuracy: 98.192 (%) Val_loss: 496.887 Best_Val_Accuracy: 64.1346 (%)  Epoch_Duration: 43.6811
+Epoch: [73/75] Train_loss: 4.2267 Train_Accuracy: 98.2769 (%) Val_loss: 493.7847 Best_Val_Accuracy: 64.1346 (%)  Epoch_Duration: 43.9894
+Epoch: [74/75] Train_loss: 4.0055 Train_Accuracy: 98.01 (%) Val_loss: 502.7144 Best_Val_Accuracy: 64.1346 (%)  Epoch_Duration: 43.6441
+Epoch: [75/75] Train_loss: 6.1684 Train_Accuracy: 97.8158 (%) Val_loss: 496.5867 Best_Val_Accuracy: 64.1346 (%)  Epoch_Duration: 43.6649
+
+ Computing the completeness score: 
+
+Top concepts: 5
+Accuracy of the bb: 88.84615384615384 (%)
+Accuracy using the completeness: 62.5 (%)
+Completeness_score: 0.32178217821782185
+/ocean/projects/asc170022p/shg121/PhD/ICLR-2022/out/cub/completeness/ResNet101/moIE/concepts_topK_5/out_put_predict_bb.pt
+TopK: 10
+train_size: torch.Size([8241, 2048, 14, 14])
+train_size: torch.Size([8241, 108])
+train_size: torch.Size([8241])
+test_size: torch.Size([1040, 2048, 14, 14])
+test_size: torch.Size([1040, 108])
+test_size: torch.Size([1040])
+Time to the full datasets: 71.3475193977356 secs
+############# Paths ############# 
+/ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints/cub/completeness/ResNet101/moIE/concepts_topK_10
+/ocean/projects/asc170022p/shg121/PhD/ICLR-2022/out/cub/completeness/ResNet101/moIE/concepts_topK_10
+/ocean/projects/asc170022p/shg121/PhD/ICLR-2022/log/cub/completeness/ResNet101/moIE/concepts_topK_10
+############# Paths ############# 
+==>> Loading BB from : /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints/cub/BB/lr_0.001_epochs_95/ResNet101/best_model_epoch_63.pth.tar
+Device: cuda
+===>>> t is loaded from: /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints/cub/t/lr_0.001_epochs_95/lr_0.001_epochs_95_ResNet101_layer4_adaptive_sgd_BCE/best_model_epoch_62.pth.tar
+Size of CAV: torch.Size([108, 2048])
+Logistic_Regression_t(
+  (adaptive_avg_pool): AdaptiveAvgPool2d(output_size=(1, 1))
+  (adaptive_max_pool): AdaptiveMaxPool2d(output_size=(1, 1))
+  (flatten): Flatten(start_dim=1, end_dim=-1)
+  (linear): Linear(in_features=2048, out_features=108, bias=True)
+)
+################## TB Log path ###################
+/ocean/projects/asc170022p/shg121/PhD/ICLR-2022/log/cub/completeness/ResNet101/moIE/concepts_topK_10/g_train
+################## TB Log path ###################
+
+ Old best val accuracy: 0 (%) || New best val accuracy: 48.46153846153846 (%) , and new model saved..
+
+
+ /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints/cub/completeness/ResNet101/moIE/concepts_topK_10/g_best_model_epoch_1.pth.tar
+
+Epoch: [1/75] Train_loss: 14.6284 Train_Accuracy: 36.4033 (%) Val_loss: 21.3976 Best_Val_Accuracy: 48.4615 (%)  Epoch_Duration: 43.097
+
+ Old best val accuracy: 48.46153846153846 (%) || New best val accuracy: 61.346153846153854 (%) , and new model saved..
+
+
+ /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints/cub/completeness/ResNet101/moIE/concepts_topK_10/g_best_model_epoch_2.pth.tar
+
+Epoch: [2/75] Train_loss: 16.1071 Train_Accuracy: 62.3832 (%) Val_loss: 30.7338 Best_Val_Accuracy: 61.3462 (%)  Epoch_Duration: 42.9076
+
+ Old best val accuracy: 61.346153846153854 (%) || New best val accuracy: 62.69230769230769 (%) , and new model saved..
+
+
+ /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints/cub/completeness/ResNet101/moIE/concepts_topK_10/g_best_model_epoch_3.pth.tar
+
+Epoch: [3/75] Train_loss: 13.4126 Train_Accuracy: 74.0929 (%) Val_loss: 41.5403 Best_Val_Accuracy: 62.6923 (%)  Epoch_Duration: 42.9562
+
+ Old best val accuracy: 62.69230769230769 (%) || New best val accuracy: 63.07692307692307 (%) , and new model saved..
+
+
+ /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints/cub/completeness/ResNet101/moIE/concepts_topK_10/g_best_model_epoch_4.pth.tar
+
+Epoch: [4/75] Train_loss: 11.6597 Train_Accuracy: 80.2694 (%) Val_loss: 53.4655 Best_Val_Accuracy: 63.0769 (%)  Epoch_Duration: 43.0982
+
+ Old best val accuracy: 63.07692307692307 (%) || New best val accuracy: 66.82692307692307 (%) , and new model saved..
+
+
+ /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints/cub/completeness/ResNet101/moIE/concepts_topK_10/g_best_model_epoch_5.pth.tar
+
+Epoch: [5/75] Train_loss: 10.8966 Train_Accuracy: 83.7641 (%) Val_loss: 64.3893 Best_Val_Accuracy: 66.8269 (%)  Epoch_Duration: 42.9052
+
+ Old best val accuracy: 66.82692307692307 (%) || New best val accuracy: 67.5 (%) , and new model saved..
+
+
+ /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints/cub/completeness/ResNet101/moIE/concepts_topK_10/g_best_model_epoch_6.pth.tar
+
+Epoch: [6/75] Train_loss: 10.8048 Train_Accuracy: 86.5429 (%) Val_loss: 76.1344 Best_Val_Accuracy: 67.5 (%)  Epoch_Duration: 44.1497
+Epoch: [7/75] Train_loss: 11.2353 Train_Accuracy: 87.6835 (%) Val_loss: 84.3915 Best_Val_Accuracy: 67.5 (%)  Epoch_Duration: 43.0937
+
+ Old best val accuracy: 67.5 (%) || New best val accuracy: 73.5576923076923 (%) , and new model saved..
+
+
+ /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints/cub/completeness/ResNet101/moIE/concepts_topK_10/g_best_model_epoch_8.pth.tar
+
+Epoch: [8/75] Train_loss: 6.6997 Train_Accuracy: 92.0398 (%) Val_loss: 89.622 Best_Val_Accuracy: 73.5577 (%)  Epoch_Duration: 42.8766
+Epoch: [9/75] Train_loss: 8.4707 Train_Accuracy: 91.967 (%) Val_loss: 101.1327 Best_Val_Accuracy: 73.5577 (%)  Epoch_Duration: 43.595
+Epoch: [10/75] Train_loss: 6.7701 Train_Accuracy: 93.6537 (%) Val_loss: 117.3347 Best_Val_Accuracy: 73.5577 (%)  Epoch_Duration: 44.7546
+Epoch: [11/75] Train_loss: 7.3293 Train_Accuracy: 93.3867 (%) Val_loss: 127.9199 Best_Val_Accuracy: 73.5577 (%)  Epoch_Duration: 43.1416
+Epoch: [12/75] Train_loss: 9.9481 Train_Accuracy: 93.1076 (%) Val_loss: 147.6091 Best_Val_Accuracy: 73.5577 (%)  Epoch_Duration: 42.8943
+Epoch: [13/75] Train_loss: 7.2538 Train_Accuracy: 94.5152 (%) Val_loss: 154.3379 Best_Val_Accuracy: 73.5577 (%)  Epoch_Duration: 43.2199
+Epoch: [14/75] Train_loss: 6.6274 Train_Accuracy: 95.1341 (%) Val_loss: 167.7037 Best_Val_Accuracy: 73.5577 (%)  Epoch_Duration: 43.3727
+Epoch: [15/75] Train_loss: 8.3385 Train_Accuracy: 94.3696 (%) Val_loss: 171.1571 Best_Val_Accuracy: 73.5577 (%)  Epoch_Duration: 43.3616
+Epoch: [16/75] Train_loss: 7.4349 Train_Accuracy: 95.2069 (%) Val_loss: 188.8682 Best_Val_Accuracy: 73.5577 (%)  Epoch_Duration: 44.5959
+Epoch: [17/75] Train_loss: 7.2353 Train_Accuracy: 96.2383 (%) Val_loss: 193.2412 Best_Val_Accuracy: 73.5577 (%)  Epoch_Duration: 43.089
+Epoch: [18/75] Train_loss: 5.5081 Train_Accuracy: 96.5417 (%) Val_loss: 205.3523 Best_Val_Accuracy: 73.5577 (%)  Epoch_Duration: 44.6511
+Epoch: [19/75] Train_loss: 5.2525 Train_Accuracy: 96.748 (%) Val_loss: 215.4355 Best_Val_Accuracy: 73.5577 (%)  Epoch_Duration: 42.9383
+Epoch: [20/75] Train_loss: 6.0301 Train_Accuracy: 96.4325 (%) Val_loss: 234.9008 Best_Val_Accuracy: 73.5577 (%)  Epoch_Duration: 43.0588
+Epoch: [21/75] Train_loss: 6.2772 Train_Accuracy: 96.5781 (%) Val_loss: 243.5544 Best_Val_Accuracy: 73.5577 (%)  Epoch_Duration: 43.6412
+Epoch: [22/75] Train_loss: 5.9599 Train_Accuracy: 96.7601 (%) Val_loss: 249.6229 Best_Val_Accuracy: 73.5577 (%)  Epoch_Duration: 42.9039
+Epoch: [23/75] Train_loss: 5.6086 Train_Accuracy: 97.0635 (%) Val_loss: 267.4396 Best_Val_Accuracy: 73.5577 (%)  Epoch_Duration: 43.2218
+Epoch: [24/75] Train_loss: 6.9052 Train_Accuracy: 96.9785 (%) Val_loss: 282.8432 Best_Val_Accuracy: 73.5577 (%)  Epoch_Duration: 42.9158
+Epoch: [25/75] Train_loss: 4.9245 Train_Accuracy: 97.4032 (%) Val_loss: 286.897 Best_Val_Accuracy: 73.5577 (%)  Epoch_Duration: 43.1568
+Epoch: [26/75] Train_loss: 7.2272 Train_Accuracy: 96.7965 (%) Val_loss: 305.3524 Best_Val_Accuracy: 73.5577 (%)  Epoch_Duration: 43.0771
+Epoch: [27/75] Train_loss: 4.3501 Train_Accuracy: 97.7309 (%) Val_loss: 314.0542 Best_Val_Accuracy: 73.5577 (%)  Epoch_Duration: 42.989
+
+ Old best val accuracy: 73.5576923076923 (%) || New best val accuracy: 73.84615384615385 (%) , and new model saved..
+
+
+ /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints/cub/completeness/ResNet101/moIE/concepts_topK_10/g_best_model_epoch_28.pth.tar
+
+Epoch: [28/75] Train_loss: 3.8206 Train_Accuracy: 98.289 (%) Val_loss: 318.1758 Best_Val_Accuracy: 73.8462 (%)  Epoch_Duration: 42.977
+Epoch: [29/75] Train_loss: 7.5989 Train_Accuracy: 97.1969 (%) Val_loss: 346.0302 Best_Val_Accuracy: 73.8462 (%)  Epoch_Duration: 43.5767
+
+ Old best val accuracy: 73.84615384615385 (%) || New best val accuracy: 74.71153846153847 (%) , and new model saved..
+
+
+ /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints/cub/completeness/ResNet101/moIE/concepts_topK_10/g_best_model_epoch_30.pth.tar
+
+Epoch: [30/75] Train_loss: 4.7366 Train_Accuracy: 98.1556 (%) Val_loss: 336.9937 Best_Val_Accuracy: 74.7115 (%)  Epoch_Duration: 45.0082
+Epoch: [31/75] Train_loss: 4.2591 Train_Accuracy: 98.3254 (%) Val_loss: 368.6252 Best_Val_Accuracy: 74.7115 (%)  Epoch_Duration: 43.1245
+Epoch: [32/75] Train_loss: 5.9227 Train_Accuracy: 97.6823 (%) Val_loss: 375.798 Best_Val_Accuracy: 74.7115 (%)  Epoch_Duration: 42.9126
+Epoch: [33/75] Train_loss: 5.0294 Train_Accuracy: 97.9371 (%) Val_loss: 367.9109 Best_Val_Accuracy: 74.7115 (%)  Epoch_Duration: 43.2667
+Epoch: [34/75] Train_loss: 5.0371 Train_Accuracy: 98.2648 (%) Val_loss: 386.0437 Best_Val_Accuracy: 74.7115 (%)  Epoch_Duration: 42.8213
+Epoch: [35/75] Train_loss: 4.2193 Train_Accuracy: 98.2648 (%) Val_loss: 403.9945 Best_Val_Accuracy: 74.7115 (%)  Epoch_Duration: 42.8766
+Epoch: [36/75] Train_loss: 3.3844 Train_Accuracy: 98.2769 (%) Val_loss: 408.0669 Best_Val_Accuracy: 74.7115 (%)  Epoch_Duration: 42.8852
+Epoch: [37/75] Train_loss: 1.8932 Train_Accuracy: 99.0535 (%) Val_loss: 420.898 Best_Val_Accuracy: 74.7115 (%)  Epoch_Duration: 43.138
+Epoch: [38/75] Train_loss: 3.2679 Train_Accuracy: 98.6773 (%) Val_loss: 413.1285 Best_Val_Accuracy: 74.7115 (%)  Epoch_Duration: 43.0496
+Epoch: [39/75] Train_loss: 6.0916 Train_Accuracy: 98.2526 (%) Val_loss: 427.5923 Best_Val_Accuracy: 74.7115 (%)  Epoch_Duration: 42.9358
+Epoch: [40/75] Train_loss: 5.8147 Train_Accuracy: 97.8522 (%) Val_loss: 461.0362 Best_Val_Accuracy: 74.7115 (%)  Epoch_Duration: 43.2367
+Epoch: [41/75] Train_loss: 4.9746 Train_Accuracy: 98.2405 (%) Val_loss: 481.5123 Best_Val_Accuracy: 74.7115 (%)  Epoch_Duration: 44.1585
+Epoch: [42/75] Train_loss: 3.9167 Train_Accuracy: 98.6895 (%) Val_loss: 503.0347 Best_Val_Accuracy: 74.7115 (%)  Epoch_Duration: 43.2799
+Epoch: [43/75] Train_loss: 6.7306 Train_Accuracy: 98.1798 (%) Val_loss: 509.8605 Best_Val_Accuracy: 74.7115 (%)  Epoch_Duration: 43.0192
+Epoch: [44/75] Train_loss: 5.5369 Train_Accuracy: 98.5317 (%) Val_loss: 534.6915 Best_Val_Accuracy: 74.7115 (%)  Epoch_Duration: 43.1267
+Epoch: [45/75] Train_loss: 6.7223 Train_Accuracy: 98.6045 (%) Val_loss: 530.9195 Best_Val_Accuracy: 74.7115 (%)  Epoch_Duration: 42.9192
+Epoch: [46/75] Train_loss: 5.2084 Train_Accuracy: 98.6045 (%) Val_loss: 545.8491 Best_Val_Accuracy: 74.7115 (%)  Epoch_Duration: 43.2967
+Epoch: [47/75] Train_loss: 2.1255 Train_Accuracy: 99.2234 (%) Val_loss: 551.5455 Best_Val_Accuracy: 74.7115 (%)  Epoch_Duration: 43.5011
+
+ Old best val accuracy: 74.71153846153847 (%) || New best val accuracy: 75.09615384615384 (%) , and new model saved..
+
+
+ /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints/cub/completeness/ResNet101/moIE/concepts_topK_10/g_best_model_epoch_48.pth.tar
+
+Epoch: [48/75] Train_loss: 2.6462 Train_Accuracy: 99.1263 (%) Val_loss: 568.0579 Best_Val_Accuracy: 75.0962 (%)  Epoch_Duration: 42.9448
+Epoch: [49/75] Train_loss: 3.402 Train_Accuracy: 98.8594 (%) Val_loss: 572.2193 Best_Val_Accuracy: 75.0962 (%)  Epoch_Duration: 44.0732
+Epoch: [50/75] Train_loss: 5.0291 Train_Accuracy: 98.6409 (%) Val_loss: 571.7986 Best_Val_Accuracy: 75.0962 (%)  Epoch_Duration: 43.0993
+Epoch: [51/75] Train_loss: 3.8931 Train_Accuracy: 98.8958 (%) Val_loss: 597.5163 Best_Val_Accuracy: 75.0962 (%)  Epoch_Duration: 44.8637
+Epoch: [52/75] Train_loss: 3.4172 Train_Accuracy: 99.187 (%) Val_loss: 624.6073 Best_Val_Accuracy: 75.0962 (%)  Epoch_Duration: 42.9277
+Epoch: [53/75] Train_loss: 7.2332 Train_Accuracy: 98.2769 (%) Val_loss: 620.7674 Best_Val_Accuracy: 75.0962 (%)  Epoch_Duration: 42.8359
+Epoch: [54/75] Train_loss: 3.7883 Train_Accuracy: 98.9322 (%) Val_loss: 618.1156 Best_Val_Accuracy: 75.0962 (%)  Epoch_Duration: 44.3491
+Epoch: [55/75] Train_loss: 4.2551 Train_Accuracy: 98.9443 (%) Val_loss: 629.4808 Best_Val_Accuracy: 75.0962 (%)  Epoch_Duration: 43.3557
+Epoch: [56/75] Train_loss: 5.6988 Train_Accuracy: 98.6531 (%) Val_loss: 641.155 Best_Val_Accuracy: 75.0962 (%)  Epoch_Duration: 42.9453
+Epoch: [57/75] Train_loss: 3.3151 Train_Accuracy: 98.8594 (%) Val_loss: 672.3106 Best_Val_Accuracy: 75.0962 (%)  Epoch_Duration: 42.7868
+Epoch: [58/75] Train_loss: 6.8794 Train_Accuracy: 98.6045 (%) Val_loss: 653.3721 Best_Val_Accuracy: 75.0962 (%)  Epoch_Duration: 42.8595
+
+ Old best val accuracy: 75.09615384615384 (%) || New best val accuracy: 75.28846153846153 (%) , and new model saved..
+
+
+ /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints/cub/completeness/ResNet101/moIE/concepts_topK_10/g_best_model_epoch_59.pth.tar
+
+Epoch: [59/75] Train_loss: 3.5584 Train_Accuracy: 99.1506 (%) Val_loss: 657.2955 Best_Val_Accuracy: 75.2885 (%)  Epoch_Duration: 42.9093
+Epoch: [60/75] Train_loss: 5.5236 Train_Accuracy: 98.6409 (%) Val_loss: 679.0689 Best_Val_Accuracy: 75.2885 (%)  Epoch_Duration: 42.7637
+Epoch: [61/75] Train_loss: 4.5528 Train_Accuracy: 99.2719 (%) Val_loss: 673.6832 Best_Val_Accuracy: 75.2885 (%)  Epoch_Duration: 42.8171
+Epoch: [62/75] Train_loss: 3.0281 Train_Accuracy: 99.2841 (%) Val_loss: 705.7649 Best_Val_Accuracy: 75.2885 (%)  Epoch_Duration: 42.8627
+Epoch: [63/75] Train_loss: 3.004 Train_Accuracy: 99.187 (%) Val_loss: 698.5198 Best_Val_Accuracy: 75.2885 (%)  Epoch_Duration: 42.804
+Epoch: [64/75] Train_loss: 0.757 Train_Accuracy: 99.5996 (%) Val_loss: 710.2332 Best_Val_Accuracy: 75.2885 (%)  Epoch_Duration: 42.7624
+Epoch: [65/75] Train_loss: 3.9043 Train_Accuracy: 99.1506 (%) Val_loss: 721.9977 Best_Val_Accuracy: 75.2885 (%)  Epoch_Duration: 42.8397
+Epoch: [66/75] Train_loss: 5.5923 Train_Accuracy: 99.2113 (%) Val_loss: 730.5634 Best_Val_Accuracy: 75.2885 (%)  Epoch_Duration: 42.9354
+Epoch: [67/75] Train_loss: 5.2669 Train_Accuracy: 99.005 (%) Val_loss: 722.5422 Best_Val_Accuracy: 75.2885 (%)  Epoch_Duration: 42.9146
+
+ Old best val accuracy: 75.28846153846153 (%) || New best val accuracy: 75.38461538461539 (%) , and new model saved..
+
+
+ /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints/cub/completeness/ResNet101/moIE/concepts_topK_10/g_best_model_epoch_68.pth.tar
+
+Epoch: [68/75] Train_loss: 2.8135 Train_Accuracy: 99.2477 (%) Val_loss: 760.4927 Best_Val_Accuracy: 75.3846 (%)  Epoch_Duration: 42.8178
+Epoch: [69/75] Train_loss: 5.1521 Train_Accuracy: 99.0292 (%) Val_loss: 773.973 Best_Val_Accuracy: 75.3846 (%)  Epoch_Duration: 42.8972
+
+ Old best val accuracy: 75.38461538461539 (%) || New best val accuracy: 75.57692307692308 (%) , and new model saved..
+
+
+ /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints/cub/completeness/ResNet101/moIE/concepts_topK_10/g_best_model_epoch_70.pth.tar
+
+Epoch: [70/75] Train_loss: 5.7104 Train_Accuracy: 99.0535 (%) Val_loss: 769.2106 Best_Val_Accuracy: 75.5769 (%)  Epoch_Duration: 42.8433
+Epoch: [71/75] Train_loss: 3.287 Train_Accuracy: 99.1991 (%) Val_loss: 791.1585 Best_Val_Accuracy: 75.5769 (%)  Epoch_Duration: 45.7066
+Epoch: [72/75] Train_loss: 3.2835 Train_Accuracy: 99.1263 (%) Val_loss: 798.1408 Best_Val_Accuracy: 75.5769 (%)  Epoch_Duration: 44.9878
+Epoch: [73/75] Train_loss: 4.0379 Train_Accuracy: 99.0778 (%) Val_loss: 828.7496 Best_Val_Accuracy: 75.5769 (%)  Epoch_Duration: 43.5832
+Epoch: [74/75] Train_loss: 2.7893 Train_Accuracy: 99.2477 (%) Val_loss: 847.9178 Best_Val_Accuracy: 75.5769 (%)  Epoch_Duration: 42.9078
+Epoch: [75/75] Train_loss: 2.8772 Train_Accuracy: 99.1142 (%) Val_loss: 852.5493 Best_Val_Accuracy: 75.5769 (%)  Epoch_Duration: 42.908
+
+ Computing the completeness score: 
+
+Top concepts: 10
+Accuracy of the bb: 88.84615384615384 (%)
+Accuracy using the completeness: 74.32692307692308 (%)
+Completeness_score: 0.6262376237623763
+/ocean/projects/asc170022p/shg121/PhD/ICLR-2022/out/cub/completeness/ResNet101/moIE/concepts_topK_10/out_put_predict_bb.pt
+TopK: 15
+train_size: torch.Size([8241, 2048, 14, 14])
+train_size: torch.Size([8241, 108])
+train_size: torch.Size([8241])
+test_size: torch.Size([1040, 2048, 14, 14])
+test_size: torch.Size([1040, 108])
+test_size: torch.Size([1040])
+Time to the full datasets: 31.27362322807312 secs
+############# Paths ############# 
+/ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints/cub/completeness/ResNet101/moIE/concepts_topK_15
+/ocean/projects/asc170022p/shg121/PhD/ICLR-2022/out/cub/completeness/ResNet101/moIE/concepts_topK_15
+/ocean/projects/asc170022p/shg121/PhD/ICLR-2022/log/cub/completeness/ResNet101/moIE/concepts_topK_15
+############# Paths ############# 
+==>> Loading BB from : /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints/cub/BB/lr_0.001_epochs_95/ResNet101/best_model_epoch_63.pth.tar
+Device: cuda
+===>>> t is loaded from: /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints/cub/t/lr_0.001_epochs_95/lr_0.001_epochs_95_ResNet101_layer4_adaptive_sgd_BCE/best_model_epoch_62.pth.tar
+Size of CAV: torch.Size([108, 2048])
+Logistic_Regression_t(
+  (adaptive_avg_pool): AdaptiveAvgPool2d(output_size=(1, 1))
+  (adaptive_max_pool): AdaptiveMaxPool2d(output_size=(1, 1))
+  (flatten): Flatten(start_dim=1, end_dim=-1)
+  (linear): Linear(in_features=2048, out_features=108, bias=True)
+)
+################## TB Log path ###################
+/ocean/projects/asc170022p/shg121/PhD/ICLR-2022/log/cub/completeness/ResNet101/moIE/concepts_topK_15/g_train
+################## TB Log path ###################
+
+ Old best val accuracy: 0 (%) || New best val accuracy: 59.71153846153846 (%) , and new model saved..
+
+
+ /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints/cub/completeness/ResNet101/moIE/concepts_topK_15/g_best_model_epoch_1.pth.tar
+
+Epoch: [1/75] Train_loss: 16.4812 Train_Accuracy: 44.3393 (%) Val_loss: 27.5778 Best_Val_Accuracy: 59.7115 (%)  Epoch_Duration: 44.6382
+
+ Old best val accuracy: 59.71153846153846 (%) || New best val accuracy: 67.59615384615385 (%) , and new model saved..
+
+
+ /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints/cub/completeness/ResNet101/moIE/concepts_topK_15/g_best_model_epoch_2.pth.tar
+
+Epoch: [2/75] Train_loss: 17.7039 Train_Accuracy: 70.7074 (%) Val_loss: 37.8267 Best_Val_Accuracy: 67.5962 (%)  Epoch_Duration: 44.8315
+
+ Old best val accuracy: 67.59615384615385 (%) || New best val accuracy: 68.07692307692308 (%) , and new model saved..
+
+
+ /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints/cub/completeness/ResNet101/moIE/concepts_topK_15/g_best_model_epoch_3.pth.tar
+
+Epoch: [3/75] Train_loss: 14.5098 Train_Accuracy: 80.3301 (%) Val_loss: 55.3447 Best_Val_Accuracy: 68.0769 (%)  Epoch_Duration: 48.5671
+
+ Old best val accuracy: 68.07692307692308 (%) || New best val accuracy: 71.63461538461539 (%) , and new model saved..
+
+
+ /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints/cub/completeness/ResNet101/moIE/concepts_topK_15/g_best_model_epoch_4.pth.tar
+
+Epoch: [4/75] Train_loss: 13.2889 Train_Accuracy: 85.4508 (%) Val_loss: 64.2231 Best_Val_Accuracy: 71.6346 (%)  Epoch_Duration: 44.0818
+
+ Old best val accuracy: 71.63461538461539 (%) || New best val accuracy: 72.40384615384615 (%) , and new model saved..
+
+
+ /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints/cub/completeness/ResNet101/moIE/concepts_topK_15/g_best_model_epoch_5.pth.tar
+
+Epoch: [5/75] Train_loss: 9.6302 Train_Accuracy: 89.3338 (%) Val_loss: 78.4617 Best_Val_Accuracy: 72.4038 (%)  Epoch_Duration: 44.068
+Epoch: [6/75] Train_loss: 10.291 Train_Accuracy: 90.0862 (%) Val_loss: 96.8624 Best_Val_Accuracy: 72.4038 (%)  Epoch_Duration: 44.0469
+
+ Old best val accuracy: 72.40384615384615 (%) || New best val accuracy: 72.59615384615384 (%) , and new model saved..
+
+
+ /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints/cub/completeness/ResNet101/moIE/concepts_topK_15/g_best_model_epoch_7.pth.tar
+
+Epoch: [7/75] Train_loss: 9.9898 Train_Accuracy: 91.7971 (%) Val_loss: 118.082 Best_Val_Accuracy: 72.5962 (%)  Epoch_Duration: 44.044
+
+ Old best val accuracy: 72.59615384615384 (%) || New best val accuracy: 75.57692307692308 (%) , and new model saved..
+
+
+ /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints/cub/completeness/ResNet101/moIE/concepts_topK_15/g_best_model_epoch_8.pth.tar
+
+Epoch: [8/75] Train_loss: 8.7095 Train_Accuracy: 92.9499 (%) Val_loss: 128.0479 Best_Val_Accuracy: 75.5769 (%)  Epoch_Duration: 44.0856
+
+ Old best val accuracy: 75.57692307692308 (%) || New best val accuracy: 75.96153846153845 (%) , and new model saved..
+
+
+ /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints/cub/completeness/ResNet101/moIE/concepts_topK_15/g_best_model_epoch_9.pth.tar
+
+Epoch: [9/75] Train_loss: 12.2441 Train_Accuracy: 92.5737 (%) Val_loss: 150.9233 Best_Val_Accuracy: 75.9615 (%)  Epoch_Duration: 44.0301
+Epoch: [10/75] Train_loss: 7.448 Train_Accuracy: 95.3889 (%) Val_loss: 153.8409 Best_Val_Accuracy: 75.9615 (%)  Epoch_Duration: 44.0332
+Epoch: [11/75] Train_loss: 5.3697 Train_Accuracy: 96.6266 (%) Val_loss: 175.9534 Best_Val_Accuracy: 75.9615 (%)  Epoch_Duration: 44.1491
+Epoch: [12/75] Train_loss: 7.0577 Train_Accuracy: 96.2019 (%) Val_loss: 194.0167 Best_Val_Accuracy: 75.9615 (%)  Epoch_Duration: 44.0917
+Epoch: [13/75] Train_loss: 9.1959 Train_Accuracy: 95.3404 (%) Val_loss: 202.6041 Best_Val_Accuracy: 75.9615 (%)  Epoch_Duration: 44.1014
+
+ Old best val accuracy: 75.96153846153845 (%) || New best val accuracy: 76.4423076923077 (%) , and new model saved..
+
+
+ /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints/cub/completeness/ResNet101/moIE/concepts_topK_15/g_best_model_epoch_14.pth.tar
+
+Epoch: [14/75] Train_loss: 6.8741 Train_Accuracy: 96.299 (%) Val_loss: 227.2368 Best_Val_Accuracy: 76.4423 (%)  Epoch_Duration: 44.1667
+Epoch: [15/75] Train_loss: 6.8126 Train_Accuracy: 96.7601 (%) Val_loss: 229.5883 Best_Val_Accuracy: 76.4423 (%)  Epoch_Duration: 44.5057
+
+ Old best val accuracy: 76.4423076923077 (%) || New best val accuracy: 77.6923076923077 (%) , and new model saved..
+
+
+ /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints/cub/completeness/ResNet101/moIE/concepts_topK_15/g_best_model_epoch_16.pth.tar
+
+Epoch: [16/75] Train_loss: 6.6102 Train_Accuracy: 97.0271 (%) Val_loss: 243.4413 Best_Val_Accuracy: 77.6923 (%)  Epoch_Duration: 44.0604
+Epoch: [17/75] Train_loss: 7.2484 Train_Accuracy: 97.0877 (%) Val_loss: 268.5372 Best_Val_Accuracy: 77.6923 (%)  Epoch_Duration: 43.9313
+Epoch: [18/75] Train_loss: 8.2284 Train_Accuracy: 97.1848 (%) Val_loss: 294.8235 Best_Val_Accuracy: 77.6923 (%)  Epoch_Duration: 44.0644
+Epoch: [19/75] Train_loss: 6.8065 Train_Accuracy: 96.9421 (%) Val_loss: 303.0638 Best_Val_Accuracy: 77.6923 (%)  Epoch_Duration: 44.3378
+Epoch: [20/75] Train_loss: 7.5699 Train_Accuracy: 97.5488 (%) Val_loss: 343.7767 Best_Val_Accuracy: 77.6923 (%)  Epoch_Duration: 44.0304
+Epoch: [21/75] Train_loss: 7.6113 Train_Accuracy: 97.6459 (%) Val_loss: 340.1108 Best_Val_Accuracy: 77.6923 (%)  Epoch_Duration: 43.9745
+Epoch: [22/75] Train_loss: 5.2384 Train_Accuracy: 97.925 (%) Val_loss: 343.4339 Best_Val_Accuracy: 77.6923 (%)  Epoch_Duration: 44.1473
+Epoch: [23/75] Train_loss: 5.2299 Train_Accuracy: 98.2162 (%) Val_loss: 392.1322 Best_Val_Accuracy: 77.6923 (%)  Epoch_Duration: 44.0035
+Epoch: [24/75] Train_loss: 5.6706 Train_Accuracy: 98.2162 (%) Val_loss: 387.7089 Best_Val_Accuracy: 77.6923 (%)  Epoch_Duration: 44.143
+
+ Old best val accuracy: 77.6923076923077 (%) || New best val accuracy: 77.98076923076923 (%) , and new model saved..
+
+
+ /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints/cub/completeness/ResNet101/moIE/concepts_topK_15/g_best_model_epoch_25.pth.tar
+
+Epoch: [25/75] Train_loss: 3.4303 Train_Accuracy: 98.6409 (%) Val_loss: 393.0883 Best_Val_Accuracy: 77.9808 (%)  Epoch_Duration: 44.101
+
+ Old best val accuracy: 77.98076923076923 (%) || New best val accuracy: 78.5576923076923 (%) , and new model saved..
+
+
+ /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints/cub/completeness/ResNet101/moIE/concepts_topK_15/g_best_model_epoch_26.pth.tar
+
+Epoch: [26/75] Train_loss: 7.536 Train_Accuracy: 97.6581 (%) Val_loss: 405.785 Best_Val_Accuracy: 78.5577 (%)  Epoch_Duration: 44.1252
+Epoch: [27/75] Train_loss: 6.1872 Train_Accuracy: 98.2526 (%) Val_loss: 429.3943 Best_Val_Accuracy: 78.5577 (%)  Epoch_Duration: 44.061
+Epoch: [28/75] Train_loss: 7.0019 Train_Accuracy: 97.9129 (%) Val_loss: 441.4531 Best_Val_Accuracy: 78.5577 (%)  Epoch_Duration: 45.1725
+Epoch: [29/75] Train_loss: 7.0304 Train_Accuracy: 98.0706 (%) Val_loss: 454.8628 Best_Val_Accuracy: 78.5577 (%)  Epoch_Duration: 44.2297
+Epoch: [30/75] Train_loss: 4.7179 Train_Accuracy: 98.8594 (%) Val_loss: 446.9139 Best_Val_Accuracy: 78.5577 (%)  Epoch_Duration: 44.0801
+Epoch: [31/75] Train_loss: 3.9031 Train_Accuracy: 99.0656 (%) Val_loss: 474.3175 Best_Val_Accuracy: 78.5577 (%)  Epoch_Duration: 44.0309
+Epoch: [32/75] Train_loss: 5.4605 Train_Accuracy: 98.3861 (%) Val_loss: 506.6638 Best_Val_Accuracy: 78.5577 (%)  Epoch_Duration: 44.0836
+Epoch: [33/75] Train_loss: 4.3465 Train_Accuracy: 98.6409 (%) Val_loss: 517.1106 Best_Val_Accuracy: 78.5577 (%)  Epoch_Duration: 43.7543
+Epoch: [34/75] Train_loss: 4.4811 Train_Accuracy: 98.6531 (%) Val_loss: 540.5941 Best_Val_Accuracy: 78.5577 (%)  Epoch_Duration: 43.947
+Epoch: [35/75] Train_loss: 4.6359 Train_Accuracy: 98.823 (%) Val_loss: 563.4312 Best_Val_Accuracy: 78.5577 (%)  Epoch_Duration: 44.1212
+Epoch: [36/75] Train_loss: 6.1737 Train_Accuracy: 98.3861 (%) Val_loss: 565.2153 Best_Val_Accuracy: 78.5577 (%)  Epoch_Duration: 44.0438
+Epoch: [37/75] Train_loss: 6.3452 Train_Accuracy: 98.4589 (%) Val_loss: 596.4461 Best_Val_Accuracy: 78.5577 (%)  Epoch_Duration: 44.0847
+Epoch: [38/75] Train_loss: 6.9629 Train_Accuracy: 98.6531 (%) Val_loss: 607.4899 Best_Val_Accuracy: 78.5577 (%)  Epoch_Duration: 44.1085
+Epoch: [39/75] Train_loss: 5.7627 Train_Accuracy: 98.7259 (%) Val_loss: 630.6096 Best_Val_Accuracy: 78.5577 (%)  Epoch_Duration: 44.0302
+Epoch: [40/75] Train_loss: 5.6072 Train_Accuracy: 99.0535 (%) Val_loss: 618.412 Best_Val_Accuracy: 78.5577 (%)  Epoch_Duration: 44.0506
+Epoch: [41/75] Train_loss: 2.9495 Train_Accuracy: 99.3811 (%) Val_loss: 620.0737 Best_Val_Accuracy: 78.5577 (%)  Epoch_Duration: 44.2077
+Epoch: [42/75] Train_loss: 2.1661 Train_Accuracy: 99.4175 (%) Val_loss: 645.2759 Best_Val_Accuracy: 78.5577 (%)  Epoch_Duration: 46.9678
+
+ Old best val accuracy: 78.5576923076923 (%) || New best val accuracy: 79.13461538461539 (%) , and new model saved..
+
+
+ /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints/cub/completeness/ResNet101/moIE/concepts_topK_15/g_best_model_epoch_43.pth.tar
+
+Epoch: [43/75] Train_loss: 4.6331 Train_Accuracy: 99.1385 (%) Val_loss: 675.4148 Best_Val_Accuracy: 79.1346 (%)  Epoch_Duration: 43.9596
+Epoch: [44/75] Train_loss: 4.9321 Train_Accuracy: 99.1749 (%) Val_loss: 679.075 Best_Val_Accuracy: 79.1346 (%)  Epoch_Duration: 44.1353
+Epoch: [45/75] Train_loss: 6.0802 Train_Accuracy: 98.7623 (%) Val_loss: 711.7268 Best_Val_Accuracy: 79.1346 (%)  Epoch_Duration: 44.0346
+Epoch: [46/75] Train_loss: 4.7385 Train_Accuracy: 99.1021 (%) Val_loss: 722.1547 Best_Val_Accuracy: 79.1346 (%)  Epoch_Duration: 45.7738
+Epoch: [47/75] Train_loss: 4.9699 Train_Accuracy: 98.7016 (%) Val_loss: 732.4815 Best_Val_Accuracy: 79.1346 (%)  Epoch_Duration: 44.0401
+Epoch: [48/75] Train_loss: 5.7609 Train_Accuracy: 99.0171 (%) Val_loss: 757.0222 Best_Val_Accuracy: 79.1346 (%)  Epoch_Duration: 44.0535
+Epoch: [49/75] Train_loss: 4.5196 Train_Accuracy: 99.2113 (%) Val_loss: 742.4146 Best_Val_Accuracy: 79.1346 (%)  Epoch_Duration: 43.9987
+Epoch: [50/75] Train_loss: 3.2653 Train_Accuracy: 99.0778 (%) Val_loss: 781.313 Best_Val_Accuracy: 79.1346 (%)  Epoch_Duration: 44.0133
+Epoch: [51/75] Train_loss: 5.2065 Train_Accuracy: 99.0778 (%) Val_loss: 772.4208 Best_Val_Accuracy: 79.1346 (%)  Epoch_Duration: 44.1801
+Epoch: [52/75] Train_loss: 2.007 Train_Accuracy: 99.5146 (%) Val_loss: 788.5693 Best_Val_Accuracy: 79.1346 (%)  Epoch_Duration: 45.8738
+Epoch: [53/75] Train_loss: 4.8188 Train_Accuracy: 99.4539 (%) Val_loss: 834.7606 Best_Val_Accuracy: 79.1346 (%)  Epoch_Duration: 44.2096
+Epoch: [54/75] Train_loss: 5.7683 Train_Accuracy: 98.7987 (%) Val_loss: 866.383 Best_Val_Accuracy: 79.1346 (%)  Epoch_Duration: 44.7064
+
+ Old best val accuracy: 79.13461538461539 (%) || New best val accuracy: 79.23076923076923 (%) , and new model saved..
+
+
+ /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints/cub/completeness/ResNet101/moIE/concepts_topK_15/g_best_model_epoch_55.pth.tar
+
+Epoch: [55/75] Train_loss: 10.1244 Train_Accuracy: 98.7987 (%) Val_loss: 866.4059 Best_Val_Accuracy: 79.2308 (%)  Epoch_Duration: 44.2929
+Epoch: [56/75] Train_loss: 2.5163 Train_Accuracy: 99.3569 (%) Val_loss: 857.2304 Best_Val_Accuracy: 79.2308 (%)  Epoch_Duration: 44.0369
+Epoch: [57/75] Train_loss: 4.1101 Train_Accuracy: 99.4661 (%) Val_loss: 867.4946 Best_Val_Accuracy: 79.2308 (%)  Epoch_Duration: 44.0508
+Epoch: [58/75] Train_loss: 2.7886 Train_Accuracy: 99.3569 (%) Val_loss: 900.7439 Best_Val_Accuracy: 79.2308 (%)  Epoch_Duration: 44.0377
+Epoch: [59/75] Train_loss: 3.2407 Train_Accuracy: 99.3447 (%) Val_loss: 901.9995 Best_Val_Accuracy: 79.2308 (%)  Epoch_Duration: 43.9575
+Epoch: [60/75] Train_loss: 3.8663 Train_Accuracy: 99.4661 (%) Val_loss: 929.0574 Best_Val_Accuracy: 79.2308 (%)  Epoch_Duration: 43.9908
+Epoch: [61/75] Train_loss: 1.964 Train_Accuracy: 99.6238 (%) Val_loss: 977.1618 Best_Val_Accuracy: 79.2308 (%)  Epoch_Duration: 44.0304
+Epoch: [62/75] Train_loss: 3.562 Train_Accuracy: 99.2234 (%) Val_loss: 995.1558 Best_Val_Accuracy: 79.2308 (%)  Epoch_Duration: 44.59
+Epoch: [63/75] Train_loss: 5.8739 Train_Accuracy: 99.1263 (%) Val_loss: 972.4908 Best_Val_Accuracy: 79.2308 (%)  Epoch_Duration: 44.0037
+Epoch: [64/75] Train_loss: 6.784 Train_Accuracy: 99.1021 (%) Val_loss: 984.4157 Best_Val_Accuracy: 79.2308 (%)  Epoch_Duration: 44.3105
+Epoch: [65/75] Train_loss: 5.9451 Train_Accuracy: 99.1749 (%) Val_loss: 1003.0149 Best_Val_Accuracy: 79.2308 (%)  Epoch_Duration: 44.4328
+Epoch: [66/75] Train_loss: 4.0083 Train_Accuracy: 99.4418 (%) Val_loss: 1070.2051 Best_Val_Accuracy: 79.2308 (%)  Epoch_Duration: 44.0071
+Epoch: [67/75] Train_loss: 3.581 Train_Accuracy: 99.4904 (%) Val_loss: 1064.3582 Best_Val_Accuracy: 79.2308 (%)  Epoch_Duration: 44.8476
+Epoch: [68/75] Train_loss: 2.3399 Train_Accuracy: 99.6602 (%) Val_loss: 1073.7529 Best_Val_Accuracy: 79.2308 (%)  Epoch_Duration: 44.1414
+Epoch: [69/75] Train_loss: 3.3041 Train_Accuracy: 99.4418 (%) Val_loss: 1086.1649 Best_Val_Accuracy: 79.2308 (%)  Epoch_Duration: 44.1406
+Epoch: [70/75] Train_loss: 5.0275 Train_Accuracy: 99.187 (%) Val_loss: 1064.4784 Best_Val_Accuracy: 79.2308 (%)  Epoch_Duration: 44.782
+Epoch: [71/75] Train_loss: 1.7365 Train_Accuracy: 99.6117 (%) Val_loss: 1091.2848 Best_Val_Accuracy: 79.2308 (%)  Epoch_Duration: 44.0698
+Epoch: [72/75] Train_loss: 2.1 Train_Accuracy: 99.5874 (%) Val_loss: 1076.0616 Best_Val_Accuracy: 79.2308 (%)  Epoch_Duration: 43.9962
+Epoch: [73/75] Train_loss: 3.3268 Train_Accuracy: 99.4175 (%) Val_loss: 1094.3566 Best_Val_Accuracy: 79.2308 (%)  Epoch_Duration: 44.0151
+Epoch: [74/75] Train_loss: 6.3337 Train_Accuracy: 99.1749 (%) Val_loss: 1129.7249 Best_Val_Accuracy: 79.2308 (%)  Epoch_Duration: 44.0501
+
+ Old best val accuracy: 79.23076923076923 (%) || New best val accuracy: 79.61538461538461 (%) , and new model saved..
+
+
+ /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints/cub/completeness/ResNet101/moIE/concepts_topK_15/g_best_model_epoch_75.pth.tar
+
+Epoch: [75/75] Train_loss: 4.712 Train_Accuracy: 99.3083 (%) Val_loss: 1122.9517 Best_Val_Accuracy: 79.6154 (%)  Epoch_Duration: 44.091
+
+ Computing the completeness score: 
+
+Top concepts: 15
+Accuracy of the bb: 88.84615384615384 (%)
+Accuracy using the completeness: 79.61538461538461 (%)
+Completeness_score: 0.7623762376237624
+/ocean/projects/asc170022p/shg121/PhD/ICLR-2022/out/cub/completeness/ResNet101/moIE/concepts_topK_15/out_put_predict_bb.pt
+TopK: 20
+train_size: torch.Size([8241, 2048, 14, 14])
+train_size: torch.Size([8241, 108])
+train_size: torch.Size([8241])
+test_size: torch.Size([1040, 2048, 14, 14])
+test_size: torch.Size([1040, 108])
+test_size: torch.Size([1040])
+Time to the full datasets: 79.36344885826111 secs
+############# Paths ############# 
+/ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints/cub/completeness/ResNet101/moIE/concepts_topK_20
+/ocean/projects/asc170022p/shg121/PhD/ICLR-2022/out/cub/completeness/ResNet101/moIE/concepts_topK_20
+/ocean/projects/asc170022p/shg121/PhD/ICLR-2022/log/cub/completeness/ResNet101/moIE/concepts_topK_20
+############# Paths ############# 
+==>> Loading BB from : /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints/cub/BB/lr_0.001_epochs_95/ResNet101/best_model_epoch_63.pth.tar
+Device: cuda
+===>>> t is loaded from: /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints/cub/t/lr_0.001_epochs_95/lr_0.001_epochs_95_ResNet101_layer4_adaptive_sgd_BCE/best_model_epoch_62.pth.tar
+Size of CAV: torch.Size([108, 2048])
+Logistic_Regression_t(
+  (adaptive_avg_pool): AdaptiveAvgPool2d(output_size=(1, 1))
+  (adaptive_max_pool): AdaptiveMaxPool2d(output_size=(1, 1))
+  (flatten): Flatten(start_dim=1, end_dim=-1)
+  (linear): Linear(in_features=2048, out_features=108, bias=True)
+)
+################## TB Log path ###################
+/ocean/projects/asc170022p/shg121/PhD/ICLR-2022/log/cub/completeness/ResNet101/moIE/concepts_topK_20/g_train
+################## TB Log path ###################
+
+ Old best val accuracy: 0 (%) || New best val accuracy: 64.42307692307693 (%) , and new model saved..
+
+
+ /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints/cub/completeness/ResNet101/moIE/concepts_topK_20/g_best_model_epoch_1.pth.tar
+
+Epoch: [1/75] Train_loss: 18.6076 Train_Accuracy: 49.1203 (%) Val_loss: 32.7146 Best_Val_Accuracy: 64.4231 (%)  Epoch_Duration: 43.5131
+
+ Old best val accuracy: 64.42307692307693 (%) || New best val accuracy: 72.98076923076923 (%) , and new model saved..
+
+
+ /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints/cub/completeness/ResNet101/moIE/concepts_topK_20/g_best_model_epoch_2.pth.tar
+
+Epoch: [2/75] Train_loss: 19.4214 Train_Accuracy: 75.2093 (%) Val_loss: 49.6153 Best_Val_Accuracy: 72.9808 (%)  Epoch_Duration: 42.9176
+
+ Old best val accuracy: 72.98076923076923 (%) || New best val accuracy: 75.96153846153845 (%) , and new model saved..
+
+
+ /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints/cub/completeness/ResNet101/moIE/concepts_topK_20/g_best_model_epoch_3.pth.tar
+
+Epoch: [3/75] Train_loss: 16.1172 Train_Accuracy: 84.2616 (%) Val_loss: 61.4733 Best_Val_Accuracy: 75.9615 (%)  Epoch_Duration: 43.3207
+Epoch: [4/75] Train_loss: 14.3014 Train_Accuracy: 87.8413 (%) Val_loss: 92.4314 Best_Val_Accuracy: 75.9615 (%)  Epoch_Duration: 42.9302
+Epoch: [5/75] Train_loss: 11.8467 Train_Accuracy: 90.5351 (%) Val_loss: 115.1617 Best_Val_Accuracy: 75.9615 (%)  Epoch_Duration: 42.9238
+
+ Old best val accuracy: 75.96153846153845 (%) || New best val accuracy: 77.59615384615385 (%) , and new model saved..
+
+
+ /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints/cub/completeness/ResNet101/moIE/concepts_topK_20/g_best_model_epoch_6.pth.tar
+
+Epoch: [6/75] Train_loss: 12.2397 Train_Accuracy: 91.9791 (%) Val_loss: 121.0619 Best_Val_Accuracy: 77.5962 (%)  Epoch_Duration: 42.852
+Epoch: [7/75] Train_loss: 9.2105 Train_Accuracy: 94.3575 (%) Val_loss: 136.2419 Best_Val_Accuracy: 77.5962 (%)  Epoch_Duration: 42.883
+Epoch: [8/75] Train_loss: 11.3427 Train_Accuracy: 93.8842 (%) Val_loss: 152.8083 Best_Val_Accuracy: 77.5962 (%)  Epoch_Duration: 42.9559
+
+ Old best val accuracy: 77.59615384615385 (%) || New best val accuracy: 77.6923076923077 (%) , and new model saved..
+
+
+ /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints/cub/completeness/ResNet101/moIE/concepts_topK_20/g_best_model_epoch_9.pth.tar
+
+Epoch: [9/75] Train_loss: 10.5645 Train_Accuracy: 94.8186 (%) Val_loss: 184.4295 Best_Val_Accuracy: 77.6923 (%)  Epoch_Duration: 44.8618
+
+ Old best val accuracy: 77.6923076923077 (%) || New best val accuracy: 78.65384615384615 (%) , and new model saved..
+
+
+ /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints/cub/completeness/ResNet101/moIE/concepts_topK_20/g_best_model_epoch_10.pth.tar
+
+Epoch: [10/75] Train_loss: 8.7364 Train_Accuracy: 95.9714 (%) Val_loss: 198.7561 Best_Val_Accuracy: 78.6538 (%)  Epoch_Duration: 42.8348
+
+ Old best val accuracy: 78.65384615384615 (%) || New best val accuracy: 79.23076923076923 (%) , and new model saved..
+
+
+ /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints/cub/completeness/ResNet101/moIE/concepts_topK_20/g_best_model_epoch_11.pth.tar
+
+Epoch: [11/75] Train_loss: 8.5546 Train_Accuracy: 96.2019 (%) Val_loss: 222.7039 Best_Val_Accuracy: 79.2308 (%)  Epoch_Duration: 43.0436
+Epoch: [12/75] Train_loss: 11.4238 Train_Accuracy: 96.0927 (%) Val_loss: 264.9119 Best_Val_Accuracy: 79.2308 (%)  Epoch_Duration: 42.9354
+Epoch: [13/75] Train_loss: 9.2731 Train_Accuracy: 96.6145 (%) Val_loss: 271.3215 Best_Val_Accuracy: 79.2308 (%)  Epoch_Duration: 42.972
+Epoch: [14/75] Train_loss: 6.971 Train_Accuracy: 97.1848 (%) Val_loss: 277.0298 Best_Val_Accuracy: 79.2308 (%)  Epoch_Duration: 43.7864
+Epoch: [15/75] Train_loss: 8.1915 Train_Accuracy: 97.3547 (%) Val_loss: 303.2239 Best_Val_Accuracy: 79.2308 (%)  Epoch_Duration: 43.8162
+Epoch: [16/75] Train_loss: 7.441 Train_Accuracy: 97.6823 (%) Val_loss: 315.6076 Best_Val_Accuracy: 79.2308 (%)  Epoch_Duration: 43.4301
+Epoch: [17/75] Train_loss: 7.06 Train_Accuracy: 97.8279 (%) Val_loss: 344.845 Best_Val_Accuracy: 79.2308 (%)  Epoch_Duration: 42.8254
+Epoch: [18/75] Train_loss: 5.9216 Train_Accuracy: 98.1313 (%) Val_loss: 365.0423 Best_Val_Accuracy: 79.2308 (%)  Epoch_Duration: 42.9686
+Epoch: [19/75] Train_loss: 9.041 Train_Accuracy: 97.5852 (%) Val_loss: 404.6461 Best_Val_Accuracy: 79.2308 (%)  Epoch_Duration: 42.9637
+Epoch: [20/75] Train_loss: 8.6105 Train_Accuracy: 97.5974 (%) Val_loss: 407.2715 Best_Val_Accuracy: 79.2308 (%)  Epoch_Duration: 43.0431
+
+ Old best val accuracy: 79.23076923076923 (%) || New best val accuracy: 79.32692307692307 (%) , and new model saved..
+
+
+ /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints/cub/completeness/ResNet101/moIE/concepts_topK_20/g_best_model_epoch_21.pth.tar
+
+Epoch: [21/75] Train_loss: 6.5956 Train_Accuracy: 98.1798 (%) Val_loss: 439.8695 Best_Val_Accuracy: 79.3269 (%)  Epoch_Duration: 45.2646
+Epoch: [22/75] Train_loss: 6.8975 Train_Accuracy: 98.2648 (%) Val_loss: 459.1132 Best_Val_Accuracy: 79.3269 (%)  Epoch_Duration: 42.9161
+Epoch: [23/75] Train_loss: 7.3201 Train_Accuracy: 98.2526 (%) Val_loss: 472.3225 Best_Val_Accuracy: 79.3269 (%)  Epoch_Duration: 43.2716
+
+ Old best val accuracy: 79.32692307692307 (%) || New best val accuracy: 79.61538461538461 (%) , and new model saved..
+
+
+ /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints/cub/completeness/ResNet101/moIE/concepts_topK_20/g_best_model_epoch_24.pth.tar
+
+Epoch: [24/75] Train_loss: 8.6661 Train_Accuracy: 97.9978 (%) Val_loss: 497.5737 Best_Val_Accuracy: 79.6154 (%)  Epoch_Duration: 42.8737
+Epoch: [25/75] Train_loss: 9.2418 Train_Accuracy: 98.3254 (%) Val_loss: 522.2054 Best_Val_Accuracy: 79.6154 (%)  Epoch_Duration: 42.894
+Epoch: [26/75] Train_loss: 7.499 Train_Accuracy: 98.4225 (%) Val_loss: 532.646 Best_Val_Accuracy: 79.6154 (%)  Epoch_Duration: 42.7886
+Epoch: [27/75] Train_loss: 5.0065 Train_Accuracy: 98.6895 (%) Val_loss: 536.6191 Best_Val_Accuracy: 79.6154 (%)  Epoch_Duration: 42.9057
+
+ Old best val accuracy: 79.61538461538461 (%) || New best val accuracy: 79.71153846153847 (%) , and new model saved..
+
+
+ /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints/cub/completeness/ResNet101/moIE/concepts_topK_20/g_best_model_epoch_28.pth.tar
+
+Epoch: [28/75] Train_loss: 6.5979 Train_Accuracy: 98.6167 (%) Val_loss: 567.2542 Best_Val_Accuracy: 79.7115 (%)  Epoch_Duration: 43.0194
+
+ Old best val accuracy: 79.71153846153847 (%) || New best val accuracy: 80.38461538461539 (%) , and new model saved..
+
+
+ /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints/cub/completeness/ResNet101/moIE/concepts_topK_20/g_best_model_epoch_29.pth.tar
+
+Epoch: [29/75] Train_loss: 5.5919 Train_Accuracy: 98.6773 (%) Val_loss: 584.7224 Best_Val_Accuracy: 80.3846 (%)  Epoch_Duration: 44.2387
+
+ Old best val accuracy: 80.38461538461539 (%) || New best val accuracy: 81.0576923076923 (%) , and new model saved..
+
+
+ /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints/cub/completeness/ResNet101/moIE/concepts_topK_20/g_best_model_epoch_30.pth.tar
+
+Epoch: [30/75] Train_loss: 5.347 Train_Accuracy: 98.9079 (%) Val_loss: 602.3985 Best_Val_Accuracy: 81.0577 (%)  Epoch_Duration: 42.8745
+Epoch: [31/75] Train_loss: 5.814 Train_Accuracy: 98.8958 (%) Val_loss: 636.3082 Best_Val_Accuracy: 81.0577 (%)  Epoch_Duration: 43.0828
+Epoch: [32/75] Train_loss: 5.9877 Train_Accuracy: 98.8108 (%) Val_loss: 638.9746 Best_Val_Accuracy: 81.0577 (%)  Epoch_Duration: 42.929
+Epoch: [33/75] Train_loss: 7.6576 Train_Accuracy: 98.5681 (%) Val_loss: 698.611 Best_Val_Accuracy: 81.0577 (%)  Epoch_Duration: 43.0159
+Epoch: [34/75] Train_loss: 7.778 Train_Accuracy: 98.6409 (%) Val_loss: 703.3797 Best_Val_Accuracy: 81.0577 (%)  Epoch_Duration: 43.3229
+
+ Old best val accuracy: 81.0576923076923 (%) || New best val accuracy: 81.53846153846153 (%) , and new model saved..
+
+
+ /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints/cub/completeness/ResNet101/moIE/concepts_topK_20/g_best_model_epoch_35.pth.tar
+
+Epoch: [35/75] Train_loss: 6.2091 Train_Accuracy: 98.92 (%) Val_loss: 709.1116 Best_Val_Accuracy: 81.5385 (%)  Epoch_Duration: 42.9357
+Epoch: [36/75] Train_loss: 2.6936 Train_Accuracy: 99.3326 (%) Val_loss: 728.8851 Best_Val_Accuracy: 81.5385 (%)  Epoch_Duration: 43.0184
+Epoch: [37/75] Train_loss: 6.0527 Train_Accuracy: 99.1142 (%) Val_loss: 775.6695 Best_Val_Accuracy: 81.5385 (%)  Epoch_Duration: 42.9586
+Epoch: [38/75] Train_loss: 4.7062 Train_Accuracy: 99.1021 (%) Val_loss: 752.2793 Best_Val_Accuracy: 81.5385 (%)  Epoch_Duration: 43.025
+Epoch: [39/75] Train_loss: 4.3003 Train_Accuracy: 99.3083 (%) Val_loss: 809.4425 Best_Val_Accuracy: 81.5385 (%)  Epoch_Duration: 43.6309
+Epoch: [40/75] Train_loss: 9.9588 Train_Accuracy: 98.7502 (%) Val_loss: 784.2581 Best_Val_Accuracy: 81.5385 (%)  Epoch_Duration: 44.397
+Epoch: [41/75] Train_loss: 6.5802 Train_Accuracy: 98.9928 (%) Val_loss: 820.8985 Best_Val_Accuracy: 81.5385 (%)  Epoch_Duration: 45.3426
+Epoch: [42/75] Train_loss: 3.3427 Train_Accuracy: 99.2962 (%) Val_loss: 831.6625 Best_Val_Accuracy: 81.5385 (%)  Epoch_Duration: 43.2011
+Epoch: [43/75] Train_loss: 8.7018 Train_Accuracy: 98.8594 (%) Val_loss: 869.3043 Best_Val_Accuracy: 81.5385 (%)  Epoch_Duration: 43.0155
+Epoch: [44/75] Train_loss: 8.9974 Train_Accuracy: 98.8594 (%) Val_loss: 884.6301 Best_Val_Accuracy: 81.5385 (%)  Epoch_Duration: 43.0946
+Epoch: [45/75] Train_loss: 7.8418 Train_Accuracy: 99.187 (%) Val_loss: 865.6233 Best_Val_Accuracy: 81.5385 (%)  Epoch_Duration: 43.5837
+Epoch: [46/75] Train_loss: 3.0289 Train_Accuracy: 99.551 (%) Val_loss: 934.0111 Best_Val_Accuracy: 81.5385 (%)  Epoch_Duration: 42.8976
+Epoch: [47/75] Train_loss: 3.2433 Train_Accuracy: 99.4054 (%) Val_loss: 912.5309 Best_Val_Accuracy: 81.5385 (%)  Epoch_Duration: 45.9984
+Epoch: [48/75] Train_loss: 4.9803 Train_Accuracy: 99.2841 (%) Val_loss: 912.6178 Best_Val_Accuracy: 81.5385 (%)  Epoch_Duration: 43.0241
+Epoch: [49/75] Train_loss: 4.8341 Train_Accuracy: 99.3326 (%) Val_loss: 967.6473 Best_Val_Accuracy: 81.5385 (%)  Epoch_Duration: 44.7255
+Epoch: [50/75] Train_loss: 7.6552 Train_Accuracy: 99.1749 (%) Val_loss: 988.2259 Best_Val_Accuracy: 81.5385 (%)  Epoch_Duration: 42.8516
+Epoch: [51/75] Train_loss: 2.8543 Train_Accuracy: 99.2598 (%) Val_loss: 1002.7904 Best_Val_Accuracy: 81.5385 (%)  Epoch_Duration: 42.9262
+Epoch: [52/75] Train_loss: 3.6559 Train_Accuracy: 99.2841 (%) Val_loss: 1010.9698 Best_Val_Accuracy: 81.5385 (%)  Epoch_Duration: 42.9399
+Epoch: [53/75] Train_loss: 6.1111 Train_Accuracy: 99.0535 (%) Val_loss: 1033.8104 Best_Val_Accuracy: 81.5385 (%)  Epoch_Duration: 44.7278
+Epoch: [54/75] Train_loss: 5.2546 Train_Accuracy: 99.2477 (%) Val_loss: 1067.4865 Best_Val_Accuracy: 81.5385 (%)  Epoch_Duration: 43.0146
+Epoch: [55/75] Train_loss: 4.0455 Train_Accuracy: 99.5996 (%) Val_loss: 1065.3394 Best_Val_Accuracy: 81.5385 (%)  Epoch_Duration: 43.1252
+Epoch: [56/75] Train_loss: 3.4813 Train_Accuracy: 99.5996 (%) Val_loss: 1128.5137 Best_Val_Accuracy: 81.5385 (%)  Epoch_Duration: 43.6078
+Epoch: [57/75] Train_loss: 6.3283 Train_Accuracy: 99.3326 (%) Val_loss: 1157.3191 Best_Val_Accuracy: 81.5385 (%)  Epoch_Duration: 42.9795
+Epoch: [58/75] Train_loss: 4.3896 Train_Accuracy: 99.4418 (%) Val_loss: 1171.5879 Best_Val_Accuracy: 81.5385 (%)  Epoch_Duration: 42.9319
+Epoch: [59/75] Train_loss: 5.0016 Train_Accuracy: 99.3569 (%) Val_loss: 1174.4886 Best_Val_Accuracy: 81.5385 (%)  Epoch_Duration: 43.0711
+Epoch: [60/75] Train_loss: 4.1777 Train_Accuracy: 99.369 (%) Val_loss: 1237.4957 Best_Val_Accuracy: 81.5385 (%)  Epoch_Duration: 42.8968
+Epoch: [61/75] Train_loss: 7.144 Train_Accuracy: 99.1506 (%) Val_loss: 1271.4373 Best_Val_Accuracy: 81.5385 (%)  Epoch_Duration: 42.9338
+Epoch: [62/75] Train_loss: 4.2464 Train_Accuracy: 99.5996 (%) Val_loss: 1252.7728 Best_Val_Accuracy: 81.5385 (%)  Epoch_Duration: 44.5324
+Epoch: [63/75] Train_loss: 7.3163 Train_Accuracy: 99.4418 (%) Val_loss: 1296.4311 Best_Val_Accuracy: 81.5385 (%)  Epoch_Duration: 43.0059
+Epoch: [64/75] Train_loss: 8.1386 Train_Accuracy: 99.3569 (%) Val_loss: 1307.8866 Best_Val_Accuracy: 81.5385 (%)  Epoch_Duration: 43.3085
+Epoch: [65/75] Train_loss: 5.1695 Train_Accuracy: 99.5632 (%) Val_loss: 1312.614 Best_Val_Accuracy: 81.5385 (%)  Epoch_Duration: 43.1478
+
+ Old best val accuracy: 81.53846153846153 (%) || New best val accuracy: 81.92307692307692 (%) , and new model saved..
+
+
+ /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints/cub/completeness/ResNet101/moIE/concepts_topK_20/g_best_model_epoch_66.pth.tar
+
+Epoch: [66/75] Train_loss: 4.3173 Train_Accuracy: 99.5996 (%) Val_loss: 1324.5061 Best_Val_Accuracy: 81.9231 (%)  Epoch_Duration: 42.9293
+Epoch: [67/75] Train_loss: 4.1861 Train_Accuracy: 99.5996 (%) Val_loss: 1347.9568 Best_Val_Accuracy: 81.9231 (%)  Epoch_Duration: 44.7934
+Epoch: [68/75] Train_loss: 3.1869 Train_Accuracy: 99.5996 (%) Val_loss: 1372.2047 Best_Val_Accuracy: 81.9231 (%)  Epoch_Duration: 44.3765
+Epoch: [69/75] Train_loss: 5.0504 Train_Accuracy: 99.5025 (%) Val_loss: 1387.5072 Best_Val_Accuracy: 81.9231 (%)  Epoch_Duration: 42.9516
+Epoch: [70/75] Train_loss: 5.3409 Train_Accuracy: 99.5268 (%) Val_loss: 1417.6092 Best_Val_Accuracy: 81.9231 (%)  Epoch_Duration: 43.0346
+Epoch: [71/75] Train_loss: 3.4445 Train_Accuracy: 99.5874 (%) Val_loss: 1368.3632 Best_Val_Accuracy: 81.9231 (%)  Epoch_Duration: 42.825
+Epoch: [72/75] Train_loss: 3.5802 Train_Accuracy: 99.551 (%) Val_loss: 1381.306 Best_Val_Accuracy: 81.9231 (%)  Epoch_Duration: 43.5731
+Epoch: [73/75] Train_loss: 5.4486 Train_Accuracy: 99.4539 (%) Val_loss: 1406.9656 Best_Val_Accuracy: 81.9231 (%)  Epoch_Duration: 42.9125
+Epoch: [74/75] Train_loss: 2.8697 Train_Accuracy: 99.6481 (%) Val_loss: 1412.7871 Best_Val_Accuracy: 81.9231 (%)  Epoch_Duration: 42.9039
+Epoch: [75/75] Train_loss: 3.7483 Train_Accuracy: 99.5753 (%) Val_loss: 1435.8145 Best_Val_Accuracy: 81.9231 (%)  Epoch_Duration: 42.9894
+
+ Computing the completeness score: 
+
+Top concepts: 20
+Accuracy of the bb: 88.84615384615384 (%)
+Accuracy using the completeness: 81.63461538461539 (%)
+Completeness_score: 0.8143564356435644
+/ocean/projects/asc170022p/shg121/PhD/ICLR-2022/out/cub/completeness/ResNet101/moIE/concepts_topK_20/out_put_predict_bb.pt
+TopK: 25
+train_size: torch.Size([8241, 2048, 14, 14])
+train_size: torch.Size([8241, 108])
+train_size: torch.Size([8241])
+test_size: torch.Size([1040, 2048, 14, 14])
+test_size: torch.Size([1040, 108])
+test_size: torch.Size([1040])
+Time to the full datasets: 81.50003504753113 secs
+############# Paths ############# 
+/ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints/cub/completeness/ResNet101/moIE/concepts_topK_25
+/ocean/projects/asc170022p/shg121/PhD/ICLR-2022/out/cub/completeness/ResNet101/moIE/concepts_topK_25
+/ocean/projects/asc170022p/shg121/PhD/ICLR-2022/log/cub/completeness/ResNet101/moIE/concepts_topK_25
+############# Paths ############# 
+==>> Loading BB from : /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints/cub/BB/lr_0.001_epochs_95/ResNet101/best_model_epoch_63.pth.tar
+Device: cuda
+===>>> t is loaded from: /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints/cub/t/lr_0.001_epochs_95/lr_0.001_epochs_95_ResNet101_layer4_adaptive_sgd_BCE/best_model_epoch_62.pth.tar
+Size of CAV: torch.Size([108, 2048])
+Logistic_Regression_t(
+  (adaptive_avg_pool): AdaptiveAvgPool2d(output_size=(1, 1))
+  (adaptive_max_pool): AdaptiveMaxPool2d(output_size=(1, 1))
+  (flatten): Flatten(start_dim=1, end_dim=-1)
+  (linear): Linear(in_features=2048, out_features=108, bias=True)
+)
+################## TB Log path ###################
+/ocean/projects/asc170022p/shg121/PhD/ICLR-2022/log/cub/completeness/ResNet101/moIE/concepts_topK_25/g_train
+################## TB Log path ###################
+
+ Old best val accuracy: 0 (%) || New best val accuracy: 67.6923076923077 (%) , and new model saved..
+
+
+ /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints/cub/completeness/ResNet101/moIE/concepts_topK_25/g_best_model_epoch_1.pth.tar
+
+Epoch: [1/75] Train_loss: 20.7214 Train_Accuracy: 50.5036 (%) Val_loss: 39.9062 Best_Val_Accuracy: 67.6923 (%)  Epoch_Duration: 42.8458
+
+ Old best val accuracy: 67.6923076923077 (%) || New best val accuracy: 72.59615384615384 (%) , and new model saved..
+
+
+ /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints/cub/completeness/ResNet101/moIE/concepts_topK_25/g_best_model_epoch_2.pth.tar
+
+Epoch: [2/75] Train_loss: 24.1596 Train_Accuracy: 76.9203 (%) Val_loss: 64.9405 Best_Val_Accuracy: 72.5962 (%)  Epoch_Duration: 42.8912
+
+ Old best val accuracy: 72.59615384615384 (%) || New best val accuracy: 75.57692307692308 (%) , and new model saved..
+
+
+ /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints/cub/completeness/ResNet101/moIE/concepts_topK_25/g_best_model_epoch_3.pth.tar
+
+Epoch: [3/75] Train_loss: 17.512 Train_Accuracy: 85.5964 (%) Val_loss: 86.2291 Best_Val_Accuracy: 75.5769 (%)  Epoch_Duration: 43.3596
+
+ Old best val accuracy: 75.57692307692308 (%) || New best val accuracy: 76.15384615384615 (%) , and new model saved..
+
+
+ /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints/cub/completeness/ResNet101/moIE/concepts_topK_25/g_best_model_epoch_4.pth.tar
+
+Epoch: [4/75] Train_loss: 15.2903 Train_Accuracy: 89.2974 (%) Val_loss: 98.2979 Best_Val_Accuracy: 76.1538 (%)  Epoch_Duration: 42.9154
+
+ Old best val accuracy: 76.15384615384615 (%) || New best val accuracy: 78.07692307692308 (%) , and new model saved..
+
+
+ /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints/cub/completeness/ResNet101/moIE/concepts_topK_25/g_best_model_epoch_5.pth.tar
+
+Epoch: [5/75] Train_loss: 14.2526 Train_Accuracy: 91.3117 (%) Val_loss: 130.8883 Best_Val_Accuracy: 78.0769 (%)  Epoch_Duration: 42.9583
+
+ Old best val accuracy: 78.07692307692308 (%) || New best val accuracy: 79.32692307692307 (%) , and new model saved..
+
+
+ /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints/cub/completeness/ResNet101/moIE/concepts_topK_25/g_best_model_epoch_6.pth.tar
+
+Epoch: [6/75] Train_loss: 13.4148 Train_Accuracy: 92.8164 (%) Val_loss: 149.9415 Best_Val_Accuracy: 79.3269 (%)  Epoch_Duration: 43.1094
+Epoch: [7/75] Train_loss: 12.5505 Train_Accuracy: 93.8357 (%) Val_loss: 168.1998 Best_Val_Accuracy: 79.3269 (%)  Epoch_Duration: 44.9821
+Epoch: [8/75] Train_loss: 11.5872 Train_Accuracy: 94.7943 (%) Val_loss: 189.8318 Best_Val_Accuracy: 79.3269 (%)  Epoch_Duration: 42.9715
+Epoch: [9/75] Train_loss: 11.7221 Train_Accuracy: 95.3525 (%) Val_loss: 215.8485 Best_Val_Accuracy: 79.3269 (%)  Epoch_Duration: 43.0641
+Epoch: [10/75] Train_loss: 10.99 Train_Accuracy: 95.7529 (%) Val_loss: 266.2455 Best_Val_Accuracy: 79.3269 (%)  Epoch_Duration: 43.0817
+
+ Old best val accuracy: 79.32692307692307 (%) || New best val accuracy: 79.8076923076923 (%) , and new model saved..
+
+
+ /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints/cub/completeness/ResNet101/moIE/concepts_topK_25/g_best_model_epoch_11.pth.tar
+
+Epoch: [11/75] Train_loss: 10.5092 Train_Accuracy: 96.4446 (%) Val_loss: 277.9095 Best_Val_Accuracy: 79.8077 (%)  Epoch_Duration: 43.6556
+Epoch: [12/75] Train_loss: 9.3849 Train_Accuracy: 96.9057 (%) Val_loss: 293.0782 Best_Val_Accuracy: 79.8077 (%)  Epoch_Duration: 42.8502
+Epoch: [13/75] Train_loss: 12.8072 Train_Accuracy: 96.6024 (%) Val_loss: 325.7588 Best_Val_Accuracy: 79.8077 (%)  Epoch_Duration: 43.0418
+Epoch: [14/75] Train_loss: 8.4808 Train_Accuracy: 97.5003 (%) Val_loss: 345.3759 Best_Val_Accuracy: 79.8077 (%)  Epoch_Duration: 43.6302
+
+ Old best val accuracy: 79.8076923076923 (%) || New best val accuracy: 80.57692307692308 (%) , and new model saved..
+
+
+ /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints/cub/completeness/ResNet101/moIE/concepts_topK_25/g_best_model_epoch_15.pth.tar
+
+Epoch: [15/75] Train_loss: 9.2387 Train_Accuracy: 97.5367 (%) Val_loss: 365.5034 Best_Val_Accuracy: 80.5769 (%)  Epoch_Duration: 43.0124
+Epoch: [16/75] Train_loss: 7.2791 Train_Accuracy: 98.0585 (%) Val_loss: 388.5699 Best_Val_Accuracy: 80.5769 (%)  Epoch_Duration: 42.748
+Epoch: [17/75] Train_loss: 11.421 Train_Accuracy: 97.7673 (%) Val_loss: 410.4688 Best_Val_Accuracy: 80.5769 (%)  Epoch_Duration: 42.8265
+Epoch: [18/75] Train_loss: 12.1692 Train_Accuracy: 97.7915 (%) Val_loss: 445.5519 Best_Val_Accuracy: 80.5769 (%)  Epoch_Duration: 42.8468
+
+ Old best val accuracy: 80.57692307692308 (%) || New best val accuracy: 82.01923076923077 (%) , and new model saved..
+
+
+ /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints/cub/completeness/ResNet101/moIE/concepts_topK_25/g_best_model_epoch_19.pth.tar
+
+Epoch: [19/75] Train_loss: 7.394 Train_Accuracy: 98.0706 (%) Val_loss: 447.8989 Best_Val_Accuracy: 82.0192 (%)  Epoch_Duration: 42.8776
+Epoch: [20/75] Train_loss: 9.1293 Train_Accuracy: 97.9735 (%) Val_loss: 496.1228 Best_Val_Accuracy: 82.0192 (%)  Epoch_Duration: 42.8195
+Epoch: [21/75] Train_loss: 8.9148 Train_Accuracy: 98.2041 (%) Val_loss: 485.3953 Best_Val_Accuracy: 82.0192 (%)  Epoch_Duration: 42.8386
+Epoch: [22/75] Train_loss: 7.1934 Train_Accuracy: 98.3012 (%) Val_loss: 540.8504 Best_Val_Accuracy: 82.0192 (%)  Epoch_Duration: 42.8237
+Epoch: [23/75] Train_loss: 8.1239 Train_Accuracy: 98.2526 (%) Val_loss: 547.3026 Best_Val_Accuracy: 82.0192 (%)  Epoch_Duration: 42.7708
+Epoch: [24/75] Train_loss: 8.3126 Train_Accuracy: 98.2648 (%) Val_loss: 590.9209 Best_Val_Accuracy: 82.0192 (%)  Epoch_Duration: 42.8841
+Epoch: [25/75] Train_loss: 6.8533 Train_Accuracy: 98.4104 (%) Val_loss: 605.1391 Best_Val_Accuracy: 82.0192 (%)  Epoch_Duration: 42.8966
+Epoch: [26/75] Train_loss: 5.8653 Train_Accuracy: 98.7744 (%) Val_loss: 637.5493 Best_Val_Accuracy: 82.0192 (%)  Epoch_Duration: 42.83
+Epoch: [27/75] Train_loss: 7.0083 Train_Accuracy: 98.6773 (%) Val_loss: 651.3043 Best_Val_Accuracy: 82.0192 (%)  Epoch_Duration: 42.9536
+Epoch: [28/75] Train_loss: 7.8227 Train_Accuracy: 98.6652 (%) Val_loss: 696.0494 Best_Val_Accuracy: 82.0192 (%)  Epoch_Duration: 42.909
+Epoch: [29/75] Train_loss: 5.322 Train_Accuracy: 99.0171 (%) Val_loss: 688.8313 Best_Val_Accuracy: 82.0192 (%)  Epoch_Duration: 42.8423
+
+ Old best val accuracy: 82.01923076923077 (%) || New best val accuracy: 82.11538461538461 (%) , and new model saved..
+
+
+ /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints/cub/completeness/ResNet101/moIE/concepts_topK_25/g_best_model_epoch_30.pth.tar
+
+Epoch: [30/75] Train_loss: 7.4483 Train_Accuracy: 98.8958 (%) Val_loss: 726.4257 Best_Val_Accuracy: 82.1154 (%)  Epoch_Duration: 42.9062
+
+ Old best val accuracy: 82.11538461538461 (%) || New best val accuracy: 82.3076923076923 (%) , and new model saved..
+
+
+ /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints/cub/completeness/ResNet101/moIE/concepts_topK_25/g_best_model_epoch_31.pth.tar
+
+Epoch: [31/75] Train_loss: 6.6974 Train_Accuracy: 99.1021 (%) Val_loss: 696.8255 Best_Val_Accuracy: 82.3077 (%)  Epoch_Duration: 42.856
+Epoch: [32/75] Train_loss: 7.376 Train_Accuracy: 98.9928 (%) Val_loss: 727.6012 Best_Val_Accuracy: 82.3077 (%)  Epoch_Duration: 42.9151
+Epoch: [33/75] Train_loss: 10.1568 Train_Accuracy: 98.6773 (%) Val_loss: 787.9016 Best_Val_Accuracy: 82.3077 (%)  Epoch_Duration: 42.7866
+Epoch: [34/75] Train_loss: 8.6466 Train_Accuracy: 98.6288 (%) Val_loss: 871.6348 Best_Val_Accuracy: 82.3077 (%)  Epoch_Duration: 42.839
+Epoch: [35/75] Train_loss: 7.7586 Train_Accuracy: 98.9564 (%) Val_loss: 883.2047 Best_Val_Accuracy: 82.3077 (%)  Epoch_Duration: 42.8978
+Epoch: [36/75] Train_loss: 7.5021 Train_Accuracy: 99.1263 (%) Val_loss: 875.4661 Best_Val_Accuracy: 82.3077 (%)  Epoch_Duration: 42.8517
+
+ Old best val accuracy: 82.3076923076923 (%) || New best val accuracy: 82.59615384615384 (%) , and new model saved..
+
+
+ /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints/cub/completeness/ResNet101/moIE/concepts_topK_25/g_best_model_epoch_37.pth.tar
+
+Epoch: [37/75] Train_loss: 3.1412 Train_Accuracy: 99.4782 (%) Val_loss: 897.805 Best_Val_Accuracy: 82.5962 (%)  Epoch_Duration: 42.847
+Epoch: [38/75] Train_loss: 5.7798 Train_Accuracy: 99.3205 (%) Val_loss: 905.7928 Best_Val_Accuracy: 82.5962 (%)  Epoch_Duration: 42.8873
+Epoch: [39/75] Train_loss: 11.0268 Train_Accuracy: 98.7744 (%) Val_loss: 939.2594 Best_Val_Accuracy: 82.5962 (%)  Epoch_Duration: 42.8301
+Epoch: [40/75] Train_loss: 10.6888 Train_Accuracy: 98.7502 (%) Val_loss: 977.7927 Best_Val_Accuracy: 82.5962 (%)  Epoch_Duration: 42.8431
+Epoch: [41/75] Train_loss: 5.8997 Train_Accuracy: 99.3205 (%) Val_loss: 1022.7926 Best_Val_Accuracy: 82.5962 (%)  Epoch_Duration: 42.8014
+Epoch: [42/75] Train_loss: 5.8101 Train_Accuracy: 99.2962 (%) Val_loss: 1019.3278 Best_Val_Accuracy: 82.5962 (%)  Epoch_Duration: 43.2143
+Epoch: [43/75] Train_loss: 6.4742 Train_Accuracy: 99.2477 (%) Val_loss: 1042.5444 Best_Val_Accuracy: 82.5962 (%)  Epoch_Duration: 42.8274
+Epoch: [44/75] Train_loss: 4.5205 Train_Accuracy: 99.4782 (%) Val_loss: 1053.5891 Best_Val_Accuracy: 82.5962 (%)  Epoch_Duration: 42.8786
+Epoch: [45/75] Train_loss: 4.874 Train_Accuracy: 99.187 (%) Val_loss: 1079.7269 Best_Val_Accuracy: 82.5962 (%)  Epoch_Duration: 42.8188
+Epoch: [46/75] Train_loss: 8.622 Train_Accuracy: 99.2598 (%) Val_loss: 1107.1793 Best_Val_Accuracy: 82.5962 (%)  Epoch_Duration: 42.7755
+Epoch: [47/75] Train_loss: 7.9944 Train_Accuracy: 99.1142 (%) Val_loss: 1156.4811 Best_Val_Accuracy: 82.5962 (%)  Epoch_Duration: 43.5629
+Epoch: [48/75] Train_loss: 6.5066 Train_Accuracy: 99.1749 (%) Val_loss: 1177.5766 Best_Val_Accuracy: 82.5962 (%)  Epoch_Duration: 42.8964
+Epoch: [49/75] Train_loss: 4.642 Train_Accuracy: 99.2719 (%) Val_loss: 1162.8227 Best_Val_Accuracy: 82.5962 (%)  Epoch_Duration: 42.8307
+Epoch: [50/75] Train_loss: 2.9905 Train_Accuracy: 99.5146 (%) Val_loss: 1190.6544 Best_Val_Accuracy: 82.5962 (%)  Epoch_Duration: 44.4776
+Epoch: [51/75] Train_loss: 5.657 Train_Accuracy: 99.4904 (%) Val_loss: 1224.4061 Best_Val_Accuracy: 82.5962 (%)  Epoch_Duration: 43.0461
+Epoch: [52/75] Train_loss: 4.6848 Train_Accuracy: 99.5025 (%) Val_loss: 1262.6119 Best_Val_Accuracy: 82.5962 (%)  Epoch_Duration: 42.9531
+Epoch: [53/75] Train_loss: 6.1714 Train_Accuracy: 99.3447 (%) Val_loss: 1278.7606 Best_Val_Accuracy: 82.5962 (%)  Epoch_Duration: 42.9353
+Epoch: [54/75] Train_loss: 6.4246 Train_Accuracy: 99.3569 (%) Val_loss: 1330.372 Best_Val_Accuracy: 82.5962 (%)  Epoch_Duration: 42.8192
+Epoch: [55/75] Train_loss: 5.825 Train_Accuracy: 99.3447 (%) Val_loss: 1311.9179 Best_Val_Accuracy: 82.5962 (%)  Epoch_Duration: 42.8773
+Epoch: [56/75] Train_loss: 3.6834 Train_Accuracy: 99.5753 (%) Val_loss: 1313.5817 Best_Val_Accuracy: 82.5962 (%)  Epoch_Duration: 43.0037
+Epoch: [57/75] Train_loss: 4.372 Train_Accuracy: 99.5753 (%) Val_loss: 1362.1455 Best_Val_Accuracy: 82.5962 (%)  Epoch_Duration: 43.1503
+Epoch: [58/75] Train_loss: 7.8164 Train_Accuracy: 99.5268 (%) Val_loss: 1348.2816 Best_Val_Accuracy: 82.5962 (%)  Epoch_Duration: 43.7569
+Epoch: [59/75] Train_loss: 6.1924 Train_Accuracy: 99.4782 (%) Val_loss: 1447.5384 Best_Val_Accuracy: 82.5962 (%)  Epoch_Duration: 42.9114
+Epoch: [60/75] Train_loss: 8.1924 Train_Accuracy: 99.3569 (%) Val_loss: 1459.553 Best_Val_Accuracy: 82.5962 (%)  Epoch_Duration: 43.0882
+Epoch: [61/75] Train_loss: 9.6576 Train_Accuracy: 99.2962 (%) Val_loss: 1505.0748 Best_Val_Accuracy: 82.5962 (%)  Epoch_Duration: 43.7726
+Epoch: [62/75] Train_loss: 7.7518 Train_Accuracy: 99.3083 (%) Val_loss: 1451.9903 Best_Val_Accuracy: 82.5962 (%)  Epoch_Duration: 43.3185
+Epoch: [63/75] Train_loss: 8.8991 Train_Accuracy: 99.2355 (%) Val_loss: 1479.2423 Best_Val_Accuracy: 82.5962 (%)  Epoch_Duration: 42.8866
+Epoch: [64/75] Train_loss: 6.0135 Train_Accuracy: 99.3811 (%) Val_loss: 1471.9236 Best_Val_Accuracy: 82.5962 (%)  Epoch_Duration: 46.0262
+
+ Old best val accuracy: 82.59615384615384 (%) || New best val accuracy: 82.88461538461539 (%) , and new model saved..
+
+
+ /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints/cub/completeness/ResNet101/moIE/concepts_topK_25/g_best_model_epoch_65.pth.tar
+
+Epoch: [65/75] Train_loss: 1.7799 Train_Accuracy: 99.7816 (%) Val_loss: 1469.7615 Best_Val_Accuracy: 82.8846 (%)  Epoch_Duration: 43.0743
+Epoch: [66/75] Train_loss: 2.0376 Train_Accuracy: 99.7452 (%) Val_loss: 1511.4001 Best_Val_Accuracy: 82.8846 (%)  Epoch_Duration: 43.3249
+Epoch: [67/75] Train_loss: 2.8338 Train_Accuracy: 99.7452 (%) Val_loss: 1522.1282 Best_Val_Accuracy: 82.8846 (%)  Epoch_Duration: 42.9473
+Epoch: [68/75] Train_loss: 6.4436 Train_Accuracy: 99.4661 (%) Val_loss: 1562.1885 Best_Val_Accuracy: 82.8846 (%)  Epoch_Duration: 42.9085
+Epoch: [69/75] Train_loss: 9.2005 Train_Accuracy: 99.1263 (%) Val_loss: 1590.2665 Best_Val_Accuracy: 82.8846 (%)  Epoch_Duration: 43.5432
+Epoch: [70/75] Train_loss: 6.2906 Train_Accuracy: 99.4175 (%) Val_loss: 1621.4843 Best_Val_Accuracy: 82.8846 (%)  Epoch_Duration: 42.904
+Epoch: [71/75] Train_loss: 7.4647 Train_Accuracy: 99.4297 (%) Val_loss: 1635.0575 Best_Val_Accuracy: 82.8846 (%)  Epoch_Duration: 43.5622
+Epoch: [72/75] Train_loss: 9.0429 Train_Accuracy: 99.4175 (%) Val_loss: 1796.4316 Best_Val_Accuracy: 82.8846 (%)  Epoch_Duration: 43.0559
+Epoch: [73/75] Train_loss: 2.6864 Train_Accuracy: 99.6845 (%) Val_loss: 1854.3548 Best_Val_Accuracy: 82.8846 (%)  Epoch_Duration: 43.7447
+Epoch: [74/75] Train_loss: 5.1426 Train_Accuracy: 99.5996 (%) Val_loss: 1866.1834 Best_Val_Accuracy: 82.8846 (%)  Epoch_Duration: 43.4151
+Epoch: [75/75] Train_loss: 5.9601 Train_Accuracy: 99.5025 (%) Val_loss: 1868.8878 Best_Val_Accuracy: 82.8846 (%)  Epoch_Duration: 42.9573
+
+ Computing the completeness score: 
+
+Top concepts: 25
+Accuracy of the bb: 88.84615384615384 (%)
+Accuracy using the completeness: 81.4423076923077 (%)
+Completeness_score: 0.8094059405940595
+/ocean/projects/asc170022p/shg121/PhD/ICLR-2022/out/cub/completeness/ResNet101/moIE/concepts_topK_25/out_put_predict_bb.pt
+TopK: 30
+train_size: torch.Size([8241, 2048, 14, 14])
+train_size: torch.Size([8241, 108])
+train_size: torch.Size([8241])
+test_size: torch.Size([1040, 2048, 14, 14])
+test_size: torch.Size([1040, 108])
+test_size: torch.Size([1040])
+Time to the full datasets: 73.20806002616882 secs
+############# Paths ############# 
+/ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints/cub/completeness/ResNet101/moIE/concepts_topK_30
+/ocean/projects/asc170022p/shg121/PhD/ICLR-2022/out/cub/completeness/ResNet101/moIE/concepts_topK_30
+/ocean/projects/asc170022p/shg121/PhD/ICLR-2022/log/cub/completeness/ResNet101/moIE/concepts_topK_30
+############# Paths ############# 
+==>> Loading BB from : /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints/cub/BB/lr_0.001_epochs_95/ResNet101/best_model_epoch_63.pth.tar
+Device: cuda
+===>>> t is loaded from: /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints/cub/t/lr_0.001_epochs_95/lr_0.001_epochs_95_ResNet101_layer4_adaptive_sgd_BCE/best_model_epoch_62.pth.tar
+Size of CAV: torch.Size([108, 2048])
+Logistic_Regression_t(
+  (adaptive_avg_pool): AdaptiveAvgPool2d(output_size=(1, 1))
+  (adaptive_max_pool): AdaptiveMaxPool2d(output_size=(1, 1))
+  (flatten): Flatten(start_dim=1, end_dim=-1)
+  (linear): Linear(in_features=2048, out_features=108, bias=True)
+)
+################## TB Log path ###################
+/ocean/projects/asc170022p/shg121/PhD/ICLR-2022/log/cub/completeness/ResNet101/moIE/concepts_topK_30/g_train
+################## TB Log path ###################
+
+ Old best val accuracy: 0 (%) || New best val accuracy: 67.6923076923077 (%) , and new model saved..
+
+
+ /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints/cub/completeness/ResNet101/moIE/concepts_topK_30/g_best_model_epoch_1.pth.tar
+
+Epoch: [1/75] Train_loss: 22.5938 Train_Accuracy: 51.4258 (%) Val_loss: 45.1288 Best_Val_Accuracy: 67.6923 (%)  Epoch_Duration: 42.8966
+
+ Old best val accuracy: 67.6923076923077 (%) || New best val accuracy: 74.42307692307692 (%) , and new model saved..
+
+
+ /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints/cub/completeness/ResNet101/moIE/concepts_topK_30/g_best_model_epoch_2.pth.tar
+
+Epoch: [2/75] Train_loss: 23.2591 Train_Accuracy: 78.7283 (%) Val_loss: 65.4919 Best_Val_Accuracy: 74.4231 (%)  Epoch_Duration: 43.2112
+
+ Old best val accuracy: 74.42307692307692 (%) || New best val accuracy: 77.88461538461539 (%) , and new model saved..
+
+
+ /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints/cub/completeness/ResNet101/moIE/concepts_topK_30/g_best_model_epoch_3.pth.tar
+
+Epoch: [3/75] Train_loss: 20.5126 Train_Accuracy: 84.7713 (%) Val_loss: 91.1853 Best_Val_Accuracy: 77.8846 (%)  Epoch_Duration: 42.7798
+Epoch: [4/75] Train_loss: 17.1473 Train_Accuracy: 89.1275 (%) Val_loss: 122.2489 Best_Val_Accuracy: 77.8846 (%)  Epoch_Duration: 42.9489
+
+ Old best val accuracy: 77.88461538461539 (%) || New best val accuracy: 78.75 (%) , and new model saved..
+
+
+ /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints/cub/completeness/ResNet101/moIE/concepts_topK_30/g_best_model_epoch_5.pth.tar
+
+Epoch: [5/75] Train_loss: 14.5357 Train_Accuracy: 92.2825 (%) Val_loss: 146.2791 Best_Val_Accuracy: 78.75 (%)  Epoch_Duration: 42.8691
+Epoch: [6/75] Train_loss: 15.4376 Train_Accuracy: 93.1804 (%) Val_loss: 179.4431 Best_Val_Accuracy: 78.75 (%)  Epoch_Duration: 42.816
+
+ Old best val accuracy: 78.75 (%) || New best val accuracy: 80.1923076923077 (%) , and new model saved..
+
+
+ /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints/cub/completeness/ResNet101/moIE/concepts_topK_30/g_best_model_epoch_7.pth.tar
+
+Epoch: [7/75] Train_loss: 14.3248 Train_Accuracy: 93.593 (%) Val_loss: 193.782 Best_Val_Accuracy: 80.1923 (%)  Epoch_Duration: 42.859
+Epoch: [8/75] Train_loss: 13.6344 Train_Accuracy: 94.588 (%) Val_loss: 223.9462 Best_Val_Accuracy: 80.1923 (%)  Epoch_Duration: 42.9268
+
+ Old best val accuracy: 80.1923076923077 (%) || New best val accuracy: 80.38461538461539 (%) , and new model saved..
+
+
+ /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints/cub/completeness/ResNet101/moIE/concepts_topK_30/g_best_model_epoch_9.pth.tar
+
+Epoch: [9/75] Train_loss: 12.1949 Train_Accuracy: 95.7893 (%) Val_loss: 243.4542 Best_Val_Accuracy: 80.3846 (%)  Epoch_Duration: 45.4234
+Epoch: [10/75] Train_loss: 11.088 Train_Accuracy: 96.2019 (%) Val_loss: 264.9374 Best_Val_Accuracy: 80.3846 (%)  Epoch_Duration: 44.0227
+
+ Old best val accuracy: 80.38461538461539 (%) || New best val accuracy: 81.25 (%) , and new model saved..
+
+
+ /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints/cub/completeness/ResNet101/moIE/concepts_topK_30/g_best_model_epoch_11.pth.tar
+
+Epoch: [11/75] Train_loss: 11.4415 Train_Accuracy: 96.4567 (%) Val_loss: 309.3775 Best_Val_Accuracy: 81.25 (%)  Epoch_Duration: 42.9731
+Epoch: [12/75] Train_loss: 11.6069 Train_Accuracy: 96.7601 (%) Val_loss: 343.8516 Best_Val_Accuracy: 81.25 (%)  Epoch_Duration: 42.9095
+Epoch: [13/75] Train_loss: 10.4638 Train_Accuracy: 97.0271 (%) Val_loss: 352.1178 Best_Val_Accuracy: 81.25 (%)  Epoch_Duration: 42.8702
+Epoch: [14/75] Train_loss: 10.2919 Train_Accuracy: 97.5246 (%) Val_loss: 388.1661 Best_Val_Accuracy: 81.25 (%)  Epoch_Duration: 42.8232
+
+ Old best val accuracy: 81.25 (%) || New best val accuracy: 81.34615384615384 (%) , and new model saved..
+
+
+ /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints/cub/completeness/ResNet101/moIE/concepts_topK_30/g_best_model_epoch_15.pth.tar
+
+Epoch: [15/75] Train_loss: 11.3882 Train_Accuracy: 97.3911 (%) Val_loss: 411.5254 Best_Val_Accuracy: 81.3462 (%)  Epoch_Duration: 42.8287
+
+ Old best val accuracy: 81.34615384615384 (%) || New best val accuracy: 81.63461538461539 (%) , and new model saved..
+
+
+ /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints/cub/completeness/ResNet101/moIE/concepts_topK_30/g_best_model_epoch_16.pth.tar
+
+Epoch: [16/75] Train_loss: 9.769 Train_Accuracy: 97.4639 (%) Val_loss: 427.5739 Best_Val_Accuracy: 81.6346 (%)  Epoch_Duration: 42.8395
+Epoch: [17/75] Train_loss: 9.3807 Train_Accuracy: 97.6216 (%) Val_loss: 465.9373 Best_Val_Accuracy: 81.6346 (%)  Epoch_Duration: 42.8913
+
+ Old best val accuracy: 81.63461538461539 (%) || New best val accuracy: 82.21153846153845 (%) , and new model saved..
+
+
+ /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints/cub/completeness/ResNet101/moIE/concepts_topK_30/g_best_model_epoch_18.pth.tar
+
+Epoch: [18/75] Train_loss: 9.3585 Train_Accuracy: 98.1192 (%) Val_loss: 482.0908 Best_Val_Accuracy: 82.2115 (%)  Epoch_Duration: 42.8521
+Epoch: [19/75] Train_loss: 8.3122 Train_Accuracy: 98.01 (%) Val_loss: 518.807 Best_Val_Accuracy: 82.2115 (%)  Epoch_Duration: 42.8537
+Epoch: [20/75] Train_loss: 6.6786 Train_Accuracy: 98.7137 (%) Val_loss: 572.8878 Best_Val_Accuracy: 82.2115 (%)  Epoch_Duration: 42.8899
+Epoch: [21/75] Train_loss: 10.9931 Train_Accuracy: 98.1434 (%) Val_loss: 574.1606 Best_Val_Accuracy: 82.2115 (%)  Epoch_Duration: 42.9595
+Epoch: [22/75] Train_loss: 9.212 Train_Accuracy: 98.3133 (%) Val_loss: 617.1762 Best_Val_Accuracy: 82.2115 (%)  Epoch_Duration: 42.882
+Epoch: [23/75] Train_loss: 8.1118 Train_Accuracy: 98.7623 (%) Val_loss: 652.9985 Best_Val_Accuracy: 82.2115 (%)  Epoch_Duration: 42.819
+Epoch: [24/75] Train_loss: 7.0313 Train_Accuracy: 98.8472 (%) Val_loss: 694.3825 Best_Val_Accuracy: 82.2115 (%)  Epoch_Duration: 42.8662
+Epoch: [25/75] Train_loss: 8.3205 Train_Accuracy: 98.4711 (%) Val_loss: 726.8323 Best_Val_Accuracy: 82.2115 (%)  Epoch_Duration: 42.8476
+Epoch: [26/75] Train_loss: 7.0693 Train_Accuracy: 98.7987 (%) Val_loss: 716.4535 Best_Val_Accuracy: 82.2115 (%)  Epoch_Duration: 42.8797
+Epoch: [27/75] Train_loss: 7.5506 Train_Accuracy: 98.5803 (%) Val_loss: 794.5713 Best_Val_Accuracy: 82.2115 (%)  Epoch_Duration: 42.8004
+Epoch: [28/75] Train_loss: 9.3208 Train_Accuracy: 98.5439 (%) Val_loss: 861.0767 Best_Val_Accuracy: 82.2115 (%)  Epoch_Duration: 42.8472
+Epoch: [29/75] Train_loss: 8.322 Train_Accuracy: 98.5803 (%) Val_loss: 868.5177 Best_Val_Accuracy: 82.2115 (%)  Epoch_Duration: 42.8068
+Epoch: [30/75] Train_loss: 5.9627 Train_Accuracy: 99.0171 (%) Val_loss: 846.6523 Best_Val_Accuracy: 82.2115 (%)  Epoch_Duration: 42.8314
+Epoch: [31/75] Train_loss: 10.2959 Train_Accuracy: 98.7866 (%) Val_loss: 894.952 Best_Val_Accuracy: 82.2115 (%)  Epoch_Duration: 42.9103
+Epoch: [32/75] Train_loss: 9.0963 Train_Accuracy: 98.9443 (%) Val_loss: 919.9191 Best_Val_Accuracy: 82.2115 (%)  Epoch_Duration: 42.8849
+Epoch: [33/75] Train_loss: 6.4467 Train_Accuracy: 99.0171 (%) Val_loss: 971.9753 Best_Val_Accuracy: 82.2115 (%)  Epoch_Duration: 42.7721
+Epoch: [34/75] Train_loss: 10.5258 Train_Accuracy: 98.9322 (%) Val_loss: 951.7458 Best_Val_Accuracy: 82.2115 (%)  Epoch_Duration: 42.782
+Epoch: [35/75] Train_loss: 6.9703 Train_Accuracy: 99.1021 (%) Val_loss: 992.7474 Best_Val_Accuracy: 82.2115 (%)  Epoch_Duration: 42.8244
+
+ Old best val accuracy: 82.21153846153845 (%) || New best val accuracy: 82.3076923076923 (%) , and new model saved..
+
+
+ /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints/cub/completeness/ResNet101/moIE/concepts_topK_30/g_best_model_epoch_36.pth.tar
+
+Epoch: [36/75] Train_loss: 7.2543 Train_Accuracy: 99.0899 (%) Val_loss: 1045.3501 Best_Val_Accuracy: 82.3077 (%)  Epoch_Duration: 42.9178
+Epoch: [37/75] Train_loss: 9.1189 Train_Accuracy: 99.0292 (%) Val_loss: 1018.8047 Best_Val_Accuracy: 82.3077 (%)  Epoch_Duration: 43.0353
+
+ Old best val accuracy: 82.3076923076923 (%) || New best val accuracy: 82.6923076923077 (%) , and new model saved..
+
+
+ /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints/cub/completeness/ResNet101/moIE/concepts_topK_30/g_best_model_epoch_38.pth.tar
+
+Epoch: [38/75] Train_loss: 12.4741 Train_Accuracy: 98.6895 (%) Val_loss: 1104.0847 Best_Val_Accuracy: 82.6923 (%)  Epoch_Duration: 42.7772
+Epoch: [39/75] Train_loss: 9.0663 Train_Accuracy: 99.0778 (%) Val_loss: 1070.7037 Best_Val_Accuracy: 82.6923 (%)  Epoch_Duration: 43.2371
+
+ Old best val accuracy: 82.6923076923077 (%) || New best val accuracy: 82.78846153846153 (%) , and new model saved..
+
+
+ /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints/cub/completeness/ResNet101/moIE/concepts_topK_30/g_best_model_epoch_40.pth.tar
+
+Epoch: [40/75] Train_loss: 4.7889 Train_Accuracy: 99.5025 (%) Val_loss: 1075.1566 Best_Val_Accuracy: 82.7885 (%)  Epoch_Duration: 42.8795
+Epoch: [41/75] Train_loss: 3.0293 Train_Accuracy: 99.551 (%) Val_loss: 1086.1643 Best_Val_Accuracy: 82.7885 (%)  Epoch_Duration: 42.911
+Epoch: [42/75] Train_loss: 6.9545 Train_Accuracy: 99.4539 (%) Val_loss: 1136.0294 Best_Val_Accuracy: 82.7885 (%)  Epoch_Duration: 42.954
+Epoch: [43/75] Train_loss: 6.7497 Train_Accuracy: 99.0535 (%) Val_loss: 1217.1664 Best_Val_Accuracy: 82.7885 (%)  Epoch_Duration: 42.8224
+Epoch: [44/75] Train_loss: 11.2358 Train_Accuracy: 99.0656 (%) Val_loss: 1195.9541 Best_Val_Accuracy: 82.7885 (%)  Epoch_Duration: 42.9994
+Epoch: [45/75] Train_loss: 5.573 Train_Accuracy: 99.3569 (%) Val_loss: 1220.1867 Best_Val_Accuracy: 82.7885 (%)  Epoch_Duration: 42.7774
+Epoch: [46/75] Train_loss: 5.3465 Train_Accuracy: 99.3933 (%) Val_loss: 1251.9618 Best_Val_Accuracy: 82.7885 (%)  Epoch_Duration: 42.8437
+Epoch: [47/75] Train_loss: 7.4543 Train_Accuracy: 99.4054 (%) Val_loss: 1267.4882 Best_Val_Accuracy: 82.7885 (%)  Epoch_Duration: 42.8352
+Epoch: [48/75] Train_loss: 5.7374 Train_Accuracy: 99.4175 (%) Val_loss: 1330.7394 Best_Val_Accuracy: 82.7885 (%)  Epoch_Duration: 43.3922
+Epoch: [49/75] Train_loss: 8.8079 Train_Accuracy: 99.2841 (%) Val_loss: 1322.6833 Best_Val_Accuracy: 82.7885 (%)  Epoch_Duration: 43.8272
+
+ Old best val accuracy: 82.78846153846153 (%) || New best val accuracy: 83.17307692307693 (%) , and new model saved..
+
+
+ /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints/cub/completeness/ResNet101/moIE/concepts_topK_30/g_best_model_epoch_50.pth.tar
+
+Epoch: [50/75] Train_loss: 8.4308 Train_Accuracy: 99.3205 (%) Val_loss: 1350.5167 Best_Val_Accuracy: 83.1731 (%)  Epoch_Duration: 42.9458
+
+ Old best val accuracy: 83.17307692307693 (%) || New best val accuracy: 83.46153846153847 (%) , and new model saved..
+
+
+ /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints/cub/completeness/ResNet101/moIE/concepts_topK_30/g_best_model_epoch_51.pth.tar
+
+Epoch: [51/75] Train_loss: 4.1252 Train_Accuracy: 99.5389 (%) Val_loss: 1381.1908 Best_Val_Accuracy: 83.4615 (%)  Epoch_Duration: 42.8229
+Epoch: [52/75] Train_loss: 3.5996 Train_Accuracy: 99.5389 (%) Val_loss: 1378.3644 Best_Val_Accuracy: 83.4615 (%)  Epoch_Duration: 42.7886
+
+ Old best val accuracy: 83.46153846153847 (%) || New best val accuracy: 83.9423076923077 (%) , and new model saved..
+
+
+ /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints/cub/completeness/ResNet101/moIE/concepts_topK_30/g_best_model_epoch_53.pth.tar
+
+Epoch: [53/75] Train_loss: 4.6555 Train_Accuracy: 99.6238 (%) Val_loss: 1372.4951 Best_Val_Accuracy: 83.9423 (%)  Epoch_Duration: 42.8278
+Epoch: [54/75] Train_loss: 10.0483 Train_Accuracy: 99.1627 (%) Val_loss: 1448.7324 Best_Val_Accuracy: 83.9423 (%)  Epoch_Duration: 43.1222
+Epoch: [55/75] Train_loss: 10.2226 Train_Accuracy: 99.2962 (%) Val_loss: 1476.2254 Best_Val_Accuracy: 83.9423 (%)  Epoch_Duration: 42.8403
+Epoch: [56/75] Train_loss: 8.4234 Train_Accuracy: 99.4054 (%) Val_loss: 1537.7917 Best_Val_Accuracy: 83.9423 (%)  Epoch_Duration: 42.7719
+Epoch: [57/75] Train_loss: 8.7132 Train_Accuracy: 99.3205 (%) Val_loss: 1521.7732 Best_Val_Accuracy: 83.9423 (%)  Epoch_Duration: 42.8482
+Epoch: [58/75] Train_loss: 9.2218 Train_Accuracy: 99.2841 (%) Val_loss: 1563.1636 Best_Val_Accuracy: 83.9423 (%)  Epoch_Duration: 42.8169
+Epoch: [59/75] Train_loss: 4.9931 Train_Accuracy: 99.4904 (%) Val_loss: 1609.6789 Best_Val_Accuracy: 83.9423 (%)  Epoch_Duration: 43.0113
+Epoch: [60/75] Train_loss: 3.7918 Train_Accuracy: 99.6724 (%) Val_loss: 1631.3725 Best_Val_Accuracy: 83.9423 (%)  Epoch_Duration: 42.8938
+Epoch: [61/75] Train_loss: 6.122 Train_Accuracy: 99.4904 (%) Val_loss: 1730.8593 Best_Val_Accuracy: 83.9423 (%)  Epoch_Duration: 42.798
+Epoch: [62/75] Train_loss: 7.816 Train_Accuracy: 99.4418 (%) Val_loss: 1722.4499 Best_Val_Accuracy: 83.9423 (%)  Epoch_Duration: 42.9321
+Epoch: [63/75] Train_loss: 7.1252 Train_Accuracy: 99.4175 (%) Val_loss: 1690.415 Best_Val_Accuracy: 83.9423 (%)  Epoch_Duration: 44.3716
+Epoch: [64/75] Train_loss: 9.608 Train_Accuracy: 99.2841 (%) Val_loss: 1734.1917 Best_Val_Accuracy: 83.9423 (%)  Epoch_Duration: 43.1541
+Epoch: [65/75] Train_loss: 6.1429 Train_Accuracy: 99.5632 (%) Val_loss: 1727.388 Best_Val_Accuracy: 83.9423 (%)  Epoch_Duration: 43.3724
+Epoch: [66/75] Train_loss: 6.0158 Train_Accuracy: 99.5268 (%) Val_loss: 1783.3088 Best_Val_Accuracy: 83.9423 (%)  Epoch_Duration: 43.02
+Epoch: [67/75] Train_loss: 7.4291 Train_Accuracy: 99.4175 (%) Val_loss: 1774.6215 Best_Val_Accuracy: 83.9423 (%)  Epoch_Duration: 43.6656
+Epoch: [68/75] Train_loss: 2.5695 Train_Accuracy: 99.7694 (%) Val_loss: 1777.7617 Best_Val_Accuracy: 83.9423 (%)  Epoch_Duration: 42.8712
+Epoch: [69/75] Train_loss: 7.2709 Train_Accuracy: 99.551 (%) Val_loss: 1872.9274 Best_Val_Accuracy: 83.9423 (%)  Epoch_Duration: 42.8046
+Epoch: [70/75] Train_loss: 8.8869 Train_Accuracy: 99.4904 (%) Val_loss: 1911.2527 Best_Val_Accuracy: 83.9423 (%)  Epoch_Duration: 42.8509
+Epoch: [71/75] Train_loss: 11.3554 Train_Accuracy: 99.187 (%) Val_loss: 1997.6155 Best_Val_Accuracy: 83.9423 (%)  Epoch_Duration: 42.8829
+Epoch: [72/75] Train_loss: 4.0327 Train_Accuracy: 99.6117 (%) Val_loss: 1948.3481 Best_Val_Accuracy: 83.9423 (%)  Epoch_Duration: 42.9026
+Epoch: [73/75] Train_loss: 3.4959 Train_Accuracy: 99.733 (%) Val_loss: 1963.9618 Best_Val_Accuracy: 83.9423 (%)  Epoch_Duration: 42.8565
+Epoch: [74/75] Train_loss: 2.0451 Train_Accuracy: 99.818 (%) Val_loss: 2033.0553 Best_Val_Accuracy: 83.9423 (%)  Epoch_Duration: 42.9163
+Epoch: [75/75] Train_loss: 5.8549 Train_Accuracy: 99.4297 (%) Val_loss: 2162.4685 Best_Val_Accuracy: 83.9423 (%)  Epoch_Duration: 43.0564
+
+ Computing the completeness score: 
+
+Top concepts: 30
+Accuracy of the bb: 88.84615384615384 (%)
+Accuracy using the completeness: 82.11538461538461 (%)
+Completeness_score: 0.8267326732673268
+/ocean/projects/asc170022p/shg121/PhD/ICLR-2022/out/cub/completeness/ResNet101/moIE/concepts_topK_30/out_put_predict_bb.pt
+/ocean/projects/asc170022p/shg121/PhD/ICLR-2022/out/cub/completeness/ResNet101/moIE
+   concepts     acc_bb  acc_completeness  completeness_score
+0         3  88.846154         51.634615            0.042079
+1         5  88.846154         62.500000            0.321782
+2        10  88.846154         74.326923            0.626238
+3        15  88.846154         79.615385            0.762376
+4        20  88.846154         81.634615            0.814356
+5        25  88.846154         81.442308            0.809406
+6        30  88.846154         82.115385            0.826733

@@ -1,0 +1,288 @@
+
+
+
+\cref{tab:bb_config} demonstrates different settings to train the Blackbox of CUB-200, Awa2 and MIMIC-CXR respectively. For the VIT-based backbone, we used the same hyperparameter setting used in the state-of-the-art Vit-B\_16 variant in \cite{wang2021feature}. To train $t$, we flatten the feature maps from the last convolutional block of $\Phi$ using ``Adaptive average pooling'' for CUB-200 and Awa2 datasets.For MIMIC-CXR and HAM10000, we flatten out the feature maps from the last convolutional block. For VIT-based backbones, we take the first block of representation from the encoder of VIT.  For HAM10000, we use the same Blackbox in \cite{yuksekgonul2022post}.~\cref{tab:g_config_cub_200},~\cref{tab:g_config_awa2},~\cref{tab:g_config_ham10k},~\cref{tab:g_config_mimic_cxr} enumerate all the different settings to train the interpretable experts for CUB-200, Awa2, HAM, and MIMIC-CXR respectively. All the residuals in different iterations follow the same settings as their blackbox counterparts.
+
+
+% \begin{table}[h]
+% \caption{Hyperparameter setting of interpretable experts ($g$) for ResNet-101-based Blackbox used by CUB-200}
+% \label{table7}
+% \begin{center}
+% \begin{tabular}{l|l|l|l|l|l|l}
+% \toprule 
+%      {\textbf{Setting}} & {\textbf{Expert1}} & {\textbf{Expert2}} 
+%      & {\textbf{Expert3}} & {\textbf{Expert4}} & {\textbf{Iteration5}}
+%      & {\textbf{Iteration6}}\\
+% \midrule 
+%        Batch size              & 16 & 16 & 16 & 16 & 16 & 16   \\
+%        \midrule 
+%        Coverage ($\tau$)  & 0.2 & 0.2 & 0.2 & 0.2 & 0.2 & 0.2 \\
+%        \midrule
+%        Learning rate & 0.01 & 0.01 & 0.01 & 0.01 & 0.01 & 0.01 \\
+%        \midrule 
+%        Temperature \\ E-Lens ($T_{lens}$) & 0.7 & 0.7 & 0.7 & 0.7 & 0.7 & 0.7 \\
+%        \midrule 
+%        $\lambda_{lens}$ & 0.0001 & 0.0001 & 0.0001 & 0.0001 & 0.0001 & 0.0001 \\
+%        \midrule
+%        $\alpha_{KD}$ & 0.9 & 0.9 & 0.9 & 0.9 & 0.9 & 0.9 \\
+%        \midrule
+%        $T_{KD}$ & 10 & 10 & 10 & 10 &10 & 10 \\
+%        \midrule
+%        hidden neurons & 10 & 10 & 10 & 10 &10 & 10 \\
+% \bottomrule
+% \end{tabular}
+% \end{center}
+% \end{table}
+
+% \begin{table}[h]
+% \caption{Hyperparameter setting of interpretable experts ($g$) for VIT-based Blackbox used by CUB-200}
+% \label{table7}
+% \begin{center}
+% \begin{tabular}{l|l|l|l|l|l|l}
+% \toprule 
+%      {\textbf{Setting}} & {\textbf{Iteration1}} & {\textbf{Iteration2}} 
+%      & {\textbf{Iteration3}} & {\textbf{Iteration4}} & {\textbf{Iteration5}}
+%      & {\textbf{Iteration6}}\\
+% \midrule 
+%        Batch size              & 16 & 16 & 16 & 16 & 16 & 16   \\
+%        \midrule 
+%        Coverage ($\tau$)  & 0.2 & 0.2 & 0.2 & 0.2 & 0.2 & 0.2 \\
+%        \midrule
+%        Learning rate & 0.01 & 0.01 & 0.01 & 0.01 & 0.01 & 0.01 \\
+%        \midrule 
+%        Temperature \\ E-Lens ($T_{lens}$) & 6.0 & 6.0 & 6.0 & 6.0 & 6.0 & 6.0 \\
+%        \midrule 
+%        $\lambda_{lens}$ & 0.0001 & 0.0001 & 0.0001 & 0.0001 & 0.0001 & 0.0001 \\
+%        \midrule
+%        $\alpha_{KD}$ & 0.99 & 0.99 & 0.99 & 0.99 & 0.99 & 0.99 \\
+%        \midrule
+%        $T_{KD}$ & 10 & 10 & 10 & 10 &10 & 10 \\
+%        \midrule
+%        hidden neurons & 10 & 10 & 10 & 10 &10 & 10 \\
+% \bottomrule
+% \end{tabular}
+% \end{center}
+% \end{table}
+
+% \begin{table}[h]
+% \caption{Hyperparameter setting of interpretable experts ($g$) for VIT-based Blackbox used by CUB-200}
+% \label{table7}
+% \begin{center}
+% \begin{tabular}{l|l|l|l|l|l|l}
+% \toprule 
+%      {\textbf{Setting}} & {\textbf{Iteration1}} & {\textbf{Iteration2}} 
+%      & {\textbf{Iteration3}} & {\textbf{Iteration4}} & {\textbf{Iteration5}}
+%      & {\textbf{Iteration6}}\\
+% \midrule 
+%        Batch size              & 16 & 16 & 16 & 16 & 16 & 16   \\
+%        \midrule 
+%        Coverage ($\tau$)  & 0.2 & 0.2 & 0.2 & 0.2 & 0.2 & 0.2 \\
+%        \midrule
+%        Learning rate & 0.01 & 0.01 & 0.01 & 0.01 & 0.01 & 0.01 \\
+%        \midrule 
+%        Temperature \\ E-Lens ($T_{lens}$) & 6.0 & 6.0 & 6.0 & 6.0 & 6.0 & 6.0 \\
+%        \midrule 
+%        $\lambda_{lens}$ & 0.0001 & 0.0001 & 0.0001 & 0.0001 & 0.0001 & 0.0001 \\
+%        \midrule
+%        $\alpha_{KD}$ & 0.99 & 0.99 & 0.99 & 0.99 & 0.99 & 0.99 \\
+%        \midrule
+%        $T_{KD}$ & 10 & 10 & 10 & 10 &10 & 10 \\
+%        \midrule
+%        hidden neurons & 10 & 10 & 10 & 10 &10 & 10 \\
+% \bottomrule
+% \end{tabular}
+% \end{center}
+% \end{table}
+
+
+\begin{table}[h]
+\caption{Hyperparameter setting of different convolution-based Blackboxes used by CUB-200, Awa2 and MIMIC-CXR}
+\label{tab:bb_config}
+\begin{center}
+\begin{tabular}{l c c c}
+\toprule 
+     {\textbf{Setting}} & {\textbf{CUB-200}} & {\textbf{Awa2}} & 
+    {\textbf{MIMIC-CXR}}\\
+\midrule 
+       Backbone              & ResNet-101 & ResNet-101 & DenseNet-121  \\
+       % \midrule 
+       Pretrained on ImageNet      & True &True & True \\
+       % \midrule 
+       Image size            & 448 & 224 & 512 \\
+       % \midrule 
+       Learning rate         & 0.001 & 0.001 & 0.01 \\
+       % \midrule 
+       Optimization          & SGD & Adam & SGD \\
+       % \midrule 
+       Weight-decay      & 0.00001 & 0 & 0.0001 \\
+       % \midrule 
+       Epcohs             & 95 & 90 & 50 \\
+       % \midrule 
+       Layers used as $\Phi$ &  \makecell{till 4$^{th}$ ResNet \\Block} &  \makecell{till 4$^{th}$ ResNet \\Block} &  \makecell{till 4$^{th}$ DenseNet \\Block} \\
+       % \midrule 
+       Flattening type for the input to $t$    &  \makecell{Adaptive average \\pooling} &  \makecell{Adaptive average \\pooling} & Flatten \\
+\bottomrule
+\end{tabular}
+\end{center}
+\end{table}
+
+
+\begin{table}[h]
+\caption{Hyperparameter setting of interpretable experts ($g$) trained on ResNet-101 (top) and VIT (bottom) blackboxes for the CUB-200 dataset}
+\label{tab:g_config_cub_200}
+\begin{center}
+\begin{tabular}{l|c|c|c|c|c|c}
+\toprule 
+    \thead{\textbf{Settings based on dataset}} & \thead{\textbf{Expert1}} & \thead{\textbf{Expert2}} 
+    & \thead{\textbf{Expert3}} & \thead{\textbf{Expert4}} & \thead{\textbf{Expert5}} & \thead{\textbf{Expert6}}\\
+     % {\textbf{Setting}} & {\textbf{Expert1}} & {\textbf{Expert2}} 
+     % & {\textbf{Expert3}} & {\textbf{Expert4}} & {\textbf{Expert5}}
+     % & {\textbf{Expert6}}\\
+\midrule 
+        CUB-200 (ResNet-101)              &    &   &  & &  & \\
+       \quad + Batch size              & 16 & 16 & 16 & 16 & 16 & 16   \\
+        
+       \quad + Coverage ($\tau$)  & 0.2 & 0.2 & 0.2 & 0.2 & 0.2 & 0.2 \\
+       
+       \quad + Learning rate & 0.01 & 0.01 & 0.01 & 0.01 & 0.01 & 0.01 \\
+       
+       \quad + $\lambda_{lens}$ & 0.0001 & 0.0001 & 0.0001 & 0.0001 & 0.0001 & 0.0001 \\
+    
+       \quad +$\alpha_{KD}$ & 0.9 & 0.9 & 0.9 & 0.9 & 0.9 & 0.9 \\
+       \quad + $T_{KD}$ & 10 & 10 & 10 & 10 &10 & 10 \\
+       \quad +hidden neurons & 10 & 10 & 10 & 10 &10 & 10 \\
+       \quad +$\lambda_s$ & 32 & 32 & 32 & 32 & 32 & 32 \\
+       \quad + $T_{lens}$ & 0.7 & 0.7 & 0.7 & 0.7 & 0.7 & 0.7 \\
+\midrule 
+        CUB-200 (VIT)            &    &   &  & &  & \\
+       \quad + Batch size              & 16 & 16 & 16 & 16 & 16 & 16   \\
+        
+       \quad + Coverage ($\tau$)  & 0.2 & 0.2 & 0.2 & 0.2 & 0.2 & 0.2 \\
+       
+       \quad + Learning rate & 0.01 & 0.01 & 0.01 & 0.01 & 0.01 & 0.01 \\
+       
+       
+       \quad + $\lambda_{lens}$ & 0.0001 & 0.0001 & 0.0001 & 0.0001 & 0.0001 & 0.0001 \\
+    
+       \quad +$\alpha_{KD}$ & 0.99 & 0.99 & 0.99 & 0.99 & 0.99 & 0.99 \\
+       \quad + $T_{KD}$ & 10 & 10 & 10 & 10 &10 & 10 \\
+       \quad +hidden neurons & 10 & 10 & 10 & 10 &10 & 10 \\
+       \quad +$\lambda_s$ & 32 & 32 & 32 & 32 & 32 & 32 \\
+       \quad +$T_{lens}$ & 6.0 & 6.0 & 6.0 & 6.0 & 6.0 & 6.0 \\
+\bottomrule
+\end{tabular}
+\end{center}
+\end{table}
+
+\begin{table}[H]
+\caption{Hyperparameter setting of interpretable experts ($g$) trained on ResNet-101 (top) and VIT (bottom) blackboxes for the Awa2 dataset}
+\label{tab:g_config_awa2}
+\begin{center}
+\begin{tabular}{l|c|c|c|c|c|c}
+\toprule 
+    \thead{\textbf{Settings based on dataset}} & \thead{\textbf{Expert1}} & \thead{\textbf{Expert2}} 
+    & \thead{\textbf{Expert3}} & \thead{\textbf{Expert4}} & \thead{\textbf{Expert5}} & \thead{\textbf{Expert6}}\\
+     % {\textbf{Setting}} & {\textbf{Expert1}} & {\textbf{Expert2}} 
+     % & {\textbf{Expert3}} & {\textbf{Expert4}} & {\textbf{Expert5}}
+     % & {\textbf{Expert6}}\\
+\midrule 
+        Awa2 (ResNet-101)              &    &   &  & &  & \\
+       \quad + Batch size              & 30 & 30 & 30 & 30 & - & -   \\
+        
+       \quad + Coverage ($\tau$)  & 0.4 & 0.35 & 0.35 & 0.25 & - & - \\
+       
+       \quad + Learning rate & 0.001 & 0.001 & 0.001 & 0.001 & - & - \\
+       
+       \quad + $\lambda_{lens}$ & 0.0001 & 0.0001 & 0.0001 & 0.0001 & - & - \\
+    
+       \quad +$\alpha_{KD}$ & 0.9 & 0.9 & 0.9 & 0.9 & - & - \\
+       \quad + $T_{KD}$ & 10 & 10 & 10 & 10 & - & - \\
+       \quad +hidden neurons & 10 & 10 & 10 & 10 & - & - \\
+       \quad +$\lambda_s$ & 32 & 32 & 32 & 32 & - & - \\
+       \quad + $T_{lens}$ & 0.7 & 0.7 & 0.7 & 0.7 & - & - \\
+\midrule 
+        Awa2 (VIT)            &    &   &  & &  & \\
+       \quad + Batch size              & 30 & 30 & 30 & 30 & 30 & 30   \\
+        
+       \quad + Coverage ($\tau$)  & 0.2 & 0.2 & 0.2 & 0.2 & 0.2 & 0.2 \\
+       
+       \quad + Learning rate & 0.01 & 0.01 & 0.01 & 0.01 & 0.01 & 0.01 \\
+       
+       
+       \quad + $\lambda_{lens}$ & 0.0001 & 0.0001 & 0.0001 & 0.0001 & 0.0001 & 0.0001 \\
+    
+       \quad +$\alpha_{KD}$ & 0.99 & 0.99 & 0.99 & 0.99 & 0.99 & 0.99 \\
+       \quad + $T_{KD}$ & 10 & 10 & 10 & 10 &10 & 10 \\
+       \quad +hidden neurons & 10 & 10 & 10 & 10 &10 & 10 \\
+       \quad +$\lambda_s$ & 32 & 32 & 32 & 32 & 32 & 32 \\
+       \quad + $T_{lens}$ & 6.0 & 6.0 & 6.0 & 6.0 & 6.0 & 6.0 \\
+\bottomrule
+\end{tabular}
+\end{center}
+\end{table}
+
+
+\begin{table}[H]
+\caption{Hyperparameter setting of interpretable experts ($g$) for the dataset HAM10000}
+\label{tab:g_config_ham10k}
+\begin{center}
+\begin{tabular}{l|c|c|c|c|c|c}
+\toprule 
+    \thead{\textbf{Settings based on dataset}} & \thead{\textbf{Expert1}} & \thead{\textbf{Expert2}} 
+    & \thead{\textbf{Expert3}} & \thead{\textbf{Expert4}} & \thead{\textbf{Expert5}}
+    & {\textbf{Expert6}}\\
+     % {\textbf{Setting}} & {\textbf{Expert1}} & {\textbf{Expert2}} 
+     % & {\textbf{Expert3}} & {\textbf{Expert4}} & {\textbf{Expert5}}
+     % & {\textbf{Expert6}}\\
+\midrule 
+        HAM10000 (Inception-V3)              &    &   &  & & &  \\
+       \quad + Batch size              & 32 & 32 & 32 & 32 & 32&  32   \\
+        
+       \quad + Coverage ($\tau$)  & 0.4 & 0.2 & 0.2 & 0.2 & 0.1&  0.1\\
+       
+       \quad + Learning rate & 0.01 & 0.01 & 0.01 & 0.01 & 0.01& 0.01 \\
+       
+       \quad + $\lambda_{lens}$ & 0.0001 & 0.0001 & 0.0001 & 0.0001 & 0.0001 &  0.0001\\
+    
+       \quad +$\alpha_{KD}$ & 0.9 & 0.9 & 0.9 & 0.9 & 0.9& 0.9\\
+       \quad + $T_{KD}$ & 10 & 10 & 10 & 10 & 10& 10 \\
+       \quad +hidden neurons & 10 & 10 & 10 & 10 & 10& 10\\
+       \quad +$\lambda_s$ & 64 & 64 & 64 & 64 & 64& 64  \\
+       \quad + $T_{lens}$ & 0.7 & 0.7 & 0.7 & 0.7 & 0.7& 0.7 \\
+\bottomrule
+\end{tabular}
+\end{center}
+\end{table}
+
+\begin{table}[H]
+\caption{Hyperparameter setting of interpretable experts ($g$) for the dataset MIMIC-CXR}
+\label{tab:g_config_mimic_cxr}
+\begin{center}
+\begin{tabular}{l|c|c|c}
+\toprule 
+    \thead{\textbf{Settings based on dataset}} & \thead{\textbf{Expert1}} & \thead{\textbf{Expert2}} 
+    & \thead{\textbf{Expert3}} \\
+     % {\textbf{Setting}} & {\textbf{Expert1}} & {\textbf{Expert2}} 
+     % & {\textbf{Expert3}} & {\textbf{Expert4}} & {\textbf{Expert5}}
+     % & {\textbf{Expert6}}\\
+\midrule 
+        Effusion-MIMIC-CXR (DenseNet-121)              &    &   &     \\
+       \quad + Batch size              & 1028 & 1028 & 1028     \\
+        
+       \quad + Coverage ($\tau$)  & 0.6 & 0.2 & 0.15   \\
+       
+       \quad + Learning rate & 0.01 & 0.01 & 0.01 \\
+       
+       \quad + $\lambda_{lens}$ & 0.0001 & 0.0001 & 0.0001  \\
+    
+       \quad +$\alpha_{KD}$ & 0.99 & 0.99 & 0.99  \\
+       \quad + $T_{KD}$ & 20 & 20 & 20   \\
+       \quad +hidden neurons & 20, 20 & 20, 20 & 20, 20  \\
+       \quad +$\lambda_s$ & 96 & 128 & 256   \\
+       \quad +$T_{lens}$ & 7.6 & 7.6 & 7.6 \\
+\bottomrule
+\end{tabular}
+\end{center}
+\end{table}
+
+
