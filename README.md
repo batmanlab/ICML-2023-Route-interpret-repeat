@@ -24,10 +24,11 @@ In [ICML, 2023](https://icml.cc/Conferences/2023/Dates) <br/>
     * [(a) Running MoIE](#a-running-moie)
     * [(b) Compute the performance metrics](#b-compute-the-performance-metrics)
     * [(c) Validating the concept importance](#c-validating-the-concept-importance)
+9. [Suggestions](#suggestions)
 6. [Checkpoints](#checkpoints)
 7. [How to Cite](#how-to-cite)
 8. [License and copyright](#license-and-copyright)
-9. [Contact](#contact)
+10. [Contact](#contact)
 
 ## Objective
 
@@ -213,6 +214,74 @@ completeness scores and test time interventions):
 | `./src/scripts/tti.sh`                 | Script to perform test time interventions for the important concepts                                                                               |
 | `./src/codebase/tti_experts.sh`        | Script to perform test time interventions for the important concepts corresponding to only the ** harder** samples covered by the last two experts |
 
+## Suggestions
+
+Most of the *argparse* variables are self-explanatory. However, in order to perform the experiments successfully, give
+the correct paths and files to the following variables in `train_explainer_<dataset>.py` and  
+`test_explainer_<dataset>.py`.
+
+* For `train_explainer_<dataset>.py` (ex. `train_explainer_CUB.py`, `train_explainer_ham10k.py` etc.), follow the rules:
+
+    1. `--checkpoint-model` : Don't include this variable for the 1st iteration. For 2nd iteration and onwards, include
+       the checkpoint files of all the experts of **previous iterations while training for the expert (
+       g) (`--expert-to-train "explainer"`)**. For example: if the current iteration is 3, include the checkpoint files
+       for the expert 1 and expert 2 sequentially. While **training the residual (`--expert-to-train "residual"`)**,
+       include the checkpoint files of all the experts **including the current iteration**.
+    2. `--checkpoint-residual` : Don't include this variable for the 1st iteration. For 2nd iteration and onwards,
+       include the checkpoint files of all the residuals of **previous iterations** while training the expert (
+       g) (`--expert-to-train "explainer"`) and the residual (`--expert-to-train "explainer"`). For example: if the
+       current iteration is 3, include the checkpoint files for the residual 1 and residual 2 sequentially.
+    3. `--prev_explainer_chk_pt_folder` : Don't include this variable for the 1st iteration. For 2nd iteration and
+       onwards, include the folders of the checkpoint files of all the experts of **previous iterations**. For example:
+       if the current iteration is 3, include the checkpoint folders for the expert 1 and expert 2 sequentially. For all
+       the datasets other than MIMIC-CXR, include the absolute path. For MIMIC-CXR, only include the experiment folder
+       where the checkpoint file will be stored.
+
+  Refer to the following example command for the 3rd iteration for CUB200 dataset with VIT as the blackbox to train the
+  expert:
+    ``` python
+    python ./src/codebase/train_explainer_CUB.py --expert-to-train "explainer" --checkpoint-model checkpt_expert1 checkpt_expert2 --checkpoint-residual checkpt_residual1 checkpt_residual2 --prev_explainer_chk_pt_folder checkpt_folder_exper1 checkpt_folder_expert2 --root-bb "lr_0.03_epochs_95" --checkpoint-bb "VIT_CUBS_8000_checkpoint.bin" --iter 3 --dataset "cub" --cov cov_iter1 cov_iter2 cov_iter3 --bs 16 --dataset-folder-concepts "lr_0.03_epochs_95_ViT-B_16_layer4_VIT_sgd_BCE" --lr learning_rate_iter1 learning_rate_iter2 learning_rate_iter3 --input-size-pi 2048 --temperature-lens 0.7 --lambda-lens 0.0001 --alpha-KD 0.9 --temperature-KD 10 --hidden-nodes 10 --layer "VIT" --arch "VIT-B_16" 
+    ```
+
+  Similarly, refer to the following example command for the 3rd iteration for CUB200 dataset with VIT as the blackbox to
+  train the residual:
+    ``` python
+    python ./src/codebase/train_explainer_CUB.py --expert-to-train "residual" --checkpoint-model checkpt_expert1 checkpt_expert2 checkpt_expert3 --checkpoint-residual checkpt_residual1 checkpt_residual2 --prev_explainer_chk_pt_folder checkpt_folder_exper1 checkpt_folder_expert2 --root-bb "lr_0.03_epochs_95" --checkpoint-bb "VIT_CUBS_8000_checkpoint.bin" --iter 3 --dataset "cub" --cov cov_iter1 cov_iter2 cov_iter3 --bs 16 --dataset-folder-concepts "lr_0.03_epochs_95_ViT-B_16_layer4_VIT_sgd_BCE" --lr learning_rate_iter1 learning_rate_iter2 learning_rate_iter3 --input-size-pi 2048 --temperature-lens 0.7 --lambda-lens 0.0001 --alpha-KD 0.9 --temperature-KD 10 --hidden-nodes 10 --layer "VIT" --arch "VIT-B_16"  
+    ```
+
+* For `test_explainer_<dataset>.py` (ex. `test_explainer_CUB.py`, `test_explainer_ham10k.py` etc.), follow the rules:
+
+    1. `--checkpoint-model` : Don't include this variable for the 1st iteration. For 2nd iteration and onwards, include
+       the checkpoint files of all the experts **including the current iteration** while testing the expert (
+       g) (`--expert-to-train "explainer"`) and the residual (`--expert-to-train "explainer"`).
+    2. `--checkpoint-residual` : Don't include this variable for the 1st iteration. For 2nd iteration and onwards,
+       include the checkpoint files of all the residuals of **previous iterations** while training for the expert (
+       g) (`--expert-to-train "explainer"`)**. For example: if the current iteration is 3, include the checkpoint files
+       for the residual 1 and residual 2 sequentially. While **testing the residual (`--expert-to-train "residual"`)**,
+       include the checkpoint files of all the residuals **including the current iteration**.
+    3. `--prev_explainer_chk_pt_folder` : Don't include this variable for the 1st iteration. For 2nd iteration and
+       onwards, include the folders of the checkpoint files all the experts of **previous iterations**. For example: if
+       the current iteration is 3, include the checkpoint folders for the expert 1 and expert 2 sequentially. For all
+       the datasets other than MIMIC-CXR, include the absolute path. For MIMIC-CXR, only include the experiment folder
+       where the checkpoint file will be stored.
+
+  Refer to the following example command for the 3rd iteration for CUB200 dataset with VIT as the blackbox to test the
+  expert:
+    ``` python
+    python ./src/codebase/test_explainer_CUB.py --expert-to-train "explainer" --checkpoint-model checkpt_expert1 checkpt_expert2 checkpt_expert3 --checkpoint-residual checkpt_residual1 checkpt_residual2 --prev_explainer_chk_pt_folder checkpt_folder_exper1 checkpt_folder_expert2 --root-bb "lr_0.03_epochs_95" --checkpoint-bb "VIT_CUBS_8000_checkpoint.bin" --iter 3 --dataset "cub" --cov cov_iter1 cov_iter2 cov_iter3 --bs 16 --dataset-folder-concepts "lr_0.03_epochs_95_ViT-B_16_layer4_VIT_sgd_BCE" --lr learning_rate_iter1 learning_rate_iter2 learning_rate_iter3 --input-size-pi 2048 --temperature-lens 0.7 --lambda-lens 0.0001 --alpha-KD 0.9 --temperature-KD 10 --hidden-nodes 10 --layer "VIT" --arch "VIT-B_16"  
+    ```
+
+  Similarly, refer to the following example command for the 3rd iteration for CUB200 dataset with VIT as the blackbox to
+  test the residual:
+    ``` python
+    python ./src/codebase/test_explainer_CUB.py --expert-to-train "residual" --checkpoint-model checkpt_expert1 checkpt_expert2 checkpt_expert3 --checkpoint-residual checkpt_residual1 checkpt_residual2 checkpt_residual3 --prev_explainer_chk_pt_folder checkpt_folder_exper1 checkpt_folder_expert2 --root-bb "lr_0.03_epochs_95" --checkpoint-bb "VIT_CUBS_8000_checkpoint.bin" --iter 3 --dataset "cub" --cov cov_iter1 cov_iter2 cov_iter3 --bs 16 --dataset-folder-concepts "lr_0.03_epochs_95_ViT-B_16_layer4_VIT_sgd_BCE" --lr learning_rate_iter1 learning_rate_iter2 learning_rate_iter3 --input-size-pi 2048 --temperature-lens 0.7 --lambda-lens 0.0001 --alpha-KD 0.9 --temperature-KD 10 --hidden-nodes 10 --layer "VIT" --arch "VIT-B_16" 
+    ```
+
+Also make sure the following variables are correct:
+
+* `--cov`: Coverages of each iteration separated by a space as in the above commands.
+* `--lr`: Learning rates of each expert separated by a space as in the above commands.
+
 ## Checkpoints
 
 For the checkpoints of the pretrained blackboxes and concept banks, refer below:
@@ -224,9 +293,22 @@ For the checkpoints of the pretrained blackboxes and concept banks, refer below:
 | [Effusion-MIMIC-CXR](https://drive.google.com/drive/u/1/folders/1h3mUuf6rvV8R0uzUKCkScgtxON13exoR) | [Effusion-MIMIC-CXR](https://drive.google.com/drive/u/1/folders/1eza7ZPhbwGwvhdyakem8pLP16bqtmrz7) |
 | [Awa2-VIT](https://drive.google.com/drive/u/1/folders/1MwYpobXz8gZSvYsD1-kEbFKEBWviauDV)           | [Awa2-VIT](https://drive.google.com/drive/u/1/folders/1DVvIyFOAPqjvM4J8ak6vmn_XdIvTso0D)           |
 
-Note for HAM10k, we add the extracted concept bank after training t. No need to train t for HAM10k and SIIM-ISIC, if
-this concept bank is used. For others, the above paths contain the checkpoints of t. Use these checkpoints to extract
+Note for HAM10k, we add the extracted concept bank after training `t`. No need to train t for HAM10k and SIIM-ISIC, if
+this concept bank is used. For others, the above paths contain the checkpoints of `t`. Use these checkpoints to extract
 the concepts.
+
+## How to Cite
+
+```
+@misc{ghosh2023dividing,
+      title={Dividing and Conquering a BlackBox to a Mixture of Interpretable Models: Route, Interpret, Repeat}, 
+      author={Shantanu Ghosh and Ke Yu and Forough Arabshahi and Kayhan Batmanghelich},
+      year={2023},
+      eprint={2302.10289},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG}
+}
+```
 
 ## License and copyright
 
@@ -235,4 +317,5 @@ Licensed under the [MIT License](LICENSE)
 Copyright © [Batman Lab](https://www.batman-lab.com/), 2023
 
 ## Contact
+
 For any queries, contact: **shawn24@bu.edu**
