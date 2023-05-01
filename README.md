@@ -18,12 +18,14 @@ In [ICML, 2023](https://icml.cc/Conferences/2023/Dates) <br/>
     * [(a) Downloading vision and skin data](#a-downloading-vision-and-skin-data)
     * [(b) Downloading MIMIC-CXR](#b-downloading-mimic-cxr)
 4. [Data preprocessing](#data-preprocessing)
-    * [(a) Preprocessing CUB200](#preprocessing-cub200)
-    * [(b) Preprocessing MIMIC-CXR](#preprocessing-mimic-cxr)
+    * [(a) Preprocessing CUB200](#a-preprocessing-cub200)
+    * [(b) Preprocessing MIMIC-CXR](#b-preprocessing-mimic-cxr)
 5. [Training pipleline](#training-pipleline)
-    * [Running the Full Evaluation Suite](#running-the-full-evaluation-suite)
+    * [Running MoIE-CXR](#running-moie-cxr)
+    * [Compute the performance metrics]()
     * [Integrating New Editing Methods](#integrating-new-editing-methods)
-6. [How to Cite](#how-to-cite)
+6. [Checkpoints](#checkpoints)
+7. [How to Cite](#how-to-cite)
 
 ## Objective
 
@@ -59,9 +61,48 @@ conda activate python_3_7_rtx_6000
 | Awa2      | Animals with Attributes2           | [Awa2 official](https://cvml.ista.ac.at/AwA2/)                                      |
 
 ### (b) Downloading MIMIC-CXR
+
 - [MIMIC-CXR](https://physionet.org/content/mimic-cxr-jpg/2.0.0/)
 - [RadGraph](https://physionet.org/content/radgraph/1.0.0/)
 - [NVIDIA Annotation](https://github.com/leotam/MIMIC-CXR-annotations)
 - [Chest ImaGenome](https://physionet.org/content/chest-imagenome/1.0.0/)
 
-For more details please follow the [AGXNet Repository](https://github.com/batmanlab/AGXNet)
+For more details please follow the [AGXNet Repository](https://github.com/batmanlab/AGXNet).
+
+## Data preprocessing
+
+### (a) Preprocessing CUB200
+
+To get the CUB200 metadata and dataset splits
+follow [Logic Explained network](https://github.com/pietrobarbiero/logic_explained_networks/tree/master/data).
+
+To preprocess the concepts for CUB200, follow:
+
+``` python
+python ./src/codebase/data_preprocessing/download_cub.py
+```
+
+### (b) Preprocessing MIMIC-CXR
+
+To preprocess MIMIC-CXR for Effusion, follow the following steps sequentially:
+
+1. To generate itemized RadGraph examples, run:
+
+``` python
+python ./src/codebase/data_preprocessing/mimic-cxr/miccai-main/preprocessing/radgraph_itemized.py
+```
+
+2. Run `./preprocessing/radgraph_parsed.py` To parse RadGraph relations, run:
+
+``` python
+python ./src/codebase/data_preprocessing/mimic-cxr/miccai-main/preprocessing/radgraph_parsed.py
+```
+
+3. To create adjacency matrix that represents the relations between anatomical
+   landmarks and observations mentioned in radiology reports, run:
+
+``` python
+python ./src/codebase/data_preprocessing/mimic-cxr/miccai-main/preprocessing/adj_matrix.py
+```
+
+Step 3 will be the concepts for training MoIE-CXR.
