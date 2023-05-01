@@ -8,7 +8,7 @@
 BU ECE, Pitt ISP, META AI, BU ECE <br/>
 In [ICML, 2023](https://icml.cc/Conferences/2023/Dates) <br/>
 
-## Table of Contents
+### Table of Contents
 1. [Objective](#objective)
 2. [Causal Tracing](#causal-tracing)
 3. [Rank-One Model Editing (ROME)](#rank-one-model-editing-rome-1)
@@ -20,3 +20,11 @@ In [ICML, 2023](https://icml.cc/Conferences/2023/Dates) <br/>
 
 ### Objective
 xxxx
+
+### Causal Tracing
+
+[`notebooks/causal_trace.ipynb`](notebooks/causal_trace.ipynb) demonstrates Causal Tracing, which can be modified to apply tracing to the processing of any statement.
+
+<p align="center">
+    <img src="https://thevisible.net/u/davidbau/romeweb/small-fast-ct-animation.gif" alt="causal tracing GIF" width="550px" />
+</p>
