@@ -20,11 +20,3 @@ In [ICML, 2023](https://icml.cc/Conferences/2023/Dates) <br/>
 
 ### Objective
 xxxx
-
-### Causal Tracing
-
-[`notebooks/causal_trace.ipynb`](notebooks/causal_trace.ipynb) demonstrates Causal Tracing, which can be modified to apply tracing to the processing of any statement.
-
-<p align="center">
-    <img src="https://thevisible.net/u/davidbau/romeweb/small-fast-ct-animation.gif" alt="causal tracing GIF" width="550px" />
-</p>
