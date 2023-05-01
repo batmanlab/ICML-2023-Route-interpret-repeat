@@ -24,7 +24,7 @@ def config():
                         default='/ocean/projects/asc170022p/shg121/PhD/ICLR-2022/out',
                         help='path to output logs')
 
-    parser.add_argument('--arch', type=str, default="ViT-B_16", help='Architecture of the blackbox')
+    parser.add_argument('--arch', type=str, default="ViT-B_16", help='BB architecture')
     parser.add_argument('--dataset', type=str, default="cub", help='dataset name')
     parser.add_argument('--iterations', default=6, type=int, help='iterations for MoIE')
     parser.add_argument('--top_K', nargs='+', default=[3, 5, 10, 15, 20, 25, 30], type=int, help='How many concepts?')

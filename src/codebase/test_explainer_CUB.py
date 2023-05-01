@@ -39,7 +39,7 @@ parser.add_argument('--output', metavar='DIR',
                     default='/ocean/projects/asc170022p/shg121/PhD/ICLR-2022/out',
                     help='path to output logs')
 parser.add_argument('--lr-residual', '--learning-rate-residual', default=0.001, type=float,
-                    metavar='LR', help='initial learning rate of bb residual')
+                    metavar='LR', help='initial learning rate of residual')
 
 parser.add_argument('--weight-decay-residual', type=float, default=1e-4, help='weight_decay for SGD')
 
@@ -75,8 +75,8 @@ parser.add_argument('--conceptizator', default='identity_bool', type=str, help='
 parser.add_argument('--hidden-nodes', nargs="+", default=[10], type=int, help='hidden nodes of the explainer model')
 parser.add_argument('--explainer-init', default=None, type=str, help='Initialization of explainer')
 parser.add_argument('--epochs', type=int, default=500, help='batch size for training')
-parser.add_argument('--layer', type=str, default="layer4", help='batch size for training of t')
-parser.add_argument('--arch', type=str, default="ResNet101", required=True, help='ResNet50 or ResNet101 or ResNet152')
+parser.add_argument('--layer', type=str, default="layer4", help='layer of bb to be used as phi (bottleneck)')
+parser.add_argument('--arch', type=str, default="ResNet101", required=True, help='BB architecture')
 parser.add_argument('--smoothing_value', type=float, default=0.0,
                     help="Label smoothing value\n")
 parser.add_argument('--prev_explainer_chk_pt_folder', metavar='path', nargs="+",

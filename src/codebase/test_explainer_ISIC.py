@@ -46,7 +46,7 @@ parser.add_argument('--num-workers', default=4, type=int, metavar='N',
 parser.add_argument("--eval_every", default=100, type=int,
                     help="100Run prediction on validation set every so many steps."
                          "Will always run one evaluation at the end of training.")
-parser.add_argument('--arch', type=str, default="Inception_V3", help='Architecture of BB')
+parser.add_argument('--arch', type=str, default="Inception_V3", help='BB architecture')
 parser.add_argument("--name", default="VIT_CUBS",
                     help="Name of this run. Used for monitoring.")
 parser.add_argument(
@@ -87,7 +87,7 @@ parser.add_argument('--alpha', default=0.5, type=float, help='trade off for Aux 
 parser.add_argument('--selection-threshold', default=0.5, type=float,
                     help='selection threshold of the selector for the test/val set')
 parser.add_argument('--lr-residual', '--learning-rate-residual', default=0.0001, type=float,
-                    metavar='LR', help='initial learning rate of bb residual')
+                    metavar='LR', help='initial learning rate of residual')
 parser.add_argument('--momentum-residual', type=float, default=0.9, help='momentum for SGD')
 parser.add_argument('--weight-decay-residual', type=float, default=1e-4, help='weight_decay for SGD')
 parser.add_argument('--lr', '--learning-rate', nargs='+', default=[0.01, 0.001], type=float,
@@ -100,8 +100,8 @@ parser.add_argument('--alpha-KD', default=0.9, type=float, help='weight for KD l
 parser.add_argument('--temperature-KD', default=10, type=float, help='temperature for KD loss')
 parser.add_argument('--conceptizator', default='identity_bool', type=str, help='activation')
 parser.add_argument('--hidden-nodes', nargs="+", default=[10], type=int, help='hidden nodes of the explainer model')
-parser.add_argument('--epochs', type=int, default=500, help='batch size for training the explainer - g')
-parser.add_argument('--epochs-residual', type=int, default=50, help='batch size for training the residual')
+parser.add_argument('--epochs', type=int, default=500, help='epoch size for training the explainer - g')
+parser.add_argument('--epochs-residual', type=int, default=50, help='epoch size for training the residual')
 parser.add_argument('--concept-names', nargs='+',
                     default=[
                         # "Sex",

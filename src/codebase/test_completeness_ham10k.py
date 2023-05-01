@@ -44,7 +44,7 @@ parser.add_argument('--num-workers', default=4, type=int, metavar='N',
 parser.add_argument("--eval_every", default=100, type=int,
                     help="100Run prediction on validation set every so many steps."
                          "Will always run one evaluation at the end of training.")
-parser.add_argument('--arch', type=str, default="Inception_V3", help='Architecture of BB')
+parser.add_argument('--arch', type=str, default="Inception_V3", help='BB architecture')
 parser.add_argument("--name", default="VIT_CUBS",
                     help="Name of this run. Used for monitoring.")
 parser.add_argument(

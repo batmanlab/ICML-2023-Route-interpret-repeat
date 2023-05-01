@@ -281,6 +281,8 @@ Also make sure the following variables are correct:
 
 * `--cov`: Coverages of each iteration separated by a space as in the above commands.
 * `--lr`: Learning rates of each expert separated by a space as in the above commands.
+* `--data-root`: Dataset path of images, labels and concepts (if exists)
+*  `--logs`: Path of tensorboard logs
 
 ## Checkpoints
 

@@ -75,7 +75,7 @@ parser.add_argument('--explainer-init', default=None, type=str, help='Initializa
 parser.add_argument('--epochs', type=int, default=100, help='batch size for training the explainer - g')
 parser.add_argument('--epochs-residual', type=int, default=50, help='batch size for training the residual')
 parser.add_argument('--layer', type=str, default="layer4", help='batch size for training of t')
-parser.add_argument('--arch', type=str, default="ResNet101", required=True, help='ResNet50 or ResNet101 or ResNet152')
+parser.add_argument('--arch', type=str, default="ResNet101", required=True, help='BB architecture')
 parser.add_argument('--smoothing_value', type=float, default=0.0,
                     help="Label smoothing value\n")
 parser.add_argument("--decay_type", choices=["cosine", "linear"], default="cosine",

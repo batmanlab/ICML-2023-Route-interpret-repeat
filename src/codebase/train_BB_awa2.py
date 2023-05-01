@@ -35,7 +35,7 @@ parser.add_argument('--lr', '--learning-rate', '--learning_rate', default=0.001,
 parser.add_argument('--momentum', type=float, default=0.9, help='momentum for SGD')
 parser.add_argument('--weight-decay', type=float, default=0, help='weight_decay for SGD')
 parser.add_argument('--epochs', type=int, default=95, help='batch size for training')
-parser.add_argument('--arch', type=str, default="ResNet50", required=True, help='ResNet50 or ResNet101 or ResNet152')
+parser.add_argument('--arch', type=str, default="ResNet50", required=True, help='BB architecture')
 
 parser.add_argument("--pretrained_model", type=str, default=None,
                     help="load pretrained model")

@@ -41,9 +41,9 @@ parser.add_argument('--epochs', type=int, default=95, help='batch size for train
 parser.add_argument('--solver-LR', type=str, default="sgd", help='solver - sgd/adam')
 parser.add_argument('--loss-LR', type=str, default="BCE", help='loss - focal/BCE')
 parser.add_argument('--epochs-LR', type=int, default=50, help='batch size for training of t')
-parser.add_argument('--layer', type=str, default="layer4", help='batch size for training of t')
+parser.add_argument('--layer', type=str, default="layer4", help='layer of bb to be used as phi (bottleneck)')
 parser.add_argument('--flattening-type', type=str, default="adaptive", help='flatten or adaptive or maxpool')
-parser.add_argument('--arch', type=str, default="ResNet101", required=True, help='ResNet50 or ResNet101 or ResNet152')
+parser.add_argument('--arch', type=str, default="ResNet101", required=True, help='BB architecture')
 parser.add_argument('--smoothing_value', type=float, default=0.0,
                     help="Label smoothing value\n")
 parser.add_argument('--concept-names', nargs='+',

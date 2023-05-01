@@ -76,7 +76,7 @@ parser.add_argument('--dataset-folder-concepts', type=str,
                     default="lr_0.01_epochs_60_loss_BCE_W_flattening_type_flatten_layer_features_denseblock4",
                     help='dataset folder of concept bank')
 parser.add_argument('--lr-residual', '--learning-rate-residual', default=0.001, type=float,
-                    metavar='LR', help='initial learning rate of bb residual')
+                    metavar='LR', help='initial learning rate of residual')
 parser.add_argument('--momentum-residual', type=float, default=0.9, help='momentum for SGD')
 parser.add_argument('--weight-decay-residual', type=float, default=1e-4, help='weight_decay for SGD')
 parser.add_argument('--lr', '--learning-rate', default=0.01, type=float,
@@ -91,11 +91,11 @@ parser.add_argument('--temperature-KD', default=10, type=float, help='temperatur
 parser.add_argument('--conceptizator', default='identity_bool', type=str, help='activation')
 parser.add_argument('--hidden-nodes', nargs="+", default=[10], type=int, help='hidden nodes of the explainer model')
 parser.add_argument('--explainer-init', default=None, type=str, help='Initialization of explainer')
-parser.add_argument('--epochs', type=int, default=500, help='batch size for training the explainer - g')
-parser.add_argument('--epochs-residual', type=int, default=50, help='batch size for training the residual')
-parser.add_argument('--arch', type=str, default="densenet121", help='densenet121')
+parser.add_argument('--epochs', type=int, default=500, help='epoch size for training the explainer - g')
+parser.add_argument('--epochs-residual', type=int, default=50, help='epoch size for training the residual')
+parser.add_argument('--arch', type=str, default="densenet121", help='BB architecture')
 parser.add_argument('--optim', type=str, default="SGD", help='optimizer of GLT')
-parser.add_argument('--layer', type=str, default="layer4", help='batch size for training of t')
+parser.add_argument('--layer', type=str, default="layer4", help='layer of bb to be used as phi (bottleneck)')
 parser.add_argument('-j', '--workers', default=4, type=int, metavar='N',
                     help='number of data loading workers (default: 4)')
 parser.add_argument('--start-epoch', default=0, type=int, metavar='N',

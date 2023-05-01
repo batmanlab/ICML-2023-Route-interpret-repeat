@@ -87,7 +87,7 @@ parser.add_argument('--data-root', metavar='DIR',
                     help='path to dataset')
 parser.add_argument('--dataset', type=str, default="awa2", help='dataset name')
 parser.add_argument('--img-size', type=int, default=224, help='image\'s size for transforms')
-parser.add_argument('--arch', type=str, default="ResNet50", required=False, help='ResNet50 or ResNet101 or ResNet152')
+parser.add_argument('--arch', type=str, default="ResNet50", required=False, help='BB architecture')
 parser.add_argument('--labels', nargs='+',
                     default=[
                         "antelope", "grizzly+bear", "killer+whale", "beaver", "dalmatian", "persian+cat", "horse",

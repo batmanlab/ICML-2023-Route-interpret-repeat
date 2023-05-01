@@ -58,7 +58,7 @@ parser.add_argument('--dataset-folder-concepts', type=str,
                     default="lr_0.001_epochs_95_ResNet101_layer4_adaptive_sgd_BCE",
                     help='dataset folder of concept bank')
 parser.add_argument('--lr-residual', '--learning-rate-residual', default=0.001, type=float,
-                    metavar='LR', help='initial learning rate of bb residual')
+                    metavar='LR', help='initial learning rate of residual')
 parser.add_argument('--momentum-residual', type=float, default=0.9, help='momentum for SGD')
 parser.add_argument('--weight-decay-residual', type=float, default=1e-4, help='weight_decay for SGD')
 parser.add_argument('--lr', '--learning-rate', nargs='+', default=[0.01, 0.001], type=float,
@@ -75,7 +75,7 @@ parser.add_argument('--explainer-init', default=None, type=str, help='Initializa
 parser.add_argument('--epochs', type=int, default=100, help='batch size for training the explainer - g')
 parser.add_argument('--epochs-residual', type=int, default=50, help='batch size for training the residual')
 parser.add_argument('--layer', type=str, default="layer4", help='batch size for training of t')
-parser.add_argument('--arch', type=str, default="ResNet101", required=True, help='ResNet50 or ResNet101 or ResNet152')
+parser.add_argument('--arch', type=str, default="ResNet101", required=True, help='BB architecture')
 parser.add_argument('--smoothing_value', type=float, default=0.0,
                     help="Label smoothing value\n")
 parser.add_argument("--decay_type", choices=["cosine", "linear"], default="cosine",

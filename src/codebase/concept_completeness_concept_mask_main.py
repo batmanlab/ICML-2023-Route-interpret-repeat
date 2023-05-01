@@ -21,7 +21,7 @@ def config():
                         help='path to output logs')
 
     parser.add_argument('--dataset', type=str, default="cub", help='dataset name')
-    parser.add_argument('--arch', type=str, default="ResNet101", help='Arch')
+    parser.add_argument('--arch', type=str, default="ResNet101", help='BB architecture')
     parser.add_argument('--iterations', type=int, default="6", help='iteration')
     parser.add_argument('--top_K', nargs='+', default=[3, 5, 10, 15, 20, 25, 30], type=int, help='How many concepts?')
     parser.add_argument('--model', default='MoIE', type=str, help='MoIE')

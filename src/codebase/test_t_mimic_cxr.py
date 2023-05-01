@@ -130,7 +130,7 @@ parser.add_argument('--warm-up', default=0, type=int,
 
 # Training
 # model arch.
-parser.add_argument('-a', '--arch', metavar='ARCH', default='densenet121',
+parser.add_argument('-a', '--arch', metavar='ARCH', default='BB architecture',
                     help='PyTorch image models')
 parser.add_argument('--pool1', metavar='ARCH', default='average',
                     help='type of pooling layer for net1. the options are: average, max, log-sum-exp')

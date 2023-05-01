@@ -49,7 +49,7 @@ parser.add_argument('--lr', '--learning-rate', default=0.001, type=float,
 parser.add_argument('--momentum', type=float, default=0.9, help='momentum for SGD')
 parser.add_argument('--weight-decay', type=float, default=1e-4, help='weight_decay for SGD')
 parser.add_argument('--epochs', type=int, default=95, help='batch size for training')
-parser.add_argument('--arch', type=str, default="Inception_V3", help='Architecture of BB')
+parser.add_argument('--arch', type=str, default="Inception_V3", help='BB architecture')
 parser.add_argument("--name", default="VIT_CUBS",
                     help="Name of this run. Used for monitoring.")
 parser.add_argument(

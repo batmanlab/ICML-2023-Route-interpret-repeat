@@ -29,7 +29,7 @@ parser.add_argument('--attribute-file-name', metavar='file',
                     default='attributes.npy',
                     help='file containing all the concept attributes')
 parser.add_argument('--save-activations', type=bool, default=True, help='test BB or save activation maps of BB')
-parser.add_argument('--layer', type=str, default="layer4", help='batch size for training of t')
+parser.add_argument('--layer', type=str, default="layer4", help='layer of bb to be used as phi (bottleneck)')
 parser.add_argument('--seed', default=0, type=int, metavar='N', help='seed')
 parser.add_argument('--pretrained', type=bool, default=True, help='pretrained imagenet')
 parser.add_argument('--dataset', type=str, default="cub", help='dataset name')
@@ -38,7 +38,7 @@ parser.add_argument('--bs', '--batch-size', default=1, type=int, metavar='N', he
 parser.add_argument('--lr', '--learning-rate', default=0.001, type=float,
                     metavar='LR', help='initial learning rate')
 parser.add_argument('--epochs', type=int, default=95, help='batch size for training')
-parser.add_argument('--arch', type=str, default="ResNet50", required=True, help='ResNet50 or ResNet101 or ResNet152')
+parser.add_argument('--arch', type=str, default="ResNet50", required=True, help='BB architecture')
 parser.add_argument("--num_steps", default=10000, type=int,
                     help="Total number of training epochs to perform.")
 parser.add_argument("--warmup_steps", default=500, type=int,

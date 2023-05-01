@@ -129,7 +129,7 @@ def config():
         '--output', metavar='DIR', default='/ocean/projects/asc170022p/shg121/PhD/ICLR-2022/out',
         help='path to output logs'
     )
-    parser.add_argument('--arch', type=str, default="ViT-B_16", help='Architecture of the blackbox')
+    parser.add_argument('--arch', type=str, default="ViT-B_16", help='BB architecture')
     parser.add_argument('--dataset', type=str, default="cub", help='dataset name')
     parser.add_argument('--iterations', default=6, type=int, help='iterations for MoIE')
     parser.add_argument('--cur_iter', default=1, type=int, help='iterations for MoIE')

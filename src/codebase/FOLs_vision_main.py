@@ -25,7 +25,7 @@ def config():
     parser.add_argument('--save_path', metavar='DIR',
                         default='/ocean/projects/asc170022p/shg121/PhD/ICLR-2022/Plots/concepts',
                         help='path of the concepts to be saved')
-    parser.add_argument('--arch', type=str, default="ViT-B_16", help='Architecture of the blackbox')
+    parser.add_argument('--arch', type=str, default="ViT-B_16", help='BB architecture')
     parser.add_argument('--dataset', type=str, default="cub", help='dataset name')
     parser.add_argument('--iterations', default=6, type=int, help='iterations for MoIE')
     return parser.parse_args()
