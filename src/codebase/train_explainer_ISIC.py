@@ -113,14 +113,14 @@ parser.add_argument('--concept-names', nargs='+',
 parser.add_argument('--lm', default=32.0, type=float, help='lagrange multiplier for selective KD loss')
 parser.add_argument('--checkpoint-model', metavar='file', nargs="+",
                     default=['model_g_best_model_epoch_14.pth.tar'],
-                    help='checkpoint file of GatedLogicNet')
+                    help='checkpoint files all the experts of previous iterations. For example: if the current iteration is 3, include the checkpoint files expert 1 and expert 2')
 parser.add_argument('--checkpoint-residual', metavar='file', nargs="+",
                     default=['model_residual_best_model_epoch_2.pth.tar'],
-                    help='checkpoint file of residual')
+                    help='checkpoint files all the residuals of previous iterations. For example: if the current iteration is 3, include the checkpoint files residual 1 and residual 2')
 
 parser.add_argument('--prev_explainer_chk_pt_folder', metavar='path', nargs="+",
                     default=[],
-                    help='checkpoint file of residual')
+                    help='checkpoint folders of previous experts. For example: if the current iteration is 3, include the folder paths of the checkpoints expert 1 and expert 2')
 parser.add_argument('--train_baseline', type=str, default="n", help='train baseline or glt')
 parser.add_argument('--soft', default='y', type=str, metavar='N', help='soft/hard concept?')
 parser.add_argument('--with_seed', default='n', type=str, metavar='N', help='trying diff seeds for paper')

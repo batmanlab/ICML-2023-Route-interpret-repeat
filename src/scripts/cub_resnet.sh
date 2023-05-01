@@ -40,6 +40,7 @@ python /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/codebase/train_BB_CUB.py 
 
 
 # BB Testing scripts
+# Update ./src/codebase/Completeness_and_interventions/paths_MoIE.json file with appropriate paths for the checkpoints and outputs
 python /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/codebase/test_BB_CUB.py --checkpoint-file "best_model_epoch_63.pth.tar" --save-activations True --layer "layer4" --bs 16 --arch "ResNet101"> $slurm_output_bb_test
 
 
@@ -151,4 +152,5 @@ python /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/codebase/test_explainer_C
 # # #---------------------------------
 # # # # Explanations
 # # #---------------------------------
+# Update ./src/codebase/Completeness_and_interventions/paths_MoIE.json file with appropriate paths for the checkpoints and outputs
 python /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/codebase/FOLs_vision_main.py --arch "ResNet101" --dataset "cub" --iterations 6  > $slurm_explanations

@@ -137,5 +137,6 @@ python /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/codebase/test_explainer_I
 # # #---------------------------------
 # # # # Explanations
 # # #---------------------------------
+# Update ./src/codebase/Completeness_and_interventions/paths_MoIE.json file with appropriate paths for the checkpoints and outputs
 python /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/codebase/FOLs_vision_main.py --arch "Inception_V3" --dataset "SIIM-ISIC" --iterations 6 > $slurm_explanations
 

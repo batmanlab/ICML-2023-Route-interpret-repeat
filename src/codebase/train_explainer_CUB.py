@@ -21,10 +21,10 @@ parser.add_argument('--checkpoints', metavar='DIR',
                     help='path to checkpoints')
 parser.add_argument('--checkpoint-model', metavar='file', nargs="+",
                     default=['model_g_best_model_epoch_116.pth.tar'],
-                    help='checkpoint file of the model GatedLogicNet')
+                    help='checkpoint files all the experts of previous iterations. For example: if the current iteration is 3, include the checkpoint files expert 1 and expert 2')
 parser.add_argument('--checkpoint-residual', metavar='file', nargs="+",
                     default=['model_residual_best_model_epoch_2.pth.tar'],
-                    help='checkpoint file of residual')
+                    help='checkpoint files all the residuals of previous iterations. For example: if the current iteration is 3, include the checkpoint files residual 1 and residual 2')
 parser.add_argument('--root-bb', metavar='file',
                     default='lr_0.001_epochs_95',
                     help='checkpoint folder of BB')
@@ -56,7 +56,7 @@ parser.add_argument('--use-concepts-as-pi-input', default="y", type=str,
 parser.add_argument('--bs', '--batch-size', default=16, type=int, metavar='N', help='batch size BB')
 parser.add_argument('--dataset-folder-concepts', type=str,
                     default="lr_0.001_epochs_95_ResNet101_layer4_adaptive_sgd_BCE",
-                    help='dataset folder of concepts')
+                    help='dataset folder of concept bank')
 parser.add_argument('--lr-residual', '--learning-rate-residual', default=0.001, type=float,
                     metavar='LR', help='initial learning rate of bb residual')
 parser.add_argument('--momentum-residual', type=float, default=0.9, help='momentum for SGD')
@@ -92,7 +92,7 @@ parser.add_argument('--prev_explainer_chk_pt_folder', metavar='path', nargs="+",
                     default=[
                         "/ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints/cub/explainer/ViT-B_16/lr_0.01_epochs_500_temperature-lens_6.0_use-concepts-as-pi-input_True_input-size-pi_2048_cov_0.2_alpha_0.5_selection-threshold_0.5_lambda-lens_0.0001_alpha-KD_0.99_temperature-KD_10.0_hidden-layers_1_layer_VIT_explainer_init_none/iter1",
                     ],
-                    help='checkpoint file of residual')
+                    help='checkpoint folders of previous experts. For example: if the current iteration is 3, include the folder paths of the checkpoints expert 1 and expert 2')
 
 parser.add_argument('--train_baseline', type=str, default="n", help='train baseline or glt')
 

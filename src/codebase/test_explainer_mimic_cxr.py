@@ -50,10 +50,10 @@ parser.add_argument('--checkpoints', metavar='DIR',
                     help='path to checkpoints')
 parser.add_argument('--checkpoint-model', metavar='file', nargs="+",
                     default=['model_seq_epoch_193.pth.tar'],
-                    help='checkpoint file of the model GatedLogicNet')
+                    help='checkpoint files all the experts including the current iteration. For example: if the current iteration is 3, include the checkpoint files expert 1, expert 2 and expert 3')
 parser.add_argument('--checkpoint-residual', metavar='file', nargs="+",
                     default=['model_residual_best_model_epoch_2.pth.tar'],
-                    help='checkpoint file of residual')
+                    help='checkpoint files all the residuals including the current iteration. For example: if the current iteration is 3, include the checkpoint files residual 1, residual 2 and residual 3')
 parser.add_argument('--output', metavar='DIR',
                     default='/ocean/projects/asc170022p/shg121/PhD/ICLR-2022/out',
                     help='path to output logs')
@@ -74,7 +74,7 @@ parser.add_argument('--selection-threshold', default=0.5, type=float,
 parser.add_argument('--bs', '--batch-size', default=16, type=int, metavar='N', help='batch size BB')
 parser.add_argument('--dataset-folder-concepts', type=str,
                     default="lr_0.01_epochs_60_loss_BCE_W_flattening_type_flatten_layer_features_denseblock4",
-                    help='dataset folder of concepts')
+                    help='dataset folder of concept bank')
 parser.add_argument('--lr-residual', '--learning-rate-residual', default=0.001, type=float,
                     metavar='LR', help='initial learning rate of bb residual')
 parser.add_argument('--momentum-residual', type=float, default=0.9, help='momentum for SGD')

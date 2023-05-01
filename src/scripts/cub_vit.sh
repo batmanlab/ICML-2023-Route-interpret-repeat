@@ -48,6 +48,10 @@ python ./codebase/train_t_CUB.py --checkpoint-file "VIT_CUBS_8000_checkpoint.bin
 # Test
 python ./codebase/test_t_CUB.py --checkpoint-file "VIT_CUBS_8000_checkpoint.bin" --checkpoint-file-t "g_best_model_epoch_54.pth.tar" --save-concepts True --bs 16 --solver-LR "sgd" --loss-LR "BCE" --layer "VIT" --flattening-type "VIT" --arch "VIT-B_16" >$slurm_output_t_test
 
+##########################################################
+####### Description of the argparse variables #######
+
+
 # MoIE Training scripts
 
 #---------------------------------
@@ -127,4 +131,6 @@ python ./codebase/test_explainer_CUB.py --checkpoint-model "model_g_best_model_e
 # # #---------------------------------
 # # # # Explanations
 # # #---------------------------------
+
+# Update ./src/codebase/Completeness_and_interventions/paths_MoIE.json file with appropriate paths for the checkpoints and outputs
 python /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/codebase/FOLs_vision_main.py --arch "ViT-B_16" --dataset "cub" --iterations 6 >$slurm_explanations

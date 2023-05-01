@@ -22,13 +22,13 @@ parser.add_argument('--checkpoints', metavar='DIR',
 
 parser.add_argument('--checkpoint-model', metavar='file', nargs="+",
                     default=['model_g_best_model_epoch_116.pth.tar', "model_g_best_model_epoch_365.pth.tar"],
-                    help='checkpoint file of GatedLogicNet')
+                    help='checkpoint files all the experts including the current iteration. For example: if the current iteration is 3, include the checkpoint files expert 1, expert 2 and expert 3')
 parser.add_argument('--checkpoint-t', metavar='file',
                     default='g_best_model_epoch_200.pth.tar',
                     help='checkpoint file of t')
 parser.add_argument('--checkpoint-residual', metavar='file', nargs="+",
                     default=['model_residual_best_model_epoch_2.pth.tar'],
-                    help='checkpoint file of residual')
+                    help='checkpoint files all the residuals including the current iteration. For example: if the current iteration is 3, include the checkpoint files residual 1, residual 2 and residual 3')
 parser.add_argument('--weight-decay-residual', type=float, default=1e-4, help='weight_decay for SGD')
 
 parser.add_argument('--root-bb', metavar='file',
@@ -61,7 +61,7 @@ parser.add_argument('--use-concepts-as-pi-input', default="y", type=str,
 parser.add_argument('--bs', '--batch-size', default=16, type=int, metavar='N', help='batch size BB')
 parser.add_argument('--dataset-folder-concepts', type=str,
                     default="lr_0.001_epochs_95_ResNet101_layer4_adaptive_sgd_BCE",
-                    help='dataset folder of concepts')
+                    help='dataset folder of concept bank')
 parser.add_argument('--lr', '--learning-rate', nargs='+', default=[0.01, 0.001], type=float,
                     metavar='LR', help='initial learning rate')
 parser.add_argument('--input-size-pi', default=2048, type=int,
@@ -82,7 +82,7 @@ parser.add_argument('--prev_explainer_chk_pt_folder', metavar='path', nargs="+",
                     default=[
                         "/ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints/cub/explainer/ViT-B_16/lr_0.01_epochs_500_temperature-lens_6.0_use-concepts-as-pi-input_True_input-size-pi_2048_cov_0.2_alpha_0.5_selection-threshold_0.5_lambda-lens_0.0001_alpha-KD_0.99_temperature-KD_10.0_hidden-layers_1_layer_VIT_explainer_init_none/iter1",
                     ],
-                    help='checkpoint file of residual')
+                    help='checkpoint folders of previous experts. For example: if the current iteration is 3, include the folder paths of the checkpoints expert 1 and expert 2')
 parser.add_argument('--concept-names', nargs='+',
                     default=["black",
                              "white", "blue", "brown", "gray", "orange", "red", "yellow", "patches", "spots", "stripes",

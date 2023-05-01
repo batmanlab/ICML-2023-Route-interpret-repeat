@@ -113,7 +113,7 @@ parser.add_argument('--concept-names', nargs='+',
 parser.add_argument('--lm', default=32.0, type=float, help='lagrange multiplier for selective KD loss')
 parser.add_argument('--checkpoint-model', metavar='file', nargs="+",
                     default=['model_g_best_model_epoch_7.pth.tar', "model_g_best_model_epoch_365.pth.tar"],
-                    help='checkpoint file of GatedLogicNet')
+                    help='checkpoint files all the experts of previous iterations. For example: if the current iteration is 3, include the checkpoint files expert 1 and expert 2')
 parser.add_argument('--checkpoint-residual', metavar='file', nargs="+",
                     default=['model_residual_best_model_epoch_2.pth.tar'],
                     help='checkpoint file of residual')

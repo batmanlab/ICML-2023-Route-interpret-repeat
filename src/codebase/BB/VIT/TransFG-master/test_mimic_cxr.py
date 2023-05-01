@@ -295,7 +295,7 @@ def main():
     )
     parser.add_argument('--checkpoint-file', metavar='file',
                         default='VIT_CUBS_8000_checkpoint.bin',
-                        help='checkpoint file of BB')
+                        help='checkpoint of the Blackbox')
 
     parser.add_argument("--pretrained_model", type=str, default=None,
                         help="load pretrained model")
@@ -478,7 +478,7 @@ def main():
                         help='number of epochs warm up.')
     parser.add_argument('--dataset-folder-concepts', type=str,
                         default="lr_0.01_epochs_60_loss_BCE_W_flattening_type_flatten_layer_features_denseblock4",
-                        help='dataset folder of concepts')
+                        help='dataset folder of concept bank')
     parser.add_argument('--pretrained', type=str,
                         default="n",
                         help='pretrained model for imagenet')

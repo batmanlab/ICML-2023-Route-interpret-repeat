@@ -21,7 +21,7 @@ parser.add_argument('--checkpoints', metavar='DIR',
                     help='path to checkpoints')
 parser.add_argument('--checkpoint-file', metavar='file',
                     default='best_model_epoch_63.pth.tar',
-                    help='path to checkpoints')
+                    help='checkpoint of the Blackbox')
 parser.add_argument('--output', metavar='DIR',
                     default='/ocean/projects/asc170022p/shg121/PhD/ICLR-2022/out',
                     help='path to output logs')
@@ -181,7 +181,7 @@ parser.add_argument('--root-explainer', metavar='file',
                     help='checkpoint folder of BB')
 parser.add_argument('--dataset-folder-concepts', type=str,
                     default="lr_0.001_epochs_95_ResNet101_layer4_adaptive_sgd_BCE",
-                    help='dataset folder of concepts')
+                    help='dataset folder of concept bank')
 
 
 def main():

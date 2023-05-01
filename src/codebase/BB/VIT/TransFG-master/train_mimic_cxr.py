@@ -581,7 +581,7 @@ def main():
                         help='number of epochs warm up.')
     parser.add_argument('--dataset-folder-concepts', type=str,
                         default="lr_0.01_epochs_60_loss_BCE_W_flattening_type_flatten_layer_features_denseblock4",
-                        help='dataset folder of concepts')
+                        help='dataset folder of concept bank')
     parser.add_argument('--pretrained', type=str,
                         default="n",
                         help='pretrained model for imagenet')

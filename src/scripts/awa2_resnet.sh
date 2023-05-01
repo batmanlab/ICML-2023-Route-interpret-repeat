@@ -106,4 +106,5 @@ python ./codebase/train_explainer_awa2.py --checkpoint-model "model_g_best_model
 # # #---------------------------------
 # # # # Explanations
 # # #---------------------------------
+# Update ./src/codebase/Completeness_and_interventions/paths_MoIE.json file with appropriate paths for the checkpoints and outputs
 python /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/codebase/FOLs_vision_main.py --arch "ResNet101" --dataset "awa2" --iterations 4 > $slurm_explanations

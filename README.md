@@ -26,6 +26,7 @@ In [ICML, 2023](https://icml.cc/Conferences/2023/Dates) <br/>
     * [(c) Validating the concept importance](#c-validating-the-concept-importance)
 6. [Checkpoints](#checkpoints)
 7. [How to Cite](#how-to-cite)
+8. [License and copyright](#license-and-copyright)
 
 ## Objective
 
@@ -111,19 +112,48 @@ Step 3 will be the concepts for training MoIE-CXR.
 
 All the scripts for training MoIE, is included in `./src/scripts` folder for all the datasets and architectures with
 comments. Follow every command sequentially of each script to train/test the Blackbox (BB), concept predictor (t),
-explainers (g) and residuals (r). Refer to the following sections for details of each of the scripts.
+explainers (g) and residuals (r).
+
+* As a first step find and replace the project path `/ocean/projects/asc170022p/shg121/PhD/ICLR-2022` from the whole
+  codebase with appropriate path.
+
+* Also, after training and testing MoIE, as the last step in each script, `FOLs_vision_main.py` file is responsible for
+  generating instance specific FOL. This file uses `./src/codebase/Completeness_and_interventions/paths_MoIE.json` file
+  where we keep all the paths and filenames of the checkpoints of Blackbox (bb), concept predictor (t), explainer (g),
+  and residual (r). Replace those paths and filenames with the appropriate ones based on the experiments. Refer below
+  for the description of the variables `paths_MoIE.json`:
+
+| Variable                 | Description                                                                   |
+|--------------------------|-------------------------------------------------------------------------------|
+| `cub_ViT-B_16`           | Root variable for CUB200 dataset with Vision Transformer as the Blackbox (BB) |
+| `cub_ResNet101`          | Root variable for CUB200 dataset with Resnet101 as the Blackbox (BB)          |
+| `HAM10k_Inception_V3`    | Root variable for HAM10k dataset with Inception_v3 as the Blackbox (BB)       |
+| `SIIM-ISIC_Inception_V3` | Root variable for SIIM-ISIC dataset with Inception_v3 as the Blackbox (BB)    |
+| `awa2_ViT-B_16`          | Root variable for Awa2 dataset with Vision Transformer as the Blackbox (BB)   |
+| `awa2_ResNet101`         | Root variable for Awa2 dataset with Resnet101 as the Blackbox (BB)            |
+
+* Note the root follow dataset_BB_architecture format. **Do not modify this format**. For each of the above
+  roots `paths_MoIE.json` file, based on the dataset and architectures, edit the values in `MoIE_paths`, `t`
+  , `bb` with appropriate checkpoint paths and files for the different experts (g), concept predictors (t) and
+  Blackbox (
+  bb).
+
+* Similarly, edit the checkpoint paths and files of `./src/codebase/MIMIC_CXR/paths_mimic_cxr_icml.json` for effusion of
+  MIMIC-CXR.
+
+**Refer to the following sections for details of each of the scripts.**
 
 ### (a) Running MoIE
 
-| Script name                      | Description                                                            | Comment                                                                                                   |
-|----------------------------------|------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------|
-| `./src/script/cub_resnet.sh`     | Script for CUB200 dataset with Resnet101 as the Blackbox (BB)          | Included train/test script for the Blackbox (BB), concept predictor (t), explainers (g) and residuals (r) |
-| `./src/script/cub_vit.sh`        | Script for CUB200 dataset with Vision Transformer as the Blackbox (BB) | Included train/test script for the Blackbox (BB), concept predictor (t), explainers (g) and residuals (r) |
-| `./src/script/awa2_resnet.sh`    | Script for Awa2 dataset with Resnet101 as the Blackbox (BB)            | Included train/test script for the Blackbox (BB), concept predictor (t), explainers (g) and residuals (r) |
-| `./src/script/awa2_vit.sh`       | Script for Awa2 dataset with Vision Transformer as the Blackbox (BB)   | Included train/test script for the Blackbox (BB), concept predictor (t), explainers (g) and residuals (r) |
-| `./src/script/ham10k.sh`         | Script for HAM10k dataset with Inception_v3 as the Blackbox (BB)       | Included train/test script for the Blackbox (BB), concept predictor (t), explainers (g) and residuals (r) |-------------------------------|---------------------------------------------------------------|--------------------------------------------------------------------------------------------------------|
-| `./src/script/SIIM-ISIC.sh`      | Script for SIIM-ISIC dataset with Inception_v3 as the Blackbox (BB)    | Included train/test script for the Blackbox (BB), concept predictor (t), explainers (g) and residuals (r) |
-| `./src/script/mimic_effusion.sh` | Script for MIMIC-CXR dataset with Densenet121 as the Blackbox (BB)     | Included train/test script for the Blackbox (BB), concept predictor (t), explainers (g) and residuals (r) |  
+| Script name                       | Description                                                            | Comment                                                                                                                      |
+|-----------------------------------|------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------|
+| `./src/scripts/cub_resnet.sh`     | Script for CUB200 dataset with Resnet101 as the Blackbox (BB)          | Included train/test and FOL generation script for the Blackbox (BB), concept predictor (t), explainers (g) and residuals (r) |
+| `./src/scripts/cub_vit.sh`        | Script for CUB200 dataset with Vision Transformer as the Blackbox (BB) | Included train/test and FOL generation script for the Blackbox (BB), concept predictor (t), explainers (g) and residuals (r) |
+| `./src/scripts/awa2_resnet.sh`    | Script for Awa2 dataset with Resnet101 as the Blackbox (BB)            | Included train/test and FOL generation script for the Blackbox (BB), concept predictor (t), explainers (g) and residuals (r) |
+| `./src/scripts/awa2_vit.sh`       | Script for Awa2 dataset with Vision Transformer as the Blackbox (BB)   | Included train/test and FOL generation script for the Blackbox (BB), concept predictor (t), explainers (g) and residuals (r) |
+| `./src/scripts/ham10k.sh`         | Script for HAM10k dataset with Inception_v3 as the Blackbox (BB)       | Included train/test and FOL generation script for the Blackbox (BB), concept predictor (t), explainers (g) and residuals (r) |
+| `./src/scripts/SIIM-ISIC.sh`      | Script for SIIM-ISIC dataset with Inception_v3 as the Blackbox (BB)    | Included train/test and FOL generation script for the Blackbox (BB), concept predictor (t), explainers (g) and residuals (r) |
+| `./src/scripts/mimic_effusion.sh` | Script for MIMIC-CXR dataset with Densenet121 as the Blackbox (BB)     | Included train/test and FOL generation script for the Blackbox (BB), concept predictor (t), explainers (g) and residuals (r) |  
 
 For reference, check the following repositories for SOTA Blackboxes and concepts:
 
@@ -131,7 +161,73 @@ For reference, check the following repositories for SOTA Blackboxes and concepts
 * [VIT-B_16 on CUB-200](https://github.com/TACJu/TransFG)
 * [Models and concepts for HAM10k and ISIC](https://github.com/mertyg/post-hoc-cbm)
 
-## License & copyright
+### (b) Compute the performance metrics
+
+To compute, the performance metrics (accuracy/AUROC) for all the experts cumulatively (Table 2 in the paper), please
+refer below for the ipython notebooks.
+
+| Notebook                                                                                        | Description                                                            |
+|-------------------------------------------------------------------------------------------------|------------------------------------------------------------------------|
+| `./src/codebase/iPython/Cumulative_performance/CUB-Resnet.ipynb`                                | Script for CUB200 dataset with Resnet101 as the Blackbox (BB)          |
+| `./src/codebase/iPython/Cumulative_performance/CUB-VIT.ipynb`                                   | Script for CUB200 dataset with Vision Transformer as the Blackbox (BB) |
+| `./src/codebase/iPython/Cumulative_performance/AWA2-Resnet.ipynb`                               | Script for Awa2 dataset with Resnet101 as the Blackbox (BB)            |
+| `./src/codebase/iPython/Cumulative_performance/AWA2-VIT.ipynb`                                  | Script for Awa2 dataset with Vision Transformer as the Blackbox (BB)   |
+| `./src/codebase/iPython/Cumulative_performance/HAM10k.ipynb`                                    | Script for HAM10k dataset with Inception_v3 as the Blackbox (BB)       | 
+| `./src/codebase/iPython/Cumulative_performance/ISIC.ipynb`                                      | Script for SIIM-ISIC dataset with Inception_v3 as the Blackbox (BB)    |
+
+For effusion in MIMIC-CXR, the command to estimate the AUROC of all the experts is:
+
+``` python
+python /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/codebase/performance_calculation_mimic_cxr_main.py --iterations 3 --icml "y" --disease "effusion" --model "MoIE"
+```
+
+This command is already included in the file `./src/scripts/mimic_effusion.sh`.
+
+### (c) Validating the concept importance
+
+In the paper, we validated in the importance of the extracted concepts using three experiments:
+
+1. Zeroing out the important concepts
+2. Computing the completeness scores of the important concept
+    * Before running the script for completeness score, run the following scripts to create the dataset to train the
+      projection model in completeness score paper:
+
+| Notebook                                                        | Description                                                            |
+|-----------------------------------------------------------------|------------------------------------------------------------------------|
+| `./src/codebase/iPython/Completeness_dataset/CUB-Resnet.ipynb`  | Script for CUB200 dataset with Resnet101 as the Blackbox (BB)          |
+| `./src/codebase/iPython/Completeness_dataset/CUB-VIT.ipynb`     | Script for CUB200 dataset with Vision Transformer as the Blackbox (BB) |
+| `./src/codebase/iPython/Completeness_dataset/AWA2-Resnet.ipynb` | Script for Awa2 dataset with Resnet101 as the Blackbox (BB)            |
+| `./src/codebase/iPython/Completeness_dataset/AWA2-VIT.ipynb`    | Script for Awa2 dataset with Vision Transformer as the Blackbox (BB)   |
+| `./src/codebase/iPython/Completeness_dataset/HAM10k.ipynb`      | Script for HAM10k dataset with Inception_v3 as the Blackbox (BB)       | 
+
+3. Performing test time interventions
+
+Please refer to the table below for the scripts to replicate the above experiments (zeroing out the concepts,
+completeness scores and test time interventions):
+
+| Scripts                                | Description                                                                                                                                        |
+|----------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------|
+| `./src/scripts/zero_out_concepts.sh`   | Script to zero out the important concepts                                                                                                          |
+| `./src/scripts/completeness_scores.sh` | Script to estimate the completeness scores of the important concepts                                                                               |
+| `./src/scripts/tti.sh`                 | Script to perform test time interventions for the important concepts                                                                               |
+| `./src/codebase/tti_experts.sh`        | Script to perform test time interventions for the important concepts corresponding to only the ** harder** samples covered by the last two experts |
+
+## Checkpoints
+
+For the checkpoints of the pretrained blackboxes and concept banks, refer below:
+
+| Blackbox                                                                                           | Concept predictor (t) / Concept banks                                                              |
+|----------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
+| [CUB200-VIT](https://drive.google.com/drive/u/1/folders/1nDmJklw3UJy_75Oh23BvzCw6VkGFWet1)         | [CUB200-VIT](https://drive.google.com/drive/u/1/folders/1fSI231IcaClK6OAZrIg6ptVXRaeIpGkh)         |
+| [HAM10k](https://drive.google.com/drive/u/1/folders/1Honi_YBX-ktOkLRH5NKuIay9-AjX4gyU)             | [HAM10k](https://drive.google.com/drive/u/1/folders/1w8Xc2xb9Y7kcMcXnP5rtNXcis-be3tAH)             |
+| [Effusion-MIMIC-CXR](https://drive.google.com/drive/u/1/folders/1h3mUuf6rvV8R0uzUKCkScgtxON13exoR) | [Effusion-MIMIC-CXR](https://drive.google.com/drive/u/1/folders/1eza7ZPhbwGwvhdyakem8pLP16bqtmrz7) |
+| [Awa2-VIT](https://drive.google.com/drive/u/1/folders/1MwYpobXz8gZSvYsD1-kEbFKEBWviauDV)           | [Awa2-VIT](https://drive.google.com/drive/u/1/folders/1DVvIyFOAPqjvM4J8ak6vmn_XdIvTso0D)           |
+
+Note for HAM10k, we add the extracted concept bank after training t. No need to train t for HAM10k and SIIM-ISIC, if
+this concept bank is used. For others, the above paths contain the checkpoints of t. Use these checkpoints to extract
+the concepts.
+
+## License and copyright
 
 Licensed under the [MIT License](LICENSE)
 

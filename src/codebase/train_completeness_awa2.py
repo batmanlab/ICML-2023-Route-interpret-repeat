@@ -56,7 +56,7 @@ parser.add_argument('--use-concepts-as-pi-input', default="y", type=str,
 parser.add_argument('--bs', '--batch-size', default=16, type=int, metavar='N', help='batch size BB')
 parser.add_argument('--dataset-folder-concepts', type=str,
                     default="lr_0.001_epochs_95_ResNet101_layer4_adaptive_sgd_BCE",
-                    help='dataset folder of concepts')
+                    help='dataset folder of concept bank')
 parser.add_argument('--lr-residual', '--learning-rate-residual', default=0.001, type=float,
                     metavar='LR', help='initial learning rate of bb residual')
 parser.add_argument('--momentum-residual', type=float, default=0.9, help='momentum for SGD')

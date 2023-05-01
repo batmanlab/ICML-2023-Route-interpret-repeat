@@ -245,7 +245,7 @@ def main():
     )
     parser.add_argument('--checkpoint-file', metavar='file',
                         default='VIT_CUBS_3000_checkpoint.bin',
-                        help='checkpoint file of BB')
+                        help='checkpoint of the Blackbox')
 
     # parser.add_argument("--pretrained_model", type=str, default=None,
     #                     help="load pretrained model")

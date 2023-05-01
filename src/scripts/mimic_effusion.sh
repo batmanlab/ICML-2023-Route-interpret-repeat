@@ -142,6 +142,7 @@ python /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/codebase/train_explainer_
   --selected-obs="effusion" \
   --labels "0 (No Effusion)" "1 (Effusion)" >$slurm_output_iter1_g_train
 
+# Update ./src/codebase/MIMIC_CXR/paths_mimic_cxr_icml.json file with appropriate paths for the checkpoints and outputs
 python /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/codebase/test_explainer_mimic_cxr.py \
   --iter 1 \
   --icml "y" \
@@ -246,6 +247,7 @@ python /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/codebase/train_explainer_
   --selected-obs="effusion" \
   --labels "0 (No Effusion)" "1 (Effusion)" >$slurm_output_iter2_g_train
 
+# Update ./src/codebase/MIMIC_CXR/paths_mimic_cxr_icml.json file with appropriate paths for the checkpoints and outputs
 python /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/codebase/test_explainer_mimic_cxr.py \
   --iter 2 \
   --expert-to-train "explainer" \
@@ -354,6 +356,7 @@ python /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/codebase/train_explainer_
   --selected-obs="effusion" \
   --labels "0 (No Effusion)" "1 (Effusion)" >$slurm_output_iter3_g_train
 
+# Update ./src/codebase/MIMIC_CXR/paths_mimic_cxr_icml.json file with appropriate paths for the checkpoints and outputs
 python /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/codebase/test_explainer_mimic_cxr.py \
   --iter 3 \
   --icml "y" \
