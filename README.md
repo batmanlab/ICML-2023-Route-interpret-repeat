@@ -20,10 +20,10 @@ In [ICML, 2023](https://icml.cc/Conferences/2023/Dates) <br/>
 4. [Data preprocessing](#data-preprocessing)
     * [(a) Preprocessing CUB200](#a-preprocessing-cub200)
     * [(b) Preprocessing MIMIC-CXR](#b-preprocessing-mimic-cxr)
-5. [Training pipleline](#training-pipleline)
-    * [Running MoIE-CXR](#running-moie-cxr)
-    * [Compute the performance metrics]()
-    * [Integrating New Editing Methods](#integrating-new-editing-methods)
+5. [Training pipeline](#training-pipleline)
+    * [(a) Running MoIE](#a-running-moie)
+    * [(b) Compute the performance metrics](#b-compute-the-performance-metrics)
+    * [(c) Validating the concept importance](#c-validating-the-concept-importance)
 6. [Checkpoints](#checkpoints)
 7. [How to Cite](#how-to-cite)
 
@@ -33,8 +33,8 @@ In this paper, we aim to blur the dichotomy of explaining a Blackbox post-hoc an
 design models. Beginning with a Blackbox, we iteratively *carve out* a mixture of interpretable experts (MoIE) and a *
 residual network*. Each interpretable model specializes in a subset of samples and explains them using First Order
 Logic (FOL). We route the remaining samples through a flexible residual. We repeat the method on the residual network
-until all the interpretable models explain the desired proportion of data. Thus illustration of our method is summarized
-below:
+until all the interpretable models explain the desired proportion of data. Thus, illustration of our method is
+summarized below:
 
 <img src='images/method.gif'><br/>
 
@@ -98,11 +98,41 @@ python ./src/codebase/data_preprocessing/mimic-cxr/miccai-main/preprocessing/rad
 python ./src/codebase/data_preprocessing/mimic-cxr/miccai-main/preprocessing/radgraph_parsed.py
 ```
 
-3. To create adjacency matrix that represents the relations between anatomical
-   landmarks and observations mentioned in radiology reports, run:
+3. To create adjacency matrix that represents the relations between anatomical landmarks and observations mentioned in
+   radiology reports, run:
 
 ``` python
 python ./src/codebase/data_preprocessing/mimic-cxr/miccai-main/preprocessing/adj_matrix.py
 ```
 
 Step 3 will be the concepts for training MoIE-CXR.
+
+## Training pipeline
+
+All the scripts for training MoIE, is included in `./src/scripts` folder for all the datasets and architectures with
+comments. Follow every command sequentially of each script to train/test the Blackbox (BB), concept predictor (t),
+explainers (g) and residuals (r). Refer to the following sections for details of each of the scripts.
+
+### (a) Running MoIE
+
+| Script name                      | Description                                                            | Comment                                                                                                   |
+|----------------------------------|------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------|
+| `./src/script/cub_resnet.sh`     | Script for CUB200 dataset with Resnet101 as the Blackbox (BB)          | Included train/test script for the Blackbox (BB), concept predictor (t), explainers (g) and residuals (r) |
+| `./src/script/cub_vit.sh`        | Script for CUB200 dataset with Vision Transformer as the Blackbox (BB) | Included train/test script for the Blackbox (BB), concept predictor (t), explainers (g) and residuals (r) |
+| `./src/script/awa2_resnet.sh`    | Script for Awa2 dataset with Resnet101 as the Blackbox (BB)            | Included train/test script for the Blackbox (BB), concept predictor (t), explainers (g) and residuals (r) |
+| `./src/script/awa2_vit.sh`       | Script for Awa2 dataset with Vision Transformer as the Blackbox (BB)   | Included train/test script for the Blackbox (BB), concept predictor (t), explainers (g) and residuals (r) |
+| `./src/script/ham10k.sh`         | Script for HAM10k dataset with Inception_v3 as the Blackbox (BB)       | Included train/test script for the Blackbox (BB), concept predictor (t), explainers (g) and residuals (r) |-------------------------------|---------------------------------------------------------------|--------------------------------------------------------------------------------------------------------|
+| `./src/script/SIIM-ISIC.sh`      | Script for SIIM-ISIC dataset with Inception_v3 as the Blackbox (BB)    | Included train/test script for the Blackbox (BB), concept predictor (t), explainers (g) and residuals (r) |
+| `./src/script/mimic_effusion.sh` | Script for MIMIC-CXR dataset with Densenet121 as the Blackbox (BB)     | Included train/test script for the Blackbox (BB), concept predictor (t), explainers (g) and residuals (r) |  
+
+For reference, check the following repositories for SOTA Blackboxes and concepts:
+
+* [ResNet-101 on CUB-200](https://github.com/zhangyongshun/resnet_finetune_cub)
+* [VIT-B_16 on CUB-200](https://github.com/TACJu/TransFG)
+* [Models and concepts for HAM10k and ISIC](https://github.com/mertyg/post-hoc-cbm)
+
+## License & copyright
+
+Licensed under the [MIT License](LICENSE)
+
+Copyright (c) [Batman Lab](https://www.batman-lab.com/), 2023
