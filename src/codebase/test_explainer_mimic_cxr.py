@@ -206,7 +206,7 @@ parser.add_argument('--checkpoint-bb', metavar='file', default='g_best_model_epo
                     help='checkpoint file of BB')
 parser.add_argument('--prev_chk_pt_explainer_folder', nargs='+', type=str,
                     default="densenet121_lr_0.1_SGD_temperature-lens_7.6_cov_0.1_alpha_0.5_selection-threshold_0.5_lm_32.0_lambda-lens_0.0001_alpha-KD_0.99_temperature-KD_20.0_hidden-layers_2020_input-size-pi_2048_layer_layer4",
-                    help='chkpt explainer')
+                    help='checkpoint folders of previous experts. For example: if the current iteration is 3, include the folder paths of the checkpoints expert 1 and expert 2')
 parser.add_argument('--soft', default='y', type=str, metavar='N', help='soft/hard concept?')
 parser.add_argument('--with_seed', default='n', type=str, metavar='N', help='trying diff seeds for paper')
 parser.add_argument('--disease', type=str, default="effusion", help='dataset name')

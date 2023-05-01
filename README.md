@@ -27,6 +27,7 @@ In [ICML, 2023](https://icml.cc/Conferences/2023/Dates) <br/>
 6. [Checkpoints](#checkpoints)
 7. [How to Cite](#how-to-cite)
 8. [License and copyright](#license-and-copyright)
+9. [Contact](#contact)
 
 ## Objective
 
@@ -178,7 +179,7 @@ refer below for the ipython notebooks.
 For effusion in MIMIC-CXR, the command to estimate the AUROC of all the experts is:
 
 ``` python
-python /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/codebase/performance_calculation_mimic_cxr_main.py --iterations 3 --icml "y" --disease "effusion" --model "MoIE"
+python ./src/codebase/performance_calculation_mimic_cxr_main.py --iterations 3 --icml "y" --disease "effusion" --model "MoIE"
 ```
 
 This command is already included in the file `./src/scripts/mimic_effusion.sh`.
@@ -232,3 +233,6 @@ the concepts.
 Licensed under the [MIT License](LICENSE)
 
 Copyright © [Batman Lab](https://www.batman-lab.com/), 2023
+
+## Contact
+For any queries, contact: **shawn24@bu.edu**

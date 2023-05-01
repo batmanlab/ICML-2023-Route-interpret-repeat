@@ -122,7 +122,7 @@ parser.add_argument('--prev_explainer_chk_pt_folder', metavar='path', nargs="+",
                     default=[
                         "/ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints/HAM10k/explainer/lr_0.01_epochs_500_temperature-lens_0.7_input-size-pi_2048_cov_0.45_alpha_0.5_selection-threshold_0.5_lambda-lens_0.0001_alpha-KD_0.9_temperature-KD_10.0_hidden-layers_1/iter1",
                         "/ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints/HAM10k/explainer/lr_0.01_epochs_500_temperature-lens_0.7_input-size-pi_2048_cov_0.45_alpha_0.5_selection-threshold_0.5_lambda-lens_0.0001_alpha-KD_0.9_temperature-KD_10.0_hidden-layers_1/cov_0.2/iter2"],
-                    help='checkpoint folders of previous experts. For example: if the current iteration is 3, include the folder paths of the checkpoints expert 1 and expert 2')
+                    help='checkpoint folders of previous experts with absolute path. For example: if the current iteration is 3, include the folder paths of the checkpoints expert 1 and expert 2')
 parser.add_argument('--train_baseline', type=str, default="n", help='train baseline or glt')
 parser.add_argument('--soft', default='y', type=str, metavar='N', help='soft/hard concept?')
 parser.add_argument('--with_seed', default='n', type=str, metavar='N', help='trying diff seeds for paper')

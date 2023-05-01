@@ -82,7 +82,7 @@ parser.add_argument('--prev_explainer_chk_pt_folder', metavar='path', nargs="+",
                     default=[
                         "/ocean/projects/asc170022p/shg121/PhD/ICLR-2022/checkpoints/cub/explainer/ViT-B_16/lr_0.01_epochs_500_temperature-lens_6.0_use-concepts-as-pi-input_True_input-size-pi_2048_cov_0.2_alpha_0.5_selection-threshold_0.5_lambda-lens_0.0001_alpha-KD_0.99_temperature-KD_10.0_hidden-layers_1_layer_VIT_explainer_init_none/iter1",
                     ],
-                    help='checkpoint folders of previous experts. For example: if the current iteration is 3, include the folder paths of the checkpoints expert 1 and expert 2')
+                    help='checkpoint folders of previous experts with absolute path. For example: if the current iteration is 3, include the folder paths of the checkpoints expert 1 and expert 2')
 parser.add_argument('--concept-names', nargs='+',
                     default=["black",
                              "white", "blue", "brown", "gray", "orange", "red", "yellow", "patches", "spots", "stripes",
