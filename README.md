@@ -135,4 +135,4 @@ For reference, check the following repositories for SOTA Blackboxes and concepts
 
 Licensed under the [MIT License](LICENSE)
 
-Copyright (c) [Batman Lab](https://www.batman-lab.com/), 2023
+Copyright © [Batman Lab](https://www.batman-lab.com/), 2023
