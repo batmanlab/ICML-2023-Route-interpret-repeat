@@ -1,6 +1,5 @@
 # Dividing and Conquering a BlackBox to a Mixture of Interpretable Models: Route, Interpret, Repeat #
-Official PyTorch implementation for the ICML 2023 paper [Dividing and Conquering a BlackBox to a Mixture of Interpretable Models: Route, Interpret, Repeat](https://arxiv.org/pdf/2302.10289.pdf)
-
+Official PyTorch implementation for the ICML 2023 paper [Dividing and Conquering a BlackBox to a Mixture of Interpretable Models: Route, Interpret, Repeat](https://arxiv.org/pdf/2302.10289.pdf) <br/>
 [Shantanu Ghosh <sup>1</sup>](https://shantanu48114860.github.io/),
 [Ke Yu <sup>2</sup>](https://gatechke.github.io/),
 [Forough Arabshahi <sup>3</sup>](https://forougha.github.io/),
