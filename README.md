@@ -144,22 +144,23 @@ predictor (t), explainers (g) and residuals (r).
   Blackbox (
   bb).
 
-* Similarly, edit the checkpoint paths and files of [`./src/codebase/MIMIC_CXR/paths_mimic_cxr_icml.json`](/src/codebase/MIMIC_CXR/paths_mimic_cxr_icml.json) for effusion of
-  MIMIC-CXR.
+* Similarly, edit the checkpoint paths and files
+  of [`./src/codebase/MIMIC_CXR/paths_mimic_cxr_icml.json`](/src/codebase/MIMIC_CXR/paths_mimic_cxr_icml.json) for
+  effusion of MIMIC-CXR.
 
 **Refer to the following sections for details of each of the scripts.**
 
 ### (a) Running MoIE
 
-| Script name                       | Description                                                            | Comment                                                                                                                      |
-|-----------------------------------|------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------|
-| `./src/scripts/cub_resnet.sh`     | Script for CUB200 dataset with Resnet101 as the Blackbox (BB)          | Included train/test and FOL generation script for the Blackbox (BB), concept predictor (t), explainers (g) and residuals (r) |
-| `./src/scripts/cub_vit.sh`        | Script for CUB200 dataset with Vision Transformer as the Blackbox (BB) | Included train/test and FOL generation script for the Blackbox (BB), concept predictor (t), explainers (g) and residuals (r) |
-| `./src/scripts/awa2_resnet.sh`    | Script for Awa2 dataset with Resnet101 as the Blackbox (BB)            | Included train/test and FOL generation script for the Blackbox (BB), concept predictor (t), explainers (g) and residuals (r) |
-| `./src/scripts/awa2_vit.sh`       | Script for Awa2 dataset with Vision Transformer as the Blackbox (BB)   | Included train/test and FOL generation script for the Blackbox (BB), concept predictor (t), explainers (g) and residuals (r) |
-| `./src/scripts/ham10k.sh`         | Script for HAM10k dataset with Inception_v3 as the Blackbox (BB)       | Included train/test and FOL generation script for the Blackbox (BB), concept predictor (t), explainers (g) and residuals (r) |
-| `./src/scripts/SIIM-ISIC.sh`      | Script for SIIM-ISIC dataset with Inception_v3 as the Blackbox (BB)    | Included train/test and FOL generation script for the Blackbox (BB), concept predictor (t), explainers (g) and residuals (r) |
-| `./src/scripts/mimic_effusion.sh` | Script for MIMIC-CXR dataset with Densenet121 as the Blackbox (BB)     | Included train/test and FOL generation script for the Blackbox (BB), concept predictor (t), explainers (g) and residuals (r) |  
+| Script name                                                         | Description                                                            | Comment                                                                                                                      |
+|---------------------------------------------------------------------|------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------|
+| [`./src/scripts/cub_resnet.sh`](/src/scripts/cub_resnet.sh)         | Script for CUB200 dataset with Resnet101 as the Blackbox (BB)          | Included train/test and FOL generation script for the Blackbox (BB), concept predictor (t), explainers (g) and residuals (r) |
+| [`./src/scripts/cub_vit.sh`](/src/scripts/cub_vit.sh)               | Script for CUB200 dataset with Vision Transformer as the Blackbox (BB) | Included train/test and FOL generation script for the Blackbox (BB), concept predictor (t), explainers (g) and residuals (r) |
+| [`./src/scripts/awa2_resnet.sh`](/src/scripts/awa2_resnet.sh)       | Script for Awa2 dataset with Resnet101 as the Blackbox (BB)            | Included train/test and FOL generation script for the Blackbox (BB), concept predictor (t), explainers (g) and residuals (r) |
+| [`./src/scripts/awa2_vit.sh`](/src/scripts/awa2_vit.sh)             | Script for Awa2 dataset with Vision Transformer as the Blackbox (BB)   | Included train/test and FOL generation script for the Blackbox (BB), concept predictor (t), explainers (g) and residuals (r) |
+| [`./src/scripts/ham10k.sh`](/src/scripts/ham10k.sh)                 | Script for HAM10k dataset with Inception_v3 as the Blackbox (BB)       | Included train/test and FOL generation script for the Blackbox (BB), concept predictor (t), explainers (g) and residuals (r) |
+| [`./src/scripts/SIIM-ISIC.sh`](/src/scripts/SIIM-ISIC.sh)           | Script for SIIM-ISIC dataset with Inception_v3 as the Blackbox (BB)    | Included train/test and FOL generation script for the Blackbox (BB), concept predictor (t), explainers (g) and residuals (r) |
+| [`./src/scripts/mimic_effusion.sh`](/src/scripts/mimic_effusion.sh) | Script for MIMIC-CXR dataset with Densenet121 as the Blackbox (BB)     | Included train/test and FOL generation script for the Blackbox (BB), concept predictor (t), explainers (g) and residuals (r) |  
 
 For reference, check the following repositories for SOTA Blackboxes and concepts:
 
