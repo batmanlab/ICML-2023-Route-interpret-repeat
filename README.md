@@ -188,7 +188,7 @@ For effusion in MIMIC-CXR, the command to estimate the AUROC of all the experts 
 python ./src/codebase/performance_calculation_mimic_cxr_main.py --iterations 3 --icml "y" --disease "effusion" --model "MoIE"
 ```
 
-This command is already included in the file [`./src/scripts/mimic_effusion.sh`](./src/scripts/mimic_effusion.sh).
+This command is already included in the file [`./src/scripts/mimic_effusion.sh`](/src/scripts/mimic_effusion.sh).
 
 ### (c) Validating the concept importance
 
@@ -199,13 +199,13 @@ In the paper, we validated in the importance of the extracted concepts using thr
     * Before running the script for completeness score, run the following scripts to create the dataset to train the
       projection model in completeness score paper:
 
-| Notebook                                                        | Description                                                            |
-|-----------------------------------------------------------------|------------------------------------------------------------------------|
-| `./src/codebase/iPython/Completeness_dataset/CUB-Resnet.ipynb`  | Script for CUB200 dataset with Resnet101 as the Blackbox (BB)          |
-| `./src/codebase/iPython/Completeness_dataset/CUB-VIT.ipynb`     | Script for CUB200 dataset with Vision Transformer as the Blackbox (BB) |
-| `./src/codebase/iPython/Completeness_dataset/AWA2-Resnet.ipynb` | Script for Awa2 dataset with Resnet101 as the Blackbox (BB)            |
-| `./src/codebase/iPython/Completeness_dataset/AWA2-VIT.ipynb`    | Script for Awa2 dataset with Vision Transformer as the Blackbox (BB)   |
-| `./src/codebase/iPython/Completeness_dataset/HAM10k.ipynb`      | Script for HAM10k dataset with Inception_v3 as the Blackbox (BB)       | 
+| Notebook                                                                                                                        | Description                                                            |
+|---------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------|
+| [`./src/codebase/iPython/Completeness_dataset/CUB_Resnet.ipynb`](/src/codebase/iPython/Completeness_dataset/CUB_Resnet.ipynb)   | Script for CUB200 dataset with Resnet101 as the Blackbox (BB)          |
+| [`./src/codebase/iPython/Completeness_dataset/CUB_VIT.ipynb`](/src/codebase/iPython/Completeness_dataset/CUB_VIT.ipynb)         | Script for CUB200 dataset with Vision Transformer as the Blackbox (BB) |
+| [`./src/codebase/iPython/Completeness_dataset/Awa2_Resnet.ipynb`](/src/codebase/iPython/Completeness_dataset/Awa2_Resnet.ipynb) | Script for Awa2 dataset with Resnet101 as the Blackbox (BB)            |
+| [`./src/codebase/iPython/Completeness_dataset/Awa2_VIT.ipynb`](/src/codebase/iPython/Completeness_dataset/Awa2_VIT.ipynb)       | Script for Awa2 dataset with Vision Transformer as the Blackbox (BB)   |
+| [`./src/codebase/iPython/Completeness_dataset/HAM10k.ipynb`](/src/codebase/iPython/Completeness_dataset/HAM10k.ipynb)           | Script for HAM10k dataset with Inception_v3 as the Blackbox (BB)       | 
 
 3. Performing test time interventions
 
