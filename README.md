@@ -112,7 +112,7 @@ Step 3 will be the concepts for training MoIE-CXR.
 
 ## Training pipeline
 
-All the scripts for training MoIE, is included in `./src/scripts` folder for all the datasets and architectures with
+All the scripts for training MoIE, is included in [`./src/scripts`](/src/scripts) folder for all the datasets and architectures with
 comments. Follow every command sequentially of each script to train/test the Blackbox (BB), concept predictor (t),
 explainers (g) and residuals (r).
 
