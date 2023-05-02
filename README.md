@@ -188,7 +188,7 @@ For effusion in MIMIC-CXR, the command to estimate the AUROC of all the experts 
 python ./src/codebase/performance_calculation_mimic_cxr_main.py --iterations 3 --icml "y" --disease "effusion" --model "MoIE"
 ```
 
-This command is already included in the file `./src/scripts/mimic_effusion.sh`.
+This command is already included in the file [`./src/scripts/mimic_effusion.sh`](./src/scripts/mimic_effusion.sh).
 
 ### (c) Validating the concept importance
 
