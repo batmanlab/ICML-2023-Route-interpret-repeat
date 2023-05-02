@@ -1,7 +1,5 @@
 # Dividing and Conquering a BlackBox to a Mixture of Interpretable Models: Route, Interpret, Repeat #
 
-### [Project Page](https://shantanu48114860.github.io/projects/ICML-2023-MoIE/) | [Paper]() | [Arxiv](https://arxiv.org/pdf/2302.10289.pdf)
-
 [Shantanu Ghosh <sup>1</sup>](https://shantanu48114860.github.io/),
 [Ke Yu <sup>2</sup>](https://gatechke.github.io/),
 [Forough Arabshahi <sup>3</sup>](https://forougha.github.io/),
@@ -9,6 +7,9 @@
 <br/>
 <sup>1</sup> BU ECE, <sup>2</sup> Pitt ISP, <sup>3</sup> META AI <br/>
 In [ICML, 2023](https://icml.cc/Conferences/2023/Dates) <br/>
+
+### [Project Page](https://shantanu48114860.github.io/projects/ICML-2023-MoIE/) | [Paper]() | [Arxiv](https://arxiv.org/pdf/2302.10289.pdf)
+
 
 ## Table of Contents
 
@@ -249,8 +250,8 @@ the correct paths and files to the following variables in `train_explainer_<data
     python ./src/codebase/train_explainer_CUB.py --expert-to-train "explainer" --checkpoint-model checkpt_expert1 checkpt_expert2 --checkpoint-residual checkpt_residual1 checkpt_residual2 --prev_explainer_chk_pt_folder checkpt_folder_exper1 checkpt_folder_expert2 --root-bb "lr_0.03_epochs_95" --checkpoint-bb "VIT_CUBS_8000_checkpoint.bin" --iter 3 --dataset "cub" --cov cov_iter1 cov_iter2 cov_iter3 --bs 16 --dataset-folder-concepts "lr_0.03_epochs_95_ViT-B_16_layer4_VIT_sgd_BCE" --lr learning_rate_iter1 learning_rate_iter2 learning_rate_iter3 --input-size-pi 2048 --temperature-lens 0.7 --lambda-lens 0.0001 --alpha-KD 0.9 --temperature-KD 10 --hidden-nodes 10 --layer "VIT" --arch "VIT-B_16" 
     ```
 
-  Similarly, refer to the following example command for the 3rd iteration for **CUB200** dataset with **VIT** as the blackbox to
-  train the residual:
+  Similarly, refer to the following example command for the 3rd iteration for **CUB200** dataset with **VIT** as the
+  blackbox to train the residual:
     ``` python
     python ./src/codebase/train_explainer_CUB.py --expert-to-train "residual" --checkpoint-model checkpt_expert1 checkpt_expert2 checkpt_expert3 --checkpoint-residual checkpt_residual1 checkpt_residual2 --prev_explainer_chk_pt_folder checkpt_folder_exper1 checkpt_folder_expert2 --root-bb "lr_0.03_epochs_95" --checkpoint-bb "VIT_CUBS_8000_checkpoint.bin" --iter 3 --dataset "cub" --cov cov_iter1 cov_iter2 cov_iter3 --bs 16 --dataset-folder-concepts "lr_0.03_epochs_95_ViT-B_16_layer4_VIT_sgd_BCE" --lr learning_rate_iter1 learning_rate_iter2 learning_rate_iter3 --input-size-pi 2048 --temperature-lens 0.7 --lambda-lens 0.0001 --alpha-KD 0.9 --temperature-KD 10 --hidden-nodes 10 --layer "VIT" --arch "VIT-B_16"  
     ```
@@ -272,8 +273,8 @@ the correct paths and files to the following variables in `train_explainer_<data
        the datasets other than MIMIC-CXR, include the absolute path. For MIMIC-CXR, only include the experiment folder
        where the checkpoint file will be stored.
 
-  Refer to the following example command for the 3rd iteration for **CUB200** dataset with **VIT** as the blackbox to test the
-  expert:
+  Refer to the following example command for the 3rd iteration for **CUB200** dataset with **VIT** as the blackbox to
+  test the expert:
     ``` python
     python ./src/codebase/test_explainer_CUB.py --expert-to-train "explainer" --checkpoint-model checkpt_expert1 checkpt_expert2 checkpt_expert3 --checkpoint-residual checkpt_residual1 checkpt_residual2 --prev_explainer_chk_pt_folder checkpt_folder_exper1 checkpt_folder_expert2 --root-bb "lr_0.03_epochs_95" --checkpoint-bb "VIT_CUBS_8000_checkpoint.bin" --iter 3 --dataset "cub" --cov cov_iter1 cov_iter2 cov_iter3 --bs 16 --dataset-folder-concepts "lr_0.03_epochs_95_ViT-B_16_layer4_VIT_sgd_BCE" --lr learning_rate_iter1 learning_rate_iter2 learning_rate_iter3 --input-size-pi 2048 --temperature-lens 0.7 --lambda-lens 0.0001 --alpha-KD 0.9 --temperature-KD 10 --hidden-nodes 10 --layer "VIT" --arch "VIT-B_16"  
     ```
