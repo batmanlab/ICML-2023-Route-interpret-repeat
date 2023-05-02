@@ -125,7 +125,8 @@ predictor (t), explainers (g) and residuals (r).
   uses [`./src/codebase/Completeness_and_interventions/paths_MoIE.json`](/src/codebase/Completeness_and_interventions/paths_MoIE.json)
   file where we keep all the paths and filenames of the checkpoints of Blackbox (bb), concept predictor (t), explainer (
   g), and residual (r). Replace those paths and filenames with the appropriate ones based on the experiments. Refer
-  below for the description of the variables `paths_MoIE.json`:
+  below for the description of the
+  variables [`paths_MoIE.json`](/src/codebase/Completeness_and_interventions/paths_MoIE.json):
 
 | Variable                 | Description                                                                   |
 |--------------------------|-------------------------------------------------------------------------------|
@@ -137,12 +138,13 @@ predictor (t), explainers (g) and residuals (r).
 | `awa2_ResNet101`         | Root variable for Awa2 dataset with Resnet101 as the Blackbox (BB)            |
 
 * Note the root follow dataset_BB_architecture format. **Do not modify this format**. For each of the above
-  roots `paths_MoIE.json` file, based on the dataset and architectures, edit the values in `MoIE_paths`, `t`
+  roots [`paths_MoIE.json`](/src/codebase/Completeness_and_interventions/paths_MoIE.json) file, based on the dataset and
+  architectures, edit the values in `MoIE_paths`, `t`
   , `bb` with appropriate checkpoint paths and files for the different experts (g), concept predictors (t) and
   Blackbox (
   bb).
 
-* Similarly, edit the checkpoint paths and files of `./src/codebase/MIMIC_CXR/paths_mimic_cxr_icml.json` for effusion of
+* Similarly, edit the checkpoint paths and files of [`./src/codebase/MIMIC_CXR/paths_mimic_cxr_icml.json`](/src/codebase/MIMIC_CXR/paths_mimic_cxr_icml.json) for effusion of
   MIMIC-CXR.
 
 **Refer to the following sections for details of each of the scripts.**
