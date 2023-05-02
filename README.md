@@ -158,7 +158,7 @@ predictor (t), explainers (g) and residuals (r).
 | [`./src/scripts/cub_vit.sh`](/src/scripts/cub_vit.sh)               | Script for CUB200 dataset with Vision Transformer as the Blackbox (BB) | Included train/test and FOL generation script for the Blackbox (BB), concept predictor (t), explainers (g) and residuals (r) |
 | [`./src/scripts/awa2_resnet.sh`](/src/scripts/awa2_resnet.sh)       | Script for Awa2 dataset with Resnet101 as the Blackbox (BB)            | Included train/test and FOL generation script for the Blackbox (BB), concept predictor (t), explainers (g) and residuals (r) |
 | [`./src/scripts/awa2_vit.sh`](/src/scripts/awa2_vit.sh)             | Script for Awa2 dataset with Vision Transformer as the Blackbox (BB)   | Included train/test and FOL generation script for the Blackbox (BB), concept predictor (t), explainers (g) and residuals (r) |
-| [`./src/scripts/ham10k.sh`](/src/scripts/ham10k.sh)                 | Script for HAM10k dataset with Inception_v3 as the Blackbox (BB)       | Included train/test and FOL generation script for the Blackbox (BB), concept predictor (t), explainers (g) and residuals (r) |
+| [`./src/scripts/ham_10k.sh`](/src/scripts/ham_10k.sh)               | Script for HAM10k dataset with Inception_v3 as the Blackbox (BB)       | Included train/test and FOL generation script for the Blackbox (BB), concept predictor (t), explainers (g) and residuals (r) |
 | [`./src/scripts/SIIM-ISIC.sh`](/src/scripts/SIIM-ISIC.sh)           | Script for SIIM-ISIC dataset with Inception_v3 as the Blackbox (BB)    | Included train/test and FOL generation script for the Blackbox (BB), concept predictor (t), explainers (g) and residuals (r) |
 | [`./src/scripts/mimic_effusion.sh`](/src/scripts/mimic_effusion.sh) | Script for MIMIC-CXR dataset with Densenet121 as the Blackbox (BB)     | Included train/test and FOL generation script for the Blackbox (BB), concept predictor (t), explainers (g) and residuals (r) |  
 
@@ -173,14 +173,14 @@ For reference, check the following repositories for SOTA Blackboxes and concepts
 To compute, the performance metrics (accuracy/AUROC) for all the experts cumulatively (Table 2 in the paper), please
 refer below for the ipython notebooks.
 
-| Notebook                                                                                        | Description                                                            |
-|-------------------------------------------------------------------------------------------------|------------------------------------------------------------------------|
-| `./src/codebase/iPython/Cumulative_performance/CUB-Resnet.ipynb`                                | Script for CUB200 dataset with Resnet101 as the Blackbox (BB)          |
-| `./src/codebase/iPython/Cumulative_performance/CUB-VIT.ipynb`                                   | Script for CUB200 dataset with Vision Transformer as the Blackbox (BB) |
-| `./src/codebase/iPython/Cumulative_performance/AWA2-Resnet.ipynb`                               | Script for Awa2 dataset with Resnet101 as the Blackbox (BB)            |
-| `./src/codebase/iPython/Cumulative_performance/AWA2-VIT.ipynb`                                  | Script for Awa2 dataset with Vision Transformer as the Blackbox (BB)   |
-| `./src/codebase/iPython/Cumulative_performance/HAM10k.ipynb`                                    | Script for HAM10k dataset with Inception_v3 as the Blackbox (BB)       | 
-| `./src/codebase/iPython/Cumulative_performance/ISIC.ipynb`                                      | Script for SIIM-ISIC dataset with Inception_v3 as the Blackbox (BB)    |
+| Notebook                                                                                                                            | Description                                                            |
+|-------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------|
+| [`./src/codebase/iPython/Cumulative_performance/CUB-Resnet.ipynb`](/src/codebase/iPython/Cumulative_performance/CUB-Resnet.ipynb)   | Script for CUB200 dataset with Resnet101 as the Blackbox (BB)          |
+| [`./src/codebase/iPython/Cumulative_performance/CUB-VIT.ipynb`](/src/codebase/iPython/Cumulative_performance/CUB-VIT.ipynb)         | Script for CUB200 dataset with Vision Transformer as the Blackbox (BB) |
+| [`./src/codebase/iPython/Cumulative_performance/AWA2-Resnet.ipynb`](/src/codebase/iPython/Cumulative_performance/AWA2-Resnet.ipynb) | Script for Awa2 dataset with Resnet101 as the Blackbox (BB)            |
+| [`./src/codebase/iPython/Cumulative_performance/AWA2-VIT.ipynb`](/src/codebase/iPython/Cumulative_performance/AWA2-VIT.ipynb)       | Script for Awa2 dataset with Vision Transformer as the Blackbox (BB)   |
+| [`./src/codebase/iPython/Cumulative_performance/HAM10k.ipynb`](/src/codebase/iPython/Cumulative_performance/HAM10k.ipynb)           | Script for HAM10k dataset with Inception_v3 as the Blackbox (BB)       | 
+| [`./src/codebase/iPython/Cumulative_performance/ISIC.ipynb`](/src/codebase/iPython/Cumulative_performance/ISIC.ipynb)               | Script for SIIM-ISIC dataset with Inception_v3 as the Blackbox (BB)    |
 
 For effusion in MIMIC-CXR, the command to estimate the AUROC of all the experts is:
 
