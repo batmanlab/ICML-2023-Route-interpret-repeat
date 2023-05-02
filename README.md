@@ -112,18 +112,20 @@ Step 3 will be the concepts for training MoIE-CXR.
 
 ## Training pipeline
 
-All the scripts for training MoIE, is included in [`./src/scripts`](/src/scripts) folder for all the datasets and architectures with
-comments. Follow every command sequentially of each script to train/test the Blackbox (BB), concept predictor (t),
-explainers (g) and residuals (r).
+All the scripts for training MoIE, is included in [`./src/scripts`](/src/scripts) folder for all the datasets and
+architectures with comments. Follow every command sequentially of each script to train/test the Blackbox (BB), concept
+predictor (t), explainers (g) and residuals (r).
 
 * As a first step find and replace the project path `/ocean/projects/asc170022p/shg121/PhD/ICLR-2022` from the whole
   codebase with appropriate path.
 
-* Also, after training and testing MoIE, as the last step in each script, `FOLs_vision_main.py` file is responsible for
-  generating instance specific FOL. This file uses `./src/codebase/Completeness_and_interventions/paths_MoIE.json` file
-  where we keep all the paths and filenames of the checkpoints of Blackbox (bb), concept predictor (t), explainer (g),
-  and residual (r). Replace those paths and filenames with the appropriate ones based on the experiments. Refer below
-  for the description of the variables `paths_MoIE.json`:
+* Also, after training and testing MoIE, as the last step in each
+  script, [`FOLs_vision_main.py`](/src/codebase/FOLs_vision_main.py) file is responsible for generating instance
+  specific FOL. This file
+  uses [`./src/codebase/Completeness_and_interventions/paths_MoIE.json`](/src/codebase/Completeness_and_interventions/paths_MoIE.json)
+  file where we keep all the paths and filenames of the checkpoints of Blackbox (bb), concept predictor (t), explainer (
+  g), and residual (r). Replace those paths and filenames with the appropriate ones based on the experiments. Refer
+  below for the description of the variables `paths_MoIE.json`:
 
 | Variable                 | Description                                                                   |
 |--------------------------|-------------------------------------------------------------------------------|
@@ -282,7 +284,7 @@ Also make sure the following variables are correct:
 * `--cov`: Coverages of each iteration separated by a space as in the above commands.
 * `--lr`: Learning rates of each expert separated by a space as in the above commands.
 * `--data-root`: Dataset path of images, labels and concepts (if exists)
-*  `--logs`: Path of tensorboard logs
+* `--logs`: Path of tensorboard logs
 
 ## Checkpoints
 
