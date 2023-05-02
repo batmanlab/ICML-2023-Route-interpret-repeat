@@ -1,4 +1,5 @@
 # Dividing and Conquering a BlackBox to a Mixture of Interpretable Models: Route, Interpret, Repeat #
+
 ### [Project Page](https://shantanu48114860.github.io/projects/ICML-2023-MoIE/) | [Paper]() | [Arxiv](https://arxiv.org/pdf/2302.10289.pdf)
 
 Official PyTorch implementation for the ICML 2023 paper <br/>
@@ -10,7 +11,6 @@ Official PyTorch implementation for the ICML 2023 paper <br/>
 <br/>
 <sup>1</sup> BU ECE, <sup>2</sup> Pitt ISP, <sup>3</sup> META AI <br/>
 In [ICML, 2023](https://icml.cc/Conferences/2023/Dates) <br/>
-
 
 ## Table of Contents
 
@@ -26,11 +26,12 @@ In [ICML, 2023](https://icml.cc/Conferences/2023/Dates) <br/>
     * [(a) Running MoIE](#a-running-moie)
     * [(b) Compute the performance metrics](#b-compute-the-performance-metrics)
     * [(c) Validating the concept importance](#c-validating-the-concept-importance)
-9. [Suggestions](#suggestions)
-6. [Checkpoints](#checkpoints)
-7. [How to Cite](#how-to-cite)
-8. [License and copyright](#license-and-copyright)
-10. [Contact](#contact)
+6. [Generated Local Explanations](#generated-local-explanations)
+7. [Suggestions](#suggestions)
+8. [Checkpoints](#checkpoints)
+9. [How to Cite](#how-to-cite)
+10. [License and copyright](#license-and-copyright)
+11. [Contact](#contact)
 
 ## Objective
 
@@ -220,6 +221,11 @@ completeness scores and test time interventions):
 | [`./src/scripts/completeness_scores.sh`](/src/scripts/completeness_scores.sh) | Script to estimate the completeness scores of the important concepts                                                                               |
 | [`./src/scripts/tti.sh`](/src/scripts/tti.sh)                                 | Script to perform test time interventions for the important concepts                                                                               |
 | [`./src/codebase/tti_experts.sh`](/src/scripts/tti_experts.sh)                | Script to perform test time interventions for the important concepts corresponding to only the ** harder** samples covered by the last two experts |
+
+## Generated Local Explanations
+
+We have included the instance-specific explanations per expert for each dataset in the folder [`./explanations`](
+/explanations).
 
 ## Suggestions
 
