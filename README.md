@@ -1,6 +1,6 @@
 # Dividing and Conquering a BlackBox to a Mixture of Interpretable Models: Route, Interpret, Repeat #
 
-### [Project Page](https://shantanu48114860.github.io/projects/ICML-2023-MoIE/) | [Paper]() | [Arxiv](https://arxiv.org/pdf/2302.10289.pdf)
+### [Project Page](https://shantanu48114860.github.io/projects/ICML-2023-MoIE/) | [Paper](Coming soon) | [Arxiv](https://arxiv.org/pdf/2302.10289.pdf)| [Video](Coming soon)
 
 Official PyTorch implementation of the paper <br/>
 **[Dividing and Conquering a BlackBox to a Mixture of Interpretable Models: Route, Interpret, Repeat](https://arxiv.org/pdf/2302.10289.pdf)** <br/>
