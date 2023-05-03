@@ -230,8 +230,7 @@ We have included the instance-specific explanations per expert for each dataset 
 ## Suggestions
 
 Most of the *argparse* variables are self-explanatory. However, in order to perform the experiments successfully, give
-the correct paths and files to the following variables in `train_explainer_<dataset>.py` and  
-`test_explainer_<dataset>.py`.
+the correct paths and files to the following variables in `train_explainer_<dataset>.py` and `test_explainer_<dataset>.py`.
 
 * For `train_explainer_<dataset>.py` (ex. [`train_explainer_CUB.py`](src/codebase/train_explainer_CUB.py)
   , [`train_explainer_ham10k.py`](src/codebase/train_explainer_ham10k.py) etc.), follow the rules:
