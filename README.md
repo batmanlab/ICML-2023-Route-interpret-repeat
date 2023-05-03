@@ -195,7 +195,7 @@ This command is already included in the file [`./src/scripts/mimic_effusion.sh`]
 
 ### (c) Validating the concept importance
 
-In the paper, we validated in the importance of the extracted concepts using three experiments:
+In the paper, we validate in the importance of the extracted concepts using three experiments:
 
 1. Zeroing out the important concepts
 2. Computing the completeness scores of the important concept
@@ -220,7 +220,7 @@ completeness scores and test time interventions):
 | [`./src/scripts/zero_out_concepts.sh`](/src/scripts/zero_out_concepts.sh)     | Script to zero out the important concepts                                                                                                          |
 | [`./src/scripts/completeness_scores.sh`](/src/scripts/completeness_scores.sh) | Script to estimate the completeness scores of the important concepts                                                                               |
 | [`./src/scripts/tti.sh`](/src/scripts/tti.sh)                                 | Script to perform test time interventions for the important concepts                                                                               |
-| [`./src/codebase/tti_experts.sh`](/src/scripts/tti_experts.sh)                | Script to perform test time interventions for the important concepts corresponding to only the ** harder** samples covered by the last two experts |
+| [`./src/codebase/tti_experts.sh`](/src/scripts/tti_experts.sh)                | Script to perform test time interventions for the important concepts corresponding to only the **harder** samples covered by the last two experts |
 
 ## Generated Local Explanations
 
