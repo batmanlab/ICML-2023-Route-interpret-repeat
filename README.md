@@ -55,6 +55,9 @@ conda activate python_3_7_rtx_6000
 ```
 
 ## Downloading data
+After downloading data from the below links, search for `--data-root` variable in the codebase and replace the 
+appropriate paths for all the different datasets. Also search for `/ocean/projects/asc170022p/shg121/PhD/ICLR-2022` 
+and replace with appropriate paths. 
 
 ### (a) Downloading vision and skin data
 
@@ -81,6 +84,8 @@ For more details please follow the [AGXNet Repository](https://github.com/batman
 
 To get the CUB200 metadata and dataset splits
 follow [Logic Explained network](https://github.com/pietrobarbiero/logic_explained_networks/tree/master/data).
+Once the json files are downloaded, search for `--json-root` variable in the codebase and replace the 
+appropriate paths for all the different datasets.
 
 To preprocess the concepts for CUB200, follow:
 
