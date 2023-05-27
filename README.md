@@ -103,7 +103,7 @@ To preprocess MIMIC-CXR for Effusion, follow the following steps sequentially:
 python ./src/codebase/data_preprocessing/mimic-cxr/miccai-main/preprocessing/radgraph_itemized.py
 ```
 
-2. Run `./preprocessing/radgraph_parsed.py` To parse RadGraph relations, run:
+2. To parse RadGraph relations, run:
 
 ``` python
 python ./src/codebase/data_preprocessing/mimic-cxr/miccai-main/preprocessing/radgraph_parsed.py
