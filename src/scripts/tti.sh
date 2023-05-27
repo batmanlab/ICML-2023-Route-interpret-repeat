@@ -17,19 +17,19 @@ conda activate python_3_7_rtx_6000
 # -----------------------------------------------------
 # CUB_VIT
 # -----------------------------------------------------
-python /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/codebase/test_time_interventions_main.py --model "MoIE" --arch "ViT-B_16" --dataset "cub" --iterations 6 --top_K 3 5 10 15 20 25 30 50 > $slurm_output_cub_vit
+python ../codebase/test_time_interventions_main.py --model "MoIE" --arch "ViT-B_16" --dataset "cub" --iterations 6 --top_K 3 5 10 15 20 25 30 50 > $slurm_output_cub_vit
 
 # -----------------------------------------------------
 # CUB_ResNet
 # -----------------------------------------------------
-python /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/codebase/test_time_interventions_main.py --model "MoIE" --arch "ResNet101" --dataset "cub" --iterations 6 --top_K 3 5 10 15 20 25 30 50 > $slurm_output_cub_resnet
+python ../codebase/test_time_interventions_main.py --model "MoIE" --arch "ResNet101" --dataset "cub" --iterations 6 --top_K 3 5 10 15 20 25 30 50 > $slurm_output_cub_resnet
 
 # -----------------------------------------------------
 # Awa2_vit
 # -----------------------------------------------------
-python /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/codebase/test_time_interventions_main.py --model "MoIE" --arch "ViT-B_16" --dataset "awa2" --iterations 6 --top_K 3 5 10 15 20 25 30 50 > $slurm_output_awa2_vit
+python ../codebase/test_time_interventions_main.py --model "MoIE" --arch "ViT-B_16" --dataset "awa2" --iterations 6 --top_K 3 5 10 15 20 25 30 50 > $slurm_output_awa2_vit
 
 # -----------------------------------------------------
 # Awa2_ResNet
 # -----------------------------------------------------
-python /ocean/projects/asc170022p/shg121/PhD/ICLR-2022/codebase/test_time_interventions_main.py --model "MoIE" --arch "ResNet101" --dataset "awa2" --iterations 4 --top_K 3 5 10 15 20 25 30 50 > $slurm_output_awa2_resnet
+python ../codebase/test_time_interventions_main.py --model "MoIE" --arch "ResNet101" --dataset "awa2" --iterations 4 --top_K 3 5 10 15 20 25 30 50 > $slurm_output_awa2_resnet
