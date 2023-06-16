@@ -321,14 +321,16 @@ the concepts.
 ## How to Cite
 
 ```
-@misc{ghosh2023dividing,
-      title={Dividing and Conquering a BlackBox to a Mixture of Interpretable Models: Route, Interpret, Repeat}, 
-      author={Shantanu Ghosh and Ke Yu and Forough Arabshahi and Kayhan Batmanghelich},
-      year={2023},
-      eprint={2302.10289},
-      archivePrefix={arXiv},
-      primaryClass={cs.LG}
+@inproceedings{ghosh2023dividing,
+  title={Dividing and Conquering a BlackBox to a Mixture of Interpretable Models: Route, Interpret, Repeat},
+  author={Ghosh, Shantanu and Yu, Ke and Arabshahi, Forough and Batmanghelich, Kayhan},
+  booktitle={Proceedings of the 40th International Conference on Machine Learning},
+  series={Proceedings of Machine Learning Research},
+  year={2023},
+  month={23--29 Jul},
+  publisher={PMLR},
 }
+
 ```
 
 ## License and copyright
