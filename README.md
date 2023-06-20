@@ -1,6 +1,6 @@
 # Dividing and Conquering a BlackBox to a Mixture of Interpretable Models: Route, Interpret, Repeat #
 
-### [Project Page](https://shantanu48114860.github.io/projects/ICML-2023-MoIE/) | [Paper (Coming soon)]() | [arXiv](https://openreview.net/pdf?id=0SgBUsL4W0) | [Video (Coming soon)]()
+### [Project Page](https://shantanu48114860.github.io/projects/ICML-2023-MoIE/) | [Paper (Coming soon)]() | [arXiv](https://openreview.net/pdf?id=0SgBUsL4W0) | [shortcut paper](https://arxiv.org/abs/2302.10289) | [Video (Coming soon)]()
 
 Official PyTorch implementation of the paper <br/>
 **[Dividing and Conquering a BlackBox to a Mixture of Interpretable Models: Route, Interpret, Repeat](https://openreview.net/forum?id=0SgBUsL4W0)** <br/>
@@ -319,7 +319,7 @@ this concept bank is used. For others, the above paths contain the checkpoints o
 the concepts.
 
 ## How to Cite
-
+* ICML 2023 paper
 ```
 @inproceedings{ghosh2023dividing,
   title={Dividing and Conquering a BlackBox to a Mixture of Interpretable Models: Route, Interpret, Repeat},
@@ -331,6 +331,15 @@ the concepts.
   publisher={PMLR},
 }
 
+```
+* Shortcut paper published in Workshop on Spurious Correlations, Invariance and Stability, ICML 2023
+```
+@inproceedings{ghosh2023tackling,
+  title={Tackling Shortcut Learning in Deep Neural Networks: An Iterative Approach with Interpretable Models},
+  author={Ghosh, Shantanu and Yu, Ke and Arabshahi, Forough and Batmanghelich, Kayhan},
+  booktitle={ICML 2023: Workshop on Spurious Correlations, Invariance and Stability},
+  year={2023}
+}
 ```
 
 ## License and copyright
