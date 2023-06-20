@@ -328,7 +328,7 @@ the concepts.
   series={Proceedings of Machine Learning Research},
   year={2023},
   month={23--29 Jul},
-  publisher={PMLR},
+  publisher={PMLR}
 }
 
 ```
