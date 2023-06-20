@@ -319,7 +319,7 @@ this concept bank is used. For others, the above paths contain the checkpoints o
 the concepts.
 
 ## How to Cite
-* ICML 2023 paper
+* Main ICML 2023 paper
 ```
 @inproceedings{ghosh2023dividing,
   title={Dividing and Conquering a BlackBox to a Mixture of Interpretable Models: Route, Interpret, Repeat},
@@ -338,6 +338,16 @@ the concepts.
   title={Tackling Shortcut Learning in Deep Neural Networks: An Iterative Approach with Interpretable Models},
   author={Ghosh, Shantanu and Yu, Ke and Arabshahi, Forough and Batmanghelich, Kayhan},
   booktitle={ICML 2023: Workshop on Spurious Correlations, Invariance and Stability},
+  year={2023}
+}
+```
+
+* Transfer learning paper published in Workshop on Interpretable Machine Learning in Healthcare, ICML 2023
+```
+@inproceedings{ghosh2023bridging,
+  title={Bridging the Gap: From Post Hoc Explanations to Inherently Interpretable Models for Medical Imaging},
+  author={Ghosh, Shantanu and Yu, Ke and Arabshahi, Forough and Batmanghelich, Kayhan},
+  booktitle={ICML 2023: Workshop on Interpretable Machine Learning in Healthcare},
   year={2023}
 }
 ```
