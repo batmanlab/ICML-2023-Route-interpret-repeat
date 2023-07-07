@@ -1,6 +1,6 @@
 # Dividing and Conquering a BlackBox to a Mixture of Interpretable Models: Route, Interpret, Repeat #
 
-### [Project Page](https://shantanu48114860.github.io/projects/ICML-2023-MoIE/) | [Paper](https://proceedings.mlr.press/v202/ghosh23c.html) | [arXiv](https://openreview.net/pdf?id=0SgBUsL4W0) | [shortcut paper (SCIS workshop)](https://arxiv.org/abs/2302.10289) | [Video](https://www.youtube.com/watch?v=252zEPba8pQ&t=6s) | [Poster](https://github.com/batmanlab/ICML-2023-Route-interpret-repeat/blob/main/doc/Route-Interpret-Repeat-ICML-2023-poster_v5.pdf) | [Slides](https://github.com/batmanlab/ICML-2023-Route-interpret-repeat/blob/main/doc/Route-Interpret-Repeat-ICML-2023-slides_v4.pdf)
+### [Project Page](https://shantanu48114860.github.io/projects/ICML-2023-MoIE/) | [Main paper](https://proceedings.mlr.press/v202/ghosh23c.html) | [arXiv](https://openreview.net/pdf?id=0SgBUsL4W0) | [shortcut paper (SCIS)](https://arxiv.org/abs/2302.10289) | [Video](https://www.youtube.com/watch?v=252zEPba8pQ&t=6s) | [Poster](https://github.com/batmanlab/ICML-2023-Route-interpret-repeat/blob/main/doc/Route-Interpret-Repeat-ICML-2023-poster_v5.pdf) | [Slides](https://github.com/batmanlab/ICML-2023-Route-interpret-repeat/blob/main/doc/Route-Interpret-Repeat-ICML-2023-slides_v4.pdf)
 
 Official PyTorch implementation of the paper <br/>
 **[Dividing and Conquering a BlackBox to a Mixture of Interpretable Models: Route, Interpret, Repeat](https://openreview.net/forum?id=0SgBUsL4W0)** <br/>
