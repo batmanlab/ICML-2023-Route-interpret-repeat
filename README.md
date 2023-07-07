@@ -321,16 +321,21 @@ the concepts.
 ## How to Cite
 * Main ICML 2023 paper
 ```
-@inproceedings{ghosh2023dividing,
-  title={Dividing and Conquering a BlackBox to a Mixture of Interpretable Models: Route, Interpret, Repeat},
-  author={Ghosh, Shantanu and Yu, Ke and Arabshahi, Forough and Batmanghelich, Kayhan},
-  booktitle={Proceedings of the 40th International Conference on Machine Learning},
-  series={Proceedings of Machine Learning Research},
-  year={2023},
-  month={23--29 Jul},
-  publisher={PMLR}
+@InProceedings{pmlr-v202-ghosh23c,
+  title = 	 {Dividing and Conquering a {B}lack{B}ox to a Mixture of Interpretable Models: Route, Interpret, Repeat},
+  author =       {Ghosh, Shantanu and Yu, Ke and Arabshahi, Forough and Batmanghelich, Kayhan},
+  booktitle = 	 {Proceedings of the 40th International Conference on Machine Learning},
+  pages = 	 {11360--11397},
+  year = 	 {2023},
+  editor = 	 {Krause, Andreas and Brunskill, Emma and Cho, Kyunghyun and Engelhardt, Barbara and Sabato, Sivan and Scarlett, Jonathan},
+  volume = 	 {202},
+  series = 	 {Proceedings of Machine Learning Research},
+  month = 	 {23--29 Jul},
+  publisher =    {PMLR},
+  pdf = 	 {https://proceedings.mlr.press/v202/ghosh23c/ghosh23c.pdf},
+  url = 	 {https://proceedings.mlr.press/v202/ghosh23c.html},
+  abstract = 	 {ML model design either starts with an interpretable model or a Blackbox and explains it post hoc. Blackbox models are flexible but difficult to explain, while interpretable models are inherently explainable. Yet, interpretable models require extensive ML knowledge and tend to be less flexible, potentially underperforming than their Blackbox equivalents. This paper aims to blur the distinction between a post hoc explanation of a Blackbox and constructing interpretable models. Beginning with a Blackbox, we iteratively <em>carve out</em> a mixture of interpretable models and a <em>residual network</em>. The interpretable models identify a subset of samples and explain them using First Order Logic (FOL), providing basic reasoning on concepts from the Blackbox. We route the remaining samples through a flexible residual. We repeat the method on the residual network until all the interpretable models explain the desired proportion of data. Our extensive experiments show that our <em>route, interpret, and repeat</em> approach (1) identifies a richer diverse set of instance-specific concepts with high concept completeness via interpretable models by specializing in various subsets of data without compromising in performance, (2) identifies the relatively “harder” samples to explain via residuals, (3) outperforms the interpretable by-design models by significant margins during test-time interventions, (4) can be used to fix the shortcut learned by the original Blackbox.}
 }
-
 ```
 * Shortcut paper published in Workshop on Spurious Correlations, Invariance and Stability, ICML 2023
 ```
