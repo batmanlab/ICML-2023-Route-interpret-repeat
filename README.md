@@ -116,7 +116,7 @@ python ./src/codebase/data_preprocessing/mimic-cxr/miccai-main/preprocessing/rad
 python ./src/codebase/data_preprocessing/mimic-cxr/miccai-main/preprocessing/adj_matrix.py
 ```
 
-Step 3 will be the concepts for training MoIE-CXR.
+Step 3 will be the concepts for training MoIE-CXR. Also, remove the disease label to be classified from the concepts. For example, to classify Pneumonia (disease label), Pneumonia will show up in the concepts produced in Step 3 as we are extracting anatomies and observations both using Rad-graph. This is redundant. So in this case, manually remove Pneumonia from the concepts. 
 
 ## Training pipeline
 
