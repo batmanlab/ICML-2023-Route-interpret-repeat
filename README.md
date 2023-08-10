@@ -78,16 +78,6 @@ and replace with appropriate paths.
 
 For more details please follow the [AGXNet Repository](https://github.com/batmanlab/AGXNet).
 
-For the radgraph files, please refer to the following paths and place it in respective folders as indicated in code for training the blackbox, concept predictor (t) and experts in MoIE:
-
-| Variable  | Description                        | URL                                                                                 |
-|-----------|------------------------------------|-------------------------------------------------------------------------------------|
-| `--radgraph-adj-mtx-pickle-file` | radgraph adjacent matrix landmark - observation        | [landmark_observation_adj_mtx_v2.pickle](https://drive.google.com/file/d/1qdYMBL1zhpm2CyOohi8Id5qCHZxvVLH1/view?usp=drive_link)           |
-| Derm7pt   | Dermatology Concepts Dataset       | [Get access here](https://derm.cs.sfu.ca/Welcome.html)                              |
-| HAM10k    | Skin lesion classification dataset | [Kaggle Link](https://www.kaggle.com/kmader/skin-cancer-mnist-ham10000)             |
-| SIIM_ISIC | Skin Melanoma classification       | [SIIM-ISIC Kaggle](https://www.kaggle.com/c/siim-isic-melanoma-classification/data) |
-| Awa2      | Animals with Attributes2           | [Awa2 official](https://cvml.ista.ac.at/AwA2/)                                      |
-
 
 ## Data preprocessing
 
@@ -128,6 +118,16 @@ python ./src/codebase/data_preprocessing/mimic-cxr/miccai-main/preprocessing/adj
 ```
 
 Step 3 will be the concepts for training MoIE-CXR. Also, remove the disease label to be classified from the concepts. For example, to classify Pneumonia (disease label), Pneumonia will show up in the concepts produced in Step 3 as we are extracting anatomies and observations both using Rad-graph. This is redundant. So in this case, manually remove Pneumonia from the concepts. 
+
+If you don't want to run the pre-processing steps for MIMIC-CXR for the radgraph files to get the concepts, please refer to the following paths directly (these will be the outputs of the above 3 steps) and place the files in respective folders as indicated in code for training the blackbox, concept predictor (t) and experts in MoIE:
+
+| Variable  | Description                        | URL                                                                                 |
+|-----------|------------------------------------|-------------------------------------------------------------------------------------|
+| `--radgraph-adj-mtx-pickle-file` | radgraph adjacent matrix landmark - observation        | [landmark_observation_adj_mtx_v2.pickle](https://drive.google.com/file/d/1qdYMBL1zhpm2CyOohi8Id5qCHZxvVLH1/view?usp=drive_link)           |
+| `--radgraph-sids-npy-file`   | radgraph study ids       | [landmark_observation_sids_v2.npy](https://drive.google.com/file/d/1IV4L9ReNvKGZlbETIRnkGhI0BrhP8Nrx/view?usp=drive_link)                              |
+| `--radgraph-adj-mtx-npy-file`    | radgraph adjacent matrix landmark - observation | [landmark_observation_adj_mtx_v2.npy](https://drive.google.com/file/d/1dnXsFCRCVXb39WIsazJf_StUkM4tJbtW/view?usp=drive_link)             |
+| `--nvidia-bounding-box-file` | bounding boxes annotated for pneumonia and pneumothorax       | [mimic-cxr-annotation.csv](https://drive.google.com/file/d/1jeSF3ixR9hyis4sThFu9aozAFZD7BqOR/view?usp=drive_link) |
+| `--imagenome-radgraph-landmark-mapping-file`      | Landmark mapping between ImaGenome and RadGraph           | [landmark_mapping.json]([https://cvml.ista.ac.at/AwA2/](https://drive.google.com/file/d/1a0hVwvS_WVKFfIrYQsSCCznZiCRxy-XC/view?usp=drive_link))                                      |
 
 ## Training pipeline
 
