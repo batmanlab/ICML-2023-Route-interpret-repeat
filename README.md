@@ -121,7 +121,7 @@ Step 3 will be the concepts for training MoIE-CXR. Also, remove the disease labe
 
 If you don't want to run the pre-processing steps for MIMIC-CXR for the radgraph files to get the concepts, please refer to the following paths directly (these will be the outputs of the above 3 steps) and place the files in respective folders as indicated in code for training the blackbox, concept predictor (t) and experts in MoIE:
 
-| Variable  | Description                        | URL                                                                                 |
+| Variable  | Description                        | Paths                                                                                 |
 |-----------|------------------------------------|-------------------------------------------------------------------------------------|
 | `--radgraph-adj-mtx-pickle-file` | radgraph adjacent matrix landmark - observation        | [landmark_observation_adj_mtx_v2.pickle](https://drive.google.com/file/d/1qdYMBL1zhpm2CyOohi8Id5qCHZxvVLH1/view?usp=drive_link)           |
 | `--radgraph-sids-npy-file`   | radgraph study ids       | [landmark_observation_sids_v2.npy](https://drive.google.com/file/d/1IV4L9ReNvKGZlbETIRnkGhI0BrhP8Nrx/view?usp=drive_link)                              |
