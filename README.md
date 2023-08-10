@@ -78,6 +78,17 @@ and replace with appropriate paths.
 
 For more details please follow the [AGXNet Repository](https://github.com/batmanlab/AGXNet).
 
+For the radgraph files, please refer to the following paths and place it in respective folders as indicated in code for training the blackbox, concept predictor (t) and experts in MoIE:
+
+| Variable  | Description                        | URL                                                                                 |
+|-----------|------------------------------------|-------------------------------------------------------------------------------------|
+| `--radgraph-adj-mtx-pickle-file` | radgraph adjacent matrix landmark - observation        | [landmark_observation_adj_mtx_v2.pickle](https://drive.google.com/file/d/1qdYMBL1zhpm2CyOohi8Id5qCHZxvVLH1/view?usp=drive_link)           |
+| Derm7pt   | Dermatology Concepts Dataset       | [Get access here](https://derm.cs.sfu.ca/Welcome.html)                              |
+| HAM10k    | Skin lesion classification dataset | [Kaggle Link](https://www.kaggle.com/kmader/skin-cancer-mnist-ham10000)             |
+| SIIM_ISIC | Skin Melanoma classification       | [SIIM-ISIC Kaggle](https://www.kaggle.com/c/siim-isic-melanoma-classification/data) |
+| Awa2      | Animals with Attributes2           | [Awa2 official](https://cvml.ista.ac.at/AwA2/)                                      |
+
+
 ## Data preprocessing
 
 ### (a) Preprocessing CUB200
