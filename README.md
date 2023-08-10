@@ -127,7 +127,7 @@ If you don't want to run the pre-processing steps for MIMIC-CXR for the radgraph
 | `--radgraph-sids-npy-file`   | radgraph study ids       | [landmark_observation_sids_v2.npy](https://drive.google.com/file/d/1IV4L9ReNvKGZlbETIRnkGhI0BrhP8Nrx/view?usp=drive_link)                              |
 | `--radgraph-adj-mtx-npy-file`    | radgraph adjacent matrix landmark - observation | [landmark_observation_adj_mtx_v2.npy](https://drive.google.com/file/d/1dnXsFCRCVXb39WIsazJf_StUkM4tJbtW/view?usp=drive_link)             |
 | `--nvidia-bounding-box-file` | bounding boxes annotated for pneumonia and pneumothorax       | [mimic-cxr-annotation.csv](https://drive.google.com/file/d/1jeSF3ixR9hyis4sThFu9aozAFZD7BqOR/view?usp=drive_link) |
-| `--imagenome-radgraph-landmark-mapping-file`      | Landmark mapping between ImaGenome and RadGraph           | [landmark_mapping.json]([https://cvml.ista.ac.at/AwA2/](https://drive.google.com/file/d/1a0hVwvS_WVKFfIrYQsSCCznZiCRxy-XC/view?usp=drive_link)                                      |
+| `--imagenome-radgraph-landmark-mapping-file`      | Landmark mapping between ImaGenome and RadGraph           | [landmark_mapping.json](https://drive.google.com/file/d/1a0hVwvS_WVKFfIrYQsSCCznZiCRxy-XC/view?usp=drive_link)                                      |
 
 ## Training pipeline
 
