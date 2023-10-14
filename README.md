@@ -130,6 +130,7 @@ If you don't want to run the pre-processing steps for MIMIC-CXR for the radgraph
 | `--imagenome-radgraph-landmark-mapping-file`      | Landmark mapping between ImaGenome and RadGraph           | [landmark_mapping.json](https://drive.google.com/file/d/1a0hVwvS_WVKFfIrYQsSCCznZiCRxy-XC/view?usp=drive_link)                                      |
 
 ## Training pipeline
+### For training MIMIC-CXR please follow our [MICCAI 2023](https://github.com/batmanlab/MICCAI-2023-Route-interpret-repeat-CXRs) repository to cater the high imbalance.
 
 All the scripts for training MoIE, is included in [`./src/scripts`](/src/scripts) folder for all the datasets and
 architectures with comments. Follow every command sequentially of each script to train/test the Blackbox (BB), concept
