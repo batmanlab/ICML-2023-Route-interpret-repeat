@@ -35,7 +35,7 @@ In [ICML, 2023](https://icml.cc/Conferences/2023/Dates) <br/>
 
 ## Objective
 
-In this paper, we aim to blur the dichotomy of explaining a Blackbox post-hoc and building inherently interpretable by
+In this paper, we blur the dichotomy of explaining a Blackbox post-hoc and building inherently interpretable by
 design models. Beginning with a Blackbox, we iteratively *carve out* a mixture of interpretable experts (MoIE) and a *
 residual network*. Each interpretable model specializes in a subset of samples and explains them using First Order
 Logic (FOL). We route the remaining samples through a flexible residual. We repeat the method on the residual network
