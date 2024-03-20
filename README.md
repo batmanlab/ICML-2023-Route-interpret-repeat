@@ -332,7 +332,7 @@ the concepts.
 
 ## How to Cite
 * Main ICML 2023 paper
-```
+```bibtex
 @InProceedings{pmlr-v202-ghosh23c,
   title = 	 {Dividing and Conquering a {B}lack{B}ox to a Mixture of Interpretable Models: Route, Interpret, Repeat},
   author =       {Ghosh, Shantanu and Yu, Ke and Arabshahi, Forough and Batmanghelich, Kayhan},
@@ -350,7 +350,7 @@ the concepts.
 }
 ```
 * Shortcut paper published in Workshop on Spurious Correlations, Invariance and Stability, ICML 2023
-```
+```bibtex
 @inproceedings{ghosh2023tackling,
   title={Tackling Shortcut Learning in Deep Neural Networks: An Iterative Approach with Interpretable Models},
   author={Ghosh, Shantanu and Yu, Ke and Arabshahi, Forough and Batmanghelich, Kayhan},
@@ -360,7 +360,7 @@ the concepts.
 ```
 
 * Transfer learning paper published in Workshop on Interpretable Machine Learning in Healthcare, ICML 2023
-```
+```bibtex
 @inproceedings{ghosh2023bridging,
   title={Bridging the Gap: From Post Hoc Explanations to Inherently Interpretable Models for Medical Imaging},
   author={Ghosh, Shantanu and Yu, Ke and Arabshahi, Forough and Batmanghelich, Kayhan},
