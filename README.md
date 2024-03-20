@@ -90,7 +90,7 @@ appropriate paths for all the different datasets.
 
 To preprocess the concepts for CUB200, follow:
 
-``` bash
+``` python
 python ./src/codebase/data_preprocessing/download_cub.py
 ```
 
@@ -100,20 +100,20 @@ To preprocess MIMIC-CXR for Effusion, follow the following steps sequentially:
 
 1. To generate itemized RadGraph examples, run:
 
-``` bash
+``` python
 python ./src/codebase/data_preprocessing/mimic-cxr/miccai-main/preprocessing/radgraph_itemized.py
 ```
 
 2. To parse RadGraph relations, run:
 
-``` bash
+``` python
 python ./src/codebase/data_preprocessing/mimic-cxr/miccai-main/preprocessing/radgraph_parsed.py
 ```
 
 3. To create adjacency matrix that represents the relations between anatomical landmarks and observations mentioned in
    radiology reports, run:
 
-``` bash
+``` python
 python ./src/codebase/data_preprocessing/mimic-cxr/miccai-main/preprocessing/adj_matrix.py
 ```
 
