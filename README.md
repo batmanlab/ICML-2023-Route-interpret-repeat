@@ -1,4 +1,5 @@
 # Dividing and Conquering a BlackBox to a Mixture of Interpretable Models: Route, Interpret, Repeat #
+<img src="https://visitor-badge.laobi.icu/badge?page_id=batmanlab.ICML-2023-Route-interpret-repeat&right_color=%23FFA500" alt="Visitor badge" />
 
 ### [Project Page](https://shantanu-ai.github.io/projects/ICML-2023-MoIE/) | [Main paper](https://proceedings.mlr.press/v202/ghosh23c.html) | [arXiv](https://arxiv.org/pdf/2307.05350.pdf) | [Shortcut paper (SCIS)](https://arxiv.org/abs/2302.10289) | [Video](https://www.youtube.com/watch?v=252zEPba8pQ&t=6s) | [Poster](https://github.com/batmanlab/ICML-2023-Route-interpret-repeat/blob/main/doc/Route-Interpret-Repeat-ICML-2023-poster_v5.pdf) | [Slides](https://github.com/batmanlab/ICML-2023-Route-interpret-repeat/blob/main/doc/Route-Interpret-Repeat-ICML-2023-slides_v4.pdf)
 
